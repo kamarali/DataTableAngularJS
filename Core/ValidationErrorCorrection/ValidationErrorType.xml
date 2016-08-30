@@ -1,0 +1,272 @@
+<ValidationExceptionType>
+
+  <Exception Code="BCGO_10211" BillingCategory="2" ValidationType="Direct" Type="DateTime"> <!--AWB Date-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "AWB_DATE" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "AWB_DATE" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "AWB_DATE" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "AWB_DATE" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+
+  <Exception Code="BCGO_10279" BillingCategory="2" ValidationType="Direct" Type="ComplexType">    <!--Your Invoice Billing Date-->
+    <ErrorLevel Name="RejectionMemo" ChildTableName = "CGO_REJECTION_MEMO" ColumnName = "YOUR_INVOICE_BILLING_PERIOD" PrimaryColumnName ="REJECTION_MEMO_ID"/>
+    <ErrorLevel Name="BillingMemo" ChildTableName = "CGO_BILLING_MEMO" ColumnName = "YOUR_INVOICE_BILLING_PERIOD" PrimaryColumnName ="BILLING_MEMO_ID"/>
+    <ErrorLevel Name="CreditMemo" ChildTableName = "CGO_CREDIT_MEMO" ColumnName = "YOUR_INVOICE_BILLING_PERIOD" PrimaryColumnName ="CREDIT_MEMO_ID"/>
+  </Exception>
+  
+  <Exception Code="BCGO_10144" BillingCategory="2" ValidationType="Regex" RegularExpression = "(0)|(1)|(2)|(3)|(4)|(5)|(6)|(9)">    <!--AWB Check Digit*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CHECK_DIGIT" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "AWB_CHECK_DIGIT" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "AWB_CHECK_DIGIT" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+
+  <Exception Code="BCGO_10117" BillingCategory="2" ValidationType="Direct">    <!--AWB Origin*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CONSIGNMENT_ORIGIN_ID" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "CONSIGNMENT_ORIGIN_ID" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "CONSIGNMENT_ORIGIN_ID" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "CONSIGNMENT_ORIGIN" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+  
+  <Exception Code="BCGO_10120" BillingCategory="2" ValidationType="Direct">    <!--AWB Origin*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CONSIGNMENT_ORIGIN_ID" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "CONSIGNMENT_ORIGIN_ID" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "CONSIGNMENT_ORIGIN_ID" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "CONSIGNMENT_ORIGIN" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+
+  <Exception Code="BCGO_10118" BillingCategory="2" ValidationType="Direct">    <!--AWB Destination*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CONSIGNMENT_DESTINATION_ID" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "CONSIGNMENT_DESTINATION_ID" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "CONSIGNMENT_DESTINATION_ID" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "CONSIGNMENT_DEST" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+  <Exception Code="BCGO_10121" BillingCategory="2" ValidationType="Direct">    <!--AWB Destination*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CONSIGNMENT_DESTINATION_ID" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "CONSIGNMENT_DESTINATION_ID" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "CONSIGNMENT_DESTINATION_ID" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "CONSIGNMENT_DEST" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+
+  <Exception Code="BCGO_10122" BillingCategory="2" ValidationType="Direct">    <!--AWB From*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CARRIAGE_FROM_ID" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "CARRIAGE_FROM_ID" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "CARRIAGE_FROM_ID" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "CARRIAGE_FROM" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+  <Exception Code="BCGO_10125" BillingCategory="2" ValidationType="Direct">    <!--AWB From*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CARRIAGE_FROM_ID" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "CARRIAGE_FROM_ID" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "CARRIAGE_FROM_ID" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "CARRIAGE_FROM" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+
+  <Exception Code="BCGO_10123" BillingCategory="2" ValidationType="Direct">    <!--AWB To (or Point of Transfer*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CARRIAGE_TO_ID" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "CARRIAGE_TO_ID" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "CARRIAGE_TO_ID" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "CARRIAGE_TO" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+  <Exception Code="BCGO_10126" BillingCategory="2" ValidationType="Direct">    <!--AWB To (or Point of Transfer*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CARRIAGE_TO_ID" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "CARRIAGE_TO_ID" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "CARRIAGE_TO_ID" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "CARRIAGE_TO" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+
+  <Exception Code="BCGO_10212" BillingCategory="2" ValidationType="Direct" Type="DateTime">    <!--Date of Carriage (or Transfer)*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CARRIAGE_TRANSFER_DATE" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "TRANSFER_DATE" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "TRANSFER_DATE" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "TRANSFER_DATE" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+  
+  <Exception Code="BCGO_10145" BillingCategory="2" ValidationType="Direct"  MasterTable = "MST_CURRENCY" MasterColumnName = "CURRENCY_CODE_ALPHA">    <!--AWB Currency Adjustment Indicator*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "CURRENCY_ADJUSTMENT_IND" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "CURRENCY_ADJUSTMENT_IND" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "CURRENCY_ADJUSTMENT_IND" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "CURRENCY_ADJUSTMENT_IND" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+  
+  <Exception Code="BCGO_10130" BillingCategory="2" ValidationType="Regex" RegularExpression = "(P)|(R)|(S)">    <!--AWB Proviso/Req./SPA*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "PROVISO_REQ_SPA" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "PROVISO_REQ_SPA" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "PROVISO_REQ_SPA" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "PROVISO_REQ_SPA" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+
+  <Exception Code="BCGO_10132" BillingCategory="2" ValidationType="Regex" RegularExpression = "(K)|(L)">    <!--AWB KG/LB Indicator*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "KG_LB_INDICATOR" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "KG_LB_INDICATOR" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "KG_LB_INDICATOR" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "KG_LB_INDICATOR" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+  
+  
+  <Exception Code="BCGO_10141" BillingCategory="2" ValidationType="MiscCode" MasterTable = "MST_MISC_CODES" MasterColumnName = "MISC_CODE" MasterGroupColumnName = "MISC_GROUP_ID" MasterGroupId = "63">
+    <ErrorLevel Name="AwbOc" ChildTableName = "CGO_AWB_OTHER_CHARGE" ColumnName = "OTHER_CHARGE_CODE" PrimaryColumnName ="AWB_OTHER_CHARGE_ID"/>
+    <ErrorLevel Name="RmAwbOc" ChildTableName = "CGO_RM_AWB_OTHER_CHARGE" ColumnName = "OTHER_CHARGE_CODE" PrimaryColumnName ="RM_AWB_OTHER_CHARGE_ID"/>
+    <ErrorLevel Name="BmAwbOc" ChildTableName = "CGO_BM_AWB_OTHER_CHARGE" ColumnName = "OTHER_CHARGE_CODE" PrimaryColumnName ="BM_AWB_OTHER_CHARGE_ID"/>
+    <ErrorLevel Name="CmAwbOc" ChildTableName = "CGO_CM_AWB_OTHER_CHARGE" ColumnName = "OTHER_CHARGE_CODE" PrimaryColumnName ="CM_AWB_OTHER_CHARGE_ID"/>
+  </Exception>
+
+  <Exception Code="BCGO_10223" BillingCategory="2" ValidationType="Regex" RegularExpression = "(P)">    <!--Part-shipment Indicator*-->
+    <ErrorLevel Name="Awb" ChildTableName = "CGO_AIR_WAY_BILL" ColumnName = "PART_SHIPMENT_IND" PrimaryColumnName ="AIR_WAY_BILL_ID"/>
+    <ErrorLevel Name="RmAwb" ChildTableName = "CGO_RM_AWB" ColumnName = "PART_SHIPMENT_IND" PrimaryColumnName ="RM_AWB_ID"/>
+    <ErrorLevel Name="BmAwb" ChildTableName = "CGO_BM_AWB" ColumnName = "PART_SHIPMENT_IND" PrimaryColumnName ="BM_AWB_ID"/>
+    <ErrorLevel Name="CmAwb" ChildTableName = "CGO_CM_AWB" ColumnName = "PART_SHIPMENT_IND" PrimaryColumnName ="CM_AWB_ID"/>
+  </Exception>
+
+  <!--Misc category-->
+  <!--<Exception Code="BMISC_10227" BillingCategory="3" ValidationType="Master"  MasterTable = "MST_COUNTRY" MasterColumnName = "COUNTRY_CODE">--><!--Country_Code--><!--
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+
+  <Exception Code="BMISC_10220" BillingCategory="3" ValidationType="Master"  MasterTable = "MST_COUNTRY_ICAO" MasterColumnName = "COUNTRY_CODE_ICAO">--><!--country_code_icao --><!--
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>-->
+
+  <Exception Code="BMISC_10244" BillingCategory="3" ValidationType="Master"  MasterTable = "MST_AIRCRAFT_TYPE" MasterColumnName = "AIRCRAFT_TYPE_CODE"><!--AIRCRAFT_TYPE_CODE-->
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+
+  <Exception Code="BMISC_10255" BillingCategory="3" ValidationType="Master"  MasterTable = "MEMBER_DETAILS" MasterColumnName = "MEMBER_CODE_NUMERIC">
+    <!--AIRCRAFT_TYPE_CODE-->
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+  
+  <Exception Code="BMISC_10245" BillingCategory="3" ValidationType="Master" MasterTable ="MST_AIRCRAFT_TYPE_ICAO" MasterColumnName ="AIRCRAFT_TYPE_ICAO_CODE"><!-- aircraft_type_icao_code -->
+    <ErrorLevel Name="LineItemDetail" ChildTableName ="MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"></ErrorLevel>
+  </Exception>
+
+  <Exception Code="BMISC_10219" BillingCategory="3" ValidationType="Master"  MasterTable = "MST_LOCATION_ICAO" MasterColumnName = "LOCATION_CODE_ICAO"><!--location_code_icao --> 
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+
+  <Exception Code="BMISC_10105" BillingCategory="3" ValidationType="Master"  MasterTable = "MST_CITY_AIRPORT" MasterColumnName = "CITY_CODE_ALPHA"><!--location_code_icao -->
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+  
+  <!-- UATP Category-->
+  <!--<Exception Code="BMISC_10227" BillingCategory="4" ValidationType="Master"  MasterTable = "MST_COUNTRY" MasterColumnName = "COUNTRY_CODE">--><!-- Country Code--><!--
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+
+  <Exception Code="BMISC_10220" BillingCategory="4" ValidationType="Master"  MasterTable = "MST_COUNTRY_ICAO" MasterColumnName = "COUNTRY_CODE_ICAO">--><!--country_code_icao--><!--
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>-->
+
+  <Exception Code="BUATP_10244" BillingCategory="4" ValidationType="Master"  MasterTable = "MST_AIRCRAFT_TYPE" MasterColumnName = "AIRCRAFT_TYPE_CODE">
+    <!--AIRCRAFT_TYPE_CODE-->
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+
+  <Exception Code="BUATP_10245" BillingCategory="4" ValidationType="Master" MasterTable ="MST_AIRCRAFT_TYPE_ICAO" MasterColumnName ="AIRCRAFT_TYPE_ICAO_CODE">
+    <!-- aircraft_type_icao_code -->
+    <ErrorLevel Name="LineItemDetail" ChildTableName ="MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"></ErrorLevel>
+  </Exception>
+
+  <Exception Code="BUATP_10219" BillingCategory="4" ValidationType="Master"  MasterTable = "MST_LOCATION_ICAO" MasterColumnName = "LOCATION_CODE_ICAO">
+    <!--location_code_icao -->
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+
+  <Exception Code="BUATP_10105" BillingCategory="4" ValidationType="Master"  MasterTable = "MST_CITY_AIRPORT" MasterColumnName = "CITY_CODE_ALPHA">
+    <!--location_code_icao -->
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+
+  <Exception Code="BUATP_10124" BillingCategory="4" ValidationType="Master"  MasterTable = "MST_CURRENCY" MasterColumnName = "CURRENCY_CODE_ALPHA">
+    <!--SignedCurrencyCode -->
+    <ErrorLevel Name="LineItemDetail" ChildTableName = "MU_FIELD_VALUE" ColumnName = "FIELD_VALUE" PrimaryColumnName ="FIELD_VALUE_ID"/>
+  </Exception>
+  
+  <!-- Pax Category-->
+  <Exception Code="BPAXNS_10199" BillingCategory="1" ValidationType="Regex" RegularExpression = "(0)|(1)|(2)|(3)|(4)|(5)|(6)|(9)"> <!--CHECK_DIGIT--> 
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "CHECK_DIGIT" PrimaryColumnName ="COUPON_RECORD_ID"/>
+    <ErrorLevel Name="RmCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "CHECK_DIGIT" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="FormFCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "CHECK_DIGIT" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="FormXFCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "CHECK_DIGIT" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="BmCoupon" ChildTableName = "PAX_BM_COUPON_BREAKDOWN" ColumnName = "CHECK_DIGIT" PrimaryColumnName ="BM_COUPON_BD_ID"/>
+    <ErrorLevel Name="CmCoupon" ChildTableName = "PAX_CM_COUPON_BREAKDOWN" ColumnName = "CHECK_DIGIT" PrimaryColumnName ="CM_COUPON_BD_ID"/>
+  </Exception>
+  
+  <Exception Code="BPAXNS_10165" BillingCategory="1" ValidationType="Direct"  MasterTable = "mst_currency" MasterColumnName = "CURRENCY_CODE_ALPHA"> <!--CURRENCY_ADJSTMNT_IND-->  
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "CURRENCY_ADJSTMNT_IND" PrimaryColumnName ="COUPON_RECORD_ID"/>
+  </Exception>
+  
+  <Exception Code="BPAXNS_10161" BillingCategory="1" ValidationType="Regex" RegularExpression = "(\s)|(^$)|(N)|(O)|(P)|(A)|(B)|(C)|(D)|(0)|(1)|(2)|(3)|(4)|(5)|(6)|(7)|(8)|(9)"> <!--ORIGINAL_PMI-->
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "ORIGINAL_PMI" PrimaryColumnName ="COUPON_RECORD_ID"/>
+  </Exception>
+  
+  <Exception Code="BPAXNS_10128" BillingCategory="1" ValidationType="Direct" Type="DateTime"> <!-- FLIGHT_DATE -->
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "FLIGHT_DATE" PrimaryColumnName ="COUPON_RECORD_ID"/>
+    <ErrorLevel Name="BmCoupon" ChildTableName = "PAX_BM_COUPON_BREAKDOWN" ColumnName = "FLIGHT_DATE" PrimaryColumnName ="BM_COUPON_BD_ID"/>
+    <ErrorLevel Name="CmCoupon" ChildTableName = "PAX_CM_COUPON_BREAKDOWN" ColumnName = "FLIGHT_DATE" PrimaryColumnName ="CM_COUPON_BD_ID "/>
+  </Exception>
+  
+  <Exception Code="BPAXNS_10110" BillingCategory="1" ValidationType="Master"  MasterTable = "MST_CITY_AIRPORT" MasterColumnName = "CITY_CODE_ALPHA"> <!-- FROM_AIRPORT_OF_COUPON -->
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="COUPON_RECORD_ID"/>
+    <ErrorLevel Name="RmCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="FormFCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="FormXFCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="BmCoupon" ChildTableName = "PAX_BM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="BM_COUPON_BD_ID"/>
+    <ErrorLevel Name="CmCoupon" ChildTableName = "PAX_CM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="CM_COUPON_BD_ID"/>
+  </Exception>
+  
+  <Exception Code="BPAXNS_10111" BillingCategory="1" ValidationType="Master"  MasterTable = "MST_CITY_AIRPORT" MasterColumnName = "CITY_CODE_ALPHA"> <!-- TO_AIRPORT_OF_COUPON -->
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "TO_AIRPORT_OF_COUPON" PrimaryColumnName ="COUPON_RECORD_ID"/>
+    <ErrorLevel Name="RmCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "TO_AIRPORT_OF_COUPON" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="BmCoupon" ChildTableName = "PAX_BM_COUPON_BREAKDOWN" ColumnName = "TO_AIRPORT_OF_COUPON" PrimaryColumnName ="BM_COUPON_BD_ID"/>
+    <ErrorLevel Name="CmCoupon" ChildTableName = "PAX_CM_COUPON_BREAKDOWN" ColumnName = "TO_AIRPORT_OF_COUPON" PrimaryColumnName ="CM_COUPON_BD_ID"/>
+    <ErrorLevel Name="FormFCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "TO_AIRPORT_OF_COUPON" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="FormXFCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "TO_AIRPORT_OF_COUPON" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+  </Exception>
+
+  <Exception Code="BPAXNS_10615" BillingCategory="1" ValidationType="Master"  MasterTable = "MST_CITY_AIRPORT" MasterColumnName = "CITY_CODE_ALPHA">
+    <!-- TO_AIRPORT_OF_COUPON -->
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="COUPON_RECORD_ID"/>
+    <ErrorLevel Name="RmCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="BmCoupon" ChildTableName = "PAX_BM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="BM_COUPON_BD_ID"/>
+    <ErrorLevel Name="CmCoupon" ChildTableName = "PAX_CM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="CM_COUPON_BD_ID"/>
+    <ErrorLevel Name="FormFCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+    <ErrorLevel Name="FormXFCoupon" ChildTableName = "PAX_RM_COUPON_BREAKDOWN" ColumnName = "FROM_AIRPORT_OF_COUPON" PrimaryColumnName ="RM_COUPON_BREAKDOWN_ID"/>
+  </Exception>
+  
+  <Exception Code="BPAXNS_10151" BillingCategory="1" ValidationType="Master"  MasterTable = "MST_TAX_CODE" MasterColumnName = "TAX_CODE"> <!-- TAX_CODE -->
+    
+    <ErrorLevel Name="CouponTax" ChildTableName = "PAX_COUPON_TAX_BREAKDOWN" ColumnName = "TAX_CODE" PrimaryColumnName ="COUPON_TAX_BD_ID"/>
+    <ErrorLevel Name="SamplingFormDTax" ChildTableName = "PAX_FORM_D_TAX_BREAKDOWN" ColumnName = "TAX_CODE" PrimaryColumnName ="FORM_D_TAX_BD_ID"/>
+    <ErrorLevel Name="RmCouponTax" ChildTableName = "PAX_RM_COUPON_TAX_BREAKDOWN" ColumnName = "TAX_CODE" PrimaryColumnName ="RM_COUPON_TAX_BD_ID"/>
+    <ErrorLevel Name="BmCouponTax" ChildTableName = "PAX_BM_COUPON_TAX_BREAKDOWN" ColumnName = "TAX_CODE" PrimaryColumnName ="BM_COUPON_TAX_BD_ID"/>
+    <ErrorLevel Name="CmCouponTax" ChildTableName = "PAX_CM_COUPON_TAX_BREAKDOWN" ColumnName = "TAX_CODE" PrimaryColumnName ="CM_COUPON_TAX_BD_ID"/>
+    <ErrorLevel Name="FormFCouponTax" ChildTableName = "PAX_RM_COUPON_TAX_BREAKDOWN" ColumnName = "TAX_CODE" PrimaryColumnName ="RM_COUPON_TAX_BD_ID"/>
+    <ErrorLevel Name="FormXFCouponTax" ChildTableName = "PAX_RM_COUPON_TAX_BREAKDOWN" ColumnName = "TAX_CODE" PrimaryColumnName ="RM_COUPON_TAX_BD_ID"/>
+  </Exception>
+
+  <Exception Code="BPAXNS_10147" BillingCategory="1" ValidationType="Master"  MasterTable = "MST_REASON_CODE" MasterColumnName = "REASON_CODE"> <!--Reason Code --> 
+    <ErrorLevel Name="SamplingFormCRecord" ChildTableName = "PAX_FORM_C_DETAIL" ColumnName = "REASON_CODE" PrimaryColumnName ="FORM_C_DETAIL_ID"/>
+  </Exception>
+
+  <Exception Code="BPAXNS_10164" BillingCategory="1" ValidationType="Master"  MasterTable = "MEMBER_DETAILS" MasterColumnName = "Member_Code_Alpha"> <!--Airline Flight Designator -->
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "AIRLINE_FLIGHT_DESIGNATOR" PrimaryColumnName ="COUPON_RECORD_ID"/>
+    <ErrorLevel Name="BmCoupon" ChildTableName = "PAX_BM_COUPON_BREAKDOWN" ColumnName = "AIRLINE_FLIGHT_DESIGNATOR" PrimaryColumnName ="BM_COUPON_BD_ID"/>
+    <ErrorLevel Name="CmCoupon" ChildTableName = "PAX_CM_COUPON_BREAKDOWN" ColumnName = "AIRLINE_FLIGHT_DESIGNATOR" PrimaryColumnName ="CM_COUPON_BD_ID"/>
+  </Exception>
+
+  <Exception Code="BPAXNS_10163" BillingCategory="1" ValidationType="Direct">
+    <!--Flight No*-->
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "FLIGHT_NO" PrimaryColumnName ="COUPON_RECORD_ID"/>
+    <ErrorLevel Name="BmCoupon" ChildTableName = "PAX_BM_COUPON_BREAKDOWN" ColumnName = "FLIGHT_NO" PrimaryColumnName ="BM_COUPON_BD_ID"/>
+    <ErrorLevel Name="CmCoupon" ChildTableName = "PAX_CM_COUPON_BREAKDOWN" ColumnName = "FLIGHT_NO" PrimaryColumnName ="CM_COUPON_BD_ID"/>
+  </Exception>
+
+  <Exception Code="BPAXNS_10810" BillingCategory="1" ValidationType="Direct">
+    <!--Reference Field 2*-->
+    <ErrorLevel Name="BmCoupon" ChildTableName = "PAX_BM_COUPON_BREAKDOWN" ColumnName = "REFERENCE_FIELD2" PrimaryColumnName ="BM_COUPON_BD_ID"/>  
+  </Exception>
+
+  <Exception Code="BPAXNS_10728" BillingCategory="1" ValidationType="Direct">
+    <!--Reference Field 2*-->
+    <ErrorLevel Name="Coupon" ChildTableName = "PAX_COUPON_RECORD" ColumnName = "REFERENCE_FIELD2" PrimaryColumnName ="COUPON_RECORD_ID"/>
+  </Exception>
+  
+</ValidationExceptionType>
