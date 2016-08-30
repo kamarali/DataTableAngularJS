@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AF8ED4F-C405-401A-9029-03A0653753B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Iata.IS.Data</RootNamespace>
+    <AssemblyName>Iata.IS.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Iata.IS.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Iata.IS.Data.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Iata.IS.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Iata.IS.Data.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.2.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Castle.Windsor.2.5.3\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=2.5.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Castle.Windsor.2.5.3\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data, Version=5.0.272.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Devart\Devart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data.Oracle, Version=6.30.172.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Devart\Devart.Data.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="Enyim.Caching, Version=2.4.6.0, Culture=neutral, PublicKeyToken=793dc3bc6bab7d1e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MemCache.2.8\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.1.2.10\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACHRecapSheet\Impl\ACHRecapSheetRepository.cs" />
+    <Compile Include="ACHRecapSheet\Impl\ACHRecapSheetRepositoryContants.cs" />
+    <Compile Include="ACHRecapSheet\IACHRecapSheetRepository.cs" />
+    <Compile Include="AutoBillingClosure\IGetAutoBillingInovices.cs" />
+    <Compile Include="AutoBillingClosure\Impl\GetAutoBillingInovices.cs" />
+    <Compile Include="Calendar\ICalendarRepository.cs" />
+    <Compile Include="Calendar\Impl\CalendarRepository.cs" />
+    <Compile Include="Cargo\ICargoConfigurationRepository.cs" />
+    <Compile Include="Cargo\ICargoCreditMemoAwbRepository.cs" />
+    <Compile Include="Cargo\ICargoBillingCodeSubTotalRepository.cs" />
+    <Compile Include="Cargo\ICargoBillingCodeSubTotalVatRepository.cs" />
+    <Compile Include="Cargo\ICargoCreditMemoAwbAttachmentRepository.cs" />
+    <Compile Include="Cargo\ICargoCreditMemoAttachmentRepository.cs" />
+    <Compile Include="Cargo\ICargoInvoiceTotalVatRepository.cs" />
+    <Compile Include="Cargo\IAwbRecordAttachmentRepository.cs" />
+    <Compile Include="Cargo\IBMAwbAttachmentRepository.cs" />
+    <Compile Include="Cargo\ICargoAwbAttachmentRepository.cs" />
+    <Compile Include="Cargo\ICargoAwbRecordRepository.cs" />
+    <Compile Include="Cargo\ICargoBillingMemoAttachmentRepository.cs" />
+    <Compile Include="Cargo\ICargoBillingMemoAwbRepository.cs" />
+    <Compile Include="Cargo\ICargoBillingMemoRepository.cs" />
+    <Compile Include="Cargo\ICargoBillingMemoVatRepository.cs" />
+    <Compile Include="Cargo\ICargoInvoiceRepository.cs" />
+    <Compile Include="Cargo\ICargoCreditMemoRecordRepository.cs" />
+    <Compile Include="Cargo\ICGOBillingCodeSubTotalVatRepository.cs" />
+    <Compile Include="Cargo\Impl\BMAwbAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\BMAwbOtherChargeRepository.cs" />
+    <Compile Include="Cargo\Impl\BMAwbProrateLadderDetailRepository.cs" />
+    <Compile Include="Cargo\Impl\BMAwbVatRepository.cs" />
+    <Compile Include="Cargo\Impl\AwbRecordAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoAwbAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoAwbOtherChargesRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoAwbRecordRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoAwbRecordVatRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoBillingCodeSubTotalRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoBillingCodeSubTotalVatRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoBillingMemoAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoBillingMemoAwbRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoBillingMemoAwbRepositoryConstants.cs" />
+    <Compile Include="Cargo\Impl\CargoBillingMemoRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoBillingMemoRepositoryConstants.cs" />
+    <Compile Include="Cargo\Impl\CargoBillingMemoVatRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoCMAwbProrateLadderDRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoConfigurationRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoCreditMemoAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoCreditMemoAwbRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoCreditMemoRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoCreditMemoVatRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoInvoiceRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoCorrespondenceAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoCorrespondenceRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoInvoiceTotalRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoInvoiceTotalVatRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoVatIdentifierRepository.cs" />
+    <Compile Include="Cargo\Impl\CGOBillingCodeSubTotalVatRepository.cs" />
+    <Compile Include="Cargo\Impl\CMAwbAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\CMAwbOtherChargeRepository.cs" />
+    <Compile Include="Cargo\Impl\CMAwbVatRepository.cs" />
+    <Compile Include="Cargo\Impl\CgoRejectionMemoAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoCreditMemoRecordRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoCreditMemoRecordRepositoryConstants.cs" />
+    <Compile Include="Cargo\Impl\RMAwbProrateLadderDetailRepository.cs" />
+    <Compile Include="Cargo\Impl\RMAwbRepositoryConstants.cs" />
+    <Compile Include="Cargo\Impl\CargoCorrespondenceRepositoryConstants.cs" />
+    <Compile Include="Cargo\Impl\RejectionMemoRecordRepositoryConstants.cs" />
+    <Compile Include="Cargo\Impl\RejectionMemoVatRepository.cs" />
+    <Compile Include="Cargo\Impl\RMAwbAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\RejectionMemoRecordRepository.cs" />
+    <Compile Include="Cargo\Impl\RMAwbOtherChargeRepository.cs" />
+    <Compile Include="Cargo\Impl\RMAwbRepository.cs" />
+    <Compile Include="Cargo\Impl\RMAwbVatRepository.cs" />
+    <Compile Include="Cargo\ICargoCorrespondenceRepository.cs" />
+    <Compile Include="Cargo\ICargoCorrespondenceAttachmentRepository.cs" />
+    <Compile Include="Cargo\ICgoRejectionMemoAttachmentRepository.cs" />
+    <Compile Include="Cargo\Impl\RMLinkedAwbRepository.cs" />
+    <Compile Include="Cargo\Impl\RMLinkingRecordsRepository.cs" />
+    <Compile Include="Common\IAchCurrencySetUpRepository.cs" />
+    <Compile Include="Common\IBVCAgreementMasterRepository.cs" />
+    <Compile Include="Common\IConcurrencyData.cs" />
+    <Compile Include="Common\ICorrespondenceRepository.cs" />
+    <Compile Include="Common\ILanguageRepository.cs" />
+    <Compile Include="Common\ILeadPeriodRepository.cs" />
+    <Compile Include="Common\ILogDebugDataRepository.cs" />
+    <Compile Include="Common\Impl\AchCurrencySetUpRepository.cs" />
+    <Compile Include="Common\Impl\BVCAgreementMasterRepository.cs" />
+    <Compile Include="Common\Impl\ConcurrencyData.cs" />
+    <Compile Include="Common\Impl\CorrespondenceRepository.cs" />
+    <Compile Include="Common\Impl\LanguageRepository.cs" />
+    <Compile Include="Common\Impl\LeadPeriodRepository.cs" />
+    <Compile Include="Common\Impl\LogDebugDataRepository.cs" />
+    <Compile Include="Common\Impl\PurgingTransactionConstants.cs" />
+    <Compile Include="Common\Impl\ReferenceDataRepository.cs" />
+    <Compile Include="Common\Impl\ServerServiceMappingRepository.cs" />
+    <Compile Include="Common\IReferenceDataRepository.cs" />
+    <Compile Include="Common\IServerServiceMappingRepository.cs" />
+    <Compile Include="IRemoveInvoiceDupCheck.cs" />
+    <Compile Include="Impl\RemoveInvoiceDupCheck.cs" />
+    <Compile Include="Impl\RemoveInvoiceDupCheckConstants.cs" />
+    <Compile Include="Isr\IIsrUnrequestedCouponRepository.cs" />
+    <Compile Include="Isr\Impl\IsrUnrequestedCouponRepository.cs" />
+    <Compile Include="Isr\Impl\PrimeCouponMarketingDetailsRepository.cs" />
+    <Compile Include="Isr\Impl\ValueCouponRequestRepository.cs" />
+    <Compile Include="Isr\Impl\ValueRequestRepositoryConstants.cs" />
+    <Compile Include="Cargo\IRejectionMemoRecordRepository.cs" />
+    <Compile Include="Cargo\Impl\CargoInvoiceRepositoryConstants.cs" />
+    <Compile Include="Cargo\IRMAwbAttachmentRepository.cs" />
+    <Compile Include="Cargo\IRMAwbRepository.cs" />
+    <Compile Include="Cargo\IRMLinkedAwbRepository.cs" />
+    <Compile Include="Isr\IPrimeCouponMarketingDetailsRepository.cs" />
+    <Compile Include="Isr\IValueCouponRequestRepository.cs" />
+    <Compile Include="Common\IAlertMessageNotesRepositiory.cs" />
+    <Compile Include="Calendar\ICalendarProcessRepository.cs" />
+    <Compile Include="Common\IExceptionCodeRepository.cs" />
+    <Compile Include="Common\IMaxAcceptableAmountRepository.cs" />
+    <Compile Include="Common\IMinAcceptableAmountRepository.cs" />
+    <Compile Include="Common\Impl\AlertMessageNotesRepositiory.cs" />
+    <Compile Include="Common\Impl\AlertMessageNotesRepositioryConstants.cs" />
+    <Compile Include="Calendar\Impl\CalendarProcessRepository.cs" />
+    <Compile Include="Common\Impl\DefaultBatchNumberRepository.cs" />
+    <Compile Include="Common\Impl\ExceptionCodeRepository.cs" />
+    <Compile Include="Common\Impl\MaxAcceptableAmountRepository.cs" />
+    <Compile Include="Common\Impl\MinAcceptableAmountRepository.cs" />
+    <Compile Include="Common\Impl\OldIdecParticipationRepository.cs" />
+    <Compile Include="Common\Impl\ProcessedInvoiceDetailConstants.cs" />
+    <Compile Include="Common\ICgoRMReasonAcceptableDiffRepository.cs" />
+    <Compile Include="Common\ICurrencyRepository.cs" />
+    <Compile Include="Common\IExchangeRateRepository.cs" />
+    <Compile Include="Common\IMinMaxAcceptableAmountRepository.cs" />
+    <Compile Include="Common\Impl\CgoRMReasonAcceptableDiffRepository.cs" />
+    <Compile Include="Common\Impl\CurrencyRepository.cs" />
+    <Compile Include="Common\Impl\ExchangeRateRepository.cs" />
+    <Compile Include="Common\Impl\MinMaxAcceptableAmountRepository.cs" />
+    <Compile Include="Common\Impl\OnBehalfInvoiceSetupRepository.cs" />
+    <Compile Include="Common\Impl\ReasonCodeRepository.cs" />
+    <Compile Include="Common\Impl\RMReasonAcceptableDiffRepository.cs" />
+    <Compile Include="Common\Impl\SisMemberSubStatusRepository.cs" />
+    <Compile Include="Common\Impl\SubDivisionRepository.cs" />
+    <Compile Include="Common\Impl\SystemParamRepository.cs" />
+    <Compile Include="Common\Impl\TimeLimitRepository.cs" />
+    <Compile Include="Common\Impl\UserRepository.cs" />
+    <Compile Include="Common\Impl\ExceptionDetailSearchResultRepository.cs" />
+    <Compile Include="Common\Impl\ExceptionSummarySearchResultRepository.cs" />
+    <Compile Include="Common\IDefaultBatchNumberRepository.cs" />
+    <Compile Include="Common\IOldIdecParticipationRepository.cs" />
+    <Compile Include="Common\IOnBehalfInvoiceSetupRepository.cs" />
+    <Compile Include="Common\IReasonCodeRepository.cs" />
+    <Compile Include="Common\IRMReasonAcceptableDiffRepository.cs" />
+    <Compile Include="Common\ISisMemberSubStatusRepository.cs" />
+    <Compile Include="Common\ISubDivisionRepository.cs" />
+    <Compile Include="Common\ISystemParamRepository.cs" />
+    <Compile Include="Common\ITimeLimitRepository.cs" />
+    <Compile Include="Common\IUserRepository.cs" />
+    <Compile Include="Common\IExceptionDetailSearchResultRepository.cs" />
+    <Compile Include="Common\IExceptionSummarySearchResultRepository.cs" />
+    <Compile Include="ExternalInterfaces\IATAInterface\IIATAInterfaceRepository.cs" />
+    <Compile Include="ExternalInterfaces\IATAInterface\Impl\IATAInterfaceRepository.cs" />
+    <Compile Include="ExternalInterfaces\IATAInterface\Impl\IATAInterfaceRepositoryConstants.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\IICHInterfaceRepository.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\Impl\ICHInterfaceRepository.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\Impl\ICHInterfaceRepositoryConstants.cs" />
+    <Compile Include="FutureSubmission\IGetFutureStatusInvoice.cs" />
+    <Compile Include="FutureSubmission\Impl\GetFutureStatusInvoice.cs" />
+    <Compile Include="ICacheManager.cs" />
+    <Compile Include="Impl\CargoMaterializers.cs" />
+    <Compile Include="Impl\CommonMaterializers.cs" />
+    <Compile Include="Impl\MuMaterializers.cs" />
+    <Compile Include="InvoiceForLegalXml\IGetInvoicesdForXml.cs" />
+    <Compile Include="InvoiceForLegalXml\Impl\GetInvoicesdForXml.cs" />
+    <Compile Include="LegalArchive\ILegalArchiveRetrievalJobSummaryRepository.cs" />
+    <Compile Include="LegalArchive\IArchiveSearchRepository.cs" />
+    <Compile Include="LegalArchive\ILegalArchiveRetrievalJobDetailsRepository.cs" />
+    <Compile Include="LegalArchive\Impl\ArchiveSearchRepository.cs" />
+    <Compile Include="LegalArchive\Impl\ArchivalProcessing.cs" />
+    <Compile Include="LegalArchive\IArchivalProcessing.cs" />
+    <Compile Include="LegalArchive\Impl\LegalArchiveRetrievalJobSummaryRepository.cs" />
+    <Compile Include="LegalArchive\Impl\LegalArchiveRetrievalJobDetailsRepository.cs" />
+    <Compile Include="LegalArchive\Impl\RetrievalRepository.cs" />
+    <Compile Include="LegalArchive\IRetrievalRepository.cs" />
+    <Compile Include="ManageSystemParameter\ManageSystemParameterModel.cs" />
+    <Compile Include="MemberProfile\IAchRepository.cs" />
+    <Compile Include="MemberProfile\IDownloadMemberDetailsRepository.cs" />
+    <Compile Include="MemberProfile\Impl\AchRepository.cs" />
+    <Compile Include="MemberProfile\Impl\BlockingRulesRepositoryConstants.cs" />
+    <Compile Include="MemberProfile\Impl\ContactTypDetailsConstants.cs" />
+    <Compile Include="MemberProfile\Impl\DownloadMemberDetailsConstants.cs" />
+    <Compile Include="MemberProfile\Impl\DownloadMemberDetailsRepository.cs" />
+    <Compile Include="MemberProfile\Impl\DataSetLinqOperators.cs" />
+    <Compile Include="MemberProfile\Impl\LocationRepositoryConstants.cs" />
+    <Compile Include="MemberProfile\Impl\UserManagementRepository.cs" />
+    <Compile Include="MemberProfile\IUserManagementRepository.cs" />
+    <Compile Include="MiscUatp\ILineItemDetailAdditionalDetailRepository.cs" />
+    <Compile Include="MiscUatp\ILineItemDetailTaxRepository.cs" />
+    <Compile Include="IMiscCodeRepository.cs" />
+    <Compile Include="Impl\CacheManager.cs" />
+    <Compile Include="Impl\DataExtn.cs" />
+    <Compile Include="Impl\MiscCodeRepository.cs" />
+    <Compile Include="Impl\RepositoryEx.cs" />
+    <Compile Include="Impl\SPResultObject.cs" />
+    <Compile Include="Impl\LoadStrategy.cs" />
+    <Compile Include="Impl\LoadStrategyResult.cs" />
+    <Compile Include="Impl\PaxMaterializers.cs" />
+    <Compile Include="Impl\SISStoredProcedures.cs" />
+    <Compile Include="Impl\StoredProcedure.cs" />
+    <Compile Include="IRepositoryEx.cs" />
+    <Compile Include="MemberProfile\IBlockingRulesRepository.cs" />
+    <Compile Include="MemberProfile\IBlockGroupExceptionRepository.cs" />
+    <Compile Include="MemberProfile\IBlockMemberRepository.cs" />
+    <Compile Include="MemberProfile\IContactRepository.cs" />
+    <Compile Include="MemberProfile\IContactTypeRepository.cs" />
+    <Compile Include="MemberProfile\IFutureUpdatesRepository.cs" />
+    <Compile Include="MemberProfile\IFutureUpdatesServiceRepository.cs" />
+    <Compile Include="MemberProfile\IIchRepository.cs" />
+    <Compile Include="MemberProfile\IDualMemberRepository.cs" />
+    <Compile Include="MemberProfile\IMemberRepository.cs" />
+    <Compile Include="MemberProfile\Impl\BlockGroupExceptionRepository.cs" />
+    <Compile Include="MemberProfile\Impl\BlockingRulesRepository.cs" />
+    <Compile Include="MemberProfile\Impl\BlockMemberRepository.cs" />
+    <Compile Include="MemberProfile\Impl\ContactConstants.cs" />
+    <Compile Include="MemberProfile\Impl\ContactRepository.cs" />
+    <Compile Include="MemberProfile\Impl\ContactTypeRepository.cs" />
+    <Compile Include="MemberProfile\Impl\FutureUpdateServiceRepository.cs" />
+    <Compile Include="MemberProfile\Impl\FutureUpdatesRepository.cs" />
+    <Compile Include="MemberProfile\Impl\FutureUpdatesServiceConstants.cs" />
+    <Compile Include="MemberProfile\Impl\IchRepository.cs" />
+    <Compile Include="MemberProfile\Impl\DualMemberRepository.cs" />
+    <Compile Include="MemberProfile\Impl\MemberRepository.cs" />
+    <Compile Include="MemberProfile\Impl\MemberRepositoryConstants.cs" />
+    <Compile Include="MemberProfile\Impl\PermissionRepository.cs" />
+    <Compile Include="MemberProfile\Impl\QueryAndDownloadDetailsConstants.cs" />
+    <Compile Include="MemberProfile\Impl\QueryAndDownloadDetailsRepository.cs" />
+    <Compile Include="MemberProfile\Impl\TemplatePermissionRepository.cs" />
+    <Compile Include="MemberProfile\IPermissionRepository.cs" />
+    <Compile Include="MemberProfile\IQueryAndDownloadDetailsRepository.cs" />
+    <Compile Include="MemberProfile\Impl\FutureUpdatesRepositoryConstants.cs" />
+    <Compile Include="MemberProfile\ITemplatePermissionRepository.cs" />
+    <Compile Include="MiscUatp\Extensions\GetDynamicFields.cs" />
+    <Compile Include="MiscUatp\Extensions\Materializers.cs" />
+    <Compile Include="MiscUatp\Extensions\StoredProcedures.cs" />
+    <Compile Include="MiscUatp\IChargeCodeRepository.cs" />
+    <Compile Include="MiscUatp\IChargeCodeTypeRepository.cs" />
+    <Compile Include="MiscUatp\IFieldValueRepository.cs" />
+    <Compile Include="MiscUatp\ILineItemAdditionalDetailRepository.cs" />
+    <Compile Include="MiscUatp\ILineItemAddOnChargeRepository.cs" />
+    <Compile Include="MiscUatp\ILineItemDetailAddOnChargeRepository.cs" />
+    <Compile Include="MiscUatp\ILineItemTaxRepository.cs" />
+    <Compile Include="MiscUatp\IMiscCorrespondenceAttachmentRepository.cs" />
+    <Compile Include="MiscUatp\IMiscCorrespondenceRepository.cs" />
+    <Compile Include="MiscUatp\ILineItemDetailRepository.cs" />
+    <Compile Include="MiscUatp\ILineItemRepository.cs" />
+    <Compile Include="MiscUatp\IMiscInvoiceRepository.cs" />
+    <Compile Include="MiscUatp\IMiscUatpInvoiceAttachmentRepository.cs" />
+    <Compile Include="MiscUatp\Impl\ChargeCategoryRepository.cs" />
+    <Compile Include="MiscUatp\Impl\ChargeCodeTypeRepository.cs" />
+    <Compile Include="MiscUatp\Impl\ContactInformationRepository.cs" />
+    <Compile Include="MiscUatp\Impl\CorrespondenceAttachmentRepository.cs" />
+    <Compile Include="MiscUatp\Impl\CountryRepository.cs" />
+    <Compile Include="MiscUatp\Impl\DataSourceRepository.cs" />
+    <Compile Include="MiscUatp\Impl\DataSourceRepositoryConstants.cs" />
+    <Compile Include="MiscUatp\Impl\FieldMetaDataRepository.cs" />
+    <Compile Include="MiscUatp\Impl\FieldMetadataRepositoryConstants.cs" />
+    <Compile Include="MiscUatp\Impl\FieldValueRepository.cs" />
+    <Compile Include="MiscUatp\Impl\InvoiceAddOnChargeRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemAdditionalDetailRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemAddOnChargeRepository.cs" />
+    <Compile Include="MiscUatp\Impl\InvoiceSummaryRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemDetailAdditionalDetailRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemDetailAddOnChargeRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemDetailTaxAdditionalDetailRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemDetailTaxRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemRepositoryConstants.cs" />
+    <Compile Include="MiscUatp\Impl\ChargeCodeRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemTaxAdditionalDetailRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemTaxRepository.cs" />
+    <Compile Include="MiscUatp\Impl\MiscConfigurationRepository.cs" />
+    <Compile Include="MiscUatp\Impl\MiscCorrespondenceAttachmentRepository.cs" />
+    <Compile Include="MiscUatp\Impl\MiscCorrespondenceRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemDetailRepository.cs" />
+    <Compile Include="MiscUatp\Impl\LineItemRepository.cs" />
+    <Compile Include="MiscUatp\Impl\MiscCorrespondenceRepositoryConstants.cs" />
+    <Compile Include="MiscUatp\Impl\MiscInvoiceRepository.cs" />
+    <Compile Include="MiscUatp\IDataSourceRepository.cs" />
+    <Compile Include="MiscUatp\IFieldMetaDataRepository.cs" />
+    <Compile Include="MiscUatp\Impl\MiscInvoiceRepositoryConstants.cs" />
+    <Compile Include="MiscUatp\Impl\MiscUatpInvoiceAdditionalDetailRepository.cs" />
+    <Compile Include="MiscUatp\Impl\MiscUatpInvoiceAttachmentRepository.cs" />
+    <Compile Include="MiscUatp\Impl\MiscUatpInvoiceTaxAdditionalDetailRepository.cs" />
+    <Compile Include="MiscUatp\Impl\MiscUatpInvoiceTaxRepository.cs" />
+    <Compile Include="MiscUatp\Impl\OtherOrganizationAdditionalDetailRepository.cs" />
+    <Compile Include="MiscUatp\Impl\OtherOrganizationContactRepository.cs" />
+    <Compile Include="MiscUatp\Impl\OtherOrganizationInformationRepository.cs" />
+    <Compile Include="MiscUatp\Impl\PaymentDetailRepository.cs" />
+    <Compile Include="MiscUatp\Impl\UatpConfigurationRepository.cs" />
+    <Compile Include="MiscUatp\Impl\UomCodeRepository.cs" />
+    <Compile Include="MiscUatp\IMuConfigurationRepository.cs" />
+    <Compile Include="MiscUatp\IUatpConfigurationRepository.cs" />
+    <Compile Include="OfflineReport\IManageOfflineReportRepository.cs" />
+    <Compile Include="OfflineReport\Imp\ManageOfflineReportRepository.cs" />
+    <Compile Include="Pax\IAutoBillingCouponVatRecordRepository.cs" />
+    <Compile Include="Pax\IAutoBillingCouponTaxRecordRepository.cs" />
+    <Compile Include="Pax\IAutoBillingCouponRecordAttachmentRepository.cs" />
+    <Compile Include="Pax\IAutoBillingCouponRecordRepository.cs" />
+    <Compile Include="Pax\IBillingMemoCouponTaxRepository.cs" />
+    <Compile Include="Pax\IBillingMemoCouponVatRepository.cs" />
+    <Compile Include="Pax\IBillingMemoVatRepository.cs" />
+    <Compile Include="MiscUatp\IMemberLocationInfoAdditionalDetailRepository.cs" />
+    <Compile Include="Pax\IManagePaxInvoiceRepository.cs" />
+    <Compile Include="Pax\Impl\BillingMemoCouponTaxRepository.cs" />
+    <Compile Include="Pax\Impl\BillingMemoCouponVatRepository.cs" />
+    <Compile Include="Pax\Impl\BillingMemoVatRepository.cs" />
+    <Compile Include="MiscUatp\Impl\MemberLocationInfoAdditionalDetailRepository.cs" />
+    <Compile Include="Pax\Impl\AutoBillingCouponRecordRepository.cs" />
+    <Compile Include="Pax\Impl\AutoBillingCouponRecordAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\AutoBillingCouponTaxRecordRepository.cs" />
+    <Compile Include="Pax\Impl\AutoBillingCouponVatRecordRepository.cs" />
+    <Compile Include="Pax\Impl\ManagePaxInvoiceRepository.cs" />
+    <Compile Include="Pax\Impl\PassengerConfigurationRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormCSourceCodeTotalRepository.cs" />
+    <Compile Include="Pax\Impl\SourceCodeRepository.cs" />
+    <Compile Include="Pax\Impl\CreditMemoCouponTaxRepository.cs" />
+    <Compile Include="Pax\Impl\CreditMemoCouponVatRepository.cs" />
+    <Compile Include="Pax\Impl\CreditMemoVatRepository.cs" />
+    <Compile Include="Pax\Impl\PaxCorrespondenceRepositoryConstants.cs" />
+    <Compile Include="Pax\Impl\PrimeCouponAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\RMCouponTaxRepository.cs" />
+    <Compile Include="Pax\Impl\RMCouponVatRepository.cs" />
+    <Compile Include="Pax\Impl\RMLinkedCouponRepository.cs" />
+    <Compile Include="Pax\Impl\RMLinkingRecordsRepository.cs" />
+    <Compile Include="Pax\Impl\VatIdentifierRepository.cs" />
+    <Compile Include="Pax\Impl\RejectionMemoVatRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormDTaxRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormDVatRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormERepositoryConstants.cs" />
+    <Compile Include="Pax\IPassengerConfigurationRepository.cs" />
+    <Compile Include="Pax\IRMLinkedCouponRepository.cs" />
+    <Compile Include="Pax\IRMLinkingRecordsRepository.cs" />
+    <Compile Include="Pax\ISamplingFormDTaxRepository.cs" />
+    <Compile Include="Pax\ISamplingFormDVatRepository.cs" />
+    <Compile Include="Pax\ISamplingFormERepository.cs" />
+    <Compile Include="Pax\ICouponTaxRecordRepository.cs" />
+    <Compile Include="Pax\ICouponVatRecordRepository.cs" />
+    <Compile Include="Pax\IInvoiceTotalRecordRepository.cs" />
+    <Compile Include="Pax\IMemberLocationInformationRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormERepository.cs" />
+    <Compile Include="Pax\Impl\CouponTaxRecordRepository.cs" />
+    <Compile Include="Pax\Impl\CouponVatRecordRepository.cs" />
+    <Compile Include="Pax\Impl\InvoiceTotalRecordRepository.cs" />
+    <Compile Include="Pax\Impl\MemberLocationInformationRecordRepository.cs" />
+    <Compile Include="Pax\Impl\MiscBillingHistoryConstants.cs" />
+    <Compile Include="Pax\Impl\PaxCorrespondenceAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\PaxCorrespondenceRepository.cs" />
+    <Compile Include="Pax\Impl\SourceCodeTotalRepository.cs" />
+    <Compile Include="Pax\Impl\SourceCodeVatRecordRepository.cs" />
+    <Compile Include="Pax\IPaxCorrespondenceAttachmentRepository.cs" />
+    <Compile Include="Pax\IPaxCorrespondenceRepository.cs" />
+    <Compile Include="Pax\ISourceCodeRepository.cs" />
+    <Compile Include="Pax\ISourceCodeTotalRepository.cs" />
+    <Compile Include="Pax\ISourceCodeVatRecordRepository.cs" />
+    <Compile Include="Purging\Impl\PurgingTransactionRepository.cs" />
+    <Compile Include="Purging\Impl\InvalidInvTempDataPurgingRepository.cs" />
+    <Compile Include="Purging\IPurgingTransactionRepository.cs" />
+    <Compile Include="Purging\IInvalidInvTempDataPurgingRepository.cs" />
+    <Compile Include="QueueHelper.cs" />
+    <Compile Include="Reports\CargoSubmissionOverviewData\ICargoSubmissionOverviewData.cs" />
+    <Compile Include="Reports\CargoSubmissionOverviewData\Impl\CargoSubmissionOverviewData.cs" />
+    <Compile Include="Reports\CargoSubmissionOverviewData\Impl\SubmissionOverviewConstant.cs" />
+    <Compile Include="Reports\Cargo\InterlineBillingSummary\IInterlineBillingSummaryReportData.cs" />
+    <Compile Include="Reports\Cargo\InterlineBillingSummary\Impl\InterlineBillingSummaryReportDataImpl.cs" />
+    <Compile Include="Reports\Cargo\InterlineBillingSummary\Impl\InterlineBillingSummaryReportDataImplConstants.cs" />
+    <Compile Include="Reports\Cargo\RejectionAnalysis\ICgoRejectionAnalysisRec.cs" />
+    <Compile Include="Reports\Cargo\RejectionAnalysis\Impl\CgoRejectionAnalysisRec.cs" />
+    <Compile Include="Reports\Cargo\RejectionAnalysis\Impl\CgoRejectionAnalysisRecConstant.cs" />
+    <Compile Include="Reports\Cargo\RMBMCMSummary\Impl\RMBMCMSummaryReportDataImpl.cs" />
+    <Compile Include="Reports\Cargo\RMBMCMSummary\Impl\RMBMCMSummaryReportDataImplConstants.cs" />
+    <Compile Include="Reports\Cargo\RMBMCMSummary\IRMBMCMSummaryReportData.cs" />
+    <Compile Include="Reports\ConfirmationSummary\Impl\ValueConfirmationSummaryConstant.cs" />
+    <Compile Include="Reports\ConfirmationSummary\IValueConfirmationSummary.cs" />
+    <Compile Include="Reports\ConfirmationSummary\Impl\ValueConfirmationSummary.cs" />
+    <Compile Include="Reports\InterlinePayablesAnalysis\IInterlinePayablesAnalysis.cs" />
+    <Compile Include="Reports\InterlinePayablesAnalysis\Impl\InterlinePayablesAnalysis.cs" />
+    <Compile Include="Reports\InterlinePayablesAnalysis\Impl\InterlinePayablesAnalysisConstant.cs" />
+    <Compile Include="Reports\Miscellaneous\IMiscellaneousData.cs" />
+    <Compile Include="Reports\Miscellaneous\Impl\MiscellaneousDataImpl.cs" />
+    <Compile Include="Reports\Miscellaneous\Impl\MiscellaneousDataImplConstants.cs" />
+    <Compile Include="Reports\PaxCgoMscTopTenPartner\Impl\PaxCgoMscTopTenPartner.cs" />
+    <Compile Include="Reports\PaxCgoMscTopTenPartner\Impl\PaxCgoMscTopTenPartnerConstant.cs" />
+    <Compile Include="Reports\PaxCgoMscTopTenPartner\IPaxCgoMscTopTenPartner.cs" />
+    <Compile Include="Reports\PayablesReport\Impl\PayablesReportDataImpl.cs" />
+    <Compile Include="Reports\PayablesReport\Impl\PayablesReportDataImplConstants.cs" />
+    <Compile Include="Reports\PayablesReport\IPayablesReportData.cs" />
+    <Compile Include="Reports\CorrespondenceStatus\ICorrespondenceStatusData.cs" />
+    <Compile Include="Reports\CorrespondenceStatus\Impl\CorrespondenceStatusConstant.cs" />
+    <Compile Include="Reports\CorrespondenceStatus\Impl\CorrespondenceStatusData.cs" />
+    <Compile Include="Reports\IManageIsCalendarRepository.cs" />
+    <Compile Include="Reports\ConfirmationDetails\IConfirmationDetailData.cs" />
+    <Compile Include="Reports\ConfirmationDetails\Impl\ConfirmationDetailDataImpl.cs" />
+    <Compile Include="Reports\ConfirmationDetails\Impl\ConfirmationDetailDataImplConstants.cs" />
+    <Compile Include="Reports\IManageSuspendedInvoicesRepository.cs" />
+    <Compile Include="Reports\Impl\ManageIsCalendarRepository.cs" />
+    <Compile Include="Reports\Impl\ManageIsCalendarRepositoryConstants.cs" />
+    <Compile Include="Reports\Impl\ManageSuspendedInvoicesRepository.cs" />
+    <Compile Include="Reports\Impl\ManageSuspendedInvoicesRepositoryConstants.cs" />
+    <Compile Include="Reports\Impl\ProcessingDashboardFileStatusRepository.cs" />
+    <Compile Include="Reports\Impl\ProcessingDashboardInvoiceStatusRepository.cs" />
+    <Compile Include="Reports\Impl\ProcessingDashboardInvoiceFileStatusRepositoryContants.cs" />
+    <Compile Include="LateSubmission\Impl\ProcessLateSubmissionRepository.cs" />
+    <Compile Include="LateSubmission\Impl\ProcessLateSubmissionRepositoryConstants.cs" />
+    <Compile Include="Reports\IProcessingDashboardFileStatusRepository.cs" />
+    <Compile Include="Reports\IProcessingDashboardInvoiceStatusRepository.cs" />
+    <Compile Include="LateSubmission\IProcessLateSubmissionRepository.cs" />
+    <Compile Include="Reports\MemberLocations\IMemberLocationData.cs" />
+    <Compile Include="Reports\MemberLocations\Impl\MemberLocationDataImpl.cs" />
+    <Compile Include="Reports\MemberLocations\Impl\MemberLocationsDataImplConstants.cs" />
+    <Compile Include="Reports\MisMatchDoc\IMismatchDataDoc.cs" />
+    <Compile Include="Reports\MisMatchDoc\Impl\MismatchDataDoc.cs" />
+    <Compile Include="Reports\MisMatchDoc\Impl\MisMatchDocConstant.cs" />
+    <Compile Include="Reports\PendingInvoicesInErrorReport\Impl\PendingInvoicesInErrorReportDataImpl.cs" />
+    <Compile Include="Reports\PendingInvoicesInErrorReport\Impl\PendingInvoicesInErrorReportDataImplConstants.cs" />
+    <Compile Include="Reports\PendingInvoicesInErrorReport\IPendingInvoicesInErrorReportData.cs" />
+    <Compile Include="Reports\ProcessingDashBoard\Impl\SISUsageReportData.cs" />
+    <Compile Include="Reports\ProcessingDashBoard\Impl\SISUsageReportDataConstants.cs" />
+    <Compile Include="Reports\ProcessingDashBoard\ISISUsageReportData.cs" />
+    <Compile Include="Reports\ReceivablesReport\Impl\ReceivablesReportDataImpl.cs" />
+    <Compile Include="Reports\ReceivablesReport\Impl\ReceivablesReportDataImplConstants.cs" />
+    <Compile Include="Reports\ReceivablesReport\IReceivablesReportData.cs" />
+    <Compile Include="Reports\SandBoxTransaction\Impl\SandBoxTransactionDataConstants.cs" />
+    <Compile Include="Reports\SandBoxTransaction\Impl\SandBoxTransactionDataImpl.cs" />
+    <Compile Include="Reports\SandBoxTransaction\ISandBoxTransactionData.cs" />
+    <Compile Include="Reports\UatpAtcan\Impl\UatpAtcanDetailsRepository.cs" />
+    <Compile Include="Reports\UatpAtcan\Impl\UatpAtcanConstants.cs" />
+    <Compile Include="Reports\UatpAtcan\IUatpAtcanDetailsRepository.cs" />
+    <Compile Include="Reports\UserPermission\Impl\UserPermissionData.cs" />
+    <Compile Include="Reports\UserPermission\IUserPermissionData.cs" />
+    <Compile Include="Reports\ValidationDetails\Impl\ValidationDetailsDataImpl.cs" />
+    <Compile Include="Reports\ValidationDetails\Impl\ValidationDetailsDataImplConstants.cs" />
+    <Compile Include="Reports\ValidationDetails\IValidationDetailsData.cs" />
+    <Compile Include="Reports\ValidationSummary\Impl\PaxValidationSummary.cs" />
+    <Compile Include="Reports\ValidationSummary\Impl\PaxValidationSummaryConstants.cs" />
+    <Compile Include="Reports\ValidationSummary\IPaxValidationSummary.cs" />
+    <Compile Include="Sandbox\Impl\SandboxCertificationRepository.cs" />
+    <Compile Include="Sandbox\ISandboxCertificationRepository.cs" />
+    <Compile Include="SanityCheck\Impl\SanityCheckRepository.cs" />
+    <Compile Include="SanityCheck\ISanityCheckRepository.cs" />
+    <Compile Include="SetInvoiceStatus\Impl\SetInvoiceStatus.cs" />
+    <Compile Include="SetInvoiceStatus\Impl\SetInvoiceStatusConstants.cs" />
+    <Compile Include="SetInvoiceStatus\ISetInvoiceStatus.cs" />
+    <Compile Include="SubmissionDeadline\Impl\ISSubmissionDeadlineConstants.cs" />
+    <Compile Include="SubmissionDeadline\Impl\ISSubmissionDeadlineImpl.cs" />
+    <Compile Include="SubmissionDeadline\ISSubmissionDeadline.cs" />
+    <Compile Include="SupportingDocuments\ICargoSupportingDocumentRepository.cs" />
+    <Compile Include="SupportingDocuments\Impl\CargoSupportingDocumentRepository.cs" />
+    <Compile Include="SupportingDocuments\Impl\SupportingDocumentRepository.cs" />
+    <Compile Include="SupportingDocuments\Impl\SupportingDocumentsConstants.cs" />
+    <Compile Include="SupportingDocuments\ISupportingDocumentRepository.cs" />
+    <Compile Include="MemberProfile\ILocationRepository.cs" />
+    <Compile Include="MemberProfile\Impl\LocationRepository.cs" />
+    <Compile Include="Pax\IBillingMemoAttachmentRepository.cs" />
+    <Compile Include="Pax\IBillingMemoCouponAttachmentRepository.cs" />
+    <Compile Include="Pax\ICouponRecordAttachmentRepository.cs" />
+    <Compile Include="Pax\ICreditMemoAttachmentRepository.cs" />
+    <Compile Include="Pax\ICreditMemoCouponAttachmentRepository.cs" />
+    <Compile Include="Pax\ICreditMemoCouponBreakdownRecordRepository.cs" />
+    <Compile Include="Impl\ObjectContextAdapter.cs" />
+    <Compile Include="Impl\UnitOfWork.cs" />
+    <Compile Include="IObjectContext.cs" />
+    <Compile Include="Pax\IBillingMemoCouponBreakdownRecordRepository.cs" />
+    <Compile Include="Pax\IInvoiceRepository.cs" />
+    <Compile Include="Pax\IInvoiceTotalVatRepository.cs" />
+    <Compile Include="Pax\Impl\BillingMemoAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\BillingMemoCouponAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\BillingMemoCouponBreakdownRecordRepository.cs" />
+    <Compile Include="Pax\Impl\CouponRecordAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\CreditMemoAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\CreditMemoCouponAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\CreditMemoCouponBreakdownRecordRepository.cs" />
+    <Compile Include="Pax\Impl\InvoiceRepository.cs" />
+    <Compile Include="Pax\Impl\InvoiceRepositoryConstants.cs" />
+    <Compile Include="Pax\Impl\InvoiceTotalVatRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormEVatRepository.cs" />
+    <Compile Include="Pax\Impl\ProvisionalInvoiceRepository.cs" />
+    <Compile Include="Pax\Impl\RejectionMemoAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\RejectionMemoCouponAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\RMCouponBreakdownRecordRepository.cs" />
+    <Compile Include="Pax\Impl\RMCouponBreakdownRecordRepositoryConstants.cs" />
+    <Compile Include="Pax\Impl\SamplingFormCAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormCRecordRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormCRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormCRepositoryConstants.cs" />
+    <Compile Include="Pax\Impl\SamplingFormDAttachmentRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormDRepository.cs" />
+    <Compile Include="Pax\Impl\SamplingFormDRepositoryConstants.cs" />
+    <Compile Include="Pax\IProvisionalInvoiceRepository.cs" />
+    <Compile Include="Pax\IRejectionMemoAttachmentRepository.cs" />
+    <Compile Include="Pax\IRejectionMemoCouponAttachmentRepository.cs" />
+    <Compile Include="Pax\IRMCouponBreakdownRecordRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Pax\IBillingMemoRecordRepository.cs" />
+    <Compile Include="Pax\ICouponRecordRepository.cs" />
+    <Compile Include="Pax\ICreditMemoRecordRepository.cs" />
+    <Compile Include="Pax\Impl\BillingMemoRecordRepository.cs" />
+    <Compile Include="Pax\Impl\BillingMemoRecordRepositoryConstants.cs" />
+    <Compile Include="Pax\Impl\CouponRecordRepository.cs" />
+    <Compile Include="Pax\Impl\CouponRecordRespositoryConstants.cs" />
+    <Compile Include="Pax\Impl\CreditMemoRecordRepository.cs" />
+    <Compile Include="Pax\Impl\CreditMemoRecordRepositoryConstants.cs" />
+    <Compile Include="Pax\Impl\RejectionMemoRecordRepository.cs" />
+    <Compile Include="Pax\Impl\RejectionMemoRecordRepositoryConstants.cs" />
+    <Compile Include="Pax\IRejectionMemoRecordRepository.cs" />
+    <Compile Include="Pax\ISamplingFormCAttachmentRepository.cs" />
+    <Compile Include="Pax\ISamplingFormCRecordRepository.cs" />
+    <Compile Include="Pax\ISamplingFormCRepository.cs" />
+    <Compile Include="Pax\ISamplingFormDAttachmentRepository.cs" />
+    <Compile Include="Pax\ISamplingFormDRepository.cs" />
+    <Compile Include="Pax\ISamplingFormEVatRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Impl\Repository.cs" />
+    <Compile Include="SystemMonitor\Imp\SystemMonitorRepository.cs" />
+    <Compile Include="SystemMonitor\ISystemMonitorRepository.cs" />
+    <Compile Include="ValueConfirmation\IAutoGenerateValueConfmReportRepository.cs" />
+    <Compile Include="ValueConfirmation\Impl\AutoGenerateValueConfmReportRepository.cs" />
+    <Compile Include="ValueConfirmation\Impl\RequestValueConfirmationRepository.cs" />
+    <Compile Include="ValueConfirmation\Impl\ValueConfirmationConstants.cs" />
+    <Compile Include="ValueConfirmation\Impl\ResponseValueConfirmationRepository.cs" />
+    <Compile Include="ValueConfirmation\IRequestValueConfirmationRepository.cs" />
+    <Compile Include="ValueConfirmation\Impl\RequestValueConfirmationRepositoryConstants.cs" />
+    <Compile Include="ValueConfirmation\IResponseValueConfirmationRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Iata.IS.Core\Iata.IS.Core.csproj">
+      <Project>{6DAC77EB-620C-4AE0-9FC5-332F1170240D}</Project>
+      <Name>Iata.IS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Model\Iata.IS.Model.csproj">
+      <Project>{5EEA49E6-F25C-4682-979C-9257903BF490}</Project>
+      <Name>Iata.IS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\EFExtensions\EFExtensions.csproj">
+      <Project>{3B7B86B0-9ABB-44C0-A10D-1373CB2EA9B1}</Project>
+      <Name>EFExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ISDataContext.edmx" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
