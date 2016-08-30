@@ -1,0 +1,142 @@
+﻿/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+.dataEntry {
+  padding-bottom: 5px;
+}
+.horizontalFlow div {
+  float: left;
+  width: 100%;
+}
+.horizontalFlow div div {
+  width: 20%;
+  float: left;
+  padding-bottom: 0px; /* background-color: #e8e8e8; */ /* border: 1px solid black; */
+}
+
+
+.horizontalFlowFor4FieldsPerLine div {
+  float: left;
+  width: 100%; /* background-color: #eee; */
+}
+.horizontalFlowFor4FieldsPerLine div div {
+  width: 25%;
+  float: left;
+  padding-bottom: 1em; /* background-color: #e8e8e8; */
+}
+.horizontalFlowFor4FieldsPerLine div div div {
+  width: auto !important;
+  padding-bottom: 0em !important;
+}
+.solidBox {
+  background-color: #f5faff;
+  border: 1px solid #c6dff3;
+  display: block;
+  float: left;
+}
+
+input, text {
+  font-size: 8pt;
+  width: 120px;
+  min-width: 10px; /* border: 1px solid #ccc; */
+}
+select {
+  margin: 1px 0px;
+  font-size: 8pt;
+  height: 15px;
+  padding: 0;
+  width: 120px;
+}
+.gridContainer {
+  overflow: auto;
+  /* background-color: #fcfcfc;
+  border: 1px solid #d9d9d9;
+  overflow-x: hidden;
+  -ms-overflow-x: hidden; */
+}
+.fieldSeparator {
+  margin: 5px 5px;
+  margin-left: 0px;
+  padding: 0px; /*border-top: 1px dotted #888;*/
+  background: url(Images/dot.gif) repeat-x;
+  height: 1px;
+}
+.verticalFlow div {
+  float: left; /* background-color: #eee; */
+}
+.verticalFlow div div {
+  width: 100%;
+  float: left;
+  margin-bottom: 0.5em; /* background-color: #e8e8e8; */
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+/* ui.jqgrid.css */
+.ui-jqgrid .ui-paging-info {
+  font-weight: normal;
+  height: 19px;
+  margin-top: 3px;
+  margin-right: 4px;
+  width: 300px;
+}
+
+/* site.css */
+#headerBar {
+  height: 17px;
+  border-top: 1px #b3d5f1 solid;
+  border-bottom: 1px #b3d5f1 solid;
+  background-color: #0070b9;
+}
+#headerBar h1 {
+  width: 250px;
+  height: 17px;
+  float: left;
+  margin: 0;
+  padding: 4px 0px 0px 15px;
+  font: bold 8.5pt Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+#content h1 {
+  font-weight: bold;
+  font-size: 12pt;
+  color: #022a4c;
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  position: relative;
+}
+#content h2 {
+  font-weight: bold;
+  font-size: 10pt;
+  color: #0075BD;
+  margin: 0px;
+  margin-top: 5px;
+  padding-bottom: 2px;
+  display: block;
+  position: relative;
+}
+
+.ui-jqgrid-title {
+  float: left;
+  margin: .1em 16px .2em 0;
+  color: #1c94c4;
+}
+
+/* Classes for Menu */
+.menuItem {
+  border-bottom: 1px solid #ffffff;
+}
+
+.separatorMenuItem {
+  border-bottom: 1px solid #727272;
+}
+
+.sf-menu li ul {
+  background-color: #e3e3e3;
+  border: 1px solid #d7e9f8;
+  color: #0a4279;
+  font-weight: normal;
+}
+

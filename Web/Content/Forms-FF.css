@@ -1,0 +1,20 @@
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+legend {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 2px 4px 4px 4px;
+}
+.ui-datepicker-trigger {
+  vertical-align: top;
+  height: 19px;
+}
+
+.ui-jqgrid .ui-paging-info {font-weight: normal; height:19px; margin-top:3px; width:auto; text-align:left; min-width: 20px}
+
+.ui-pg-input, .ui-pg-selbox {
+  /*width: inherit !important;*/
+  width: 40px !important;
+  max-width: 40px !important; 
+}

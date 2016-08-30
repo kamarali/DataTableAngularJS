@@ -1,0 +1,770 @@
+﻿/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+.fieldContainer {
+  border: none;
+  padding: 1em;
+}
+.fieldSeparator {
+  margin: 5px 5px;
+  margin-left: 0px;
+  padding: 0px;
+  border-top: 1px dotted #888;
+}
+.bottomLine {
+  margin-left: 0px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #888;
+}
+.topLine {
+  margin-left: 0px;
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 1px dotted #888;
+}
+.buttonContainer {
+  clear: both;
+  border: none;
+  margin-top: 6px;
+  margin-bottom: 3px;
+  width: 100%;
+}
+.buttonContainer form {
+  display: inline;
+}
+.buttonContainer div {
+  display: inline;
+}
+.secondaryButtonContainer {
+  float: right;
+  border: none;
+  margin-top: 5px;
+}
+.gridContainer {
+  /* background-color: #fcfcfc;
+  border: 1px solid #d9d9d9; */
+  -ms-overflow-x: scroll;
+  overflow: auto;
+  overflow-x: scroll;
+  width: 100%;
+}
+.solidBox {
+  background-color: #f5faff;
+  border: 1px solid #c6dff3;
+}
+.dataEntry {
+  background-color: #f5faff;
+  border: 1px solid #c6dff3;
+}
+.searchCriteria {
+  width: 960px;
+}
+.searchCriteriaMedium {
+  width: 775px;
+}
+.searchResults {
+  border: 1px solid #00f;
+  font-size: 24px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+fieldset p {
+  display: none;
+  margin: 2px 12px 10px 10px;
+}
+.horizontalFlow > div {
+  float: left;
+  width: 100%; /* background-color: #eee; */
+}
+.horizontalFlow .twoColumn {
+  width: 40%;
+}
+.horizontalFlow .threeColumn {
+  width: 32%;
+}
+.horizontalFlow > div > div {
+  width: 20%;
+  float: left;
+  padding-bottom: 0.5em; /* background-color: #e8e8e8; */ /* border: 1px solid black; */
+}
+.test {
+  background-color: #e8e8e8;
+  border: 1px solid red;
+}
+.horizontalFlowFor4FieldsPerLine > div {
+  float: left;
+  width: 100%; /* background-color: #eee; */
+}
+.horizontalFlowFor4FieldsPerLine > div > div {
+  width: 25%;
+  float: left;
+  padding-bottom: 1em; /* background-color: #e8e8e8; */
+}
+.horizontalFlowFor4FieldsPerLine > div > div > div {
+  width: auto !important;
+  padding-bottom: 0em !important;
+}
+.verticalFlow > div {
+  float: left; /* background-color: #eee; */
+}
+.verticalFlow > div > div {
+  width: 100%;
+  float: left;
+  margin-bottom: 0.5em; /* background-color: #e8e8e8; */
+}
+.verticalFlow .oneColumn {
+  width: 90%;
+}
+.verticalFlow .twoColumn {
+  width: 40%;
+}
+.verticalFlow .halfWidthColumn {
+  width: 50%;
+}
+.verticalFlow .twoColumnWidth {
+  width: 60%;
+}
+.verticalFlow .oneColumnWidth {
+  width: 30%;
+}
+.verticalFlow .secondColumnWidth {
+  width: 48%;
+  margin-left: 10px;
+}
+.verticalFlow > .bottomLine {
+  margin: 0px;
+  padding: 0px;
+}
+fieldset label, div label {
+  display: block;
+  white-space: nowrap;
+  padding-bottom: .1em;
+  overflow: hidden;
+}
+fieldset label span {
+  color: #f00;
+  font-weight: bolder;
+  font-family: Verdana;
+}
+fieldset label.inline, div label.inline {
+  display: inline;
+}
+div.readOnly label {
+  display: inline !important;
+}
+legend {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 2px 4px 8px 4px;
+}
+.readonlyValue {
+  padding: 3px 0px;
+  display: block;
+}
+input[type="text"], select {
+  font-size: 8pt;
+  width: 120px;
+  min-width: 10px; /* border: 1px solid #ccc; */
+}
+textarea {
+  font: 8pt Arial, Helvetica, sans-serif;
+  overflow: auto
+  
+}
+input[readonly] {
+  background-color: #f4f4f4;
+  border: 1px solid #d1d1d1;
+}
+input[readonly=readonly] {
+   background-color: #f4f4f4;
+  border: 1px solid #d1d1d1;
+  cursor: text;
+  color:#696262;
+}
+input[disabled=disabled] {
+  background-color: #f4f4f4;
+  border: 1px solid #d1d1d1;
+  cursor: text;
+  color:#696262;
+}
+select {
+  margin: 1px 0px;
+}
+input[type="password"] {
+  font-size: 8pt;
+  width: 120px;
+  min-width: 10px; /* border: 1px solid #ccc; */
+}
+input[type="checkbox"] {
+  margin-top: 1px;
+}
+
+.disabledButtonClassForMozilla{
+  width: auto;
+  margin: 1px 0px;
+  font: bold 8pt Arial, Helvetica, sans-serif;
+  color: gray;
+  border: 1px solid #d1d1d1;
+  background: url() #ef9c00 no-repeat;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  height: 21px;
+  background-color: #f4f4f4;
+}
+
+/* Dark Grey - outside container */
+.primaryButton, .secondaryButton, .shiftButton, .secondaryButtonText, .tempButton {
+  width: auto;
+  margin: 1px 0px;
+  font: bold 8pt Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  border: 1px solid #606060;
+  background: url() #939494 no-repeat;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  height: 21px;
+}
+.secondaryButtonText {
+  padding: 3px 8px 2px 8px;
+}
+.lwoul {
+  text-decoration: none !important;
+}
+.tempButton {
+  background-color: #ffff99;
+  color: #444;
+}
+/* Orange - outside container */
+.primaryButton {
+  border: 1px solid #ca8402;
+  background: url() #ef9c00 no-repeat;
+}
+div.subscriptionRequired {
+  color: #ef9c00;
+  font-weight: bold;
+  background-image: url('Images/subscription_required.png');
+  background-repeat: no-repeat;
+  padding-left: 18px;
+  padding-bottom: 1px;
+}
+div.futureUpdatesLegend {
+  background-image: url('Images/Exclamation.gif');
+  background-repeat: no-repeat;
+  padding-left: 18px;
+  padding-bottom: 1px;
+  margin-left: 5px;
+}
+div.tallFieldContainer {
+  height: 48px;
+}
+/* width for >*/
+.shiftButton {
+  width: 40px;
+}
+
+.rightAlignedButton {
+  margin: 0px 10px 0px 0px;
+}
+.horizontalFlow div div input[type="button"] {
+  margin: 0px;
+  margin-top: -1px;
+}
+
+/* Button overrides need to be copied from the IATA template. */
+
+/* Overridden styles from various plug-ins start here */
+.watermark {
+  color: #999;
+}
+.datePicker {
+  max-width: 70px;
+}
+.dateTimePicker {
+  max-width: 110px;
+}
+.datePickerMaster {
+  max-width: 114px;
+}
+/* Master pages */
+.masterGridTable {
+  border-style: solid;
+  border-width: thin;
+  border-color: Silver;
+}
+.masterGridHeader {
+  background-color: Silver;
+  border-bottom-color: Black;
+  border-style: dashed;
+}
+
+/* Miscellaneous */
+.subjectInput {
+  width: 93% !important;
+}
+.billingTypes {
+  margin-right: 15px;
+}
+img.legend {
+  margin-right: 7px;
+}
+div.legend {
+  text-align: left;
+}
+div.invoiceDetails > div {
+  clear: both;
+}
+div.invoiceDetails div div {
+  float: left;
+  text-align: right;
+  width: 100px;
+  margin-right: 15px;
+}
+.horizontalFlowForDetails > div {
+  float: left;
+  width: 100%; /* background-color: #eee; */
+}
+.horizontalFlowForDetails > div > div {
+  width: 21%;
+  float: left;
+  padding-bottom: 0.5em; /* background-color: #e8e8e8; */ /* border: 1px solid black; */
+}
+.horizontalFlowForAddOnCharges > div {
+  float: left;
+  width: 100%; /* background-color: #eee; */
+}
+.horizontalFlowForAddOnCharges > div > div {
+  width: 12%;
+  float: left;
+  padding-bottom: 0.5em; /* background-color: #e8e8e8; */ /* border: 1px solid black; */
+}
+
+.vSmallTextField {
+  width: 40px !important;
+}
+.smallTextField {
+  width: 80px !important;
+}
+.mediumTextField {
+  width: 150px !important;
+}
+.xlargeTextField {
+  width: 170px !important;
+}
+.largeTextField {
+  width: 250px !important;
+}
+.descriptionTextField {
+  width: 95% !important;
+  margin-bottom: 1em;
+}
+.hidden {
+  display: none;
+}
+
+/* Added to display percentage and amount fields */
+.percentageTextfield {
+  width: 40px !important;
+  min-width: 10px;
+}
+.amountTextfield {
+  width: 60px !important;
+  min-width: 10px;
+}
+
+/* Added for validation error */
+.error {
+  display: inline;
+  color: Red;
+  font-weight: bold;
+  font-size: xx-small;
+  background-color: inherit;
+}
+.errorMessage {
+  padding: 5px;
+  color: Red;
+  font-weight: bold;
+  background-color: #FFE6EE;
+  border: thin solid #f00;
+  text-align: left;
+  width: 80% !important;
+  min-width: 500px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+.fixedDiv {
+  width: 660px;
+}
+.serverMessage, .clientMessage {
+  padding: 5px 5px 8px 5px;
+  font-weight: bold;
+  width: 80% !important;
+  min-width: 700px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+.serverMessage label {
+  white-space: normal;
+}
+.serverErrorMessage, .clientErrorMessage {
+  color: Red;
+  background-color: #FFE6EE;
+  border: thin solid #f00;
+}
+.serverSuccessMessage, .clientSuccessMessage {
+  color: green;
+  background-color: #D9FFFE;
+  border: thin solid green;
+}
+.serverSuccessMessage img {
+  margin-right: 5px;
+}
+.autocComplete {
+  background-color: #C6DEFF;
+}
+.upperCase {
+  text-transform: uppercase;
+}
+.lowerCase {
+  text-transform: lowercase;
+}
+.deleteIcon {
+  background-image: url(Images/delete.png);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.amountFieldsTable {
+  background-color: #deeeff;
+  border: 1px solid #b6d8fa;
+  padding: 12px;
+}
+.fieldset {
+  border: solid 1px #ddd; /*background: #eee;*/
+  margin-top: 40px;
+  position: relative;
+  width: 775px;
+}
+.legend {
+  left: 0.5em;
+  top: -0.6em;
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 0.25em 0 0.25em;
+  background: #fff;
+}
+.fieldset-wrapper .content {
+  margin: 1.5em 1em 1em 1em;
+}
+.labelAttachment {
+  font-weight: bold;
+}
+.inputAttachment {
+  padding-left: 250px;
+}
+.dynamicTextArea {
+  width: 50% !important;
+}
+
+/* Classes for Menu */
+.menuItem {
+  border-bottom: 1px solid #ffffff;
+}
+.separatorMenuItem {
+  border-bottom: 1px solid #727272;
+}
+.sf-menu li ul {
+  background-color: #e3e3e3;
+  border: 1px solid #d7e9f8;
+  color: #0a4279;
+  font-weight: normal;
+}
+.linkImage {
+  cursor: pointer;
+}
+.ac_loading {
+  background: #C6DEFF url('images/busy.gif') right center no-repeat;
+}
+.expandLinkImage {
+  cursor: pointer;
+}
+.dynamicFieldWithAttribute > div {
+  width: 30% !important;
+  float: left;
+}
+.dynamicFieldWithAttribute > div > input[type="text"] {
+  font-size: 8pt;
+  width: 60px !important;
+  min-width: 10px !important; /* border: 1px solid #ccc; */
+}
+.dynamicFieldWithAttribute > div > select {
+  font-size: 8pt;
+  width: 120px !important;
+  min-width: 10px !important; /* border: 1px solid #ccc; */
+}
+.dynamicFieldWithOneAttribute > div {
+  width: 30% !important;
+  float: left;
+}
+.dynamicFieldWithOneAttribute > div > input[type="text"] {
+  font-size: 8pt;
+  width: 90px !important;
+  min-width: 10px !important; /* border: 1px solid #ccc; */
+}
+.dynamicFieldWithOneAttribute > div > select {
+  font-size: 8pt;
+  width: 90px !important;
+  min-width: 10px !important; /* border: 1px solid #ccc; */
+}
+div.paymentField {
+  width: 20%;
+}
+.paymentField > div, .discountField > div {
+  float: left;
+}
+.paymentField > div > label, .discountField > div > label {
+  display: inline;
+}
+.paymentFieldTextWithin {
+  text-align: right;
+  padding-top: 6px;
+}
+.paymentFieldText {
+  text-align: right;
+}
+div.discountField {
+  width: 45% !important;
+  margin-left: 5%;
+}
+.wrappingLabel {
+  white-space: normal;
+}
+.dashboardLegend {
+  text-align: left;
+}
+.imglegend {
+  margin-right: 7px;
+}
+
+/*Class for UATP legal label */
+.legalDiv {
+  width: 105% !important;
+  float: left;
+  padding-bottom: 0.5em; /* background-color: #e8e8e8; */ /* border: 1px solid black; */
+}
+
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { background: #edeeee url(); color: #000; opacity: 1.0; filter:Alpha(Opacity=100);  }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #ef9c00; background: #fff0a5 url(ui-sis/images/ui-bg_highlight-soft_0_fff0a5_1x100.png) 50% top repeat-x; color: #1d5987; }
+.ui-dialog .ui-dialog-title { font-size: 1.1em; } 
+
+.ui-jqgrid tr.jqgrow td {
+  white-space: normal;
+}
+.ui-jqgrid .ui-jqgrid-htable th div {
+  /* to change the jqGrid header text and height */
+  white-space: normal;
+  height: 30px;
+}
+.ui-pager-control {
+  width: 200px !important;
+}
+.ui-pg-input, .ui-pg-selbox {
+  width: 40px !important;
+}
+.ui-pg-selbox {
+  margin-left: 15px !important;
+}
+
+.ui-autocomplete {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  font: 7pt Arial, Helvetica, sans-serif;
+  height: 200px;
+  overflow: scroll;
+}
+
+.ui-datepicker-trigger {
+  vertical-align: top;
+}
+
+/* Classes for DateTimePicker */
+.ui-timepicker-div .ui-widget-header {
+  margin-bottom: 8px;
+}
+.ui-timepicker-div dl {
+  text-align: left;
+}
+.ui-timepicker-div dl dt {
+  height: 25px;
+}
+.ui-timepicker-div dl dd {
+  margin: -25px 0 10px 65px;
+}
+.ui-timepicker-div td {
+  font-size: 90%;
+}
+.horizontalMediumFlow > div > div {
+  width: 14%;
+  float: left;
+  padding-bottom: 0.5em;
+}
+.searchCriteriaMax {
+  width: 95%;
+}
+
+/*  CMP#596: Length of Member Accounting Code to be Increased to 12 
+    Desc: Non layout related IS-WEB screen changes.
+    Ref: FRS Section 3.1 Table 2, Section 3.2 Table 8,Section 3.3 Table 12, Section 3.5 Table20 */
+input.textboxWidth 
+{
+    width:170px;
+}
+
+.listboxWidth
+{
+    width:170px;
+}
+
+.labelexpandedwidth
+{
+    overflow: visible;
+}
+
+
+/* CMP #675: Progress Status Bar for Processing of Billing Data Files. 
+* Desc: CSS added for Progress Bar.
+----------------------------------------------------------*/
+
+/* Form Progress */
+.progress {
+  width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+}
+.progress .circle,
+.progress .bar {
+  display: inline-block;
+  background: #fff;
+  width: 40px; height: 40px;
+  border-radius: 40px;
+  border: 1px solid #d5d5da;
+}
+.progress .bar {
+  position: relative;
+  width: 140px;
+  height: 6px;
+  margin: 0 -5px 60px -5px;
+  border-left: none;
+  border-right: none;
+  border-radius: 1;
+  background: linear-gradient(to right, #EEE 40%, #FFF 60%);
+}
+.progress .circle .label {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 32px;
+  margin-top: 3px;
+  color: #b5b5ba;
+  font-size: 17px;
+  font-family: 'Arial';
+}
+.progress .circle .title {
+  color: #000;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: -5px;
+  white-space: nowrap;
+  font-family: 'Arial';
+}
+
+.progress .circle .Status {
+  color: #000;
+  font-size: 12px;  
+  margin-left: -5px;
+  white-space: nowrap;
+  font-family: 'Arial';
+}
+
+/* Done / Active */
+.progress .bar.done,
+.progress .circle.done {
+  background: #eee;
+}
+
+.progress .circle.pending {
+  background: #d5d5da;
+}
+
+.progress .circle.pendingQ {
+  background: #d5d5da;
+}
+.progress .circle.pendingQ .label {
+  color: #FFF;
+  background: #666666;
+  box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+
+.progress .bar.pending {
+  background: linear-gradient(to right, #EEE 40%, #FFF 60%);
+}
+
+.progress .circle.pending .label {
+  color: #FFF;
+  background: #c7c7c7;
+  box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+.progress .circle.done .label {
+  color: #FFF;
+  background: #8bc435;
+  box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+
+.progress .circle.active .label {
+  color: #FFF;
+  background: #0c95be;
+  box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+.progress .circle.active .title {
+  color: #0c95be;
+}
+.progress .circle.active .Status {
+  color: #0c95be;
+}
+.progress .circle.done .title {
+  color: #8bc435;
+}
+.progress .circle.done .Status {
+  color: #8bc435;
+}
+.progress .circle.pending .title {
+  color: #000;
+}
+.progress .bar.active {
+  background: linear-gradient(to right, #EEE 40%, #FFF 60%);
+}
+.queuePositionWhite {
+    color: #ffffff;
+    white-space:nowrap;
+    font-size:12px;
+    margin-left:-5px;
+    font-family:Arial;
+}
+.queuePositionBlack {
+    color: #000000;
+    white-space:nowrap;
+    font-size:12px;
+    margin-left:-5px;
+    font-family:Arial;
+}
