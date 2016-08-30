@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Iata.IS.Model.Cargo.AwbAttachment" Collapsed="true">
+    <Position X="1.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\AwbAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.SearchCriteria" Collapsed="true">
+    <Position X="10.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iTAkQgAIAAMBAIBAAgABBAwADAAaABQAy0BBEARKCAA=</HashCode>
+      <FileName>Cargo\SearchCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.AwbOtherCharge" Collapsed="true">
+    <Position X="3" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\AwbOtherCharge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.AwbRecord" Collapsed="true">
+    <Position X="0.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wIgAIBgAAAAABMcCgABBAACAAAASwgAKAAAABCAAAQA=</HashCode>
+      <FileName>Cargo\AwbRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.AwbTax" Collapsed="true">
+    <Position X="24.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\AwbTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.AwbVat" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\AwbVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BillingCodeSubTotal" Collapsed="true">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAIIAAAEAAAAJAEAAAIAgAAQoAIgAAAAAAAAAgAAQA=</HashCode>
+      <FileName>Cargo\BillingCodeSubTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BMAwbAttachment" Collapsed="true">
+    <Position X="17" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\BMAwbAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BMAwbOtherCharge" Collapsed="true">
+    <Position X="0.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\BMAwbOtherCharge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BMAwbProrateLadderDetail" Collapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\BMAwbProrateLadderDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BMAwbVat" Collapsed="true">
+    <Position X="19.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\BMAwbVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BMProrateLadder" Collapsed="true">
+    <Position X="29.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\BMProrateLadder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoBillingCode" Collapsed="true">
+    <Position X="24.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoBillingCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoBillingCodeSubTotalVat" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoBillingCodeSubTotalVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoBillingMemo" Collapsed="true">
+    <Position X="12.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADAAAATIBAQABWAAAAAAAQAAAAASAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoBillingMemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoBillingMemoAttachment" Collapsed="true">
+    <Position X="10.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoBillingMemoAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoBillingMemoAwb" Collapsed="true">
+    <Position X="5.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAAQkAAAAQAAGCCABAIAAAAgAAAgqCIAAABAAEAAA=</HashCode>
+      <FileName>Cargo\CargoBillingMemoAwb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoBillingMemoOtherCharge" Collapsed="true">
+    <Position X="26" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAASAAAAEAAAgAAAAAQAAAAACAAAAAoAAACAAAAA=</HashCode>
+      <FileName>Cargo\CargoBillingMemoOtherCharge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoBillingMemoVat" Collapsed="true">
+    <Position X="21.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoBillingMemoVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoCorrespondence" Collapsed="true">
+    <Position X="27.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAEAAIAAAAAAAAAAAAAAAAAAQAAAAQA=</HashCode>
+      <FileName>Cargo\CargoCorrespondence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoCorrespondenceAttachment" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoCorrespondenceAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoCreditMemo" Collapsed="true">
+    <Position X="9.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCIAAAAAAAAAAUACEAAAASQAAgARAAAAAAAFAAAAAA=</HashCode>
+      <FileName>Cargo\CargoCreditMemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoCreditMemoAttachment" Collapsed="true">
+    <Position X="12.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoCreditMemoAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoCreditMemoVat" Collapsed="true">
+    <Position X="17.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoCreditMemoVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoInvoice" Collapsed="true">
+    <Position X="0.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAiAAAARgAIAAACAAAACMEACgAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Cargo\CargoInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoInvoiceSearch" Collapsed="true">
+    <Position X="29.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAEQAAUAAAAgAIAAgABJIwgQEAQAQyIYAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoInvoiceSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoInvoiceTotal" Collapsed="true">
+    <Position X="3.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAIAAAAEAAAAAAAAAAIAABAQAAAgAAAAAAAAIAAAQA=</HashCode>
+      <FileName>Cargo\CargoInvoiceTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoInvoiceTotalVat" Collapsed="true">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Cargo\CargoInvoiceTotalVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoInvoiceVat" Collapsed="true">
+    <Position X="24.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAEASCgAAQAAAAhA=</HashCode>
+      <FileName>Cargo\CargoInvoiceVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CargoRejectionMemo" Collapsed="true">
+    <Position X="6.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADABQAAABCCAAeACQIAKAQAAAECSAgIQAAAJIwUAAA=</HashCode>
+      <FileName>Cargo\CargoRejectionMemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CgoBillingCodeSubTotalVat" Collapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CgoBillingCodeSubTotalVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CgoBillingMemoDetailReport" Collapsed="true">
+    <Position X="12.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAMAAAAAAAgAKIAAgAABAAAAAAIAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CgoBillingMemoDetailReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CgoCreditMemoDetailReport" Collapsed="true">
+    <Position X="9.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAMAAAAAAAwACIAAgAABAAAAAAIAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CgoCreditMemoDetailReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CgoRejectionMemoAttachment" Collapsed="true">
+    <Position X="14.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CgoRejectionMemoAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CgoRejectionMemoDetailReport" Collapsed="true">
+    <Position X="6.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAMAAAAAAAAACIAAgAABAAAAACIAQAAAAAAAAQAAAA=</HashCode>
+      <FileName>Cargo\CgoRejectionMemoDetailReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CgoRejectionMemoVat" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CgoRejectionMemoVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CgoVatIdentifier" Collapsed="true">
+    <Position X="26" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAgAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Cargo\CgoVatIdentifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CMAirWayBill" Collapsed="true">
+    <Position X="3" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJgAAAAAAAAAAAmGCAAAACIAEAAAIhoDAAAEBAAEAIA=</HashCode>
+      <FileName>Cargo\CMAirWayBill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CMAwbAttachment" Collapsed="true">
+    <Position X="8" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CMAwbAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CMAwbOtherCharge" Collapsed="true">
+    <Position X="5.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CMAwbOtherCharge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CMAwbProrateLadderDetail" Collapsed="true">
+    <Position X="27.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CMAwbProrateLadderDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.CMAwbVat" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\CMAwbVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.PayableSearch" Collapsed="true">
+    <Position X="12.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAGQAAYAAAAAIIAAgABRIwASAACAAQAAAAAGABAACA=</HashCode>
+      <FileName>Cargo\PayableSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.RMAwb" Collapsed="true">
+    <Position X="7.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAEAAkBAICAAgGCCAAAIJSwAgEBAgCiIAAAJEQEAAA=</HashCode>
+      <FileName>Cargo\RMAwb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.RMAwbAttachment" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\RMAwbAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.RMAwbOtherCharge" Collapsed="true">
+    <Position X="7.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\RMAwbOtherCharge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.RMAwbProrateLadderDetail" Collapsed="true">
+    <Position X="29.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\RMAwbProrateLadderDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.RMAwbVat" Collapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\RMAwbVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.RMOtherCharge" Collapsed="true">
+    <Position X="9.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\RMOtherCharge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Base.InvoiceTotalBase" Collapsed="true">
+    <Position X="3.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAQAIAAIAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Cargo\Base\InvoiceTotalBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.Attachment" Collapsed="true">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAABCAAIEAAggAAAAAAAAAwFIAAAIAEA=</HashCode>
+      <FileName>Base\Attachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Base.Vat" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAEASCgAAQAAAAhA=</HashCode>
+      <FileName>Cargo\Base\Vat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Base.OtherCharge" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAASAAAAEAAAgAAAAAQAAAAACAAAAAoAAACAAAAA=</HashCode>
+      <FileName>Cargo\Base\OtherCharge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Base.AWBBase" Collapsed="true">
+    <Position X="4" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAkgIIAAAAAgiAAgIQAAggQAAAIQIAIQAQQAAA=</HashCode>
+      <FileName>Cargo\Base\AWBBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="11.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Iata.IS.Model.Base.InvoiceBase" Collapsed="true">
+    <Position X="0.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>I3CczVhHZI7CoZaGgkVFJaygC0AWQx+BYIpjmBhNdDA=</HashCode>
+      <FileName>Base\InvoiceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BillingHistory.CargoAuditTrail" Collapsed="true">
+    <Position X="19.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Cargo\BillingHistory\CargoAuditTrail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BillingHistory.TransactionDetails" Collapsed="true">
+    <Position X="14.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\BillingHistory\TransactionDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BillingHistory.CargoTransaction" Collapsed="true">
+    <Position X="17" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\BillingHistory\TransactionDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BillingHistory.CargoBillingHistorySearchResult" Collapsed="true">
+    <Position X="12.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AWAEaACAACAAAABgAyAABIUAAQAYAIEIIAAAEBBDCAI=</HashCode>
+      <FileName>Cargo\BillingHistory\CargoBillingHistorySearchResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.BillingHistory.InvoiceSearchCriteria" Collapsed="true">
+    <Position X="21.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAACACAAAAAAAAAAAAAMAQAEAAAAIAAAQAAAAA=</HashCode>
+      <FileName>Cargo\BillingHistory\InvoiceSearchCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Common.CgoRMLinkingCriteria" Collapsed="true">
+    <Position X="18.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAERAAAAAACAAAAAwIABAQAEAAAAAQIgAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\Common\CgoRMLinkingCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Common.SupportingDocumentAttachment" Collapsed="true">
+    <Position X="23" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\Common\SupportingDocumentAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Common.CgoRMLinkingResultDetails" Collapsed="true">
+    <Position X="27.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAkgAAA=</HashCode>
+      <FileName>Cargo\Common\CgoRMLinkingResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Common.CgoRMLinkingRecords" Collapsed="true">
+    <Position X="20.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\Common\CgoRMLinkingResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Common.CgoRMLinkingAmount" Collapsed="true">
+    <Position X="25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAABAAAAKAAAAAIAAAAAECCAgIQAAABAAEAAA=</HashCode>
+      <FileName>Cargo\Common\CgoRMLinkingResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Common.RMLinkedAwbDetails" Collapsed="true">
+    <Position X="29.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo\Common\RMLinkedAwbDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Cargo.Common.RMLinkedAwb" Collapsed="true">
+    <Position X="22.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEQAAAAAAAAAAAAAAAAAAAAAAACAAAAAAgAAA=</HashCode>
+      <FileName>Cargo\Common\RMLinkedAwbDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.ValidationExceptionDetailBase" Collapsed="true">
+    <Position X="30.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAgAIQiAIAAAEIAgIyAAIAAAGACAEAAAAAAABAKAA=</HashCode>
+      <FileName>Base\ValidationExceptionDetailBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.CorrespondenceBase" Collapsed="true">
+    <Position X="47" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAEAgAAAiJIAoCUAIIABAEAGCCACABCAAAAhBBYgAI=</HashCode>
+      <FileName>Base\CorrespondenceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.EntityBase&lt;PK&gt;" Collapsed="true">
+    <Position X="48" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\EntityBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.InvoiceSearchCriteriaBase" Collapsed="true">
+    <Position X="32.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEQAAAAAABAAQAEwAABAAAAAAIUAQAAAAAABAAAAA=</HashCode>
+      <FileName>Base\InvoiceSearchCriteriaBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.MasterBase&lt;PK&gt;" Collapsed="true">
+    <Position X="49.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\MasterBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.ModelBase" Collapsed="true">
+    <Position X="48" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\ModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

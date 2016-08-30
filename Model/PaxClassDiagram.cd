@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Iata.IS.Model.Pax.Base.InvoiceTotalBase">
+    <Position X="7.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAQAIAAIAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Pax\Base\InvoiceTotalBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Base.InvoiceTransmissionBase">
+    <Position X="23.75" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Base\InvoiceTransmissionBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Base.MemoBase">
+    <Position X="32" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBQAoAAAAAAAAAAAggQAAAAAAgCAgAAAAAACQgQRARA=</HashCode>
+      <FileName>Pax\Base\MemoBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Base.Tax">
+    <Position X="23" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAgAAAABAAAA=</HashCode>
+      <FileName>Pax\Base\Tax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Base.TransmissionHeaderBase">
+    <Position X="119.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MBAAACAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAA=</HashCode>
+      <FileName>Pax\Base\TransmissionHeaderBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Base.TransmissionSummaryBase">
+    <Position X="124.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Pax\Base\TransmissionSummaryBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Base.Vat">
+    <Position X="47.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAEASCgAAQAAAAhA=</HashCode>
+      <FileName>Pax\Base\Vat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BillingHistory.InvoiceSearchCriteria">
+    <Position X="23.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAACACAAAAAAAAAAAAAMAQAEAAAAIAAAQAAAAA=</HashCode>
+      <FileName>Pax\BillingHistory\InvoiceSearchCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BillingHistory.PaxAuditTrail">
+    <Position X="140" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\BillingHistory\PaxAuditTrail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BillingHistory.PaxBillingHistorySearchResult">
+    <Position X="89.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AWAEaACACCAAAABgASAABIUAAQAIAIEIIAAAEBBDCAI=</HashCode>
+      <FileName>Pax\BillingHistory\PaxBillingHistorySearchResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BillingMemo">
+    <Position X="34.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACDAAFACCAAAAAEAGAAAACSAAAAEAAgQAAAAAAoAAAA=</HashCode>
+      <FileName>Pax\BillingMemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BillingMemoAttachment">
+    <Position X="83.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\BillingMemoAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BillingMemoVat">
+    <Position X="36.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\BillingMemoVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BMCoupon">
+    <Position X="11.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAwCAAAAAACMQAgRAAQSgAAAAAAAQAAGA0AAAAAA=</HashCode>
+      <FileName>Pax\BMCoupon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BMCouponAttachment">
+    <Position X="86" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\BMCouponAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BMCouponTax">
+    <Position X="20.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\BMCouponTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.BMCouponVat">
+    <Position X="43.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\BMCouponVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.CMCoupon">
+    <Position X="14" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAgAACAAAACMEAgRAASSgAAAAAAAAAAGA0AAAAAA=</HashCode>
+      <FileName>Pax\CMCoupon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.CMCouponAttachment">
+    <Position X="92.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\CMCouponAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.CMCouponTax">
+    <Position X="27.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\CMCouponTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.CMCouponVat">
+    <Position X="54.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\CMCouponVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Correspondence">
+    <Position X="81.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIEAAIAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Pax\Correspondence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.CorrespondenceAttachment">
+    <Position X="97.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\CorrespondenceAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.CouponBase">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAABAAABQAQgAgAKQAAAAAQAAIEAAAABAQQAAA=</HashCode>
+      <FileName>Pax\CouponBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.CreditMemo">
+    <Position X="29.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAgAECAABAAEACEBEASSAAAAAJAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\CreditMemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.CreditMemoAttachment">
+    <Position X="101.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\CreditMemoAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.CreditMemoVat">
+    <Position X="41" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\CreditMemoVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.DerivedVatDetails">
+    <Position X="48.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAEAAAAAAAAAAEASCAAAAAAAAhA=</HashCode>
+      <FileName>Pax\DerivedVatDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.InvoiceTotal">
+    <Position X="7.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIkAAFsAAAEgBhAIAAIABEQAQABAgAABAAgAAIAAQQM=</HashCode>
+      <FileName>Pax\InvoiceTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.InvoiceTransmission">
+    <Position X="23.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Pax\InvoiceTransmission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.InvoiceVat">
+    <Position X="50" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\InvoiceVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.MemoCouponBase">
+    <Position X="12.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAggAAAACEAIAAIAAAiABAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Pax\MemoCouponBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.NonAppliedVatDetails">
+    <Position X="48" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\NonAppliedVatDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.PaxBillingCode">
+    <Position X="110.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\PaxBillingCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.PaxCorrespondenceAttachment">
+    <Position X="88.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\PaxCorrespondenceAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.PaxInvoice">
+    <Position X="108.5" Y="27" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAMAiQAABAgAAAAADQCCRJYAAAgAAARABABAAIAgI=</HashCode>
+      <FileName>Pax\PaxInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.PrimeCoupon">
+    <Position X="9.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggAAIgAACAgBAaMCkgRAgYSAAiBDgACAAAgA0AAAAQg=</HashCode>
+      <FileName>Pax\PrimeCoupon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.PrimeCouponAttachment">
+    <Position X="99.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\PrimeCouponAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.PrimeCouponTax">
+    <Position X="23" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\PrimeCouponTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.PrimeCouponVat">
+    <Position X="45.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\PrimeCouponVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.RejectionMemo">
+    <Position X="32" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SADACQAACACCAEEACwIAKAQAEAECACgAAAIENOpUAAI=</HashCode>
+      <FileName>Pax\RejectionMemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.RejectionMemoAttachment">
+    <Position X="95" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\RejectionMemoAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.RejectionMemoVat">
+    <Position X="56.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\RejectionMemoVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.RMCoupon">
+    <Position X="16.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAFQAAGAEIAAAEsAAwYQAISAAgEFCCAAQAFEQGRAAAA=</HashCode>
+      <FileName>Pax\RMCoupon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.RMCouponAttachment">
+    <Position X="104" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\RMCouponAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.RMCouponTax">
+    <Position X="18.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Pax\RMCouponTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.RMCouponVat">
+    <Position X="38.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\RMCouponVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.SearchCriteria">
+    <Position X="92.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iTAkQgAAAAEBAIBAAgABBAwADAASABQAiwBBEARKAAA=</HashCode>
+      <FileName>Pax\SearchCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.SourceCode" BaseTypeListCollapsed="true">
+    <Position X="65.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAgAAAAAAAAAAAAAQCAAAAAAAAAEAAAEEAhAAAAA=</HashCode>
+      <FileName>Pax\SourceCode.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.SourceCodeTotal">
+    <Position X="135.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAIEAACAEAABAEABAAAASAQoAIAAAAAAAAAAAAAQI=</HashCode>
+      <FileName>Pax\SourceCodeTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.SourceCodeVat">
+    <Position X="47.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\SourceCodeVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.UtilizationType" BaseTypeListCollapsed="true">
+    <Position X="126.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\UtilizationType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.VatIdentifier" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAgAAAAAAAAAAAAAAAAAAAAAAAAQgAAAAA=</HashCode>
+      <FileName>Pax\VatIdentifier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.BvcMatrix">
+    <Position X="63.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAEAAAAAggAAAAAAAAAAACAAAQAAAEAAAAAAAAAEA=</HashCode>
+      <FileName>Pax\Common\BvcMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.IsInputFile">
+    <Position X="128.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAEAAAQBACAAAgAACAABAAAiAAAAAAACAAIRCBIAEA=</HashCode>
+      <FileName>Pax\Common\ISInputFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.PaxValidationExceptionDetail">
+    <Position X="20.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Common\PaxValidationExceptionDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.ReasonCode" BaseTypeListCollapsed="true">
+    <Position X="61.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAgEIAACAAgAAEAAAAAAAEIAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Common\ReasonCode.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.Rfic">
+    <Position X="68" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Common\Rfic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.Rfisc">
+    <Position X="72.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAEAAAAAABAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Pax\Common\Rfisc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.RMLinkedCouponDetails">
+    <Position X="89.75" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Common\RMLinkedCouponDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.RMLinkedCoupon">
+    <Position X="47.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAEAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAgAAA=</HashCode>
+      <FileName>Pax\Common\RMLinkedCouponDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.RMLinkingCriteria">
+    <Position X="119" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEQAAAAAADAAAAAwAABAQAEAIAAAQAgAAAEAABAAA=</HashCode>
+      <FileName>Pax\Common\RMLinkingCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.RMLinkingResultDetails">
+    <Position X="51.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAkgAAA=</HashCode>
+      <FileName>Pax\Common\RMLinkingResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.RMLinkingRecords">
+    <Position X="115.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Common\RMLinkingResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.RMLinkingAmount">
+    <Position X="97.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SABACAAAAAAAAEAAAwAAIAAAAAECACAAAAIEBGpEAAA=</HashCode>
+      <FileName>Pax\Common\RMLinkingResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.RMReasonAcceptableDiff">
+    <Position X="74.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAEAAAAAggAAAAAAAAQAQCAAQAAABAAIAAAAAAIAA=</HashCode>
+      <FileName>Pax\Common\RMReasonAcceptableDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.SampleDigit">
+    <Position X="77" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAA=</HashCode>
+      <FileName>Pax\Common\SampleDigit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.TaxCode">
+    <Position X="79.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Pax\Common\TaxCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.TaxCodeType" BaseTypeListCollapsed="true">
+    <Position X="113" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Pax\Common\TaxCodeType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Common.ValidationExceptionSummary">
+    <Position X="131" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEIAAAAAAAAgAAAAAQBACAAAARAAAAAQAAAABAIQA=</HashCode>
+      <FileName>Pax\Common\ValidationExceptionSummary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.ParsingModel.InvoiceModel">
+    <Position X="89.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Pax\ParsingModel\InvoiceModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.ParsingModel.InvoiceModelList">
+    <Position X="97.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Pax\ParsingModel\InvoiceModelList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.ParsingModel.ProrateSlip">
+    <Position X="97.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Pax\ParsingModel\ProrateSlip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.ParsingModel.ReasonBreakdown">
+    <Position X="118.75" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Pax\ParsingModel\ReasonBreakdown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.ParsingModel.ReferenceDataPart2">
+    <Position X="115.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICAAAAACIAgAAAAAIAAAAAAAQAAAAAACBAAAAAAAAAA=</HashCode>
+      <FileName>Pax\ParsingModel\ReferenceDataPart2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.ParsingModel.SourceCodeTotalModel">
+    <Position X="97.5" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Pax\ParsingModel\SourceCodeTotalModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.LinkedCouponDetails">
+    <Position X="115.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Pax\Sampling\LinkedCouponDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.LinkedCoupon">
+    <Position X="124.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIBAAAAQAIEAEAAIAAAAgQAAAEIAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Sampling\LinkedCouponDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.ProvisionalInvoiceRecordDetail">
+    <Position X="142.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAASAAAAAEAAAgAAACAAAABAAIiAAAAAAAAAAQA=</HashCode>
+      <FileName>Pax\Sampling\ProvisionalInvoiceRecordDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingConstantDetails">
+    <Position X="94.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAI=</HashCode>
+      <FileName>Pax\Sampling\SamplingConstantDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormC">
+    <Position X="115.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAQgAAAjQAgCAAEALBIQACIACCAMABAB4ACgYBAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormCRecord">
+    <Position X="122" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CASAABAIDIAABQEIAAEAAIQAAgRQAAAEMAAAAQQQAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormCRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormCRecordAttachment">
+    <Position X="90.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormCRecordAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormCResultSet">
+    <Position X="94.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAABAAAAAAEADAAAACIAAGAAABABQAQAAABA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormCResultSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormCSourceCodeTotal">
+    <Position X="133.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIgIAEAIAAABAAAAAAAAAABQQIAIAAAAAAAAAQBAAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormCSourceCodeTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormCSourceTotal">
+    <Position X="118.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABCAAAAAAAAAAAAAAAAAAAEAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormCSourceTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormDRecord">
+    <Position X="137.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAQQIjAJDCABBaNAEBVABQSgAgASAAAEIQlAgAQQAQA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormDRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormDRecordAttachment">
+    <Position X="106.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormDRecordAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormDTax">
+    <Position X="25.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormDTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormDVat">
+    <Position X="52.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormDVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormEDetail">
+    <Position X="117.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgQoEEADAEAABgEAAZAAAQBQ4BBAKEAQAKBABAAARI=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormEDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormEDetailVat">
+    <Position X="59" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormEDetailVat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingFormFLinkingResult">
+    <Position X="115" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingFormFLinkingResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Pax.Sampling.SamplingRMLinkingCriteria">
+    <Position X="51.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEQAAAAAACAECAAgAABAQAAACAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Pax\Sampling\SamplingRMLinkingCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.Attachment">
+    <Position X="95" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAABAAAAEAAggAAAAAAAAAgBAAAAIAEA=</HashCode>
+      <FileName>Base\Attachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.CorrespondenceBase">
+    <Position X="81.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAgAAAiJIAgCEAIIABAEACCCACABCAAAAhBBIgAI=</HashCode>
+      <FileName>Base\CorrespondenceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.EntityBase&lt;PK&gt;">
+    <Position X="74.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\EntityBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.InvoiceBase">
+    <Position X="108.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>I3CcTUhFZIqCoZYAAkEBJaygC0AWQB+BQIpjmBBJcDA=</HashCode>
+      <FileName>Base\InvoiceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.InvoiceSearchCriteriaBase">
+    <Position X="23.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEQAAAAAABAAQAEwAABAAAAAAIUAQAAAAAABAAAAA=</HashCode>
+      <FileName>Base\InvoiceSearchCriteriaBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.MasterBase&lt;PK&gt;">
+    <Position X="70.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\MasterBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.ModelBase">
+    <Position X="74.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\ModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.ValidationExceptionDetailBase">
+    <Position X="20.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAgAIQiAIAAAEIAgIyAAIAAAGACAEAAAAAAABAKAA=</HashCode>
+      <FileName>Base\ValidationExceptionDetailBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

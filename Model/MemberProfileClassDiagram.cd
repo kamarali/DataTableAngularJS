@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Iata.IS.Model.MemberProfile.AchConfiguration">
+    <Position X="0.75" Y="4.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>kDAAIKKGQAIAAQoRTQgAQUSBGKAcCAEwwIGUBQiEQwA=</HashCode>
+      <FileName>MemberProfile\AchConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.AchEntryDetail">
+    <Position X="21.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQCAAAAIAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>MemberProfile\AchEntryDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.AchException">
+    <Position X="42.25" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAIAAAAAAAAAAQAAAAAIAACAAAEIAAAAAAA=</HashCode>
+      <FileName>MemberProfile\AchException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.AchReinstatement">
+    <Position X="42.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAQAAAAAIAAAEAAAAAAAAAAI=</HashCode>
+      <FileName>MemberProfile\AchReinstatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.AchReinstatementDetail">
+    <Position X="72.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAQQAAAAIAAAAAABAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\AchReinstatementDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.AchSuspension">
+    <Position X="42.75" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIBEAAAAAAAAQAAQAAAAAIAAAEAAAAAAAAAAI=</HashCode>
+      <FileName>MemberProfile\AchSuspension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.AchSuspensionDetail">
+    <Position X="102.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAgEAAAAAAAAgAAAAAAQEAAEAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\AchSuspensionDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.AuditAttribute">
+    <Position X="47.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAAAAAAAABAAAAAAAgAAgAAAAAQAEAAAAAIAAAAIAAA=</HashCode>
+      <FileName>MemberProfile\AuditAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.AuditTrail">
+    <Position X="39.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAEQAAABAACAKAAiEEAgAAAAgAAABAAQRBAQBACQ=</HashCode>
+      <FileName>MemberProfile\AuditTrail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.AuditTrailUserDetails">
+    <Position X="43" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>MemberProfile\AuditTrailUserDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.BilateralConfiguration">
+    <Position X="45.75" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAkAAAAAAAAAAgAEAAAAAAAAAABAAAAAAAAEAA=</HashCode>
+      <FileName>MemberProfile\BilateralConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.BlockGroup">
+    <Position X="75.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAQBAAEAoAAAAEAAAAQAAAAAAABAAgQAQAEAAA=</HashCode>
+      <FileName>MemberProfile\BlockGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.BlockGroupException">
+    <Position X="95" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAACAAAAAAAAAAAAAgAAAQEIAQAAAAQ=</HashCode>
+      <FileName>MemberProfile\BlockGroupException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.BlockingRule">
+    <Position X="105.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAQAEgAAAAAAAAQQCAAxAIKAAAAAAAAAABEAA=</HashCode>
+      <FileName>MemberProfile\BlockingRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.BlockingRuleUpdate">
+    <Position X="47.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIBAEBAAEAAIAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>MemberProfile\BlockingRuleUpdateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.Creditor">
+    <Position X="39.5" Y="32.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAABAABAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\BlockingRuleUpdateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.Debtor">
+    <Position X="39.5" Y="29" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAABAABAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\BlockingRuleUpdateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.BlockedByGroup">
+    <Position X="42.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\BlockingRuleUpdateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.Exceptions">
+    <Position X="52.75" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\BlockingRuleUpdateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.BlockMember">
+    <Position X="10.75" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAQQAAAAoAQAAAAAQAAAAAIAgABAQAQAQAAAAA=</HashCode>
+      <FileName>MemberProfile\BlockMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.CargoConfiguration">
+    <Position X="24" Y="4.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>PaMbwSEA2xO/QWQHTClk6VAoImCo3KgaK6KaLg+QdnY=</HashCode>
+      <FileName>MemberProfile\CargoConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.Contact">
+    <Position X="48.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAAICEgCYAAQAiQAMANAQQSkEDIdIAACAAAQBkAUAAg=</HashCode>
+      <FileName>MemberProfile\Contact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.ContactAssignmentSearchCriteria">
+    <Position X="52.5" Y="26.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAABEAAAAAAAAAAAAAAAAAAAAAAAgAAAAEEgAAAA=</HashCode>
+      <FileName>MemberProfile\ContactAssignmentSearchCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.ContactContactTypeMatrix">
+    <Position X="77.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAEAAACAEAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\ContactContactTypeMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.ContactData">
+    <Position X="36.25" Y="34.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAg=</HashCode>
+      <FileName>MemberProfile\ContactData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.ContactType">
+    <Position X="108.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAgUgAEICgAgEAABIAQAAACIAAAgEIAQAGBAUEI=</HashCode>
+      <FileName>MemberProfile\ContactType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.ContactTypeGroup">
+    <Position X="115.75" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\ContactTypeGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.ContactTypeSubGroup">
+    <Position X="14" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAEAAAIAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\ContactTypeSubGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.DSRequiredCountrymapping">
+    <Position X="58.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAQAAAAIYAAAAAAAAABAAAAA=</HashCode>
+      <FileName>MemberProfile\DSRequiredCountrymapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.EBillingConfiguration">
+    <Position X="80.5" Y="4.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAIoA4AIuwBBBCAgAAiAQUACAUAIAaEAAIEQUCAAAAA=</HashCode>
+      <FileName>MemberProfile\EBillingConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.FutureUpdateDetails">
+    <Position X="36.25" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQJCUAAAAAAAiACAAgAGQhAIAAgAAABAAgQAQAAAAQ=</HashCode>
+      <FileName>MemberProfile\FutureUpdateDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.FutureUpdates">
+    <Position X="118.25" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAEAJAAAAAAgigBAAAAQgAQQAIEACAAAIAoQAAECI=</HashCode>
+      <FileName>MemberProfile\FutureUpdates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.FutureUpdateTemp">
+    <Position X="16.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQACEBAAAAAAiACAAgAGQBAAQAAAAAgAAgAAQAAAAQ=</HashCode>
+      <FileName>MemberProfile\FutureUpdateTemp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.IchConfiguration">
+    <Position X="28.75" Y="4.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BBAB5IssUCUAQEICAukURcWJkwQIdgDaUECQQkhExhI=</HashCode>
+      <FileName>MemberProfile\IchConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.IchEntryDetail">
+    <Position X="51.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQCAAAAIAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>MemberProfile\IchEntryDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.IchReinstatementDetail">
+    <Position X="61.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAQQAAAAIAAAAAABAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\IchReinstatementDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.IchSuspensionDetail">
+    <Position X="84.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAEAAIAAAAAgAAAAAJQAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\IchSuspensionDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.IsEntryDetail">
+    <Position X="98.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQCAAAAIAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>MemberProfile\IsEntryDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.Location">
+    <Position X="111.5" Y="4.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>IlRADCAAKoBAAJBiMEBAAWCADKIcAIGgCpCAkAQYAAA=</HashCode>
+      <FileName>MemberProfile\Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.Member">
+    <Position X="121.25" Y="4.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>gsECAQAAAAAMKSRACAACG0LAYQACJ6ARAEgwAQgOUBE=</HashCode>
+      <FileName>MemberProfile\Member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.MemberProfileUpdate">
+    <Position X="36.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hRAkAEQACAEgCQBCAASLQAOAMByANACCEKKAYQFGIgA=</HashCode>
+      <FileName>MemberProfile\MemberProfileUpdate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.MemberStatusDetails">
+    <Position X="32.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgEEAAAAAAAAAAAAAQAACAAIBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\MemberStatusDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.MiscellaneousConfiguration">
+    <Position X="53.75" Y="4.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>GKMJACGhSAgiQEAFBCAAC1AEIGAIBACgKhASKiwI8h4=</HashCode>
+      <FileName>MemberProfile\MiscellaneousConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.PassengerConfiguration">
+    <Position X="64.25" Y="4.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>f/crd7+7f7y86cCfnGufudWg9WA+5Ooii0PWe97v/l4=</HashCode>
+      <FileName>MemberProfile\PassengerConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.Permission">
+    <Position X="87.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAgASAAAAEAQBAAEAAAAQACABAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\Permission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.PermissionListWithCategory">
+    <Position X="39.75" Y="35" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAEAABAAAAAAAQAAQAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\PermissionListWithCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.PermissionTemplateTreeview">
+    <Position X="47.75" Y="34.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgQAAAAAAAAAAAAAEAAACAAQAAAAQAA=</HashCode>
+      <FileName>MemberProfile\PermissionTemplateTreeview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.TreeviewAttribute">
+    <Position X="52" Y="38.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgA=</HashCode>
+      <FileName>MemberProfile\PermissionTemplateTreeview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.PermissionToUser">
+    <Position X="125.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAIAAAAAAACAAAAEAAhAAAAgAARAAQBAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\PermissionToUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.PermissionToUserList">
+    <Position X="52.5" Y="30.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAEAAgAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\PermissionToUserList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.ProfileMetadata">
+    <Position X="35.5" Y="4.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AgQwSEBAAAAgigAAAEAEACIAACGCAwIAAAABAUAIQAI=</HashCode>
+      <FileName>MemberProfile\ProfileMetadata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.ProfileMetadataAvailableFields">
+    <Position X="52.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\ProfileMetadataAvailableFields.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.QueryAndDownloadDetails">
+    <Position X="69.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAAAQAAAAgAAACAAIABAAAQAAAACAAAAA=</HashCode>
+      <FileName>MemberProfile\QueryAndDownloadDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.QueryAndDownloadSearchCriteria">
+    <Position X="47.75" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQBAAAAAAIgCAIIAAAASJAgIAQAAEAAAAAEAUAAAA=</HashCode>
+      <FileName>MemberProfile\QueryAndDownloadSearchCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.SearchEntity">
+    <Position X="42.75" Y="34.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABIAAAQBAAAgQAAAAAAQACAAAABAAAYAAABAAJAEA=</HashCode>
+      <FileName>MemberProfile\SearchEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.SubDivision">
+    <Position X="136" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAIQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\SubDivision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.TechnicalConfiguration">
+    <Position X="127.75" Y="4.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>BjCARAJiAAABFIgyAIoHAQRCALIKQAAFAAugAEgREAA=</HashCode>
+      <FileName>MemberProfile\TechnicalConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.Template">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQBAACAICABACAAAAAAAAAg=</HashCode>
+      <FileName>MemberProfile\Template.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.TemplatePermission">
+    <Position X="39.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAEAQAAAAEgAABAAAAAgAAAAAA=</HashCode>
+      <FileName>MemberProfile\TemplatePermission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.TreeViewPermissions">
+    <Position X="52.25" Y="33.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAABAgACAAAAEAABAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\TreeViewPermissions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.UatpConfiguration">
+    <Position X="90.25" Y="4.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>GCMJACAhSgggQMAFBCgAC1SAYGAIZAGhKgAWKiwIch4=</HashCode>
+      <FileName>MemberProfile\UatpConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.MemberProfile.UserCategory">
+    <Position X="100.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAABAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemberProfile\UserCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.Attachment">
+    <Position X="8" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAABAAAAEAAggAAAAAAAAAgBAAAAIAEA=</HashCode>
+      <FileName>Base\Attachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.CorrespondenceBase">
+    <Position X="133" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAgAAAiJIAgCEAIIABAEACCCACABCAAAAhBBIgAI=</HashCode>
+      <FileName>Base\CorrespondenceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.EntityBase&lt;PK&gt;">
+    <Position X="68.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\EntityBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.InvoiceBase">
+    <Position X="4.75" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>I3CcTUhFZIqCoZYAAkEBJaygC0AWQB+BQIpjmBBJcDA=</HashCode>
+      <FileName>Base\InvoiceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.InvoiceSearchCriteriaBase">
+    <Position X="43" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEQAAAAAABAAQAEwAABAAAAAAIUAQAAAAAABAAAAA=</HashCode>
+      <FileName>Base\InvoiceSearchCriteriaBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.MasterBase&lt;PK&gt;">
+    <Position X="136" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\MasterBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.ModelBase">
+    <Position X="68.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\ModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iata.IS.Model.Base.ValidationExceptionDetailBase">
+    <Position X="39.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAgAIQiAIAAAEIAgIyAAIAAAGACAEAAAAAAABAKAA=</HashCode>
+      <FileName>Base\ValidationExceptionDetailBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5EEA49E6-F25C-4682-979C-9257903BF490}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Iata.IS.Model</RootNamespace>
+    <AssemblyName>Iata.IS.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Iata.IS.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Iata.IS.Model.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Iata.IS.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Iata.IS.Model.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>c:\program files\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>c:\program files\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>c:\program files\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="FileHelpers">
+      <HintPath>..\lib\FileHelpers.2.0\FileHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.1.2.10\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACHRecapSheet\AchRecapSheetDetail.cs" />
+    <Compile Include="AutoBillingClosure\AutoBillingInvoice.cs" />
+    <Compile Include="AutoBillingClosure\EmailAutoBillingInvoices.cs" />
+    <Compile Include="Base\Attachment.cs" />
+    <Compile Include="Base\EntityBase.cs" />
+    <Compile Include="Base\InvoiceBase.cs" />
+    <Compile Include="Base\InvoiceSearchCriteriaBase.cs" />
+    <Compile Include="Base\MasterBase.cs" />
+    <Compile Include="Base\ModelBase.cs" />
+    <Compile Include="Base\ValidationExceptionDetailBase.cs" />
+    <Compile Include="Cargo\Base\ProrateLadderDetail.cs" />
+    <Compile Include="Cargo\BillingHistory\CargoExistingBMTransactionDetails.cs" />
+    <Compile Include="Cargo\BillingHistory\InvoiceSearchCriteria.cs" />
+    <Compile Include="Cargo\BillingHistory\CargoBillingHistorySearchResult.cs" />
+    <Compile Include="Cargo\AwbOtherCharge.cs" />
+    <Compile Include="Cargo\BillingHistory\CargoAuditTrail.cs" />
+    <Compile Include="Cargo\BillingHistory\TransactionDetails.cs" />
+    <Compile Include="Cargo\CargoInvoiceSearchDetails.cs" />
+    <Compile Include="Cargo\CgoBillingCodeSubTotalVat.cs" />
+    <Compile Include="Cargo\CgoBillingMemoDetailReport.cs" />
+    <Compile Include="Cargo\BMAwbProrateLadderDetail.cs" />
+    <Compile Include="Cargo\CargoBillingCode.cs" />
+    <Compile Include="Cargo\CargoBillingCodeSubTotalVat.cs" />
+    <Compile Include="Cargo\BMAwbAttachment.cs" />
+    <Compile Include="Cargo\BMAwbVat.cs" />
+    <Compile Include="Cargo\CargoBillingMemoAttachment.cs" />
+    <Compile Include="Cargo\CargoBillingMemoAwb.cs" />
+    <Compile Include="Cargo\CargoBillingMemoVat.cs" />
+    <Compile Include="BroadcastMessages\ISMessageDeactivated.cs" />
+    <Compile Include="BroadcastMessages\ISMessageRecipients.cs" />
+    <Compile Include="BroadcastMessages\ISMessagesAlerts.cs" />
+    <Compile Include="BroadcastMessages\ISSISOpsAlert.cs" />
+    <Compile Include="Calendar\ACHCalendarRecord.cs" />
+    <Compile Include="Calendar\CalendarEvent.cs" />
+    <Compile Include="Calendar\CalendarRecordBase.cs" />
+    <Compile Include="Calendar\CalendarSearchResult.cs" />
+    <Compile Include="Calendar\DerivedEventOffsetInfo.cs" />
+    <Compile Include="Calendar\EventMapAttribute.cs" />
+    <Compile Include="Calendar\ICHCalendarRecord.cs" />
+    <Compile Include="Calendar\ISCalendar.cs" />
+    <Compile Include="Calendar\ISCalendarTriggers.cs" />
+    <Compile Include="Calendar\CalendarProcess.cs" />
+    <Compile Include="Calendar\TimeInterval.cs" />
+    <Compile Include="Cargo\AwbAttachment.cs" />
+    <Compile Include="Cargo\AwbRecord.cs" />
+    <Compile Include="Cargo\AwbTax.cs" />
+    <Compile Include="Cargo\AwbVat.cs" />
+    <Compile Include="Cargo\Base\InvoiceTotalBase.cs" />
+    <Compile Include="Cargo\Base\MemoBase.cs" />
+    <Compile Include="Cargo\Base\OtherCharge.cs" />
+    <Compile Include="Cargo\Base\ProrateLadder.cs" />
+    <Compile Include="Cargo\Base\Tax.cs" />
+    <Compile Include="Cargo\Base\Vat.cs" />
+    <Compile Include="Cargo\BillingCodeSubTotal.cs" />
+    <Compile Include="Cargo\CargoBillingMemo.cs" />
+    <Compile Include="Cargo\BMAwbOtherCharge.cs" />
+    <Compile Include="Cargo\BMProrateLadder.cs" />
+    <Compile Include="Cargo\CargoCreditMemo.cs" />
+    <Compile Include="Cargo\CargoCreditMemoAttachment.cs" />
+    <Compile Include="Cargo\CargoCreditMemoVat.cs" />
+    <Compile Include="Cargo\CargoInvoice.cs" />
+    <Compile Include="Cargo\CargoInvoiceSearch.cs" />
+    <Compile Include="Cargo\CargoInvoiceTotal.cs" />
+    <Compile Include="Cargo\Base\AWBBase.cs" />
+    <Compile Include="Cargo\CargoInvoiceVat.cs" />
+    <Compile Include="Cargo\CgoLinkedCorrRejectionSearchData.cs" />
+    <Compile Include="Cargo\CMAirWayBill.cs" />
+    <Compile Include="Cargo\CMAwbAttachment.cs" />
+    <Compile Include="Cargo\CMAwbOtherCharge.cs" />
+    <Compile Include="Cargo\CMAwbProrateLadderDetail.cs" />
+    <Compile Include="Cargo\CMAwbVat.cs" />
+    <Compile Include="Cargo\Common\CgoRMLinkingCriteria.cs" />
+    <Compile Include="Cargo\Common\CgoRMLinkingResult.cs" />
+    <Compile Include="Cargo\Common\RMLinkedAwbDetails.cs" />
+    <Compile Include="Cargo\Common\SupportingDocumentAttachment.cs" />
+    <Compile Include="Cargo\CgoCreditMemoDetailReport.cs" />
+    <Compile Include="Cargo\CgoRejectionMemoDetailReport.cs" />
+    <Compile Include="Common\AuditTrailPackageRequestMessage.cs" />
+    <Compile Include="Common\InvPaymentStatus.cs" />
+    <Compile Include="Common\CorrespondenceReportContact.cs" />
+    <Compile Include="Common\CsvUploadQueueMessage.cs" />
+    <Compile Include="Common\DailyOutputFileDownloadSearch.cs" />
+    <Compile Include="Common\DebugLog.cs" />
+    <Compile Include="Common\DuplicateCorrBMLog.cs" />
+    <Compile Include="Common\DuplicateFormCRecordLog.cs" />
+    <Compile Include="Common\DuplicateInvRMLog.cs" />
+    <Compile Include="Common\InvalidRejectionMemoDetails.cs" />
+    <Compile Include="Common\InvoicePendingForDailyDelivery.cs" />
+    <Compile Include="Common\IsDailyOutputProcessLog.cs" />
+    <Compile Include="Common\IsFilePurgeQueue.cs" />
+    <Compile Include="Common\LinkedRejectionMemo.cs" />
+    <Compile Include="Common\MemberReferenceData.cs" />
+    <Compile Include="Common\OarDownloadInvoiceBase.cs" />
+    <Compile Include="Common\SisSanPathConfiguration.cs" />
+    <Compile Include="Common\SupportingDocPurgingDetails.cs" />
+    <Compile Include="Common\CorrReportFile.cs" />
+    <Compile Include="Common\DuplicateInvoiceLog.cs" />
+    <Compile Include="Common\Language.cs" />
+    <Compile Include="Common\PurgingFileQueueMessage.cs" />
+    <Compile Include="Common\AutoBillingExceptionNotification.cs" />
+    <Compile Include="Common\CorrespondenceTrailSearchCriteria.cs" />
+    <Compile Include="Common\ReportDownloadRequestMessage.cs" />
+    <Compile Include="Common\CorrespondenceTrailSearchResult.cs" />
+    <Compile Include="Common\InclusionStatus.cs" />
+    <Compile Include="Common\MaxAcceptableAmount.cs" />
+    <Compile Include="Common\MinAcceptableAmount.cs" />
+    <Compile Include="Common\ServerServiceMapping.cs" />
+    <Compile Include="Enums\ApplicableMinimumField.cs" />
+    <Compile Include="Common\UatpAtcanDetails.cs" />
+    <Compile Include="Common\DefaultBatchNumber.cs" />
+    <Compile Include="Common\ValidationExceptionSummary.cs" />
+    <Compile Include="Cargo\CargoCorrespondence.cs" />
+    <Compile Include="Cargo\CargoCorrespondenceAttachment.cs" />
+    <Compile Include="Cargo\Enums\BillingCode.cs" />
+    <Compile Include="Cargo\Enums\BMCMIndicator.cs" />
+    <Compile Include="Cargo\Enums\SubmissionMethod.cs" />
+    <Compile Include="Cargo\CgoRejectionMemoAttachment.cs" />
+    <Compile Include="Cargo\CargoInvoiceTotalVat.cs" />
+    <Compile Include="Cargo\ParsingModel\CargoBMProrateSlipDetails.cs" />
+    <Compile Include="Cargo\ParsingModel\CargoCMProrateSlipDetails.cs" />
+    <Compile Include="Cargo\ParsingModel\CargoInvoiceModel.cs" />
+    <Compile Include="Cargo\ParsingModel\CargoReasonBreakdown.cs" />
+    <Compile Include="Cargo\ParsingModel\CargoRMProrateSlipDetails.cs" />
+    <Compile Include="Cargo\PayableSearch.cs" />
+    <Compile Include="Cargo\Payables\CGOSupportingDoc.cs" />
+    <Compile Include="Cargo\CargoRejectionMemo.cs" />
+    <Compile Include="Cargo\CgoRejectionMemoVat.cs" />
+    <Compile Include="Cargo\RMAwb.cs" />
+    <Compile Include="Cargo\RMAwbOtherCharge.cs" />
+    <Compile Include="Cargo\RMAwbAttachment.cs" />
+    <Compile Include="Cargo\RMAwbProrateLadderDetail.cs" />
+    <Compile Include="Cargo\RMAwbVat.cs" />
+    <Compile Include="Cargo\RMOtherCharge.cs" />
+    <Compile Include="Cargo\SearchCriteria.cs" />
+    <Compile Include="Cargo\CgoVatIdentifier.cs" />
+    <Compile Include="Common\AdditionalOutputs.cs" />
+    <Compile Include="Common\AircraftTypeIcao.cs" />
+    <Compile Include="Common\Airport.cs" />
+    <Compile Include="Common\Airline.cs" />
+    <Compile Include="Common\AlertsMessagesAnnouncementsResultSet.cs" />
+    <Compile Include="Common\AspNetSessions.cs" />
+    <Compile Include="Common\BillingCategory.cs" />
+    <Compile Include="Common\CgoRMReasonAcceptableDiff.cs" />
+    <Compile Include="Common\CityAirport.cs" />
+    <Compile Include="Common\CorrespondenceSearchCriteria.cs" />
+    <Compile Include="Common\CountryIcao.cs" />
+    <Compile Include="Common\ElementGroup.cs" />
+    <Compile Include="Common\EmailTemplate.cs" />
+    <Compile Include="Common\ExceptionCode.cs" />
+    <Compile Include="Common\ExceptionDetailsSearchResult.cs" />
+    <Compile Include="Common\ExceptionSummarySearchResult.cs" />
+    <Compile Include="Common\ExchangeRate.cs" />
+    <Compile Include="Common\ExpiredCorrespondence.cs" />
+    <Compile Include="Common\FileFormat.cs" />
+    <Compile Include="Common\FileHeader.cs" />
+    <Compile Include="Common\FileServer.cs" />
+    <Compile Include="Common\FileTotal.cs" />
+    <Compile Include="Calendar\BillingPeriod.cs" />
+    <Compile Include="Common\FileType.cs" />
+    <Compile Include="Common\FileWatcher.cs" />
+    <Compile Include="Common\IchZone.cs" />
+    <Compile Include="Common\InvoiceDownloadNotificationMessage.cs" />
+    <Compile Include="Common\InvoiceDuplicateRecord.cs" />
+    <Compile Include="Common\InvoiceOfflineCollectionFilePath.cs" />
+    <Compile Include="Common\InvoiceOfflineCollectionMessage.cs" />
+    <Compile Include="Common\IsEmail.cs" />
+    <Compile Include="Common\IsEmailAttachment.cs" />
+    <Compile Include="Common\ISFTPLog.cs" />
+    <Compile Include="Common\IsHttpDownloadLink.cs" />
+    <Compile Include="Common\ISFileList.cs" />
+    <Compile Include="Common\IsOutputProcessLog.cs" />
+    <Compile Include="Common\IsValidationExceptionDetail.cs" />
+    <Compile Include="Common\IsValidationExceptionSummary.cs" />
+    <Compile Include="Common\LeadPeriod.cs" />
+    <Compile Include="Common\LocationIcao.cs" />
+    <Compile Include="Common\MinMaxAcceptableAmount.cs" />
+    <Compile Include="Common\MiscCode.cs" />
+    <Compile Include="Common\MiscCodeGroup.cs" />
+    <Compile Include="Common\OfflineCollectionFolderType.cs" />
+    <Compile Include="Common\InvoiceOfflineCollectionMetaData.cs" />
+    <Compile Include="Common\OutputGenerationNotificationMessage.cs" />
+    <Compile Include="Common\SisExtendedParameter.cs" />
+    <Compile Include="Common\SystemParameter.cs" />
+    <Compile Include="Common\UpcomingEventsResultSet.cs" />
+    <Compile Include="Common\UserQuestion.cs" />
+    <Compile Include="Enums\CalendarEvents.cs" />
+    <Compile Include="Enums\ArchivalAssociation.cs" />
+    <Compile Include="Enums\InvPaymentStatusApplicableFor.cs" />
+    <Compile Include="Enums\CorrespondenceCloseStatus.cs" />
+    <Compile Include="Enums\DailyDeliveryStatus.cs" />
+    <Compile Include="Enums\EnumDescriptionExtensions.cs" />
+    <Compile Include="Enums\IchZones.cs" />
+    <Compile Include="Enums\Association.cs" />
+    <Compile Include="Enums\MemberProfileCsvUploadEnums.cs" />
+    <Compile Include="Enums\MUChargeCodes.cs" />
+    <Compile Include="Enums\OutputProcessStatus.cs" />
+    <Compile Include="Enums\ProcessIndicator.cs" />
+    <Compile Include="Enums\PurgingFileType.cs" />
+    <Compile Include="Enums\ErrorType.cs" />
+    <Compile Include="Enums\FileSenderRecieverType.cs" />
+    <Compile Include="Enums\InvoiceSettlementStatusType.cs" />
+    <Compile Include="Enums\MemberConfigParameter.cs" />
+    <Compile Include="Enums\PaxCouponRecord.cs" />
+    <Compile Include="Enums\RecalculateFormE.cs" />
+    <Compile Include="Enums\RecordSequence.cs" />
+    <Compile Include="Enums\ReferenceDataErrorType.cs" />
+    <Compile Include="Enums\SettlementMethodValues.cs" />
+    <Compile Include="Enums\SFRFolderPath.cs" />
+    <Compile Include="Enums\StatusType.cs" />
+    <Compile Include="Enums\SystemUsers.cs" />
+    <Compile Include="Enums\TransactionGroups.cs" />
+    <Compile Include="Enums\TransactionTypeTable.cs" />
+    <Compile Include="Enums\ValidationParams.cs" />
+    <Compile Include="ExternalInterfaces\IATAInterface\SisIsWebUsageRptData.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\Error.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\SISInvoiceValidationRequestTransmission.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\SISInvoiceValidationResponseTransmission.cs" />
+    <Compile Include="FutureSubmission\EmailFutureSubmittedInvoices.cs" />
+    <Compile Include="FutureSubmission\FutureSubmissionInvoice.cs" />
+    <Compile Include="LegalArchive\LegalArchivalReturn.cs" />
+    <Compile Include="LegalArchive\LegalArchiveLog.cs" />
+    <Compile Include="LegalArchive\LegalArchiveSearch.cs" />
+    <Compile Include="LegalArchive\LegalArchiveSearchCriteria.cs" />
+    <Compile Include="LegalArchive\LegalArchRetrPurgingFiles.cs" />
+    <Compile Include="LegalArchive\RetrievalJobDetails.cs" />
+    <Compile Include="LegalArchive\RetrievalJobSummary.cs" />
+    <Compile Include="LegalArchive\RetrivalJobDetailGrid.cs" />
+    <Compile Include="LegalArchive\RetrivalJobSummaryGrid.cs" />
+    <Compile Include="LegalXmlGenerator\GetDSFileTypeModel.cs" />
+    <Compile Include="LegalXmlGenerator\InvoicesForXmlGeneration.cs" />
+    <Compile Include="LegalXmlGenerator\TransmitterInvoices.cs" />
+    <Compile Include="LegalXmlGenerator\XsltFileOfInvoices.cs" />
+    <Compile Include="Master\AchCurrencySearchData.cs" />
+    <Compile Include="Master\ChargeCodeSearchData.cs" />
+    <Compile Include="Master\ChargeCodeTypeSearchData.cs" />
+    <Compile Include="MemberProfileCSVUpload\MemberProfileData.cs" />
+    <Compile Include="MemberProfileDataFile\CompleteReferenceDataModel.cs" />
+    <Compile Include="MemberProfileDataFile\IsFileLogExt1Model.cs" />
+    <Compile Include="MemberProfileDataFile\MemberProfileIntermediateDataModel.cs" />
+    <Compile Include="MemberProfile\ArchivalLocations.cs" />
+    <Compile Include="MemberProfile\ChildMemberList.cs" />
+    <Compile Include="MemberProfile\DownloadBlockingRules.cs" />
+    <Compile Include="MemberProfile\DownloadMemberDetails.cs" />
+    <Compile Include="MemberProfile\Enums\ControlType.cs" />
+    <Compile Include="MemberProfile\FutureUpdate.cs" />
+    <Compile Include="MemberProfile\ISLoginUser.cs" />
+    <Compile Include="MemberProfile\ISUserPassReset .cs" />
+    <Compile Include="MemberProfile\LocationAssociation.cs" />
+    <Compile Include="MemberProfile\LocationCodeDetails.cs" />
+    <Compile Include="MemberProfile\ManageUsers.cs" />
+    <Compile Include="MemberProfile\MemberLocationAssociation.cs" />
+    <Compile Include="MemberProfile\MemberLogo.cs" />
+    <Compile Include="MemberProfile\ProfileEntity.cs" />
+    <Compile Include="MemberProfile\RequiredContactType.cs" />
+    <Compile Include="MemberProfile\UserAssignedLocation.cs" />
+    <Compile Include="MemberProfile\UserContactLocations.cs" />
+    <Compile Include="MiscUatp\BillingHistory\AuditTrailPdf.cs" />
+    <Compile Include="MiscUatp\Common\AchCurrencySetUp.cs" />
+    <Compile Include="MiscUatp\Common\PaymentTermsAdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Enums\ProductId.cs" />
+    <Compile Include="MiscUatp\Enums\UomCodeType.cs" />
+    <Compile Include="MiscUatp\MiscDerivedVatDetails.cs" />
+    <Compile Include="MiscUatp\MiscInvoiceSearch.cs" />
+    <Compile Include="Common\ValidationErrorCorrection.cs" />
+    <Compile Include="MiscUatp\MiscInvoiceSearchDetails.cs" />
+    <Compile Include="MiscUatp\MUDailyPayableResultData.cs" />
+    <Compile Include="OfflineReportLog\OfflineReport.cs" />
+    <Compile Include="OfflineReportLog\OfflineReportLog.cs" />
+    <Compile Include="OfflineReportLog\OfflineReportSearchCriteria.cs" />
+    <Compile Include="OfflineReportLog\OfflineReportSearchData.cs" />
+    <Compile Include="OfflineReportLog\RmBmCmPayableReportModel.cs" />
+    <Compile Include="OfflineReportLog\RmBmCmReceivableReportModel.cs" />
+    <Compile Include="Pax\AuditDeletedInvoice.cs" />
+    <Compile Include="Pax\AutoBillingSearchCriteria.cs" />
+    <Compile Include="Pax\AutoBilling\AutoBillingPerformanceReportSearchCriteria.cs" />
+    <Compile Include="Pax\AutoBilling\AutoBillingPerformanceReportSearchResult.cs" />
+    <Compile Include="Pax\AutoBilling\AutoBillUpdateCouponStatusModel.cs" />
+    <Compile Include="Pax\AutoBilling\AutoBillUpdateSourceCodeTotalModel.cs" />
+    <Compile Include="Pax\AutoBilling\IsrAutoBillingModel.cs" />
+    <Compile Include="Pax\AutoBilling\IsrUnrequestedCoupon.cs" />
+    <Compile Include="Pax\AutoBilling\AutoBillingPrimeCoupon.cs" />
+    <Compile Include="Pax\AutoBilling\AutoBillingPrimeCouponAttachment.cs" />
+    <Compile Include="Pax\AutoBilling\PrimeCouponMarketingDetails.cs" />
+    <Compile Include="Pax\AutoBilling\AutoBillingPrimeCouponTax.cs" />
+    <Compile Include="Pax\AutoBilling\AutoBillingPrimeCouponVat.cs" />
+    <Compile Include="Pax\AutoBilling\ProrationCouponError.cs" />
+    <Compile Include="Pax\AutoBilling\Record50LiftRequest.cs" />
+    <Compile Include="Pax\BillingHistory\ExistingBMTransactionDetails.cs" />
+    <Compile Include="Pax\BillingHistory\TransactionDetails.cs" />
+    <Compile Include="Pax\BillingMemoDetailReport.cs" />
+    <Compile Include="Pax\BVC\BVCAgreement.cs" />
+    <Compile Include="Pax\Common\InvoiceLegalPdf.cs" />
+    <Compile Include="Pax\Common\RMSourceCodeValidationCriteria.cs" />
+    <Compile Include="Pax\Common\SupportingDocumentAttachment.cs" />
+    <Compile Include="Pax\Enums\AutoBillingCouponStatus.cs" />
+    <Compile Include="Pax\Enums\AutoBillingTransactionType.cs" />
+    <Compile Include="Pax\Enums\AutoBillingRequestType.cs" />
+    <Compile Include="Pax\Enums\AutoBillingErrorType.cs" />
+    <Compile Include="Pax\Enums\AutoBillingETicketIndicator.cs" />
+    <Compile Include="Pax\Enums\AutoBillingStatusType.cs" />
+    <Compile Include="Pax\Enums\FileType.cs" />
+    <Compile Include="Pax\Enums\TransactionDbStatus.cs" />
+    <Compile Include="Pax\InvoiceDeletionAuditReport.cs" />
+    <Compile Include="Pax\PaxLinkedCorrRejectionSearchData.cs" />
+    <Compile Include="Pax\PaxInvoiceSearch.cs" />
+    <Compile Include="Common\CouponSearchCriteria.cs" />
+    <Compile Include="Pax\CreditMemoDetailReport.cs" />
+    <Compile Include="Enums\InvoiceValidationStatus.cs" />
+    <Compile Include="Pax\PaxInvoiceSearchDetails.cs" />
+    <Compile Include="Pax\PaxOldIdecBillingMember.cs" />
+    <Compile Include="Common\PurgingTransaction.cs" />
+    <Compile Include="MemberProfileDataFile\ChangeInfoReferenceDataModel.cs" />
+    <Compile Include="Reports\Cargo\CargoRmBmCmSummaryPayablesReport.cs" />
+    <Compile Include="Reports\Cargo\CargoRmBmCmSummaryReceivablesReport.cs" />
+    <Compile Include="Reports\Cargo\CgoAwbListingReport.cs" />
+    <Compile Include="Reports\Cargo\CgoRmBmCmListingReport.cs" />
+    <Compile Include="Reports\Cargo\InterlineBillingSummary.cs" />
+    <Compile Include="Reports\Cargo\ReceivablesRMBMCMSummaryUI.cs" />
+    <Compile Include="Reports\Cargo\RejectionAnalysis\CgoRejectionAnalysisRecModel.cs" />
+    <Compile Include="Reports\Cargo\RMBMCMDetailsModel.cs" />
+    <Compile Include="Reports\Cargo\RMBMCMDetailsUI.cs" />
+    <Compile Include="Reports\Cargo\RMBMCMSummaryCargoReceivableReport.cs" />
+    <Compile Include="Reports\ConfirmationDetails\CsvConfirmationDetailModel.cs" />
+    <Compile Include="Reports\ConfirmationSummary\ConfirmationSummaryModel.cs" />
+    <Compile Include="Reports\InterlinePayablesAnalysis\InterlineBillingSummaryReportResultModel.cs" />
+    <Compile Include="Reports\InterlinePayablesAnalysis\InterlinePayablesAnalysisModel.cs" />
+    <Compile Include="Reports\Miscellaneous\InvoiceSummaryReportModel.cs" />
+    <Compile Include="Reports\Miscellaneous\MiscSubstitutionValuesReportResult.cs" />
+    <Compile Include="Reports\PaxCgoMscTopTenPartner\PaxCgoMscTopTenPartnerReportModel.cs" />
+    <Compile Include="Reports\PayablesReport\PaxPayablesRmBmCmSummaryReport.cs" />
+    <Compile Include="Reports\PayablesReport\PayablesReportModel.cs" />
+    <Compile Include="Reports\PendingInvoicesInErrorReport.cs" />
+    <Compile Include="Reports\ProcessingDashInvoiceDeleteActionStatus.cs" />
+    <Compile Include="Reports\ReceivableCargoSubmissionOverviewModel\ReceivableCargoSubmissionOverview.cs" />
+    <Compile Include="Reports\ReceivableCargoSubmissionOverviewModel\ReceivableCargoSubmissionOverviewUI.cs" />
+    <Compile Include="Reports\ReceivablesReport\PaxInterlineBillingSummaryReportResult.cs" />
+    <Compile Include="Reports\ReceivablesReport\PaxReceivablesRmBmCmSummaryReport.cs" />
+    <Compile Include="Reports\ReceivablesReport\PaxRejectionAnalysisNonSamplingReportResult.cs" />
+    <Compile Include="Reports\ReceivablesReport\ReceivablesReportModel.cs" />
+    <Compile Include="Reports\ReceivablesReport\SamplAnalysisRec.cs" />
+    <Compile Include="Reports\ReportSearchCriteria\ReportSearchCriteriaModel.cs" />
+    <Compile Include="Reports\SupportingMismatchDocument\MiscSupportingMismatchDoc.cs" />
+    <Compile Include="Reports\UserPermission.cs" />
+    <Compile Include="SalesForce\SalesForceContactDetails.cs" />
+    <Compile Include="SalesForce\SalesForceMemberDetails.cs" />
+    <Compile Include="SandBox\CertificationParameterMaster.cs" />
+    <Compile Include="SandBox\CertificationTransactionDetails.cs" />
+    <Compile Include="SandBox\CertificationTransactionDetailsReport.cs" />
+    <Compile Include="SandBox\CertificationTransactionGroup.cs" />
+    <Compile Include="SandBox\CertificationTransactionHeader.cs" />
+    <Compile Include="SandBox\ChargeCategoryChargeCode.cs" />
+    <Compile Include="SandBox\ErrorCode.cs" />
+    <Compile Include="SandBox\SandboxTransactionGroupModel.cs" />
+    <Compile Include="SandBox\SandboxTransactionModel.cs.cs" />
+    <Compile Include="SupportingDocuments\CargoPayableSupportingDocSearchResult.cs" />
+    <Compile Include="SupportingDocuments\CargoSupportingDocSearchResult.cs" />
+    <Compile Include="SupportingDocuments\Enums\CargoSupportingDocRecordType.cs" />
+    <Compile Include="SupportingDocuments\PayableSupportingDocSearchResult.cs" />
+    <Compile Include="SupportingDocuments\Enums\SupportingDocAttachmentIndicator.cs" />
+    <Compile Include="SupportingDocuments\Enums\SupportingDocRecordType.cs" />
+    <Compile Include="SupportingDocuments\Enums\SupportingDocType.cs" />
+    <Compile Include="Pax\RejectionMemoDetailReport.cs" />
+    <Compile Include="Common\OldIdecParticipation.cs" />
+    <Compile Include="Common\OnBehalfInvoiceSetup.cs" />
+    <Compile Include="Common\ParsedValidationExceptionNotification.cs" />
+    <Compile Include="Common\ProcessedInvoiceDetail.cs" />
+    <Compile Include="Common\SisMemberStatus.cs" />
+    <Compile Include="Common\SisMemberSubStatus.cs" />
+    <Compile Include="Common\TimeLimit.cs" />
+    <Compile Include="Common\Tolerance.cs" />
+    <Compile Include="Common\TransactionStatus.cs" />
+    <Compile Include="Common\TransactionType.cs" />
+    <Compile Include="Common\UnlocCode.cs" />
+    <Compile Include="Common\User.cs" />
+    <Compile Include="Common\WebValidationError.cs" />
+    <Compile Include="EnumList.cs" />
+    <Compile Include="Enums\BillingCategoryType.cs" />
+    <Compile Include="Enums\BillingType.cs" />
+    <Compile Include="Enums\CalendarEventCategory.cs" />
+    <Compile Include="Enums\ClearingHouse.cs" />
+    <Compile Include="Enums\CorrespondenceStatus.cs" />
+    <Compile Include="Enums\CorrespondenceSubStatus.cs" />
+    <Compile Include="Enums\DigitalSignatureRequired.cs" />
+    <Compile Include="Enums\DigitalSignatureStatus.cs" />
+    <Compile Include="Enums\EmailTemplateId.cs" />
+    <Compile Include="Enums\ErrorStatus.cs" />
+    <Compile Include="Enums\FileFormatType.cs" />
+    <Compile Include="Enums\FileStatusType.cs" />
+    <Compile Include="Enums\InvoiceDownloadOptions.cs" />
+    <Compile Include="Enums\InvoicePeriod.cs" />
+    <Compile Include="Enums\MessageType.cs" />
+    <Compile Include="Enums\MiscGroups.cs" />
+    <Compile Include="Enums\ReferenceDataSource.cs" />
+    <Compile Include="Enums\SupportingAttachmentStatus.cs" />
+    <Compile Include="Enums\SupportingDocumentsRecordType.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\ICHSettlementData.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\CrossCheckRequestInvoice.cs" />
+    <Compile Include="ExternalInterfaces\IATAInterface\RechargeData.cs" />
+    <Compile Include="Fdr\Base\ExchangeRates.cs" />
+    <Compile Include="Fdr\Base\FileHeader.cs" />
+    <Compile Include="Fdr\FiveDayRate.cs" />
+    <Compile Include="ICacheable.cs" />
+    <Compile Include="LateSubmission\Enums\LateSubmissionRequestStatus.cs" />
+    <Compile Include="LateSubmission\LateSubmissionRejectInvoices.cs" />
+    <Compile Include="LateSubmission\LateSubmittedMemberHeader.cs" />
+    <Compile Include="LateSubmission\LateSubmittedInvoices.cs" />
+    <Compile Include="MemberProfile\AuditAttribute.cs" />
+    <Compile Include="MemberProfile\AuditTrailUserDetails.cs" />
+    <Compile Include="MemberProfile\BlockingRuleUpdateHandler.cs" />
+    <Compile Include="MemberProfile\ContactAssignmentSearchCriteria.cs" />
+    <Compile Include="MemberProfile\ContactData.cs" />
+    <Compile Include="MemberProfile\ContactTypeGroup.cs" />
+    <Compile Include="MemberProfile\ContactTypeSubGroup.cs" />
+    <Compile Include="MemberProfile\Enums\AccessFlags.cs" />
+    <Compile Include="MemberProfile\Enums\BillingTypes.cs" />
+    <Compile Include="MemberProfile\Enums\FileUploadType.cs" />
+    <Compile Include="MemberProfile\Enums\ProcessingContactType.cs" />
+    <Compile Include="MemberProfile\Enums\TypeOfContactType.cs" />
+    <Compile Include="MemberProfile\Enums\UpdateFlavor.cs" />
+    <Compile Include="MemberProfile\Enums\UserCategory.cs" />
+    <Compile Include="MemberProfile\FutureUpdateDetails.cs" />
+    <Compile Include="MemberProfile\FutureUpdateTemp.cs" />
+    <Compile Include="MemberProfile\MemberProfileUpdate.cs" />
+    <Compile Include="MemberProfile\Permission.cs" />
+    <Compile Include="MemberProfile\PermissionListWithCategory.cs" />
+    <Compile Include="MemberProfile\PermissionTemplateTreeview.cs" />
+    <Compile Include="MemberProfile\PermissionToUser.cs" />
+    <Compile Include="MemberProfile\PermissionToUserList.cs" />
+    <Compile Include="MemberProfile\ProfileMetadataAvailableFields.cs" />
+    <Compile Include="MemberProfile\ProfilePermissionAttribute.cs" />
+    <Compile Include="MemberProfile\QueryAndDownloadSearchCriteria.cs" />
+    <Compile Include="MemberProfile\SubDivision.cs" />
+    <Compile Include="MemberProfile\Template.cs" />
+    <Compile Include="MemberProfile\TemplatePermission.cs" />
+    <Compile Include="MemberProfile\TreeViewPermissions.cs" />
+    <Compile Include="MemberProfile\UserCategory.cs" />
+    <Compile Include="MiscUatp\Base\LineItemBase.cs" />
+    <Compile Include="MiscUatp\Base\MiscUatpTax.cs" />
+    <Compile Include="MiscUatp\BillingHistory\MiscAuditTrail.cs" />
+    <Compile Include="MiscUatp\BillingHistory\MiscBillingHistorySearchResult.cs" />
+    <Compile Include="MiscUatp\BillingHistory\InvoiceSearchCriteria.cs" />
+    <Compile Include="MiscUatp\Common\AdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Base\AddOnCharge.cs" />
+    <Compile Include="MiscUatp\Common\AddOnChargeName.cs" />
+    <Compile Include="MiscUatp\Common\AircraftType.cs" />
+    <Compile Include="MiscUatp\Common\ChargeCodeType.cs" />
+    <Compile Include="MiscUatp\Common\ChargeCategory.cs" />
+    <Compile Include="MiscUatp\Common\ChargeCode.cs" />
+    <Compile Include="MiscUatp\Common\AdditionalDetailBase.cs" />
+    <Compile Include="MiscUatp\Common\DynamicGroupDetail.cs" />
+    <Compile Include="MiscUatp\Common\MiscUatpInvoiceTaxAdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Common\MemberLocationInfoAdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Common\LineItemDetailTaxAdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Common\LineItemTaxAdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Common\LineItemDetailAdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Common\LineItemAdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Common\MiscUatpInvoiceAdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Common\DataSource.cs" />
+    <Compile Include="MiscUatp\Common\DataSourceValue.cs" />
+    <Compile Include="MiscUatp\Common\DropdownDataValue.cs" />
+    <Compile Include="MiscUatp\Common\FieldMetaData.cs" />
+    <Compile Include="MiscUatp\Common\FieldValue.cs" />
+    <Compile Include="MiscUatp\Common\NotesAdditionalDeail.cs" />
+    <Compile Include="MiscUatp\Common\OtherOrganizationAdditionalDetail.cs" />
+    <Compile Include="MiscUatp\Common\TaxSubType.cs" />
+    <Compile Include="MiscUatp\ContactInformation.cs" />
+    <Compile Include="MiscUatp\CorrespondenceInvoiceDetails.cs" />
+    <Compile Include="MiscUatp\DynamicValidationError.cs" />
+    <Compile Include="MiscUatp\Enums\AditionalDetailLevel.cs" />
+    <Compile Include="MiscUatp\Enums\BillingHistorySearchType.cs" />
+    <Compile Include="Enums\CorrespondenceInitiatingMember.cs" />
+    <Compile Include="MiscUatp\Enums\RejectionStage.cs" />
+    <Compile Include="MiscUatp\MiscInvoiceBillingHistory.cs" />
+    <Compile Include="MiscUatp\NavigationDetails.cs" />
+    <Compile Include="MiscUatp\OtherOrganizationContact.cs" />
+    <Compile Include="MiscUatp\Enums\ContactType.cs" />
+    <Compile Include="MiscUatp\Enums\FieldType.cs" />
+    <Compile Include="MiscUatp\Enums\MemberType.cs" />
+    <Compile Include="MiscUatp\Enums\OtherOrganizationType.cs" />
+    <Compile Include="MiscUatp\Enums\TaxCategory.cs" />
+    <Compile Include="MiscUatp\Enums\VatSubType.cs" />
+    <Compile Include="MiscUatp\FieldChargeCodeMapping.cs" />
+    <Compile Include="MiscUatp\LineItemDetailTax.cs" />
+    <Compile Include="MiscUatp\LineItemTax.cs" />
+    <Compile Include="MiscUatp\MiscCorrespondence.cs" />
+    <Compile Include="MiscUatp\MiscCorrespondenceAttachment.cs" />
+    <Compile Include="MiscUatp\Enums\ControlType.cs" />
+    <Compile Include="MiscUatp\Enums\DataType.cs" />
+    <Compile Include="MiscUatp\Enums\RequiredType.cs" />
+    <Compile Include="MiscUatp\LineItemDetailAddOnCharge.cs" />
+    <Compile Include="MiscUatp\Enums\AdditionalDetailType.cs" />
+    <Compile Include="MiscUatp\InvoiceAddOnCharge.cs" />
+    <Compile Include="MiscUatp\Common\UomCode.cs" />
+    <Compile Include="MiscUatp\InvoiceSummary.cs" />
+    <Compile Include="MiscUatp\LineItem.cs" />
+    <Compile Include="MiscUatp\LineItemAddOnCharge.cs" />
+    <Compile Include="MiscUatp\LineItemDetail.cs" />
+    <Compile Include="MiscUatp\MiscUatpAttachment.cs" />
+    <Compile Include="MiscUatp\MiscUatpInvoice.cs" />
+    <Compile Include="MiscUatp\MiscUatpInvoiceTax.cs" />
+    <Compile Include="MiscUatp\OtherOrganizationInformation.cs" />
+    <Compile Include="MiscUatp\PaymentDetail.cs" />
+    <Compile Include="MiscUatp\MiscSearchCriteria.cs" />
+    <Compile Include="MiscUatp\RejectedInvoiceDetails.cs" />
+    <Compile Include="MiscUatp\ServerValidator.cs" />
+    <Compile Include="Common\FileStatus.cs" />
+    <Compile Include="Common\InvoiceStatus.cs" />
+    <Compile Include="Pax\Common\RMLinkedCouponDetails.cs" />
+    <Compile Include="Pax\Common\RMLinkingCriteria.cs" />
+    <Compile Include="Pax\Common\RMLinkingResult.cs" />
+    <Compile Include="Pax\Common\RMReasonAcceptableDiff.cs" />
+    <Compile Include="Pax\Common\SampleDigit.cs" />
+    <Compile Include="Pax\Common\BvcMatrix.cs" />
+    <Compile Include="Pax\Common\Rfic.cs" />
+    <Compile Include="Pax\Common\Rfisc.cs" />
+    <Compile Include="Common\SettlementMethod.cs" />
+    <Compile Include="Pax\BillingHistory\InvoiceSearchCriteria.cs" />
+    <Compile Include="Pax\BillingHistory\PaxAuditTrail.cs" />
+    <Compile Include="Pax\BillingHistory\PaxBillingHistorySearchResult.cs" />
+    <Compile Include="Enums\FIMBMCMIndicator.cs" />
+    <Compile Include="Pax\Enums\ValueConfirmationStatus.cs" />
+    <Compile Include="Pax\ParsingModel\ProrateSlip.cs" />
+    <Compile Include="Pax\ParsingModel\ReasonBreakdown.cs" />
+    <Compile Include="Pax\ParsingModel\SourceCodeTotalModel.cs" />
+    <Compile Include="Pax\PaxCorrespondenceAttachment.cs" />
+    <Compile Include="Reports\CorrespondenceStatus\CorrespondenceStatusUIModel.cs" />
+    <Compile Include="Reports\ConfirmationDetails\ConfirmationDetailModel.cs" />
+    <Compile Include="Reports\CorrespondenceStatus\CorrespondenceStatusModel.cs" />
+    <Compile Include="Reports\IsClearingHouseCalendar.cs" />
+    <Compile Include="Reports\MemberLocations\MemberLocationModel.cs" />
+    <Compile Include="Reports\MemberSuspendedInvoices.cs" />
+    <Compile Include="Reports\Pax\PaxCouponListingReport.cs" />
+    <Compile Include="Reports\Pax\PaxNonSamplingRmBmCmListingReport.cs" />
+    <Compile Include="Reports\Pax\PaxSampleRMListingReport.cs" />
+    <Compile Include="Reports\Pax\PaxSamplingFormCListingReport.cs" />
+    <Compile Include="Pax\Sampling\LinkedCouponDetails.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormFLinkingResult.cs" />
+    <Compile Include="Pax\Sampling\SamplingConstantDetails.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormCSourceCodeTotal.cs" />
+    <Compile Include="Pax\Sampling\SamplingRMLinkingCriteria.cs" />
+    <Compile Include="Reports\Pax\PaxSamplingFormDListingReport.cs" />
+    <Compile Include="Reports\ProcessingDashboardFileDeleteActionStatus.cs" />
+    <Compile Include="Reports\ProcessingDashboardFileWarningDetail.cs" />
+    <Compile Include="Reports\Enums\Month.cs" />
+    <Compile Include="Reports\ProcessingDashboardFileActionStatus.cs" />
+    <Compile Include="Reports\ProcessingDashboardInvoiceActionStatus.cs" />
+    <Compile Include="Reports\ProcessingDashboardInvoiceDetail.cs" />
+    <Compile Include="Reports\ProcessingDashboardFileStatusResultSet.cs" />
+    <Compile Include="Reports\ProcessingDashboardInvoiceStatusResultSet.cs" />
+    <Compile Include="Reports\ProcessingDashboardSearchEntity.cs" />
+    <Compile Include="Reports\ProcessingDashBoard\SisUsageReportModel.cs" />
+    <Compile Include="Reports\SupportingMismatchDocument\SupportingMismatchDoc.cs" />
+    <Compile Include="Reports\SupportingMismatchDocument\SupportingMismatchDocument.cs" />
+    <Compile Include="Reports\SuspendedInvoiceDetails.cs" />
+    <Compile Include="Reports\ValidationDetails\ValidationDetailsModel.cs" />
+    <Compile Include="Reports\ValidationSummary\PaxValidationSummary.cs" />
+    <Compile Include="SanityCheck\SupportingDocIndexCsv.cs" />
+    <Compile Include="SubmissionDeadline\SubmissionData.cs" />
+    <Compile Include="SupportingDocuments\RecordSearchCriteria.cs" />
+    <Compile Include="SupportingDocuments\SupportingDocSearchCriteria.cs" />
+    <Compile Include="SupportingDocuments\SupportingDocSearchResult.cs" />
+    <Compile Include="SupportingDocuments\SupportingDocumentRecord.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="MemberProfile\AchException.cs" />
+    <Compile Include="MemberProfile\ContactContactTypeMatrix.cs" />
+    <Compile Include="MemberProfile\DSRequiredCountrymapping.cs" />
+    <Compile Include="MemberProfile\Enums\ActionType.cs" />
+    <Compile Include="MemberProfile\Enums\BlockGroupType.cs" />
+    <Compile Include="MemberProfile\Enums\ElementGroupType.cs" />
+    <Compile Include="MemberProfile\Enums\MemberProfileConfigurationType.cs" />
+    <Compile Include="MemberProfile\MemberStatusDetails.cs" />
+    <Compile Include="MemberProfile\ProfileMetadata.cs" />
+    <Compile Include="MemberProfile\SearchEntity.cs" />
+    <Compile Include="MemberProfile\FutureUpdates.cs" />
+    <Compile Include="MemberProfile\AchEntryDetail.cs" />
+    <Compile Include="MemberProfile\AchReinstatement.cs" />
+    <Compile Include="MemberProfile\AchReinstatementDetail.cs" />
+    <Compile Include="MemberProfile\AchSuspension.cs" />
+    <Compile Include="MemberProfile\AchSuspensionDetail.cs" />
+    <Compile Include="MemberProfile\IchEntryDetail.cs" />
+    <Compile Include="MemberProfile\IsEntryDetail.cs" />
+    <Compile Include="MemberProfile\IchSuspensionDetail.cs" />
+    <Compile Include="MemberProfile\CargoConfiguration.cs" />
+    <Compile Include="MemberProfile\EBillingConfiguration.cs" />
+    <Compile Include="MemberProfile\Location.cs" />
+    <Compile Include="MemberProfile\Enums\AchCategory.cs" />
+    <Compile Include="MemberProfile\Enums\AchMembershipStatus.cs" />
+    <Compile Include="MemberProfile\Enums\AggregatedType.cs" />
+    <Compile Include="MemberProfile\Enums\BilledOtherOutputFormats.cs" />
+    <Compile Include="MemberProfile\Enums\BillingOtherOutputFormats.cs" />
+    <Compile Include="MemberProfile\Enums\BillingOutputFormats.cs" />
+    <Compile Include="MemberProfile\Enums\ContactStatus.cs" />
+    <Compile Include="MemberProfile\Enums\DeliveryPreference.cs" />
+    <Compile Include="MemberProfile\Enums\DigitalSignature.cs" />
+    <Compile Include="MemberProfile\Enums\IchCategory.cs" />
+    <Compile Include="MemberProfile\Enums\ICHMembershipStatus.cs" />
+    <Compile Include="MemberProfile\Enums\IchWebReportOptions.cs" />
+    <Compile Include="MemberProfile\Enums\IchZoneType.cs" />
+    <Compile Include="MemberProfile\Enums\MigrationStatus.cs" />
+    <Compile Include="MemberProfile\Enums\OutputFileDeliveryMethod.cs" />
+    <Compile Include="MemberProfile\Enums\Salutation.cs" />
+    <Compile Include="MemberProfile\Enums\SamplingCarrierType.cs" />
+    <Compile Include="MemberProfile\Enums\MemberStatus.cs" />
+    <Compile Include="MemberProfile\AchConfiguration.cs" />
+    <Compile Include="MemberProfile\AuditTrail.cs" />
+    <Compile Include="MemberProfile\BilateralConfiguration.cs" />
+    <Compile Include="MemberProfile\BlockGroup.cs" />
+    <Compile Include="MemberProfile\BlockGroupException.cs" />
+    <Compile Include="MemberProfile\BlockMember.cs" />
+    <Compile Include="MemberProfile\BlockingRule.cs" />
+    <Compile Include="MemberProfile\IchConfiguration.cs" />
+    <Compile Include="MemberProfile\Member.cs" />
+    <Compile Include="MemberProfile\IchReinstatementDetail.cs" />
+    <Compile Include="MemberProfile\TechnicalConfiguration.cs" />
+    <Compile Include="MemberProfile\QueryAndDownloadDetails.cs" />
+    <Compile Include="MemberProfile\MiscellaneousConfiguration.cs" />
+    <Compile Include="MemberProfile\PassengerConfiguration.cs" />
+    <Compile Include="MemberProfile\UatpConfiguration.cs" />
+    <Compile Include="MemberProfile\Contact.cs" />
+    <Compile Include="MemberProfile\ContactType.cs" />
+    <Compile Include="Pax\ParsingModel\InvoiceModel.cs" />
+    <Compile Include="Pax\ParsingModel\InvoiceModelList.cs" />
+    <Compile Include="Pax\ParsingModel\ReferenceDataPart2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pax\Sampling\SamplingFormCResultSet.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormCSourceTotal.cs" />
+    <Compile Include="SupportingDocuments\SupportingDocuments.cs" />
+    <Compile Include="SupportingDocuments\UnlinkedSupportingDocument.cs" />
+    <Compile Include="Pax\CorrespondenceAttachment.cs" />
+    <Compile Include="Pax\BillingMemoAttachment.cs" />
+    <Compile Include="Pax\BMCouponAttachment.cs" />
+    <Compile Include="Pax\CMCouponAttachment.cs" />
+    <Compile Include="Pax\PrimeCouponAttachment.cs" />
+    <Compile Include="Common\DerivedVatDetails.cs" />
+    <Compile Include="MemberProfile\Enums\IsMigrationStatus.cs" />
+    <Compile Include="Common\NonAppliedVatDetails.cs" />
+    <Compile Include="Pax\RMCouponAttachment.cs" />
+    <Compile Include="Pax\CreditMemoAttachment.cs" />
+    <Compile Include="Enums\BillingCurrency.cs" />
+    <Compile Include="Enums\InvoiceFormat.cs" />
+    <Compile Include="Enums\InvoiceType.cs" />
+    <Compile Include="Pax\Enums\NilFormCIndicator.cs" />
+    <Compile Include="Enums\RejectionStage.cs" />
+    <Compile Include="Pax\Enums\RejectionOnValidationFailure.cs" />
+    <Compile Include="Enums\SubmissionMethod.cs" />
+    <Compile Include="Pax\Enums\ToleranceType.cs" />
+    <Compile Include="Pax\Enums\TransactionStatus.cs" />
+    <Compile Include="Enums\TransactionType.cs" />
+    <Compile Include="Pax\Enums\UtilizationType.cs" />
+    <Compile Include="Pax\PaxBillingCode.cs" />
+    <Compile Include="Pax\BMCouponTax.cs" />
+    <Compile Include="Pax\BMCouponVat.cs" />
+    <Compile Include="Pax\CMCouponTax.cs" />
+    <Compile Include="Pax\CMCouponVat.cs" />
+    <Compile Include="Pax\BillingMemoVat.cs" />
+    <Compile Include="Common\Country.cs" />
+    <Compile Include="Pax\PrimeCouponTax.cs" />
+    <Compile Include="Pax\PrimeCouponVat.cs" />
+    <Compile Include="Pax\RMCouponTax.cs" />
+    <Compile Include="Pax\RMCouponVat.cs" />
+    <Compile Include="Pax\CreditMemoVat.cs" />
+    <Compile Include="Base\CorrespondenceBase.cs" />
+    <Compile Include="Pax\Base\InvoiceTotalBase.cs" />
+    <Compile Include="Pax\Base\InvoiceTransmissionBase.cs" />
+    <Compile Include="Pax\Base\MemoBase.cs" />
+    <Compile Include="Pax\Base\TransmissionHeaderBase.cs" />
+    <Compile Include="Pax\Base\TransmissionSummaryBase.cs" />
+    <Compile Include="Pax\BillingMemo.cs" />
+    <Compile Include="Common\City.cs" />
+    <Compile Include="Common\Currency.cs" />
+    <Compile Include="Pax\Common\ISInputFile.cs" />
+    <Compile Include="Common\MemberLocationInformation.cs" />
+    <Compile Include="Common\ReasonCode.cs" />
+    <Compile Include="Pax\Base\Tax.cs" />
+    <Compile Include="Pax\Common\TaxCode.cs" />
+    <Compile Include="Pax\Common\TaxCodeType.cs" />
+    <Compile Include="Pax\Base\Vat.cs" />
+    <Compile Include="Pax\Correspondence.cs" />
+    <Compile Include="Pax\BMCoupon.cs" />
+    <Compile Include="Pax\MemoCouponBase.cs" />
+    <Compile Include="Pax\CMCoupon.cs" />
+    <Compile Include="Pax\PrimeCoupon.cs" />
+    <Compile Include="Pax\CouponBase.cs" />
+    <Compile Include="Pax\RMCoupon.cs" />
+    <Compile Include="Pax\CreditMemo.cs" />
+    <Compile Include="Pax\Enums\BillingCode.cs" />
+    <Compile Include="Pax\Enums\HandlingFeeType.cs" />
+    <Compile Include="Enums\InvoiceStatusType.cs" />
+    <Compile Include="Pax\Enums\InvoiceProcessStatus.cs" />
+    <Compile Include="Pax\Enums\ResubmissionStatus.cs" />
+    <Compile Include="Pax\PaxInvoice.cs" />
+    <Compile Include="Pax\InvoiceTotal.cs" />
+    <Compile Include="Pax\InvoiceVat.cs" />
+    <Compile Include="Pax\InvoiceTransmission.cs" />
+    <Compile Include="Pax\RejectionMemoAttachment.cs" />
+    <Compile Include="Pax\RejectionMemo.cs" />
+    <Compile Include="Pax\RejectionMemoVat.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormCRecord.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormCRecordAttachment.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormDRecordAttachment.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormDTax.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormDVat.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormEDetailVat.cs" />
+    <Compile Include="Pax\Sampling\ProvisionalInvoiceRecordDetail.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormC.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormDRecord.cs" />
+    <Compile Include="Pax\Sampling\SamplingFormEDetail.cs" />
+    <Compile Include="Pax\SearchCriteria.cs" />
+    <Compile Include="Enums\SMI.cs" />
+    <Compile Include="Pax\SourceCodeTotal.cs" />
+    <Compile Include="Pax\SourceCodeVat.cs" />
+    <Compile Include="Common\TransmissionHeader.cs" />
+    <Compile Include="Common\TransmissionSummary.cs" />
+    <Compile Include="Pax\VatIdentifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pax\SourceCode.cs" />
+    <Compile Include="Pax\UtilizationType.cs" />
+    <Compile Include="SupportingDocuments\UnlinkedSupportingDocumentEx.cs" />
+    <Compile Include="SystemMonitor\CompletedJobs.cs" />
+    <Compile Include="SystemMonitor\IsWebResponse.cs" />
+    <Compile Include="SystemMonitor\LoggedInUserByRegion.cs" />
+    <Compile Include="SystemMonitor\OutputFile.cs" />
+    <Compile Include="SystemMonitor\OutstandingItems.cs" />
+    <Compile Include="SystemMonitor\LoggedInUser.cs" />
+    <Compile Include="SystemMonitor\PendingInvoices.cs" />
+    <Compile Include="SystemMonitor\PendingJobs.cs" />
+    <Compile Include="SystemMonitor\ProceesedFiles.cs" />
+    <Compile Include="SystemMonitor\RequestLog.cs" />
+    <Compile Include="SystemMonitor\SystemMonitorManage.cs" />
+    <Compile Include="UploadMemberProfileCSVData\MemberProfileCSVData.cs" />
+    <Compile Include="ValueConfirmation\AutoGenerateValueConfirmationReport.cs" />
+    <Compile Include="ValueConfirmation\BvcResponseHeader.cs" />
+    <Compile Include="ValueConfirmation\RequestVCFCoupon.cs" />
+    <Compile Include="ValueConfirmation\ResponseVCFRequiredFields.cs" />
+    <Compile Include="ValueConfirmation\ValidationFailGroupHeader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Iata.IS.ruleset">
+      <Link>Iata.IS.ruleset</Link>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="MiscUATPClassDiagram.cd" />
+    <None Include="MemberProfileClassDiagram.cd" />
+    <None Include="PaxClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Iata.IS.Core\Iata.IS.Core.csproj">
+      <Project>{6DAC77EB-620C-4AE0-9FC5-332F1170240D}</Project>
+      <Name>Iata.IS.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pax\Reports\" />
+    <Folder Include="RequestVCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
