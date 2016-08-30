@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using Iata.IS.Business.Common;
+using Iata.IS.Business.MemberProfile;
+using Iata.IS.Business.MiscUatp;
+using Iata.IS.Web.Util.Filters;
+using System.Web.Mvc;
+using Iata.IS.Web.Util;
+
+namespace Iata.IS.Web.Areas.Misc.Controllers
+{
+    public class MiscDailyPayCreditNoteController : MiscPayInvoiceController
+    {
+        //SCP#444864 - KAL:Internal issue for Daily Bilateral CreditNote
+        // Controller and View created.
+
+        public MiscDailyPayCreditNoteController(IMiscUatpInvoiceManager miscUatpInvoiceManager, IReferenceManager referenceManager, IMemberManager memberManager)
+            : base(miscUatpInvoiceManager, referenceManager, memberManager)
+        {
+        }
+
+        [ISAuthorize(Business.Security.Permissions.Misc.Payables.DailyBilateralDelivery.Download)]
+        [HttpGet]
+        public override FileStreamResult InvoiceAttachmentDownload(string invoiceId, string lineItemId)
+        {
+            return base.InvoiceAttachmentDownload(invoiceId, lineItemId);
+        }
+
+        [ISAuthorize(Business.Security.Permissions.Misc.Payables.DailyBilateralDelivery.Download)]
+        [HttpGet]
+        public override FileStreamResult LineItemAttachmentDownload(string invoiceId, string lineItemId, string lineItemDetailId)
+        {
+            return base.LineItemAttachmentDownload(invoiceId, lineItemId, lineItemDetailId);
+        }
+    }
+}
