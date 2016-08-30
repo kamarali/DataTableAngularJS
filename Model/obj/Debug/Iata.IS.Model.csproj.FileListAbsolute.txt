@@ -1,0 +1,15 @@
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Iata.IS.Model.dll
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Iata.IS.Model.pdb
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\FileHelpers.dll
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Iata.IS.Core.dll
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\log4net.dll
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Castle.Core.dll
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Castle.Windsor.dll
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Iata.IS.Core.pdb
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Castle.Core.pdb
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Castle.Core.xml
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Castle.Windsor.pdb
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\bin\Debug\Castle.Windsor.xml
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\obj\Debug\Iata.IS.Model.csprojResolveAssemblyReference.cache
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\obj\Debug\Iata.IS.Model.dll
+D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Model\obj\Debug\Iata.IS.Model.pdb
