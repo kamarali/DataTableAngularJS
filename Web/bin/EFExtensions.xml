@@ -1,0 +1,577 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFExtensions</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Data.Extensions.DataExtensions">
+            <summary>
+            Helper methods for System.Data and System.Data.Entity types.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Field``1(System.Data.IDataRecord,System.String)">
+            <summary>
+            Returns the value for a field in the given data record.
+            </summary>
+            <remarks>
+            If this method is used within a Materializer expression, it will
+            be optimized. If the 'name' argument is a literal, we replace it with
+            the column ordinal. In addition, the optimizations described for
+            Field(record, ordinal) are applied.
+            </remarks>
+            <typeparam name="T">Expected type of the field.</typeparam>
+            <param name="record">Record from which to retrieve field.</param>
+            <param name="name">Name of field.</param>
+            <returns>Value of field.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Field``1(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Returns the value for a field in the given data record.
+            </summary>
+            <remarks>
+            If this method is used within a Materializer expression, it will
+            be optimized. The record is directly accessed and IsDBNull checks
+            are included only if warranted by T.
+            </remarks>
+            <typeparam name="T">Expected type of the field.</typeparam>
+            <param name="record">Record from which to retrieve field.</param>
+            <param name="ordinal">Ordinal of field.</param>
+            <returns>Value of field.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Materialize``1(System.Data.Common.DbDataReader)">
+            <summary>
+            Uses default Materializer behaviors to shape reader results as an enumeration
+            of T.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="reader">Data reader producing results.</param>
+            <returns>Typed reader results.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Materialize``1(System.Data.Common.DbDataReader,System.Linq.Expressions.Expression{System.Func{System.Data.IDataRecord,``0}})">
+            <summary>
+            Uses the given expression to shape reader results as an enumeration of T.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="reader">Data reader producing results.</param>
+            <param name="expression">Expression describing how reader results should be shaped.</param>
+            <returns>Typed reader results.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Materialize``1(System.Data.Common.DbCommand)">
+            <summary>
+            Uses default Materializer behaviors to shape the result of evaluating the given command as 
+            an enumeration of T.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="command">Command producing results.</param>
+            <returns>Typed reader results.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Materialize``1(System.Data.Common.DbCommand,System.Data.CommandBehavior)">
+            <summary>
+            Uses the given expression to shape command results as an enumeration of T.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="command">Data reader producing results.</param>
+            <param name="commandBehavior">Command behavior to use when executing the command.</param>
+            <returns>Typed reader results.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Materialize``1(System.Data.Common.DbCommand,System.Linq.Expressions.Expression{System.Func{System.Data.IDataRecord,``0}})">
+            <summary>
+            Uses the given expression to shape command results as an enumeration of T.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="command">Data reader producing results.</param>
+            <param name="expression">Expression describing how reader results should be shaped.</param>
+            <returns>Typed reader results.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Materialize``1(System.Data.Common.DbCommand,System.Data.CommandBehavior,System.Linq.Expressions.Expression{System.Func{System.Data.IDataRecord,``0}})">
+            <summary>
+            Uses the given expression to shape command results as an enumeration of T.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="command">Data reader producing results.</param>
+            <param name="commandBehavior">Command behavior to use when executing the command.</param>
+            <param name="expression">Expression describing how reader results should be shaped.</param>
+            <returns>Typed reader results.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.CreateStoreCommand(System.Data.Objects.ObjectContext,System.String,System.Object[])">
+            <summary>
+            Creates a store command based on the connection used by given object context.
+            </summary>
+            <param name="context">Object context.</param>
+            <param name="commandText">Command text.</param>
+            <param name="parameters">Parameters to pass to the store command.</param>
+            <returns>Store command.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.CreateStoreCommand(System.Data.Objects.ObjectContext,System.String,System.Data.CommandType,System.Object[])">
+            <summary>
+            Creates a store command based on the connection used by given object context.
+            </summary>
+            <param name="context">Object context.</param>
+            <param name="commandText">Command text.</param>
+            <param name="commandType">Command type.</param>
+            <param name="parameters">Parameters to pass to the store command.</param>
+            <returns>Store command.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Bind``2(System.Collections.Generic.IEnumerable{``0},System.Data.Objects.ObjectSet{``1})">
+            <summary>
+            Associates results in the given source with an entity set. This supports tracking
+            results in the state manager. If an existing element with the same key exists, it
+            is returned instead.
+            </summary>
+            <typeparam name="TEntity">Entity type.</typeparam>
+            <typeparam name="TBase">Base type for entity set.</typeparam>
+            <param name="source">Entities to bind.</param>
+            <param name="objectSet">Entity set to which elements should be bound.</param>
+            <returns>Bound entities.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.Bind``1(System.Collections.Generic.IEnumerable{``0},System.Data.Objects.ObjectContext)">
+            <summary>
+            Associates results in the given source with the default entity set for the given entity type. 
+            This supports tracking results in the state manager. If an existing element with the same key 
+            exists, it is returned instead.
+            </summary>
+            <typeparam name="TEntity">Entity type.</typeparam>
+            <param name="source">Entities to bind.</param>
+            <param name="context">Object context to which entities are bound.</param>
+            <returns>Bound entities.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.CreateConnectionScope(System.Data.Common.DbConnection)">
+            <summary>
+            Returns a handle on an IDisposable that can be used to safely control the lifetime
+            of an open connection. If the connection is closed, it will be opened immediately
+            and closed when the result of this method (the scope) is disposed. If the connection is already
+            open, it remains open.
+            <code>
+            // Example with CreateConnectionScope
+            using (command.Connection.CreateConnectionScope())
+            {
+                command.ExecuteNonQuery();
+            }
+            
+            // Example without
+            bool connectionOpened = command.Connection.State == ConnectionState.Closed;
+            if (connectionOpened)
+            {
+                command.Connection.Open();
+            }
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (connectionOpened &amp;&amp; command.Connection.State == ConnectionState.Open)
+                {
+                    command.Connection.Close();
+                }
+            }
+            </code>
+            </summary>
+            <param name="connection">Connection to open.</param>
+            <returns>Scope closing the connection on dispose.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.ExpandInvocations(System.Linq.Expressions.Expression)">
+            <summary>
+            Expands all InvocationExpression instances within the given expression.
+            </summary>
+            <param name="expression">Expression to expand.</param>
+            <returns>Expanded expression.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.ExpandInvocations``1(System.Linq.IQueryable{``0})">
+            <summary>
+            Expands all InvocationExpression instances within the given query.
+            </summary>
+            <param name="query">Query to expand.</param>
+            <returns>Expanded query.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.FindOrAttach``2(System.Data.Objects.ObjectSet{``0},``1)">
+            <summary>
+            Attaches the given entity or returns existing entity with the same key.
+            </summary>
+            <typeparam name="TElement">Element type of object set.</typeparam>
+            <typeparam name="TEntity">Entity type.</typeparam>
+            <param name="objectSet">Object set.</param>
+            <param name="entity">Entity to attach.</param>
+            <returns>Input entity or existing entity with the same key.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.GetTrackedEntities``1(System.Data.Objects.ObjectSet{``0})">
+            <summary>
+            Gets all members of the ObjectSet that are currently in memory.
+            </summary>
+            <returns>All tracked members of the ObjectSet</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.DataExtensions.GetTrackedEntities``1(System.Data.Objects.ObjectSet{``0},System.Data.EntityState)">
+            <summary>
+            Gets all members of the ObjectSet that are currently in memory
+            with the given state(s).
+            </summary>
+            <param name="objectSet">Object set.</param>
+            <param name="state">Entity state flags.</param>
+            <typeparam name="TElement">Element type of object set.</typeparam>
+            <returns>Tracked members of the ObjectSet in the given state.</returns>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.DataExtensions.InvocationExpander">
+            <summary>
+            Expands invocation expressions by replacing parameters with values.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.DataExtensions.FieldMethodOptimizer">
+            <summary>
+            Optimizer implementation that rewrites calls to the DataExtensions.Field methods.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.IMaterializerMethodOptimizer">
+            <summary>
+            Interface method optimizers must implement to be used by the Materializer component.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.IMaterializerMethodOptimizer.OptimizeMethodCall(System.Collections.ObjectModel.ReadOnlyCollection{System.String},System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.MethodCallExpression)">
+            <summary>
+            Optimize a method call.
+            </summary>
+            <remarks>
+            Implementations should return the input expression if they are unable to optimize
+            rather than throwing or returning null.
+            </remarks>
+            <param name="fieldNames">Names and order of fields available in the given record.</param>
+            <param name="recordParameter">Record parameter (of type IDataRecord).</param>
+            <param name="methodCall">Expression representing the method call.</param>
+            <returns>Optimized method call.</returns>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.DataExtensions.OpenConnectionLifetime">
+            <summary>
+            Class supporting the DataExtensions.OpenConnection method.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.Messages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.AttachedEntityHasWrongType">
+            <summary>
+              Looks up a localized string similar to The given type argument to does not match the type of an entity found in the state manager..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.CannotDetermineMetadataForRelatedEnd">
+            <summary>
+              Looks up a localized string similar to Unable to retrieve metadata for related end..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.DeletingFromWrongSet">
+            <summary>
+              Looks up a localized string similar to Attempting to delete an entity belonging to a different set..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.EmptyArgument">
+            <summary>
+              Looks up a localized string similar to Argument is empty..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.IncompatibleReader">
+            <summary>
+              Looks up a localized string similar to The given reader is incompatible with the current materializer. Create a different materializer for this reader..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.InvalidOptimizerType">
+            <summary>
+              Looks up a localized string similar to The given type must implement &apos;{0}&apos; and have a default constructor..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.InvalidSourceEntity">
+            <summary>
+              Looks up a localized string similar to Source entity did not contribute the given reference..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.OperationRequiresObjectQuery">
+            <summary>
+              Looks up a localized string similar to The argument must be an instance of System.Data.Objects.ObjectQuery&apos;1..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.OptimizedExpressionUnavailable">
+            <summary>
+              Looks up a localized string similar to An optimized expression cannot be produced before results have been materialized..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.SimpleKeyOnly">
+            <summary>
+              Looks up a localized string similar to This method is only supported for non-compound reference keys.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.UnableToCreateDefaultMaterializeDelegate">
+            <summary>
+              Looks up a localized string similar to Unable to build a default materialization delegate for this type. Initialize a materializer with a specific delegate definition..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.UnableToFindMetadataForType">
+            <summary>
+              Looks up a localized string similar to Unable to find EDM metadata for the given CLR type &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.UnableToGetBindingList">
+            <summary>
+              Looks up a localized string similar to The given query does not support binding lists..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.UnexpectedKeyCount">
+            <summary>
+              Looks up a localized string similar to Unexpected number of key values given..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.UnknownEntityContainer">
+            <summary>
+              Looks up a localized string similar to Unable to find specified entity container &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.UnknownEntitySet">
+            <summary>
+              Looks up a localized string similar to Unable to find specified entity set &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.Messages.UntrackedEntity">
+            <summary>
+              Looks up a localized string similar to Entity is not tracked by the current object context..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.EntityReferenceExtensions">
+            <summary>
+            Extensions supporting easy retrieval and setting of reference key values. Currently, the EntityReference
+            class requires metadata for a key but does not directly expose that metadata. This class exposes the 
+            keys as pure values.
+            </summary>
+            <example>
+            <code>
+            // existing pattern
+            product.CategoryReference.EntityKey = new EntityKey("EntityContainer.Categories", new EntityKeyMember("CategoryID", 1), new EntityKeyMember("DivisionID", 1))); 
+            
+            // new pattern
+            product.CategoryReference.SetKey(1, 1);
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.EntityReferenceExtensions.GetKey``1(System.Data.Objects.DataClasses.EntityReference{``0})">
+            <summary>
+            Gets key value for a non-compound reference key (e.g. one foreign key component).
+            </summary>
+            <typeparam name="T">EntityReference element type</typeparam>
+            <param name="entityReference">Entity reference.</param>
+            <returns>Key value from entity reference.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.EntityReferenceExtensions.GetKey``1(System.Data.Objects.DataClasses.EntityReference{``0},System.Int32)">
+            <summary>
+            Gets a component of a key value for a (potentially compound) reference key.
+            </summary>
+            <typeparam name="T">EntityReference element type</typeparam>
+            <param name="entityReference">Entity reference.</param>
+            <param name="keyOrdinal">Index of the key component (with respect to the element type's
+            EntityType.KeyMembers).</param>
+            <returns>Key component value from entity reference.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.EntityReferenceExtensions.SetKey``1(System.Data.Objects.DataClasses.EntityReference{``0},System.Object[])">
+            <summary>
+            Sets reference key values.
+            </summary>
+            <typeparam name="T">EntityReference element type</typeparam>
+            <param name="entityReference">Entity reference.</param>
+            <param name="keyValues">Components of the key (aligned with the element type EntityType.KeyMembers)</param>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.EntityReferenceExtensions.GetTargetEntitySet(System.Data.Objects.DataClasses.RelatedEnd)">
+            <summary>
+            Uses internal API to access metadata for related end target.
+            </summary>
+            <param name="relatedEnd">Related end.</param>
+            <returns>Entity set targeted by the related end.</returns>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.Utility">
+            <summary>
+            General purpose helper methods.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.Utility.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Foreach element in the input, runs the specified action. Yields input elements.
+            </summary>
+            <typeparam name="TResult">Element type.</typeparam>
+            <param name="source">Source sequence.</param>
+            <param name="action">Action to perform on each element of the source.</param>
+            <returns>Source elements.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.Utility.IsGenericAssignableFrom(System.Type,System.Type,System.Type[]@)">
+            <summary>
+            Determines whether a generic type definition is assignable from a type given some
+            generic type arguments. For instance, <code>typeof(IEnumerable&lt;&gt;).IsGenericAssignableFrom(typeof(List&lt;int&gt;), out genericArguments)</code>
+            returns true with generic arguments { typeof(int) }.
+            </summary>
+            <param name="toType">Target generic type definition (to which the value would be assigned).</param>
+            <param name="fromType">Source type (instance of which is being assigned)</param>
+            <param name="genericArguments">Returns generic type arguments required for the assignment to succeed
+            or null if no such assignment exists.</param>
+            <returns>true if the type can be assigned; otherwise false</returns>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.Materializer`1">
+            <summary>
+            Supports shaping DbCommand and DbDataReader as CLR instances.
+            </summary>
+            <remarks>
+            This type is thread-safe. For performance reasons, static instances of this type
+            should be shared wherever possible. Note that a single instance of the Materializer
+            cannot be used with two command or readers returning different fields or the same
+            fields in a different order. To develop custom optimization behaviors, implement
+            methods with the IMaterializerOptimizedMethodAttribute.
+            </remarks>
+            <typeparam name="T">CLR type to materialize.</typeparam>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.Materializer`1.#ctor">
+            <summary>
+            Default constructor. Instances of T are materialized by assigning field values to
+            writable properties on T having the same name. By default, allows fields
+            that do not have corresponding properties and properties that do not have corresponding
+            fields.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.Materializer`1.#ctor(System.Data.Metadata.Edm.StructuralType)">
+            <summary>
+            Creates a materializer for the given EDM type. Assumes that a column exists in the result
+            set for every property of the EDM type.
+            </summary>
+            <remarks>
+            Beyond requiring that all properties of the type are available, no type validation
+            is performed.
+            </remarks>
+            <param name="structuralType">EDM type for which to create a Materializer.</param>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.Materializer`1.#ctor(System.Linq.Expressions.Expression{System.Func{System.Data.IDataRecord,`0}})">
+            <summary>
+            Instances of T are materialized using the given shaper. For every row in the result,
+            the shaper is evaluated.
+            </summary>
+            <param name="shaper">Describes how reader rows are transformed into typed results.</param>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.Materializer`1.Materialize(System.Data.Common.DbCommand)">
+            <summary>
+            Materializes the results of the given command.
+            </summary>
+            <param name="command">Command to execute.</param>
+            <returns>Shaped results.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.Materializer`1.Materialize(System.Data.Common.DbCommand,System.Data.CommandBehavior)">
+            <summary>
+            Materializes the results of the given command.
+            </summary>
+            <param name="command">Command to execute.</param>
+            <param name="commandBehavior">Command behavior to use when executing the command.</param>
+            <returns>Shaped results.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.Materializer`1.Materialize(System.Data.Common.DbDataReader)">
+            <summary>
+            Materializes rows in the given reader.
+            </summary>
+            <param name="reader">Results to materialize.</param>
+            <returns>Shaped results.</returns>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.Materializer`1.OptimizingExpressionVisitor">
+            <summary>
+            LINQ expression visitor that optimizes method call expressions referencing methods with
+            the IMaterializerMethodAttribute.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.MaterializerOptimizedMethodAttribute">
+            <summary>
+            Attach this attribute to a method that can be locally rewritten to optimize Materializer
+            performance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.MaterializerOptimizedMethodAttribute.#ctor(System.Type)">
+            <summary>
+            Construct attribute.
+            </summary>
+            <param name="optimizerType">A type implementing the IMaterializerMethodOptimizer interface
+            that can be used to optimize MethodCallExpressions referencing the attributed method. The
+            type must have a public default constructor.</param>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.MaterializerOptimizedMethodAttribute.OptimizerType">
+            <summary>
+            Gets type of optimizer.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Data.Extensions.MaterializerOptimizedMethodAttribute.Optimizer">
+            <summary>
+            Instance of the optimizer class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Data.Extensions.ObjectQueryExtensions">
+            <summary>
+            When using LINQ to Entities, queries are instances of ObjectQuery but are statically
+            typed as IQueryable. This makes it difficult to access members of ObjectQuery, particularly
+            when the element type is anonymous. These extensions make it easier to access ObjectQuery
+            members.
+            </summary>
+            <example>
+            <code>
+            var q = from p in context.Products
+                    where p.ProductName.StartsWith("Foo")
+                    select p;
+            
+            // before
+            string commandText = ((ObjectQuery&lt;Product&gt;)q).ToTraceString();
+            
+            // after
+            string commandText = q.ToTraceString();
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.ObjectQueryExtensions.AsObjectQuery``1(System.Linq.IQueryable{``0})">
+            <summary>
+            Returns the given IQuerable instance as an ObjectQuery instance.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="source">IQueryable instance.</param>
+            <returns>source as an ObjectQuery</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.ObjectQueryExtensions.ToTraceString``1(System.Linq.IQueryable{``0})">
+            <summary>
+            Retrieves Entity Framework trace information for the given query.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="source">IQueryable instance. Must be an ObjectQuery instance at runtime.</param>
+            <returns>Trace string for the query.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.ObjectQueryExtensions.Include``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            Includes navigation path in query result.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="source">IQueryable instance. Must be an ObjectQuery instance at runtime.</param>
+            <param name="path">Navigation path.</param>
+            <returns>Query with spanned navigations.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.ObjectQueryExtensions.SetMergeOption``1(System.Linq.IQueryable{``0},System.Data.Objects.MergeOption)">
+            <summary>
+            Sets merge option for a query.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="source">IQueryable instance. Must be an ObjectQuery instance at runtime.</param>
+            <param name="mergeOption">Merge option to use when evaluating the query.</param>
+            <returns>Query with merge option set.</returns>
+        </member>
+        <member name="M:Microsoft.Data.Extensions.ObjectQueryExtensions.ToBindingList``1(System.Linq.IQueryable{``0})">
+            <summary>
+            Returns binding list for the given query instance.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
