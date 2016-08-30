@@ -1,0 +1,1400 @@
+<mvcSiteMap xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-2.0" enableLocalization="true">
+  <mvcSiteMapNode title="Home" controller="Home" action="Index" changeFrequency="Always" updatePriority="Normal">
+    <mvcSiteMapNode title="Passenger" controller="ManageInvoice" action="Index" area="Pax" clickable="false">
+      <mvcSiteMapNode title="Receivables" controller="ManageInvoice" action="Index" area="Pax" clickable="false">
+        <mvcSiteMapNode title="Manage Invoice" area="Pax" controller="ManageInvoice" action="Index" RouteName="InvoiceSearch" ParameterList="id" />
+        <mvcSiteMapNode title="Create Non-Sampling Invoice" area="Pax" controller="Invoice" action="Create" RouteName="InvoiceCreate" />
+        <mvcSiteMapNode title="Create Non-Sampling Credit Note" area="Pax" controller="CreditNote" action="Create" RouteName="InvoiceCreate" />
+        <mvcSiteMapNode title="Create Sampling Form D/E" area="Pax" controller="FormDE" action="Create" RouteName="InvoiceCreate" />
+        <mvcSiteMapNode title="Create Sampling Form F" area="Pax" controller="FormF" action="Create" RouteName="InvoiceCreate" />
+        <mvcSiteMapNode title="Create Sampling Form XF" area="Pax" controller="FormXF" action="Create" RouteName="InvoiceCreate" />
+        <mvcSiteMapNode title="Manage Supporting Documents" area="Pax" controller="SupportingDoc" action="Index" RouteName="ManageSupportingDocuments" />
+
+        <mvcSiteMapNode title="View Non-Sampling Invoice" area="Pax" controller="Invoice" action="View" RouteName="transactions" ParameterList="invoiceId, billingType">
+          <mvcSiteMapNode title="Invoice Level VAT" area="Pax" controller="Invoice" action="VATView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Prime Billing List" area="Pax" controller="Invoice" action="PrimeBillingListView" RouteName="transactions" ParameterList="invoiceId, transactionId, billingType">
+            <mvcSiteMapNode title="View Prime Billing" area="Pax" controller="Invoice" action="PrimeBillingView" RouteName="transactions" ParameterList="invoiceId,transactionId, billingType" />
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Rejection Memo List" area="Pax" controller="Invoice" action="RMListView" RouteName="transactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="View Rejection Memo" area="Pax" controller="Invoice" action="RMView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Rejection Memo Coupon" area="Pax" controller="Invoice" action="RMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Billing Memo List" area="Pax" controller="Invoice" action="BMListView" RouteName="transactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="View Billing Memo" area="Pax" controller="Invoice" action="BMView" RouteName="transactions" ParameterList="invoiceId,transactionId,billingType">
+              <mvcSiteMapNode title="View Billing Memo Coupon" area="Pax" controller="Invoice" action="BMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Credit Note" area="Pax" controller="CreditNote" action="View" RouteName="InvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Credit Note Level VAT" area="Pax" controller="CreditNote" action="VATView" RouteName="transactions" ParameterList="invoiceId,billingType" />
+          <mvcSiteMapNode title="View Credit Memo" area="Pax" controller="CreditNote" action="CreditMemoView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Credit Memo Coupon" area="Pax" controller="CreditNote" action="CreditMemoCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="View Credit Note" area="Pax" controller="CreditNotePayables" action="View" RouteName="InvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Credit Note Level VAT" area="Pax" controller="CreditNotePayables" action="VatView" RouteName="transactions" ParameterList="invoiceId,billingType" />
+          <mvcSiteMapNode title="View Credit Memo" area="Pax" controller="CreditNotePayables" action="CreditMemoView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Credit Memo Coupon" area="Pax" controller="CreditNotePayables" action="CreditMemoCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+        <!--<mvcSiteMapNode title="View Sampling Form D/E" area="Pax" controller="FormDE" action="View" RouteName="InvoiceView" ParameterList="invoiceId, billingType">
+          <mvcSiteMapNode title="Form D/E Invoice Level VAT" area="Pax" controller="FormDE" action="VATView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="View Form D" area="Pax" controller="FormDE" action="FormDView" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          <mvcSiteMapNode title="View Form E" area="Pax" controller="FormDE" action="FormEView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Provisional Invoice Records" area="Pax" controller="FormDE" action="ProvisionalInvoiceView" RouteName="transactions" ParameterList="invoiceId" />
+        </mvcSiteMapNode>-->
+        
+        <mvcSiteMapNode title="Form C Summary List" area="Pax" controller="FormC" action="ViewDetails" RouteName="FormC" ParameterList="provisionalBillingYear,provisionalBillingMonth,provisionalBillingMemberId,fromMemberId,listingCurrencyId,invoiceStatusId">
+          <mvcSiteMapNode title="View Form C Coupon" area="Pax" controller="FormC" action="CouponView" RouteName="transactions" ParameterList="invoiceId" />
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="Form C Summary List" area="Pax" controller="FormCPayables" action="ViewDetails" RouteName="FormC" ParameterList="provisionalBillingYear,provisionalBillingMonth,provisionalBillingMemberId,fromMemberId,listingCurrencyId,invoiceStatusId">
+          <mvcSiteMapNode title="View Form C Coupon" area="Pax" controller="FormCPayables" action="CouponView" RouteName="transactions" ParameterList="invoiceId" />
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="Edit Non-Sampling Invoice" area="Pax" controller="Invoice" action="Edit" RouteName="InvoiceEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Billing Member's Reference Data" area="Pax" controller="Invoice" action="BillingMember" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Billed Member's Reference Data" area="Pax" controller="Invoice" action="BilledMember" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Invoice Level VAT" area="Pax" controller="Invoice" action="VAT" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Prime Billing List" area="Pax" controller="Invoice" action="PrimeBillingList" RouteName="transactions" ParameterList="invoiceId">
+            <mvcSiteMapNode title="Create Prime Billing" area="Pax" controller="Invoice" action="PrimeBillingCreate" RouteName="transactions" ParameterList="invoiceId" />
+            <mvcSiteMapNode title="Edit Prime Billing" area="Pax" controller="Invoice" action="PrimeBillingEdit" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Create Prime Billing" area="Pax" controller="Invoice" action="PrimeBillingCreateAndReturn" RouteName="transactions" ParameterList="invoiceId" />
+            <mvcSiteMapNode title="Create Prime Billing" area="Pax" controller="Invoice" action="PrimeBillingDuplicate" RouteName="transactions" ParameterList="invoiceId" />
+            <mvcSiteMapNode title="Edit Prime Billing" area="Pax" controller="Invoice" action="PrimeBillingEditAndReturn" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Edit Prime Billing" area="Pax" controller="Invoice" action="PrimeBillingClone" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Rejection Memo List" area="Pax" controller="Invoice" action="RMList" RouteName="transactions" ParameterList="invoiceId">
+            <mvcSiteMapNode title="Create Rejection Memo" area="Pax" controller="Invoice" action="RMCreate" RouteName="transactions" ParameterList="invoiceId" />            
+            <mvcSiteMapNode title="Create Rejection Memo" area="Pax" controller="Invoice" action="RMCreateAndAddNew" RouteName="transactions" ParameterList="invoiceId" />
+            <mvcSiteMapNode title="Edit Rejection Memo" area="Pax" controller="Invoice" action="RMEdit" RouteName="transactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="Create Rejection Memo Coupon" area="Pax" controller="Invoice" action="RMCouponCreate" RouteName="breakdown" ParameterList="invoiceId,transactionId,couponId" />
+              <mvcSiteMapNode title="Create Rejection Memo Coupon" area="Pax" controller="Invoice" action="RMCouponDuplicate" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+              <mvcSiteMapNode title="Create Rejection Memo Coupon" area="Pax" controller="Invoice" action="RMCouponCreateAndReturn" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+              <mvcSiteMapNode title="Edit Rejection Memo Coupon" area="Pax" controller="Invoice" action="RMCouponEdit" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Create Rejection Memo Coupon" area="Pax" controller="Invoice" action="RMCouponClone" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Rejection Memo Coupon" area="Pax" controller="Invoice" action="RMCouponEditAndReturn" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+            <mvcSiteMapNode title="Edit Rejection Memo" area="Pax" controller="Invoice" action="RMEditAndAddNew" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Billing Memo List" area="Pax" controller="Invoice" action="BMList" RouteName="transactions" ParameterList="invoiceId">
+            <mvcSiteMapNode title="Create Billing Memo" area="Pax" controller="Invoice" action="BMCreate" RouteName="transactions" ParameterList="invoiceId" />
+            <mvcSiteMapNode title="Edit Billing Memo" area="Pax" controller="Invoice" action="BMEdit" RouteName="transactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="Create Billing Memo Coupon" area="Pax" controller="Invoice" action="BMCouponCreate" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+              <mvcSiteMapNode title="Create Billing Memo Coupon" area="Pax" controller="Invoice" action="BMCouponDuplicate" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+              <mvcSiteMapNode title="Create Billing Memo Coupon" area="Pax" controller="Invoice" action="BMCouponCreateAndReturn" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+              <mvcSiteMapNode title="Edit Billing Memo Coupon" area="Pax" controller="Invoice" action="BMCouponEdit" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Billing Memo Coupon" area="Pax" controller="Invoice" action="BMCouponClone" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Billing Memo Coupon" area="Pax" controller="Invoice" action="BMCouponEditAndReturn" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+            <mvcSiteMapNode title="Edit Billing Memo" area="Pax" controller="Invoice" action="BMEditAndAddNew" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        
+
+        <!--<mvcSiteMapNode title="View Non-Sampling Invoice" area="Pax" controller="Invoice" action="View" RouteName="transactions" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Invoice Level VAT" area="Pax" controller="Invoice" action="VatView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Prime Billing List" area="Pax" controller="Invoice" action="PrimeBillingListView" RouteName="transactions" ParameterList="invoiceId">
+            <mvcSiteMapNode title="View Prime Billing" area="Pax" controller="Invoice" action="PrimeBillingView" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Rejection Memo List" area="Pax" controller="Invoice" action="RMListView" RouteName="transactions" ParameterList="invoiceId">
+            <mvcSiteMapNode title="View Rejection Memo" area="Pax" controller="Invoice" action="RMView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Rejection Memo Coupon" area="Pax" controller="Invoice" action="RMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Billing Memo List" area="Pax" controller="Invoice" action="BMListView" RouteName="transactions" ParameterList="invoiceId">
+            <mvcSiteMapNode title="View Billing Memo" area="Pax" controller="Invoice" action="BMView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Billing Memo Coupon" area="Pax" controller="Invoice" action="BMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+
+        </mvcSiteMapNode>-->
+
+        <!-- Site map for FormAB -->
+        <mvcSiteMapNode title="View Invoice" area="Pax" controller="FormAB" action="View" RouteName="transactions" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Invoice Level VAT" area="Pax" controller="FormAB" action="VatView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Prime Billing List" area="Pax" controller="FormAB" action="PrimeBillingListView" RouteName="transactions" ParameterList="invoiceId">
+            <mvcSiteMapNode title="View Prime Billing" area="Pax" controller="FormAB" action="PrimeBillingView" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="View Invoice" area="Pax" controller="FormABPayables" action="View" RouteName="transactions" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Invoice Level VAT" area="Pax" controller="FormABPayables" action="VatView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Prime Billing List" area="Pax" controller="FormABPayables" action="PrimeBillingListView" RouteName="transactions" ParameterList="invoiceId">
+            <mvcSiteMapNode title="View Prime Billing" area="Pax" controller="FormABPayables" action="PrimeBillingView" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+       
+         <mvcSiteMapNode title="Edit Credit Note" area="Pax" controller="CreditNote" action="Edit" RouteName="InvoiceEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Billing Member's Reference Data" area="Pax" controller="CreditNote" action="BillingMember" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Billed Member's Reference Data" area="Pax" controller="CreditNote" action="BilledMember" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Credit Note Level VAT" area="Pax" controller="CreditNote" action="VAT" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Create Credit Memo" area="Pax" controller="CreditNote" action="CreditMemoCreate" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Edit Credit Memo" area="Pax" controller="CreditNote" action="CreditMemoEdit" RouteName="transactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="Create Credit Memo Coupon" area="Pax" controller="CreditNote" action="CreditMemoCouponCreate" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Create Credit Memo Coupon" area="Pax" controller="CreditNote" action="CreditMemoCouponDuplicate" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Create Credit Memo Coupon" area="Pax" controller="CreditNote" action="CreditMemoCouponCreateAndReturn" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Edit Credit Memo Coupon" area="Pax" controller="CreditNote" action="CreditMemoCouponEdit" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Coupon" area="Pax" controller="CreditNote" action="CreditMemoCouponClone" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Coupon" area="Pax" controller="CreditNote" action="CreditMemoEditAndReturn" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode> 
+      
+        <mvcSiteMapNode title="Edit Sampling Form D/E" area="Pax" controller="FormDE" action="Edit" RouteName="InvoiceEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Form D/E Invoice Level VAT" area="Pax" controller="FormDE" action="VAT" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Create Form D" area="Pax" controller="FormDE" action="FormDCreate" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Create Form D" area="Pax" controller="FormDE" action="FormDDuplicate" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+          <mvcSiteMapNode title="Create Form D" area="Pax" controller="FormDE" action="FormDCreateAndReturn" RouteName="breakdown" ParameterList="invoiceId,transactionId" />
+          <mvcSiteMapNode title="Edit Form D" area="Pax" controller="FormDE" action="FormDEdit" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          <mvcSiteMapNode title="Create Form D" area="Pax" controller="FormDE" action="FormDClone" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          <mvcSiteMapNode title="Edit Form D" area="Pax" controller="FormDE" action="FormDEditAndReturn" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          <mvcSiteMapNode title="Edit Form E" area="Pax" controller="FormDE" action="Details" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Edit Form E" area="Pax" controller="FormDE" action="FormEEdit" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Provisional Invoice Records" area="Pax" controller="FormDE" action="ProvisionalInvoice" RouteName="transactions" ParameterList="invoiceId" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Sampling Form D/E" area="Pax" controller="FormDE" action="View" RouteName="transactions" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Form D/E Invoice Level VAT" area="Pax" controller="FormDE" action="VATView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="View Form D" area="Pax" controller="FormDE" action="FormDView" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          <mvcSiteMapNode title="View Form E" area="Pax" controller="FormDE" action="FormEView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Provisional Invoice Records" area="Pax" controller="FormDE" action="ProvisionalInvoiceView" RouteName="transactions" ParameterList="invoiceId" />
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="View Sampling Form D/E" area="Pax" controller="FormDEPayables" action="View" RouteName="transactions" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Form D/E Invoice Level VAT" area="Pax" controller="FormDEPayables" action="VATView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="View Form D" area="Pax" controller="FormDEPayables" action="FormDView" RouteName="transactions" ParameterList="invoiceId,transactionId" />
+          <mvcSiteMapNode title="View Form E" area="Pax" controller="FormDEPayables" action="FormEView" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Provisional Invoice Records" area="Pax" controller="FormDEPayables" action="ProvisionalInvoiceView" RouteName="transactions" ParameterList="invoiceId" />
+        </mvcSiteMapNode>
+        
+        <mvcSiteMapNode title="Edit Sampling Form F" area="Pax" controller="FormF" action="Edit" RouteName="InvoiceEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Form F Invoice Level VAT" area="Pax" controller="FormF" action="VAT" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Create Rejection Memo" area="Pax" controller="FormF" action="RMCreate" RouteName="transactions" ParameterList="invoiceId" />          
+          <mvcSiteMapNode title="Edit Rejection Memo" area="Pax" controller="FormF" action="RMEdit" RouteName="transactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="Create Rejection Memo Coupon" area="Pax" controller="FormF" action="RMCouponCreate" RouteName="breakdown" ParameterList="invoiceId, transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Rejection Memo Coupon" area="Pax" controller="FormF" action="RMCouponEdit" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Edit Sampling Form XF" area="Pax" controller="FormXF" action="Edit" RouteName="InvoiceEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Billing Member's Reference Data" area="Pax" controller="FormXF" action="BillingMember" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Billed Member's Reference Data" area="Pax" controller="FormXF" action="BilledMember" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Form XF Invoice Level VAT" area="Pax" controller="FormXF" action="VAT" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Create Rejection Memo" area="Pax" controller="FormXF" action="RMCreate" RouteName="transactions" ParameterList="invoiceId" />          
+          <mvcSiteMapNode title="Edit Rejection Memo" area="Pax" controller="FormXF" action="RMEdit" RouteName="transactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="Create Rejection Memo Coupon" area="Pax" controller="FormXF" action="RMCouponCreate" RouteName="breakdown" ParameterList="invoiceId, transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Rejection Memo Coupon" area="Pax" controller="FormXF" action="RMCouponEdit" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Sampling Form F" area="Pax" controller="FormF" action="View" RouteName="transactions" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Form F Invoice Level VAT" area="Pax" controller="FormF" action="VAT" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="View Rejection Memo" area="Pax" controller="FormF" action="RMView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Rejection Memo Coupon" area="Pax" controller="FormF" action="RMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="View Sampling Form F" area="Pax" controller="FormFPayables" action="View" RouteName="transactions" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Form F Invoice Level VAT" area="Pax" controller="FormFPayables" action="VAT" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="View Rejection Memo" area="Pax" controller="FormFPayables" action="RMView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Rejection Memo Coupon" area="Pax" controller="FormFPayables" action="RMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="View Sampling Form XF" area="Pax" controller="FormXFPayables" action="View" RouteName="transactions" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Form XF Invoice Level VAT" area="Pax" controller="FormXFPayables" action="VAT" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="View Rejection Memo" area="Pax" controller="FormXFPayables" action="RMView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Rejection Memo Coupon" area="Pax" controller="FormXFPayables" action="RMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        
+        <mvcSiteMapNode title="View Sampling Form XF" area="Pax" controller="FormXF" action="View" RouteName="transactions" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Form XF Invoice Level VAT" area="Pax" controller="FormXF" action="VAT" RouteName="transactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="View Rejection Memo" area="Pax" controller="FormXF" action="RMView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Rejection Memo Coupon" area="Pax" controller="FormXF" action="RMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+      
+        <mvcSiteMapNode title="Validation Error Correction" area="Pax" action ="ValidationErrorCorrection" controller="PaxValidationErrorCorrection"></mvcSiteMapNode>
+        <mvcSiteMapNode title="Validation Error Correction" area="Pax" action ="SamplingValidationErrorCorrection" controller="PaxValidationErrorCorrection"></mvcSiteMapNode>
+        <mvcSiteMapNode title="Validation Error Correction" area="Pax" controller="PaxValidationErrorCorrection" action="Index"></mvcSiteMapNode>
+    
+        <mvcSiteMapNode title="Correct AutoBilling Invoices" area="Pax" controller="AutoBilling" action="Index" RouteName="AutoBillingInvoiceSearch">
+          <mvcSiteMapNode title="Edit Prime Billing" area="Pax" controller="AutoBilling" action="PrimeBillingEdit" RouteName="AutoBillingInvoiceSearch" ParameterList="Id" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+
+      <mvcSiteMapNode title="Receivables" controller="ManageInvoice" action="Index" area="Pax" clickable="false">
+        <mvcSiteMapNode title="Manage Sampling Form C" area="Pax" controller="FormC" action="Index" RouteName="InvoiceSearch" ParameterList="id" />
+        <mvcSiteMapNode title="Edit Sampling Form C" area="Pax" controller="FormC" action="Edit" RouteName="FormCEdit" ParameterList="id">
+          <mvcSiteMapNode title="Create Form C Coupon" area="Pax" controller="FormC" action="CouponCreate" RouteName="FormCCouponAdd" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Edit Form C Coupon" area="Pax" controller="FormC" action="CouponEdit" RouteName="transactions" ParameterList="invoiceId" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Form C Summary List" area="Pax" controller="FormC" action="ViewDetails" RouteName="FormC" ParameterList="provisionalBillingYear,provisionalBillingMonth,provisionalBillingMemberId,fromMemberId,listingCurrencyId,invoiceStatusId">
+          <mvcSiteMapNode title="View Form C Coupon" area="Pax" controller="FormC" action="CouponView" RouteName="transactions" ParameterList="invoiceId" />
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="Create Sampling Form C" area="Pax" controller="FormC" action="Create" RouteName="InvoiceCreate" />        
+      </mvcSiteMapNode>
+
+      <mvcSiteMapNode title=" Billing History and Correspondence" controller="BillingHistory" action="Index" area="Pax">
+        <mvcSiteMapNode title="Create Correspondence" area="Pax" controller="Correspondence" action="PaxCreateCorrespondence" />
+        <mvcSiteMapNode title="Create Correspondence" area="Pax" controller="Correspondence" action="CreateAndSendCorrespondence" />
+        <mvcSiteMapNode title="Edit Correspondence" area="Pax" controller="Correspondence" action="SendCorrespondence" />
+        <mvcSiteMapNode title="Edit Correspondence" area="Pax" controller="Correspondence" action="EditPaxCorrespondence" />
+        <mvcSiteMapNode title="View Correspondence" area="Pax" controller="Correspondence" action="Correspondence" />
+        <mvcSiteMapNode title="View Correspondence" area="Pax" controller="Correspondence" action="ViewCorrespondence" />
+        <mvcSiteMapNode title="View Correspondence" area="Pax" controller="Correspondence" action="ViewLinkedCorrespondence" />
+        <mvcSiteMapNode title="Create Correspondence" area="Pax" controller="Correspondence" action="ReplyCorrespondence" />
+        <mvcSiteMapNode title="Audit Trail" area="Pax" controller="BillingHistory" action="PaxBillingHistoryAuditTrail" />
+      </mvcSiteMapNode>
+      
+      <mvcSiteMapNode title="Payables" controller="ManagePaxPayablesInvoice" action="Index" area="PaxPayables" clickable="false">
+        <mvcSiteMapNode title="Invoice Search" area="PaxPayables" controller="ManagePaxPayablesInvoice" action="Index">
+          <mvcSiteMapNode title="View Non-Sampling Invoice" area="Pax" controller="InvoicePayables" action="View" clickable="true" RouteName="transactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="Invoice Level VAT" area="Pax" controller="InvoicePayables" action="VATView" RouteName="transactions" ParameterList="invoiceId" />
+            <mvcSiteMapNode title="Prime Billing List" area="Pax" controller="InvoicePayables" action="PrimeBillingListView" RouteName="transactions" ParameterList="invoiceId, transactionId, billingType">
+              <mvcSiteMapNode title="View Prime Billing" area="Pax" controller="InvoicePayables" action="PrimeBillingView" RouteName="transactions" ParameterList="invoiceId,transactionId, billingType" />
+            </mvcSiteMapNode>
+            <mvcSiteMapNode title="Rejection Memo List" area="Pax" controller="InvoicePayables" action="RMList" RouteName="transactions" ParameterList="invoiceId, billingType">
+              <mvcSiteMapNode title="View Rejection Memo" area="Pax" controller="InvoicePayables" action="RMView" RouteName="transactions" ParameterList="invoiceId,transactionId">
+                <mvcSiteMapNode title="View Rejection Memo Coupon" area="Pax" controller="InvoicePayables" action="RMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+              </mvcSiteMapNode>
+            </mvcSiteMapNode>
+            <mvcSiteMapNode title="Billing Memo List" area="Pax" controller="InvoicePayables" action="BMListView" RouteName="transactions" ParameterList="invoiceId, billingType">
+              <mvcSiteMapNode title="View Billing Memo" area="Pax" controller="InvoicePayables" action="BMView" RouteName="transactions" ParameterList="invoiceId,transactionId,billingType">
+                <mvcSiteMapNode title="View Billing Memo Coupon" area="Pax" controller="InvoicePayables" action="BMCouponView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+              </mvcSiteMapNode>
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+          
+        </mvcSiteMapNode>
+          <mvcSiteMapNode title="Manage Supporting Documents" area="PaxPayables" controller="SupportingDoc" action="PayableSupportingDocs" RouteName="PayablesManageSupportingDocuments" />
+          <mvcSiteMapNode title="Sampling Form C Search" area="Pax" controller="FormC" action="PayablesSearch" RouteName="FormCPayablesManage" />
+        
+        
+        <mvcSiteMapNode title="Sampling Form C Search" area="Pax" controller="FormCPayables" action="PayablesSearch" RouteName="FormCPayablesManage" />
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Validation Error Correction" area="Pax" action ="ValidationErrorCorrection" controller="PaxValidationErrorCorrection"></mvcSiteMapNode>
+      <mvcSiteMapNode title="Validation Error Correction" area="Pax" action ="SamplingValidationErrorCorrection" controller="PaxValidationErrorCorrection"></mvcSiteMapNode>
+      <mvcSiteMapNode title="Validation Error Correction" area="Pax" action ="Index" controller="PaxValidationErrorCorrection"></mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <!--Cargo-->
+    <mvcSiteMapNode title="Cargo" controller="PayablesInvoiceSearch" action="Index" area="CargoPayables" clickable="false">
+      <mvcSiteMapNode title="Payables" controller="PayablesInvoiceSearch" action="Index" area="CargoPayables" clickable="false">
+        <!--<mvcSiteMapNode title="Invoice Search" area="CargoPayables" controller="PayablesInvoiceSearch" action="Index" RouteName="PayableManageInvoiceSearch" ParameterList="id" />-->
+        <mvcSiteMapNode title="Invoice Search" area="CargoPayables" controller="PayablesInvoiceSearch" RouteName="CGOPInvoiceSearchs" action="Index" ParameterList="id" />
+        <mvcSiteMapNode title="Manage Supporting Documents" area="CargoPayables" controller="CargoSupportingDoc" action="PayableSupportingDocs" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Cargo" controller="CargoManageInvoice" action="Index" area="Cargo" clickable="false">
+      <mvcSiteMapNode title="Receivables" controller="CargoManageInvoice" action="Index" area="Cargo" clickable="false">
+        <mvcSiteMapNode title="View Invoice" area="Cargo" controller="InvoicePayables" action="View" RouteName="CGOtransactions" ParameterList="invoiceId,billingType">
+          <mvcSiteMapNode title="Invoice Level VAT" area="Cargo" controller="InvoicePayables" action="Vat" RouteName="CGOtransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="AWB Charge Collect List" area="Cargo" controller="InvoicePayables" action="AwbChargeCollectBillingListView" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="View AWB Charge Collect" area="Cargo" controller="InvoicePayables" action="AwbChargeCollectBillingView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Prepaid AWB Listing" area="Cargo" controller="InvoicePayables" action="AwbPrepaidBillingListView" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="View AWB Prepaid" area="Cargo" controller="InvoicePayables" action="AwbPrepaidBillingView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+          </mvcSiteMapNode>
+
+          <mvcSiteMapNode title="Rejection Memo List" area="Cargo" controller="InvoicePayables" action="RMListView" RouteName="CGOtransactions" ParameterList="invoiceId,billingType">
+            <mvcSiteMapNode title="View Rejection Memo" area="Cargo" controller="InvoicePayables" action="RMView" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Rejection Memo AWB" area="Cargo" controller="InvoicePayables" action="RMAwbView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="View Rejection Memo Prepaid AWB" area="Cargo" controller="InvoicePayables" action="RMPrepaidAwbView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="View Rejection Memo Charge Collect AWB" area="Cargo" controller="InvoicePayables" action="RMChargeCollectAwbView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Billing Memo List" area="Cargo" controller="InvoicePayables" action="BMListView" RouteName="CGOtransactions" ParameterList="invoiceId,billingType">
+            <mvcSiteMapNode title="View Billing Memo" area="Cargo" controller="InvoicePayables" action="BMView" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Billing Memo AWB" area="Cargo" controller="InvoicePayables" action="BMAwbView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Credit Note" area="Cargo" controller="CreditNote" action="View" ParameterList="invoiceId" clickable="true">
+          <mvcSiteMapNode title="View Credit Memo" area="Cargo" controller="CreditNote" action="CMView" clickable="true" RouteName ="CGOtransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Prepaid AWB Billing" area="Cargo" controller="CreditNote" action="CMAwbPrepaidView" clickable="false" RouteName ="CGObreakdown" ParameterList="invoiceId,transactionId,couponId"/>
+            <mvcSiteMapNode title="View Charge Collect AWB Billing" area="Cargo" controller="CreditNote" action="CMAwbChargeCollectView" clickable="false" RouteName ="CGObreakdown" ParameterList="invoiceId,transactionId,couponId"/>
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Credit Note VAT" area="Cargo" controller="CreditNote" action="VatView" clickable="false" ParameterList="invoiceId,billingType"/>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Create Invoice" area="Cargo" controller="Invoice" action="Create" RouteName="CGOInvoiceCreate" ParameterList="id" />
+       
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Payables" controller="CargoManageInvoice" action="Index" area="Cargo" clickable="false">
+        <mvcSiteMapNode title="Invoice Search" area="CargoPayables" controller="PayablesInvoiceSearch" RouteName="CGOPInvoiceSearchs" action="Index" ParameterList="id">
+          <mvcSiteMapNode title="View Credit Note" area="Cargo" controller="CreditNotePayables" action="View" ParameterList="invoiceId" clickable="true">
+            <mvcSiteMapNode title="View Credit Memo" area="Cargo" controller="CreditNotePayables" action="CMView" clickable="true" RouteName ="CGOtransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Prepaid AWB Billing" area="Cargo" controller="CreditNotePayables" action="CMAwbPrepaidView" clickable="false" RouteName ="CGObreakdown" ParameterList="invoiceId,transactionId,couponId"/>
+              <mvcSiteMapNode title="View Charge Collect AWB Billing" area="Cargo" controller="CreditNotePayables" action="CMAwbChargeCollectView" clickable="false" RouteName ="CGObreakdown" ParameterList="invoiceId,transactionId,couponId"/>
+            </mvcSiteMapNode>
+            <mvcSiteMapNode title="Credit Note VAT" area="Cargo" controller="CreditNotePayables" action="VatView" clickable="false" ParameterList="invoiceId,billingType"/>
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+
+      <mvcSiteMapNode title=" Billing History and Correspondence" controller="BillingHistory" action="Index" area="Cargo">
+        <mvcSiteMapNode title="Create Correspondence" area="Cargo" controller="Correspondence" action="CargoCreateCorrespondence" />
+        <mvcSiteMapNode title="Create Correspondence" area="Cargo" controller="Correspondence" action="CreateAndSendCorrespondence" />
+        <mvcSiteMapNode title="Edit Correspondence" area="Cargo" controller="Correspondence" action="SendCorrespondence" />
+        <mvcSiteMapNode title="Edit Correspondence" area="Cargo" controller="Correspondence" action="EditCargoCorrespondence" />
+        <mvcSiteMapNode title="View Correspondence" area="Cargo" controller="Correspondence" action="Correspondence" />
+        <mvcSiteMapNode title="View Correspondence" area="Cargo" controller="Correspondence" action="ViewCorrespondence" />
+        <mvcSiteMapNode title="View Correspondence" area="Cargo" controller="Correspondence" action="ViewLinkedCorrespondence" />
+        <mvcSiteMapNode title="Create Correspondence" area="Cargo" controller="Correspondence" action="ReplyCorrespondence" />
+        <mvcSiteMapNode title="Audit Trail" area="Cargo" controller="BillingHistory" action="CargoBillingHistoryAuditTrail" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Cargo" controller="CargoManageInvoice" action="Index" area="Cargo" clickable="false">
+      <mvcSiteMapNode title="Receivables" controller="CargoManageInvoice" action="Index" area="Cargo" clickable="false">
+        <mvcSiteMapNode title="View Invoice" area="Cargo" controller="Invoice" action="View" RouteName="CGOtransactions" ParameterList="invoiceId,billingType">
+          <mvcSiteMapNode title="Invoice Level VAT" area="Cargo" controller="Invoice" action="Vat" RouteName="CGOtransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="AWB Charge Collect List" area="Cargo" controller="Invoice" action="AwbChargeCollectBillingListView" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="View AWB Charge Collect" area="Cargo" controller="Invoice" action="AwbChargeCollectBillingView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Prepaid AWB Listing" area="Cargo" controller="Invoice" action="AwbPrepaidBillingListView" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="View AWB Prepaid" area="Cargo" controller="Invoice" action="AwbPrepaidBillingView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+          </mvcSiteMapNode>
+
+          <mvcSiteMapNode title="Rejection Memo List" area="Cargo" controller="Invoice" action="RMListView" RouteName="CGOtransactions" ParameterList="invoiceId,billingType">
+            <mvcSiteMapNode title="View Rejection Memo" area="Cargo" controller="Invoice" action="RMView" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Rejection Memo AWB" area="Cargo" controller="Invoice" action="RMAwbView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="View Rejection Memo Prepaid AWB" area="Cargo" controller="Invoice" action="RMPrepaidAwbView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="View Rejection Memo Charge Collect AWB" area="Cargo" controller="Invoice" action="RMChargeCollectAwbView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Billing Memo List" area="Cargo" controller="Invoice" action="BMListView" RouteName="CGOtransactions" ParameterList="invoiceId,billingType">
+            <mvcSiteMapNode title="View Billing Memo" area="Cargo" controller="Invoice" action="BMView" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Billing Memo AWB" area="Cargo" controller="Invoice" action="BMAwbView" RouteName="breakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Manage Invoice" area="Cargo" controller="CargoManageInvoice" action="Index" RouteName="InvoiceSearchCGO" ParameterList="id" />
+        
+        <!--<mvcSiteMapNode title="Manage Invoice" area="Cargo" controller="ManageInvoice" action="Index" RouteName="InvoiceSearch" ParameterList="id" />-->
+        <mvcSiteMapNode title="Manage Supporting Documents" area="Cargo" controller="CgoSupportingDoc" action="Index" RouteName="ManageSupportingDocuments" />
+        <mvcSiteMapNode title="Create Credit Note" area="Cargo" controller="CreditNote" action="Create" RouteName="CGOCreditNoteCreate" />
+        <mvcSiteMapNode title="Edit Credit Note" area="Cargo" controller="CreditNote" action="Edit" RouteName="CGOCreditNoteEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Billing Member's Reference Data" area="Cargo" controller="CreditNote" action="BillingMember" RouteName="CGOtransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Billed Member's Reference Data" area="Cargo" controller="CreditNote" action="BilledMember" RouteName="CGOtransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Credit Note Level VAT" area="Cargo" controller="CreditNote" action="Vat" RouteName="CGOtransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Create Credit Memo" area="Cargo" controller="CreditNote" action="CMCreate" RouteName="CGOtransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Edit Credit Memo" area="Cargo" controller="CreditNote" action="CMEdit" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="Add Credit Memo Prepaid Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbPrepaidCreate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+            <mvcSiteMapNode title="Add Credit Memo Prepaid Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbPrepaidDuplicate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+            <mvcSiteMapNode title="Create Credit Memo Prepaid Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbPrepaidCreateAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbEdit" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Prepaid Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbPrepaidClone" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Prepaid Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbPrepaidEdit" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Prepaid Airway Bill" area="Cargo" controller="CreditNote" action="CMPrepaidAwbEditAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Prepaid Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbPrepaidCreateAndDuplicate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Prepaid Airway Bill" area="Cargo" controller="CreditNote" action="CMPrepaidAwbClone" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+
+            <mvcSiteMapNode title="Edit Credit Memo Charge Collect Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbChargeCollectEdit" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Add Credit Memo Charges Collect Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbChargeCollectCreate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Add Credit Memo Charges Collect Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbChargeCollectDuplicate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Add Credit Memo Charges Collect Airway Bill" area="Cargo" controller="CreditNote" action="CMAwbChargeCollectCreateAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Charges Collect Airway Bill" area="Cargo" controller="CreditNote" action="CMChargeCollectAwbClone" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            <mvcSiteMapNode title="Edit Credit Memo Charges Collect Airway Bill" area="Cargo" controller="CreditNote" action="CMChargeCollectAwbEditAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Credit Note" area="Cargo" controller="CreditNote" action="View" ParameterList="invoiceId" clickable="true">
+          <mvcSiteMapNode title="View Credit Memo" area="Cargo" controller="CreditNote" action="CMView" clickable="true" RouteName ="CGOtransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Prepaid AWB Billing" area="Cargo" controller="CreditNote" action="CMAwbPrepaidView" clickable="false" RouteName ="CGObreakdown" ParameterList="invoiceId,transactionId,couponId"/>
+            <mvcSiteMapNode title="View Charge Collect AWB Billing" area="Cargo" controller="CreditNote" action="CMAwbChargeCollectView" clickable="false" RouteName ="CGObreakdown" ParameterList="invoiceId,transactionId,couponId"/>
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Credit Note VAT" area="Cargo" controller="CreditNote" action="VatView" clickable="false" ParameterList="invoiceId,billingType"/>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Create Invoice" area="Cargo" controller="Invoice" action="Create" RouteName="CGOInvoiceCreate" ParameterList="id" />
+        <mvcSiteMapNode title="Edit Invoice" area="Cargo" controller="Invoice" action="Edit" RouteName="CGOInvoiceEdit" ParameterList="id">
+          <mvcSiteMapNode title="Invoice Level VAT" area="Cargo" controller="Invoice" action="VatView" RouteName="CGOtransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Prepaid AWB Listing" area="Cargo" controller="Invoice" action="AwbPrepaidBillingList" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+          </mvcSiteMapNode>
+         
+            <mvcSiteMapNode title="Add Prepaid AWB"  area="Cargo" controller="Invoice" action="AwbPrepaidBillingCreateAndReturn" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+          
+          <mvcSiteMapNode title="Add Prepaid AWB"  area="Cargo" controller="Invoice" action="AwbPrepaidBillingCreate" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+          <mvcSiteMapNode title="Add Prepaid AWB"  area="Cargo" controller="Invoice" action="AwbPrepaidBillingDuplicate" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+          <mvcSiteMapNode title="Add Prepaid AWB"  area="Cargo" controller="Invoice" action="AwbPrepaidBillingClone" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+          <mvcSiteMapNode title="Edit AWB Prepaid" area="Cargo" controller="Invoice" action="AwbPrepaidRecordEdit" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+                       
+            </mvcSiteMapNode>
+
+          <mvcSiteMapNode title="Charge Collect AWB Listing" area="Cargo" controller="Invoice" action="AwbChargeCollectBillingList" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+          </mvcSiteMapNode>
+          
+          <mvcSiteMapNode title="Add Charge Collect AWB"  area="Cargo" controller="Invoice" action="AwbChargeCollectBillingCreateAndReturn" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+          <mvcSiteMapNode title="Add Charge Collect AWB"  area="Cargo" controller="Invoice" action="AwbChargeCreditBillingDuplicate" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+          <mvcSiteMapNode title="Add Charge Collect AWB"  area="Cargo" controller="Invoice" action="AwbChargeCreditBillingClone" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+          
+          <mvcSiteMapNode title="Add Charge Collect AWB"  area="Cargo" controller="Invoice" action="AwbChargeCollectBillingCreate" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+          <mvcSiteMapNode title="Edit AWB Charge Collect" area="Cargo" controller="Invoice" action="AwbChargeCollectRecordEdit" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+
+          </mvcSiteMapNode>
+            
+            
+         
+          
+          
+          
+          <mvcSiteMapNode title="Rejection Memo List" area="Cargo" controller="Invoice" action="RMList" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="Create Rejection Memo"  area="Cargo" controller="Invoice" action="RMCreate" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>              
+            
+            <mvcSiteMapNode title="Create Rejection Memo"  area="Cargo" controller="Invoice" action="RMCreateAndAddNew" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+            <mvcSiteMapNode title="Edit Rejection Memo" area="Cargo" controller="Invoice" action="RMEdit" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="Add Prepaid Airway Bill" area="Cargo" controller="Invoice" action="RMPrepaidAwbCreate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Add Prepaid Airway Bill" area="Cargo" controller="Invoice" action="RMPrepaidAwbDuplicate" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Add Prepaid Airway Bill" area="Cargo" controller="Invoice" action="RMAwbCreateAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Add Prepaid Airway Bill" area="Cargo" controller="Invoice" action="RMPrepaidAwbCreateAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Prepaid Airway Bill" area="Cargo" controller="Invoice" action="RMPrepaidAwbEdit" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+                <mvcSiteMapNode title="Airway Bill Prorate Ladder" area="Cargo" controller="Invoice" action="RMAwbProrateLadderCreate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              </mvcSiteMapNode>
+              <mvcSiteMapNode title="Edit Prepaid Airway Bill" area="Cargo" controller="Invoice" action="RMPrepaidAwbClone" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Prepaid Airway Bill" area="Cargo" controller="Invoice" action="RMPrepaidAwbEditAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+
+              <mvcSiteMapNode title="Add Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="RMChargeCollectAwbCreate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Add Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="RMChargeCollectAwbDuplicate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+              <mvcSiteMapNode title="Add Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="RMChargeCollectAwbCreateAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+              <mvcSiteMapNode title="Edit Airway Bill" area="Cargo" controller="Invoice" action="RMAwbEdit" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="RMChargeCollectAwbEdit" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="RMChargeCollectAwbClone" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="RMChargeCollectAwbEditAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+           
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Rejection Memo List" area="Cargo" controller="Invoice" action="RMList" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="Edit Rejection Memo" area="Cargo" controller="Invoice" action="RMEdit" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="Edit Rejection Memo Awb" area="Cargo" controller="Invoice" action="RMCouponView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+          <mvcSiteMapNode title="Billing Memo List" area="Cargo" controller="Invoice" action="BMList" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="Create Billing Memo"  area="Cargo" controller="Invoice" action="BMCreate" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+            <mvcSiteMapNode title="Create Billing Memo"  area="Cargo" controller="Invoice" action="BMCreateAndAddNew" clickable="false" RouteName ="CGOtransactions" ParameterList="invoiceId, transactionId"/>
+            <mvcSiteMapNode title="Edit Billing Memo" area="Cargo" controller="Invoice" action="BMEdit" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+              <!--<mvcSiteMapNode title="Create Billing Memo Prepaid AWB" area="Cargo" controller="Invoice" action="BMAwbPrepaidCreate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId" />-->
+              <mvcSiteMapNode title="Create Billing Memo Prepaid AWB" area="Cargo" controller="Invoice" action="BMAwbPrepaidCreate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+              <mvcSiteMapNode title="Create Billing Memo Prepaid AWB" area="Cargo" controller="Invoice" action="BMAwbPrepaidCreateAndDuplicate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Create Billing Memo Prepaid AWB" area="Cargo" controller="Invoice" action="BMAwbPrepaidCreateAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId,couponId" />
+              <mvcSiteMapNode title="Edit Billing Memo Airway Bill" area="Cargo" controller="Invoice" action="BMAwbEdit" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Billing Memo Prepaid Airway Bill" area="Cargo" controller="Invoice" action="BMAwbPrepaidEdit" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId"/>           
+              <mvcSiteMapNode title="Edit Billing Memo Prepaid Airway Bill" area="Cargo" controller="Invoice" action="BMPrepaidAwbClone" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Billing Memo Prepaid Airway Bill" area="Cargo" controller="Invoice" action="BMPrepaidAwbEditAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+
+              <mvcSiteMapNode title="Create Billing Memo Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="BMAwbChargeCollectCreate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Create Billing Memo Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="BMAwbChargeCollectDuplicate" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Create Billing Memo Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="BMAwbChargeCollectCreateAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Billing Memo Charge Collect Airway Bill" area="Cargo" controller="Invoice" action="BMAwbChargeCollectEdit" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId"/>
+              <mvcSiteMapNode title="Edit Billing Prepaid Memo Airway Bill" area="Cargo" controller="Invoice" action="BMChargeCollectAwbClone" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              <mvcSiteMapNode title="Edit Billing Memo Prepaid Airway Bill" area="Cargo" controller="Invoice" action="BMChargeCollectAwbEditAndReturn" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+              
+            </mvcSiteMapNode>
+            
+          </mvcSiteMapNode>
+          <!--<mvcSiteMapNode title="Billing Memo List" area="Cargo" controller="Invoice" action="BMList" RouteName="CGOtransactions" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="Edit Billing Memo" area="Cargo" controller="Invoice" action="BMEdit" RouteName="CGOtransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="Edit Billing Memo Awb" area="Cargo" controller="Invoice" action="BMCouponView" RouteName="CGObreakdown" ParameterList="invoiceId,transactionId, couponId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>-->
+        <mvcSiteMapNode title="Validation Error Correction" area="Cargo" controller="ValidationErrorCorrection" action="Index" RouteName="ValidationErrorCorrectionIndex"/>
+        </mvcSiteMapNode>
+
+      <mvcSiteMapNode title=" Billing History and Correspondence" controller="BillingHistory" action="Index" area="Cargo">
+        <mvcSiteMapNode title="Create Correspondence" area="Cargo" controller="Correspondence" action="CargoCreateCorrespondence" />
+        <mvcSiteMapNode title="Create Correspondence" area="Cargo" controller="Correspondence" action="CreateAndSendCorrespondence" />
+        <mvcSiteMapNode title="Edit Correspondence" area="Cargo" controller="Correspondence" action="SendCorrespondence" />
+        <mvcSiteMapNode title="Edit Correspondence" area="Cargo" controller="Correspondence" action="EditCargoCorrespondence" />
+        <mvcSiteMapNode title="View Correspondence" area="Cargo" controller="Correspondence" action="Correspondence" />
+        <mvcSiteMapNode title="View Correspondence" area="Cargo" controller="Correspondence" action="ViewCorrespondence" />
+        <mvcSiteMapNode title="View Correspondence" area="Cargo" controller="Correspondence" action="ViewLinkedCorrespondence" />
+        <mvcSiteMapNode title="Create Correspondence" area="Cargo" controller="Correspondence" action="ReplyCorrespondence" />
+        <mvcSiteMapNode title="Audit Trail" area="Cargo" controller="BillingHistory" action="CargoBillingHistoryAuditTrail" />
+      </mvcSiteMapNode>        
+      </mvcSiteMapNode>
+
+   
+
+   
+
+
+    <!--<mvcSiteMapNode title="Payables" controller="CreditNote" action="CreditNote" area="Cargo" clickable="false">-->
+      <!--<mvcSiteMapNode title="Invoice Search" area="CargoPayables" controller="PayablesInvoiceSearch" action="Index" ParameterList="id" clickable="true" >-->
+        
+      <!--</mvcSiteMapNode>-->
+    <!--</mvcSiteMapNode>-->
+    
+    <!--End Cargo-->
+    <mvcSiteMapNode title="Miscellaneous" controller="ManageMiscInvoice" action="Index" area="Misc" clickable="false">
+      <mvcSiteMapNode title="Receivables" controller="ManageMiscInvoice" action="Index" area="Misc" clickable="false">
+        <mvcSiteMapNode title="View Invoice" controller="MiscInvoice" action="ShowDetails" area="Misc" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Create Rejection Invoice" controller="MiscInvoice" action="CreateRejectionInvoice" area="Misc" ParameterList="rejectedInvoiceId" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Invoice" controller="MiscCreditNote" action="ShowDetails" area="Misc" ParameterList="invoiceId">
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Manage Invoice" area="Misc" controller="ManageMiscInvoice" action="Index" RouteName="MiscInvoiceSearch" ParameterList="id" />
+        <mvcSiteMapNode title="Create Invoice" area="Misc" controller="MiscInvoice" action="Create" RouteName="MiscInvoiceCreate" />
+        <mvcSiteMapNode title="Manage Supporting Documents" area="Misc" controller="MiscSupportingDoc" action="Index" RouteName="MiscManageSupportingDocuments" />
+        <mvcSiteMapNode title="Edit Miscellaneous Invoice" area="Misc" controller="MiscInvoice" action="Edit" RouteName="MiscInvoiceEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Create Line Item" area="Misc" controller="MiscInvoice" action="LineItemCreate" RouteName="MiscTransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Edit Line Item" area="Misc" controller="MiscInvoice" action="LineItemEdit" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="Create Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailCreate" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailClone" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailDuplicate" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailReturn" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailEdit" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailClone" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailEditAndReturn" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Miscellaneous Invoice" area="Misc" controller="MiscInvoice" action="View" RouteName="MiscInvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Line Item" area="Misc" controller="MiscInvoice" action="LineItemView" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        
+        <!--SCP359603: SRM-Incorrect MISC Invoice description in IS-WEB-->
+        <mvcSiteMapNode title="View Miscellaneous Invoice" area="Misc" controller="MiscPayInvoice" action="View" RouteName="MiscInvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Line Item" area="Misc" controller="MiscPayInvoice" action="LineItemView" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Line Item Detail" area="Misc" controller="MiscPayInvoice" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        
+        <mvcSiteMapNode title="Create Credit Note" area="Misc" controller="MiscCreditNote" action="Create" RouteName="MiscInvoiceCreate" />
+        <mvcSiteMapNode title="Edit Miscellaneous Credit Note" area="Misc" controller="MiscCreditNote" action="Edit" RouteName="MiscInvoiceEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Create Line Item" area="Misc" controller="MiscCreditNote" action="LineItemCreate" RouteName="MiscTransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Edit Line Item" area="Misc" controller="MiscCreditNote" action="LineItemEdit" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="Create Line Item Detail" area="Misc" controller="MiscCreditNote" action="LineItemDetailCreate" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Misc" controller="MiscCreditNote" action="LineItemDetailClone" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Misc" controller="MiscCreditNote" action="LineItemDetailDuplicate" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Misc" controller="MiscCreditNote" action="LineItemDetailReturn" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Misc" controller="MiscCreditNote" action="LineItemDetailEdit" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Misc" controller="MiscCreditNote" action="LineItemDetailClone" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Misc" controller="MiscCreditNote" action="LineItemDetailEditAndReturn" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        
+        <!--SCP359603: SRM-Incorrect MISC Invoice description in IS-WEB-->
+        <mvcSiteMapNode title="View Miscellaneous Credit Note" area="Misc" controller="MiscCreditNote" action="View" RouteName="MiscInvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Line Item" area="Misc" controller="MiscCreditNote" action="LineItemView" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Line Item Detail" area="Misc" controller="MiscCreditNote" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+        <!--SCP359603: SRM-Incorrect MISC Invoice description in IS-WEB-->
+        <mvcSiteMapNode title="View Miscellaneous Credit Note" area="Misc" controller="MiscPayCreditNote" action="View" RouteName="MiscInvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Line Item" area="Misc" controller="MiscPayCreditNote" action="LineItemView" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Line Item Detail" area="Misc" controller="MiscPayCreditNote" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        
+        <mvcSiteMapNode title="Validation Error Correction" area="Misc" controller="MiscValidationErrorCorrection" action="Index" RouteName="MiscValidationErrorCorrectionIndex"  />
+        <mvcSiteMapNode title="Correct Supporting Document Linking Errors" controller="UnlinkedSupportingDocument" action="Index" area="Misc"></mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Payables" controller="ManageMiscPayablesInvoice" action="Index" area="MiscPayables" clickable="false">          
+          
+          <mvcSiteMapNode title="View Daily Bilateral Invoices" area="MiscPayables" controller="ManageMiscDailyPayablesInvoice" action="Index">
+            <mvcSiteMapNode title="View Miscellaneous Invoice" area="Misc" controller="MiscDailyPayInvoice" action="View" RouteName="MiscInvoiceView" ParameterList="invoiceId">
+              <mvcSiteMapNode title="View Line Item" area="Misc" controller="MiscDailyPayInvoice" action="LineItemView" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+                <mvcSiteMapNode title="View Line Item Detail" area="Misc" controller="MiscDailyPayInvoice" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+              </mvcSiteMapNode>
+            </mvcSiteMapNode>
+			  <!--SCP#444864 - KAL:Internal issue for Daily Bilateral CreditNote -->
+			  <mvcSiteMapNode title="View Miscellaneous Credit Note" area="Misc" controller="MiscDailyPayCreditNote" action="View" RouteName="MiscInvoiceView" ParameterList="invoiceId">
+				  <mvcSiteMapNode title="View Line Item" area="Misc" controller="MiscDailyPayCreditNote" action="LineItemView" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+					  <mvcSiteMapNode title="View Line Item Detail" area="Misc" controller="MiscDailyPayCreditNote" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+				  </mvcSiteMapNode>
+			  </mvcSiteMapNode>
+          </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="Invoice Search" area="MiscPayables" controller="ManageMiscPayablesInvoice" action="Index">
+          <mvcSiteMapNode title="View Miscellaneous Invoice" area="Misc" controller="MiscPayInvoice" action="View" RouteName="MiscInvoiceView" ParameterList="invoiceId">
+            <mvcSiteMapNode title="View Line Item" area="Misc" controller="MiscPayInvoice" action="LineItemView" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Line Item Detail" area="Misc" controller="MiscPayInvoice" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+          <!--<mvcSiteMapNode title="View Invoice" area="Misc" controller="MiscInvoice" action="View" RouteName="MiscInvoiceView" ParameterList="invoiceId, billingType">
+                  <mvcSiteMapNode title="View Line Item" area="Misc" controller="MiscInvoice" action="LineItemView" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+                      <mvcSiteMapNode title="View Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+                  </mvcSiteMapNode>
+              </mvcSiteMapNode>-->
+        </mvcSiteMapNode>
+         
+        <mvcSiteMapNode title="Manage Supporting Documents" area="MiscPayables" controller="MiscPayableSupportingDoc" action="PayableSupportingDocs" RouteName="MiscPayableManageSupportingDocuments" />
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title=" Billing History and Correspondence" controller="BillingHistory" action="Index" area="Misc">
+        <mvcSiteMapNode title="Create Correspondence" controller="Correspondence" action="CreateCorrespondence" area="Misc" ParameterList="invoiceId" RouteName="Correspondence" />
+        <mvcSiteMapNode title="Create Correspondence" area="Misc" controller="Correspondence" action="CreateAndSendCorrespondence" ParameterList="invoiceId" RouteName="Correspondence" />
+        <mvcSiteMapNode title="Edit Correspondence" area="Misc" controller="Correspondence" action="SendCorrespondence" ParameterList="invoiceId,transactionId" RouteName="Upload" />
+        <mvcSiteMapNode title="Edit Correspondence" controller="Correspondence" action="EditCorrespondence" area="Misc" ParameterList="invoiceId,transactionId" RouteName="Upload" />
+        <mvcSiteMapNode title="Audit Trail" controller="BillingHistory" action="MiscBHAuditTrail" area="Misc" ParameterList="invoiceId" />
+
+        <mvcSiteMapNode title="View Correspondence" controller="Correspondence" action="ViewCorrespondence" area="Misc" ParameterList="invoiceId" />
+        <mvcSiteMapNode title="Create Correspondence Invoice" controller="MiscInvoice" action="CreateBillingMemo" area="Misc" ParameterList="invoiceId,correspondenceReferenceNumber" RouteName="CreateBillingMemo" />
+        <mvcSiteMapNode title="Correspondence" controller="Correspondence" action="Correspondence" area="Misc" ParameterList="invoiceId" RouteName="Correspondence">
+          <mvcSiteMapNode title="Create Correspondence" controller="Correspondence" action="ReplyCorrespondence" area="Misc" ParameterList="invoiceId,transactionId" RouteName="Upload"></mvcSiteMapNode>
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      
+    </mvcSiteMapNode>
+   
+    <mvcSiteMapNode title="Uatp" controller="ManageUATPInvoice" action="Index" area="Uatp" clickable="false">
+      <mvcSiteMapNode title="Receivables" controller="ManageUatpInvoice" action="Index" area="Uatp" clickable="false">
+        <mvcSiteMapNode title="View Invoice" controller="UatpInvoice" action="ShowDetails" area="Uatp" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Create Rejection Invoice" controller="UatpInvoice" action="CreateRejectionInvoice" area="Uatp" ParameterList="rejectedInvoiceId" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Manage Invoice" area="Uatp" controller="ManageUatpInvoice" action="Index" RouteName="UatpInvoiceSearch" ParameterList="id" />
+        <mvcSiteMapNode title="Create Invoice" area="Uatp" controller="UatpInvoice" action="Create" RouteName="UatpInvoiceCreate" />
+        <mvcSiteMapNode title="Edit Uatp Invoice" area="Uatp" controller="UatpInvoice" action="Edit" RouteName="UatpInvoiceEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Create Line Item" area="Uatp" controller="UatpInvoice" action="LineItemCreate" RouteName="UatpTransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Edit Line Item" area="Uatp" controller="UatpInvoice" action="LineItemEdit" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="Create Line Item Detail" area="Uatp" controller="UatpInvoice" action="LineItemDetailCreate" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Uatp" controller="UatpInvoice" action="LineItemDetailClone" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Uatp" controller="UatpInvoice" action="LineItemDetailDuplicate" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Uatp" controller="UatpInvoice" action="LineItemDetailReturn" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Uatp" controller="UatpInvoice" action="LineItemDetailEdit" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Uatp" controller="UatpInvoice" action="LineItemDetailEditAndReturn" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Uatp Invoice" area="Uatp" controller="UatpInvoice" action="View" RouteName="UatpInvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Line Item" area="Uatp" controller="UatpInvoice" action="LineItemView" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Line Item Detail" area="Uatp" controller="UatpInvoice" action="LineItemDetailView" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Uatp Invoice" area="Uatp" controller="UatpPayInvoice" action="View" RouteName="UatpInvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Line Item" area="Uatp" controller="UatpPayInvoice" action="LineItemView" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Line Item Detail" area="Uatp" controller="UatpPayInvoice" action="LineItemDetailView" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Create Credit Note" area="Uatp" controller="UatpCreditNote" action="Create" RouteName="UatpInvoiceCreate" />
+        <mvcSiteMapNode title="Edit Uatp Credit Note" area="Uatp" controller="UatpCreditNote" action="Edit" RouteName="UatpInvoiceEdit" ParameterList="invoiceId">
+          <mvcSiteMapNode title="Create Line Item" area="Uatp" controller="UatpCreditNote" action="LineItemCreate" RouteName="UatpTransactions" ParameterList="invoiceId" />
+          <mvcSiteMapNode title="Edit Line Item" area="Uatp" controller="UatpCreditNote" action="LineItemEdit" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="Create Line Item Detail" area="Uatp" controller="UatpCreditNote" action="LineItemDetailCreate" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Uatp" controller="UatpCreditNote" action="LineItemDetailClone" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Uatp" controller="UatpCreditNote" action="LineItemDetailDuplicate" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Create Line Item Detail" area="Uatp" controller="UatpCreditNote" action="LineItemDetailReturn" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Uatp" controller="UatpCreditNote" action="LineItemDetailEdit" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId" />
+            <mvcSiteMapNode title="Edit Line Item Detail" area="Uatp" controller="UatpCreditNote" action="LineItemDetailEditAndReturn" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId,lineItemDetailId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="View Uatp Credit Note" area="Uatp" controller="UatpCreditNote" action="View" RouteName="UatpInvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Line Item" area="Uatp" controller="UatpCreditNote" action="LineItemView" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Line Item Detail" area="Uatp" controller="UatpCreditNote" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="View Uatp Credit Note" area="Uatp" controller="UatpPayCreditNote" action="View" RouteName="UatpInvoiceView" ParameterList="invoiceId">
+          <mvcSiteMapNode title="View Line Item" area="Uatp" controller="UatpPayCreditNote" action="LineItemView" RouteName="UatpTransactions" ParameterList="invoiceId,transactionId">
+            <mvcSiteMapNode title="View Line Item Detail" area="Uatp" controller="UatpPayCreditNote" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        
+        <mvcSiteMapNode title="Validation Error Correction" area="Uatp" controller="UatpValidationErrorCorrection" action="Index" RouteName="UatpValidationErrorCorrectionIndex"  />
+      </mvcSiteMapNode>
+    <!--payables Uatp-->
+      <mvcSiteMapNode title="Payables" controller="ManageUatpPayablesInvoice" action="Index" area="UatpPayables" clickable="false">
+        <mvcSiteMapNode title="Invoice Search" area="UatpPayables" controller="ManageUatpPayablesInvoice" action="Index">
+          <!--<mvcSiteMapNode title="View Invoice" area="Misc" controller="MiscInvoice" action="View" RouteName="MiscInvoiceView" ParameterList="invoiceId, billingType">
+            <mvcSiteMapNode title="View Line Item" area="Misc" controller="MiscInvoice" action="LineItemView" RouteName="MiscTransactions" ParameterList="invoiceId,transactionId">
+              <mvcSiteMapNode title="View Line Item Detail" area="Misc" controller="MiscInvoice" action="LineItemDetailView" RouteName="LineItemDetailEdit" ParameterList="invoiceId,lineItemId,lineItemDetailId" />
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>-->
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Manage Supporting Documents" area="MiscPayables" controller="MiscPayableSupportingDoc" action="PayableSupportingDocs" RouteName="MiscPayableManageSupportingDocuments" />
+      </mvcSiteMapNode>
+      <!--end Payables uatp-->
+      <mvcSiteMapNode title=" Billing History and Correspondence" controller="BillingHistory" action="Index" area="Uatp">
+        <mvcSiteMapNode title="Create Correspondence" controller="Correspondence" action="CreateCorrespondence" area="Uatp" ParameterList="invoiceId" RouteName="Correspondence" />
+        <mvcSiteMapNode title="Create Correspondence" area="Uatp" controller="Correspondence" action="CreateAndSendCorrespondence" ParameterList="invoiceId" RouteName="Correspondence" />
+        <mvcSiteMapNode title="Edit Correspondence" area="Uatp" controller="Correspondence" action="SendCorrespondence" ParameterList="invoiceId,transactionId" RouteName="Upload" />
+        <mvcSiteMapNode title="Edit Correspondence" controller="Correspondence" action="EditCorrespondence" area="Uatp" ParameterList="invoiceId,transactionId" RouteName="Upload" />
+        <mvcSiteMapNode title="Audit Trail" controller="BillingHistory" action="UatpBHAuditTrail" area="Uatp" ParameterList="invoiceId" />
+
+        <mvcSiteMapNode title="View Correspondence" controller="Correspondence" action="ViewCorrespondence" area="Uatp" ParameterList="invoiceId" />
+        <mvcSiteMapNode title="Create Correspondence Invoice" controller="UatpInvoice" action="CreateBillingMemo" area="Uatp" ParameterList="invoiceId,correspondenceReferenceNumber" RouteName="CreateBillingMemo" />
+        <mvcSiteMapNode title="Correspondence" controller="Correspondence" action="Correspondence" area="Uatp" ParameterList="invoiceId" RouteName="Correspondence">
+          <mvcSiteMapNode title="Create Correspondence" controller="Correspondence" action="ReplyCorrespondence" area="Uatp" ParameterList="invoiceId,transactionId" RouteName="Upload"></mvcSiteMapNode>
+          <mvcSiteMapNode title="View Correspondence" controller="Correspondence" action="OpenCorrespondenceForEdit" area="Uatp" ParameterList="invoiceId,transactionId" RouteName="UatpOpenCorrespondenceForEdit"/>
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="General" controller="Calendar" action="Index" area="General" clickable="false">
+      <mvcSiteMapNode title="IS Calendar Search" area="General" controller="Calendar" action="Index" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="General" controller="FileViaWeb" action="FileManagerUpload" area="General" clickable="false">
+      <mvcSiteMapNode title="File Management" area="General" controller="FileViaWeb" action="FileManagerUpload" clickable="false">
+        <mvcSiteMapNode title="Upload File" area="General" controller="FileViaWeb" action="FileManagerUpload" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+
+    <mvcSiteMapNode title="General" controller="FileViaWeb" action="FileManagerDownload" area="General" clickable="false">
+      <mvcSiteMapNode title="File Management" area="General" controller="FileViaWeb" action="FileManagerDownload" clickable="false">
+        <mvcSiteMapNode title="Download File" area="General" controller="FileViaWeb" action="FileManagerDownload" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="General" controller="ManageSuspendedInvoices" action="ManageSuspendedInvoices" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Manage Suspended Invoices" area="Reports" controller="ManageSuspendedInvoices" action="ManageSuspendedInvoices">
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="General" controller="ManageSuspendedInvoices" action="ManageSuspendedInvoices" area="Reports" clickable="false">
+    <mvcSiteMapNode title="Legal Archive Retrieval" area="LegalArchive" controller="ArchiveRetrieval" action="Search" clickable="false">
+      <mvcSiteMapNode title="Search and Retrieve" area="LegalArchive" controller="ArchiveRetrieval" action="Search" />
+      <mvcSiteMapNode title="Download Retrieved Files" area="LegalArchive" controller="ArchiveRetrieval" action="DownloadRetrievedFiles" />
+    </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="SIS Ops" area="General" controller="Calendar" action="UploadCalendar" clickable="false">
+      <mvcSiteMapNode title="Upload ICH &amp; ACH Calendar" area="General" controller="Calendar" action="UploadCalendar"></mvcSiteMapNode>
+      <mvcSiteMapNode title="Broadcast Messages" area="ISOps" controller="BroadcastMessages" action="BroadcastMessages" />
+      <mvcSiteMapNode title="Broadcast Messages" area="ISOps" controller="BroadcastMessages" action="Announcements" />
+    </mvcSiteMapNode>
+
+    <!--<mvcSiteMapNode title="Profile" controller="Permission" action="NewPermissionTemplate" area="Profile" clickable="false">
+      <mvcSiteMapNode title="Create Permission Templates" area="Profile" controller="Permission" action="NewPermissionTemplate" />
+    </mvcSiteMapNode>-->
+
+    <mvcSiteMapNode title="Profile and User Management" controller="Permission" action="NewPermissionTemplate1" area="Profile" clickable="false">
+      <mvcSiteMapNode title="Manage User Permissions" area="Profile" controller="Permission" action="NewPermissionTemplate1" clickable="false" >
+      <mvcSiteMapNode title="Manage Permission Template" area="Profile" controller="Permission" action="ManagePermissionTemplate" clickable="true">
+        <mvcSiteMapNode title="Edit" area="Profile" controller="Permission" action="EditPermissionTemplate"/>
+        <mvcSiteMapNode title="Add" area="Profile" controller="Permission" action="NewPermissionTemplate"/>        
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Profile and User Management" controller="Permission" action="ManagePermissionTemplate" area="Profile" clickable="false">
+      <mvcSiteMapNode title="Manage User Permissions" area="Profile" controller="Permission" action="ManagePermissionTemplate" clickable="false" >
+        <mvcSiteMapNode title="Manage Permission Template" area="Profile" controller="Permission" action="ManagePermissionTemplate"/>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Profile and User Management" controller="Permission" action="PermissionToUser" area="Profile" clickable="false">
+      <mvcSiteMapNode title="Manage User Permissions" area="Profile" controller="Permission" action="ManagePermissionTemplate" clickable="false" >
+        <mvcSiteMapNode title="Assign Permission To User" area="Profile" controller="Permission" action="PermissionToUser" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="ProcessingDashboard" action="ISProcessingDashboard" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Processing Dashboard" area="Reports" controller="ProcessingDashboard" action="ISProcessingDashboard" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="ICH Ops" controller="LateSubmission" action="IchLateSubmission" area="LateSubmission" clickable="false">
+      <mvcSiteMapNode title="Manage Late Submissions" area="LateSubmission" controller="LateSubmission" action="IchLateSubmission" />
+      <mvcSiteMapNode title="Manage Blocks" area="Profile" controller="ICH" action="ICHBlockingRules" clickable="true" >      
+      <mvcSiteMapNode title="Edit Blocking Rules" area="Profile" controller="Ich" action="BlockingRuleEdit" RouteName="BlockingRuleSearch" ParameterList="id" />
+      <mvcSiteMapNode title="Add Blocking Rules" area="Profile" controller="ICH" action="BlockingRuleDetails" />
+    </mvcSiteMapNode>
+      </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="ACH Ops" controller="LateSubmission" action="AchLateSubmission" area="LateSubmission" clickable="false">
+      <mvcSiteMapNode title="Manage Late Submissions" area="LateSubmission" controller="LateSubmission" action="AchLateSubmission" />
+      <mvcSiteMapNode title="Manage Blocks" area="Profile" controller="ACH" action="ACHBlockingRules"  clickable="true">
+        <mvcSiteMapNode title="Edit Blocking Rules" area="Profile" controller="Ach" action="BlockingRuleEdit" RouteName="BlockingRuleSearch" ParameterList="id" />
+        <mvcSiteMapNode title="Add Blocking Rules" area="Profile" controller="Ach" action="BlockingRuleDetails" RouteName="BlockingRuleSearch" ParameterList="id" />
+      </mvcSiteMapNode>
+      <!--CMP #553: ACH Requirement for Multiple Currency Handling.-->
+      <mvcSiteMapNode title="ACH Currencies of Clearance Setup" area="Masters" controller="AchCurrencySetUp" action="Index" >
+        <mvcSiteMapNode title="Add ACH Currency" area="Masters" controller="AchCurrencySetUp" action="Create" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+
+    <mvcSiteMapNode title="Profile and User Management" controller="ManageContacts" action="Index" area="Profile" clickable="false">
+      <mvcSiteMapNode title="Contacts Administration" area="Profile" controller="ManageContacts" action="Index">
+        <mvcSiteMapNode title="Edit Contact Type" area="Profile" controller="ManageContacts" action="Edit" />
+        <mvcSiteMapNode title="Add Contact Type" area="Profile" controller="ManageContacts" action="Create" />
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Proxy Log-in" area="" controller="Account" action="ProxyLoginSearch"/>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Profile and User Management" controller="Member" action="Manage" area="Profile" clickable="false">
+      <mvcSiteMapNode title="Manage Member Profile" area="Profile" controller="Member" action="Manage" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Profile and User Management" controller="Member" action="Create" area="Profile" clickable="false">
+      <mvcSiteMapNode title="Create / Manage Member Profile" area="Profile" controller="Member" action="Create" />
+      <mvcSiteMapNode title="Create / Manage Member Profile" area="Profile" controller="Member" action="ManageMember" /> 
+      <mvcSiteMapNode title="Create Users" area="" controller="Account" action="Register" />
+      <mvcSiteMapNode title="Manage Users" area="" controller="Account" action="SearchOrModify" >
+        <mvcSiteMapNode title="Edit" area="" controller="Account" action="UserEditFromMember" />
+    </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    
+    <mvcSiteMapNode title="Profile and User Management" controller="AuditTrail" action="AuditTrail" area="Profile" clickable="false">
+      <mvcSiteMapNode title="View Profile Changes" area="Profile" controller="AuditTrail" action="AuditTrail" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Profile and User Management" controller="AuditTrail" action="Ich" area="Profile" clickable="false">
+      <mvcSiteMapNode title="View ICH Profile Changes" area="Profile" controller="AuditTrail" action="Ich" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Profile and User Management" controller="AuditTrail" action="Ach" area="Profile" clickable="false">
+      <mvcSiteMapNode title="View ACH Profile Changes" area="Profile" controller="AuditTrail" action="Ach" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="MemberLocation" action="MemberLocation" area="Reports" clickable="false">
+      <!--SCP#436979 - Title mismatch-->
+      <mvcSiteMapNode title="Invoice Reference Data" area="Reports" controller="MemberLocation" action="MemberLocation" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="InvoiceDeletionAudit" action="InvoiceDeletionAudit" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Invoice Deletion Audit Trail Report" area="Reports" controller="InvoiceDeletionAudit" action="InvoiceDeletionAudit" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Master Maintenance" controller="Country" action="Index" area="Masters" clickable="false">
+      <mvcSiteMapNode title="General" area="Masters" controller="ReasonCode" action="Index" clickable="false">
+        <mvcSiteMapNode title="Reason Code Setup" area="Masters" controller="ReasonCode" action="Index">
+          <mvcSiteMapNode title="Reason Code Details" area="Masters" controller="ReasonCode" action="Details" />
+          <mvcSiteMapNode title="Add Reason Code" area="Masters" controller="ReasonCode" action="Create" />
+          <mvcSiteMapNode title="Edit Reason Code" area="Masters" controller="ReasonCode" action="Edit" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Transaction Type Setup" area="Masters" controller="TransactionType" action="Index">
+          <mvcSiteMapNode title="Transaction Type Details" area="Masters" controller="TransactionType" action="Details" />
+          <mvcSiteMapNode title="Add Transaction Type" area="Masters" controller="TransactionType" action="Create" />
+          <mvcSiteMapNode title="Edit Transaction Type" area="Masters" controller="TransactionType" action="Edit" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Transmitter Exception Setup" area="Masters" controller="OnBehalfInvoiceSetup" action="Index">
+          <mvcSiteMapNode title="Edit Transmitter Exception" area="Masters" controller="OnBehalfInvoiceSetup" action="Edit" />
+          <mvcSiteMapNode title="Add Transmitter Exception" area="Masters" controller="OnBehalfInvoiceSetup" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Tolerance Setup" area="Masters" controller="Tolerance" action="Index">
+          <mvcSiteMapNode title="Edit Tolerance" area="Masters" controller="Tolerance" action="Edit" />
+          <mvcSiteMapNode title="Add Tolerance" area="Masters" controller="Tolerance" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Minimum / Maximum Value Setup" area="Masters" controller="MinMaxAcceptableAmount" action="Index">
+          <mvcSiteMapNode title="Edit Minimum / Maximum Value" area="Masters" controller="MinMaxAcceptableAmount" action="Edit" />
+          <mvcSiteMapNode title="Add Minimum / Maximum Value" area="Masters" controller="MinMaxAcceptableAmount" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Time Limit Setup" area="Masters" controller="TimeLimit" action="Index">
+          <mvcSiteMapNode title="Edit Time Limit" area="Masters" controller="TimeLimit" action="Edit" />
+          <mvcSiteMapNode title="Add Time Limit" area="Masters" controller="TimeLimit" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Miscellaneous Codes Setup" area="Masters" controller="MiscCode" action="Index">
+          <mvcSiteMapNode title="Edit Miscellaneous Code" area="Masters" controller="MiscCode" action="Edit" />
+          <mvcSiteMapNode title="Add Miscellaneous Code" area="Masters" controller="MiscCode" action="Create" />
+        </mvcSiteMapNode>        
+        <mvcSiteMapNode title="Member Sub Status Setup" area="Masters" controller="SisMemberSubStatus" action="Index">
+          <mvcSiteMapNode title="Edit Member Sub Status" area="Masters" controller="SisMemberSubStatus" action="Edit" />
+          <mvcSiteMapNode title="Add Member Sub Status" area="Masters" controller="SisMemberSubStatus" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="File Format Setup" area="Masters" controller="FileFormat" action="Index">
+          <mvcSiteMapNode title="Edit File Format" area="Masters" controller="FileFormat" action="Edit" />
+          <mvcSiteMapNode title="Add File Format" area="Masters" controller="FileFormat" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="VAT Identifier Setup" area="Masters" controller="VatIdentifier" action="Index">
+          <mvcSiteMapNode title="Edit VAT Identifier" area="Masters" controller="VatIdentifier" action="Edit" />
+          <mvcSiteMapNode title="Add VAT Identifier" area="Masters" controller="VatIdentifier" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Minimum Value Setup" area="Masters" controller="MinAcceptableAmount" action="Index">
+          <mvcSiteMapNode title="Edit Minimum Value" area="Masters" controller="MinAcceptableAmount" action="Edit" />
+          <mvcSiteMapNode title="Add Minimum Value" area="Masters" controller="MinAcceptableAmount" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Maximum Value Setup" area="Masters" controller="MaxAcceptableAmount" action="Index">
+          <mvcSiteMapNode title="Edit Maximum Value" area="Masters" controller="MaxAcceptableAmount" action="Edit" />
+          <mvcSiteMapNode title="Add Maximum Value" area="Masters" controller="MaxAcceptableAmount" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Lead Period Setup" area="Masters" controller="LeadPeriod" action="Index">
+          <mvcSiteMapNode title="Edit Lead Period Value" area="Masters" controller="LeadPeriod" action="Edit" />
+          <mvcSiteMapNode title="Add Lead Period Value" area="Masters" controller="LeadPeriod" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Settlement Method Setup" area="Masters" controller="SettlementMethod" action="Index">
+          <mvcSiteMapNode title="Edit Settlement Method Value" area="Masters" controller="SettlementMethod" action="Edit" />
+          <mvcSiteMapNode title="Add Settlement Method Value" area="Masters" controller="SettlementMethod" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Language Setup" area="Masters" controller="Language" action="Index">
+          <mvcSiteMapNode title="Language Details" area="Masters" controller="Language" action="Details" />
+          <mvcSiteMapNode title="Add Language" area="Masters" controller="Language" action="Create" />
+          <mvcSiteMapNode title="Edit Language" area="Masters" controller="Language" action="Edit" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Area Related" area="Masters" controller="Country" action="Index" clickable="false">
+        <mvcSiteMapNode title="ISO Country and DS Setup" area="Masters" controller="Country" action="Index">
+          <mvcSiteMapNode title="Edit ISO Country" area="Masters" controller="Country" action="Edit" />
+          <mvcSiteMapNode title="Add ISO Country" area="Masters" controller="Country" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="City and Airport Setup" area="Masters" controller="CityAirport" action="Index">
+          <mvcSiteMapNode title="Edit City and Airport" area="Masters" controller="CityAirport" action="Edit" />
+          <mvcSiteMapNode title="Add City and Airport" area="Masters" controller="CityAirport" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Area Sub Division Setup" area="Masters" controller="SubDivision" action="Index">
+          <mvcSiteMapNode title="Edit Sub Division" area="Masters" controller="SubDivision" action="Edit" />
+          <mvcSiteMapNode title="Add Sub Division" area="Masters" controller="SubDivision" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="UN Location Setup" area="Masters" controller="UnlocCode" action="Index">
+          <mvcSiteMapNode title="Edit UN Location" area="Masters" controller="UnlocCode" action="Edit" />
+          <mvcSiteMapNode title="Add UN Location" area="Masters" controller="UnlocCode" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="ICAO Airport Setup" area="Masters" controller="Airport" action="Index">
+          <mvcSiteMapNode title="Edit ICAO Airport" area="Masters" controller="Airport" action="Edit" />
+          <mvcSiteMapNode title="Add ICAO Airport" area="Masters" controller="Airport" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="ICAO Location Setup" area="Masters" controller="LocationIcao" action="Index">
+          <mvcSiteMapNode title="Edit ICAO Location" area="Masters" controller="LocationIcao" action="Edit" />
+          <mvcSiteMapNode title="Add ICAO Location" area="Masters" controller="LocationIcao" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="ICAO Country Setup" area="Masters" controller="CountryIcao" action="Index">
+          <mvcSiteMapNode title="Edit ICAO Country" area="Masters" controller="CountryIcao" action="Edit" />
+          <mvcSiteMapNode title="Add ICAO Country" area="Masters" controller="CountryIcao" action="Create" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Currency Related" area="Masters" controller="Currency" action="Index" clickable="false">
+        <mvcSiteMapNode title="ISO Currency Setup" area="Masters" controller="Currency" action="Index">
+          <mvcSiteMapNode title="Edit ISO Currency" area="Masters" controller="Currency" action="Edit" />
+          <mvcSiteMapNode title="Add ISO Currency" area="Masters" controller="Currency" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Exchange Rate Setup" area="Masters" controller="ExchangeRate" action="Index">
+          <mvcSiteMapNode title="Edit Exchange Rate" area="Masters" controller="ExchangeRate" action="Edit" />
+          <mvcSiteMapNode title="Add Exchange Rate" area="Masters" controller="ExchangeRate" action="Create" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Passenger Related" area="Masters" controller="SampleDigit" action="Index" clickable="false">
+        <mvcSiteMapNode title="Sample Digit Setup" area="Masters" controller="SampleDigit" action="Index">
+          <mvcSiteMapNode title="Edit Sample Digit" area="Masters" controller="SampleDigit" action="Edit" />
+          <mvcSiteMapNode title="Add Sample Digit" area="Masters" controller="SampleDigit" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Tax Code Setup" area="Masters" controller="TaxCode" action="Index">
+          <mvcSiteMapNode title="Edit Tax Code" area="Masters" controller="TaxCode" action="Edit" />
+          <mvcSiteMapNode title="Add Tax Code" area="Masters" controller="TaxCode" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Reason Code - RM Amount Map" area="Masters" controller="RMReasonAcceptableDiff" action="Index">
+          <mvcSiteMapNode title="Edit Reason Code - RM Amount" area="Masters" controller="RMReasonAcceptableDiff" action="Edit" />
+          <mvcSiteMapNode title="Add Reason Code - RM Amount" area="Masters" controller="RMReasonAcceptableDiff" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="EMD RFIC Setup" area="Masters" controller="Rfic" action="Index">
+          <mvcSiteMapNode title="Edit EMD RFIC" area="Masters" controller="Rfic" action="Edit" />
+          <mvcSiteMapNode title="Add EMD RFIC" area="Masters" controller="Rfic" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="EMD RFISC Setup" area="Masters" controller="Rfisc" action="Index">
+          <mvcSiteMapNode title="Edit EMD RFISC" area="Masters" controller="Rfisc" action="Edit" />
+          <mvcSiteMapNode title="Add EMD RFISC" area="Masters" controller="Rfisc" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="BVC Matrix Setup" area="Masters" controller="BvcMatrix" action="Index">
+          <mvcSiteMapNode title="Edit BVC Matrix" area="Masters" controller="BvcMatrix" action="Edit" />
+          <mvcSiteMapNode title="Add BVC Matrix" area="Masters" controller="BvcMatrix" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Member BVC Agreement" area="Masters" controller="OneWayBVCAgreement" action="Index">
+          <mvcSiteMapNode title="Add Member BVC Agreement" area="Masters" controller="OneWayBVCAgreement" action="Create" />
+          <mvcSiteMapNode title="Edit Member BVC Agreement" area="Masters" controller="OneWayBVCAgreement" action="Edit" />
+          <mvcSiteMapNode title="Delete Member BVC Agreement" area="Masters" controller="OneWayBVCAgreement" action="Delete" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Miscellaneous Related" area="Masters" controller="AircraftType" action="Index" clickable="false">
+        <mvcSiteMapNode title="Aircraft Type Setup" area="Masters" controller="AircraftType" action="Index">
+          <mvcSiteMapNode title="Edit Aircraft Type" area="Masters" controller="AircraftType" action="Edit" />
+          <mvcSiteMapNode title="Add Aircraft Type" area="Masters" controller="AircraftType" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Unit Of Measure Code Setup" area="Masters" controller="UomCode" action="Index">
+          <mvcSiteMapNode title="Edit Unit Of Measure Code" area="Masters" controller="UomCode" action="Edit" />
+          <mvcSiteMapNode title="Add Unit Of Measure Code" area="Masters" controller="UomCode" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Tax Sub Type Setup" area="Masters" controller="TaxSubType" action="Index">
+          <mvcSiteMapNode title="Edit Tax Sub Type" area="Masters" controller="TaxSubType" action="Edit" />
+          <mvcSiteMapNode title="Add Tax Sub Type" area="Masters" controller="TaxSubType" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Aircraft Type ICAO Setup" area="Masters" controller="AircraftTypeIcao" action="Index">
+          <mvcSiteMapNode title="Edit Aircraft Type ICAO" area="Masters" controller="AircraftTypeIcao" action="Edit" />
+          <mvcSiteMapNode title="Add Aircraft Type ICAO" area="Masters" controller="AircraftTypeIcao" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Charge Code Type Requirement Setup" area="Masters" controller="ChargeCodeTypeRequirementSetUp" action="Index">
+          <mvcSiteMapNode title="Edit Charge Code Type Requirement" area="Masters" controller="ChargeCodeTypeRequirementSetUp" action="Edit" />
+          <mvcSiteMapNode title="Add Charge Code Type Requirement" area="Masters" controller="ChargeCodeTypeRequirementSetUp" action="Create" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Charge Code Type Name Setup" area="Masters" controller="ChargeCodeTypeNameSetUp" action="Index">
+          <mvcSiteMapNode title="Edit Charge Code Type Name" area="Masters" controller="ChargeCodeTypeNameSetUp" action="Edit" />
+          <mvcSiteMapNode title="Add Charge Code Type Name" area="Masters" controller="ChargeCodeTypeNameSetUp" action="Create" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Cargo Related" area="Masters" controller="Currency" action="Index" clickable="false">
+        <mvcSiteMapNode title="Reason Code - RM Amount Map" area="Masters" controller="CgoRMReasonAcceptableDiff" action="Index">
+          <mvcSiteMapNode title="Edit Reason Code - RM Amount" area="Masters" controller="CgoRMReasonAcceptableDiff" action="Edit" />
+          <mvcSiteMapNode title="Add Reason Code - RM Amount" area="Masters" controller="CgoRMReasonAcceptableDiff" action="Create" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="InterlinePayablesAnalysis" action="InterlineBillingSummaryReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Financial Controller" controller="InterlinePayablesAnalysis" action="InterlineBillingSummaryReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Interline Billing Summary" area="Reports" controller="InterlinePayablesAnalysis" action="InterlineBillingSummaryReport" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="ManageSuspendedInvoices" action="MemberSuspendedInvoices" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Financial Controller" controller="ManageSuspendedInvoices" action="MemberSuspendedInvoices" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Suspended Billings" area="Reports" controller="ManageSuspendedInvoices" action="MemberSuspendedInvoices" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="IsCalendar" action="IsCalendar" area="Reports" clickable="false">
+      <mvcSiteMapNode title="IS and CH Calendar Report" area="Reports" controller="IsCalendar" action="IsCalendar" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="PayablesReport" action="PaxRejectionAnalysisNonSamplingReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="PayablesReport" action="PaxRejectionAnalysisNonSamplingReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Payables" controller="PayablesReport" action="PaxRejectionAnalysisNonSamplingReport" area="Reports" clickable="false">
+          <mvcSiteMapNode title="Non Sample Rejection Analysis" area="Reports" controller="PayablesReport" action="PaxRejectionAnalysisNonSamplingReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="ReceivablesReport" action="PaxRejectionAnalysisNonSamplingReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="ReceivablesReport" action="PaxRejectionAnalysisNonSamplingReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="ReceivablesReport" action="PaxRejectionAnalysisNonSamplingReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Non Sample Rejection Analysis" area="Reports" controller="ReceivablesReport" action="PaxRejectionAnalysisNonSamplingReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Reports" controller="PayablesReport" action="PaxInterlineBillingSummaryReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="PayablesReport" action="PaxInterlineBillingSummaryReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Payables" controller="PayablesReport" action="PaxInterlineBillingSummaryReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Interline Billing Summary" area="Reports" controller="PayablesReport" action="PaxInterlineBillingSummaryReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Reports" controller="ReceivablesReport" action="PaxInterlineBillingSummaryReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="ReceivablesReport" action="PaxInterlineBillingSummaryReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="ReceivablesReport" action="PaxInterlineBillingSummaryReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Interline Billing Summary" area="Reports" controller="ReceivablesReport" action="PaxInterlineBillingSummaryReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Miscellaneous" controller="CorrespondenceTrail" action="Index" area="Misc" clickable="false">
+          <mvcSiteMapNode title="Download Correspondences" area="Misc" controller="CorrespondenceTrail" action="Index" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Passenger" controller="CorrespondenceTrail" action="Index" area="Pax" clickable="false">
+      <mvcSiteMapNode title="Download Correspondences" area="Pax" controller="CorrespondenceTrail" action="Index" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Cargo" controller="CorrespondenceTrail" action="Index" area="Cargo" clickable="false">
+      <mvcSiteMapNode title="Download Correspondences" area="Cargo" controller="CorrespondenceTrail" action="Index" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Uatp" controller="CorrespondenceTrail" action="Index" area="Uatp" clickable="false">
+      <mvcSiteMapNode title="Download Correspondences" area="Uatp" controller="CorrespondenceTrail" action="Index" />
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Reports" controller="ReceivablesReport" action="OwSamplingReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="ReceivablesReport" action="OwSamplingReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="ReceivablesReport" action="OwSamplingReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Sampling Billing Analysis" area="Reports" controller="ReceivablesReport" action="OwSamplingReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+  
+    
+    <mvcSiteMapNode title="Reports" controller="CorrespondenceStatus" action="PaxCorrespondenceStatus" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="CorrespondenceStatus" action="PaxCorrespondenceStatus" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Correspondence status" area="Reports" controller="CorrespondenceStatus" action="PaxCorrespondenceStatus" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <!--Interline Billing Summary Dashboard Report-->
+    <mvcSiteMapNode title="Reports" controller="InterlineBillingSummaryDashboard" action="InterlineBillingSummaryDashBoardReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Interline Billing Summary Dashboard Report" area="Reports" controller="InterlineBillingSummaryDashboard" action="InterlineBillingSummaryDashBoardReport" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="CargoInterlineBillingSummary" action="ReceivablesReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="CargoInterlineBillingSummary" action="ReceivablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="CargoInterlineBillingSummary" action="ReceivablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Interline Billing Summary" area="Reports" controller="CargoInterlineBillingSummary" action="ReceivablesReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="CargoInterlineBillingSummary" action="PayablesReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="CargoInterlineBillingSummary" action="PayablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Payables" controller="CargoInterlineBillingSummary" action="PayablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Interline Billing Summary" area="Reports" controller="CargoInterlineBillingSummary" action="PayablesReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Reports" controller="ReceivablesReport" action="ReceivablesReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="ReceivablesReport" action="ReceivablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="ReceivablesReport" action="ReceivablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="RM BM CM Summary" area="Reports" controller="ReceivablesReport" action="ReceivablesReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="PayablesReport" action="IwSamplingReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="PayablesReport" action="IwSamplingReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Payables" controller="PayablesReport" action="IwSamplingReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Sampling Billing Analysis" area="Reports" controller="PayablesReport" action="IwSamplingReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Reports" controller="PayablesReport" action="PayablesReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="PayablesReport" action="PayablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Payables" controller="PayablesReport" action="PayablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="RM BM CM Summary" area="Reports" controller="PayablesReport" action="PayablesReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Reports" controller="RMBMCMDetails" action="Index" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="RMBMCMDetails" action="Index" area="Reports" clickable="false">
+        <mvcSiteMapNode title="RM-BM-CM Details Report" area="Reports" controller="RMBMCMDetails" action="Index" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    <!--For RM BM CM Summary Reports-->
+    <mvcSiteMapNode title="Reports" controller="RMBMCMSummaryReport" action="CargoReceivablesReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="RMBMCMSummaryReport" action="CargoReceivablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="RMBMCMSummaryReport" action="CargoReceivablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="RM BM CM Summary" area="Reports" controller="RMBMCMSummaryReport" action="CargoReceivablesReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="RMBMCMSummaryReport" action="CargoPayablesReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="RMBMCMSummaryReport" action="CargoPayablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Payables" controller="RMBMCMSummaryReport" action="CargoPayablesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="RM BM CM Summary" area="Reports" controller="RMBMCMSummaryReport" action="CargoPayablesReport" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <!--Auto-Billing Performance report-->
+    <mvcSiteMapNode title="Reports" controller="AutoBillingPerformance" action="AutoBillingPerformance" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="AutoBillingPerformance" action="AutoBillingPerformance" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="AutoBillingPerformance" action="AutoBillingPerformance" area="Reports" clickable="false">
+          <mvcSiteMapNode title="Auto-Billing Performance report" area="Reports" controller="AutoBillingPerformance" action="AutoBillingPerformance" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <!--Pending Invoices In Error Report-->
+    <mvcSiteMapNode title="Reports" controller="PendingInvoices" action="PendingInvoicesReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Financial Controller" controller="PendingInvoices" action="PendingInvoicesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Pending Invoices In Error" area="Reports" controller="PendingInvoices" action="PendingInvoicesReport" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="CorrespondenceStatus" action="CGOCorrespondenceStatus" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="CorrespondenceStatus" action="CGOCorrespondenceStatus" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Correspondence Status" area="Reports" controller="CorrespondenceStatus" action="CGOCorrespondenceStatus" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Reports" controller="SupportingMismatchDocument" action="CgoMismatchDocument" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="SupportingMismatchDocument" action="CgoMismatchDocument" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="SupportingMismatchDocument" action="CgoMismatchDocument" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Supporting Documents Mismatch" area="Reports" controller="SupportingMismatchDocument" action="CgoMismatchDocument" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="ReceivableCargoSubmissionOverview" action="Index" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="ReceivableCargoSubmissionOverview" action="Index" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="ReceivableCargoSubmissionOverview" action="Index" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Submission Overview" area="Reports" controller="ReceivableCargoSubmissionOverview" action="Index" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Reports" controller="ReceivableCargoSubmissionOverview" action="PayableCargoSubmissionOverview" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="ReceivableCargoSubmissionOverview" action="PayableCargoSubmissionOverview" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Payables" controller="ReceivableCargoSubmissionOverview" action="PayableCargoSubmissionOverview" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Submission Overview" area="Reports" controller="ReceivableCargoSubmissionOverview" action="PayableCargoSubmissionOverview" />
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="Miscellaneous" action="MiscSubstitutionValuesReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Miscellaneous" controller="Miscellaneous" action="MiscSubstitutionValuesReport" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Substitution Values Report" area="Reports" controller="Miscellaneous" action="MiscSubstitutionValuesReport" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="SupportingMismatchDocument" action="MiscMismatchDocument" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Miscellaneous" controller="SupportingMismatchDocument" action="MiscMismatchDocument" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivable Supporting Documents Mismatch" area="Reports" controller="SupportingMismatchDocument" action="MiscMismatchDocument" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Reports" controller="Miscellaneous" action="MiscChargeSummary" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Miscellaneous" controller="Miscellaneous" action="MiscChargeSummary" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivable Invoice Summary Report" area="Reports" controller="Miscellaneous" action="MiscChargeSummary" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="Miscellaneous" action="MiscChargePaySummary" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Miscellaneous" controller="Miscellaneous" action="MiscChargePaySummary" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Payables Invoice Summary Report" area="Reports" controller="Miscellaneous" action="MiscChargePaySummary" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Reports" controller="CorrespondenceStatus" action="MiscCorrespondenceStatus" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Miscellaneous" controller="CorrespondenceStatus" action="MiscCorrespondenceStatus" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Correspondence status" area="Reports" controller="CorrespondenceStatus" action="MiscCorrespondenceStatus" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="ValidationSummary" action="IsValidationSummary" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="ValidationSummary" action="IsValidationSummary" area="Reports" clickable="false">
+        <mvcSiteMapNode title="IS Validation Summary" area="Reports" controller="ValidationSummary" action="IsValidationSummary" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="ValidationSummary" action="MiscellaneousSummary" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Miscellaneous" controller="ValidationSummary" action="MiscellaneousSummary" area="Reports" clickable="false">
+        <mvcSiteMapNode title="IS Validation Summary" area="Reports" controller="ValidationSummary" action="MiscellaneousSummary" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller=" ValidationDetails" action="IsValidationDetail" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="ValidationDetails" action="IsValidationDetail" area="Reports" clickable="false">
+        <mvcSiteMapNode title="IS Validation Details" area="Reports" controller="ValidationDetails" action="IsValidationDetail" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="ValidationDetails" action="MiscellaneousDetails" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Miscellaneous" controller="ValidationDetails" action="MiscellaneousDetails" area="Reports" clickable="false">
+        <mvcSiteMapNode title="IS Validation Details" area="Reports" controller="ValidationDetails" action="MiscellaneousDetails" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="SupportingMismatchDocument" action="MismatchDocument" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="SupportingMismatchDocument" action="MismatchDocument" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="SupportingMismatchDocument" action="MismatchDocument" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Supporting Documents Mismatch" area="Reports" controller="SupportingMismatchDocument" action="MismatchDocument">
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="SupportingMismatchDocument" action="MismatchDocument" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="SupportingMismatchDocument" action="MismatchDocument" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="SupportingMismatchDocument" action="MismatchDocument" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Supporting Documents Mismatch" area="Reports" controller="SupportingMismatchDocument" action="MismatchDocument">
+        </mvcSiteMapNode>
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Reports" controller="RejectionAnalysisRec" action="CgoRejectionAnalysisRec" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="RejectionAnalysisRec" action="CgoRejectionAnalysisRec" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Receivables" controller="RejectionAnalysisRec" action="CgoRejectionAnalysisRec" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Rejection Analysis" controller="RejectionAnalysisRec" action="CgoRejectionAnalysisRec"  area="Reports">
+        </mvcSiteMapNode>
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="RejectionAnalysisRec" action="CgoRejectionAnalysisPay" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Cargo" controller="RejectionAnalysisRec" action="CgoRejectionAnalysisPay" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Payables" controller="RejectionAnalysisRec" action="CgoRejectionAnalysisPay" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Rejection Analysis" controller="RejectionAnalysisRec" action="CgoRejectionAnalysisPay"  area="Reports">
+        </mvcSiteMapNode>
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+   
+    <mvcSiteMapNode title="Reports" controller="PaxCgoMscTopTenPartner" action="PaxCgoMscTopTenPartnerRec" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Financial Controller" controller="PaxCgoMscTopTenPartner" action="PaxCgoMscTopTenPartnerRec" area="Reports" clickable="false">
+       <mvcSiteMapNode title="Top 10 Interline Partner - Receivables" controller="PaxCgoMscTopTenPartner" action="PaxCgoMscTopTenPartnerRec"  area="Reports">
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="PaxCgoMscTopTenPartner" action="PaxCgoMscTopTenPartnerPay" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Financial Controller" controller="PaxCgoMscTopTenPartner" action="PaxCgoMscTopTenPartnerPay" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Top 10 Interline Partner - Payables" controller="PaxCgoMscTopTenPartner" action="PaxCgoMscTopTenPartnerPay"  area="Reports">
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+  
+    <mvcSiteMapNode title="Reports" controller="InterlinePayablesAnalysis" action="InterlinePayablesAnalysis" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Financial Controller" controller="InterlinePayablesAnalysis" action="InterlinePayablesAnalysis" area="Reports" clickable="false">
+        <mvcSiteMapNode title="Interline Payables Analysis" controller="InterlinePayablesAnalysis" action="InterlinePayablesAnalysis"  area="Reports">
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="SisUsageReport" action="SISUsageReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="SIS Usage Report" area="Reports" controller="SisUsageReport" action="SISUsageReport" />
+      <mvcSiteMapNode title="SIS IS-WEB Usage Report" area="Reports" controller="SisUsageReport" action="SisIsWebUsageReport" />
+      <mvcSiteMapNode title="Member/Contact Report" area="Profile" controller="QueryAndDownloadDetails" action="MemberDetails" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="UserPermissionReport" action="UserPermissionReport" area="Reports" clickable="false">
+      <mvcSiteMapNode title="User Permission Report" area="Reports" controller="UserPermissionReport" action="UserPermissionReport" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="OfflineReports" action="Index" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Download Offline Reports" area="Reports" controller="OfflineReports" action="Index" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Reports" controller="ConfirmationDetail" action="ConfirmationDetail" area="Reports" clickable="false">
+      <mvcSiteMapNode title="Passenger" controller="ConfirmationDetail" action="ConfirmationDetail" area="Reports" clickable="false">
+        <mvcSiteMapNode title="BVC Details" area="Reports" controller="ConfirmationDetail" action="ConfirmationDetail" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="SIS Ops" controller="ManageSystemParameter" action="ManageSystemParameter" area="ISOps" clickable="false">
+      <mvcSiteMapNode title="Manage System Parameters" area="ISOps" controller="ManageSystemParameter" action="ManageSystemParameter" />
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="SIS Ops" controller="ManageSystemParameter" action="RenderSystemParamValue" area="ISOps" clickable="false">
+      <mvcSiteMapNode title="Manage System Parameters" area="ISOps" controller="ManageSystemParameter" action="RenderSystemParamValue" />
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="SIS Ops" controller="ManageSystemMonitor" action="Manage" area="ISOps" clickable="false">
+      <mvcSiteMapNode title="System Monitor" area="ISOps" controller="ManageSystemMonitor" action="Manage" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="SIS Ops" controller="UploadMemberProfileCSVData" action="UploadMemberProfileCSVData" area="ISOps" clickable="false">
+      <mvcSiteMapNode title="Upload Member Profile Data" area="ISOps" controller="UploadMemberProfileCSVData" action="UploadMemberProfileCSVData" />
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="SandBox" controller="SandBox" action="Index" area="Masters" clickable="false">
+      <mvcSiteMapNode title="Certification Parameters" area="Masters" controller="SandBox" action="Index" />
+      <mvcSiteMapNode title="Sandbox Testing Report" area="Reports" controller="SandBoxTransaction" action="SandBoxTransaction" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="UATP" controller="UatpSupportingDoc" action="Index" area="Uatp" clickable="false">
+      <mvcSiteMapNode title="Receivables" controller="UatpSupportingDoc" action="Index" area="Uatp" clickable="false">
+        <mvcSiteMapNode title="Manage Supporting Documents" controller="UatpSupportingDoc" action="Index"  area="Uatp">
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Passenger" controller="ManageInvoice" action="Index" area="Pax" clickable="false">
+      <mvcSiteMapNode title="Receivable" controller="ManageInvoice" action="Index" area="Pax" clickable="false">
+        <mvcSiteMapNode title="Correct Supporting Document Linking Errors" controller="UnlinkedSupportingDocument" action="Index" area="Pax"/>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="UATP" controller="UnlinkedSupportingDocument" action="Index" area="Uatp" clickable="false">
+      <mvcSiteMapNode title="Receivables" controller="ManageUatpInvoice" action="Index" area="Uatp" clickable="false">
+        <mvcSiteMapNode title="Correct Supporting Document Linking Errors" controller="UnlinkedSupportingDocument" action="Index"  area="Uatp">
+        </mvcSiteMapNode>
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Cargo" controller="UnlinkedSupportingDocument" action="Index" area="Cargo" clickable="false">
+      <mvcSiteMapNode title="Receivables" controller="CargoManageInvoice" action="Index" area="Cargo" clickable="false">
+      <mvcSiteMapNode title="Correct Supporting Document Linking Errors" controller="UnlinkedSupportingDocument" action="Index"  area="Cargo">
+      </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="UATP" controller="UatpPayablesSupportingDoc" action="PayableSupportingDocs" area="UatpPayables" clickable="false">
+      <mvcSiteMapNode title="Payables" controller="UatpPayablesSupportingDoc" action="PayableSupportingDocs" area="UatpPayables" clickable="false">
+        <mvcSiteMapNode title="Manage Supporting Documents" controller="UatpPayablesSupportingDoc" action="PayableSupportingDocs"  area="UatpPayables">
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+  </mvcSiteMapNode>
+</mvcSiteMap>

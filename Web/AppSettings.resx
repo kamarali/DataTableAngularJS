@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountCreationUnsuccessfulMessage" xml:space="preserve">
+    <value>Account creation was unsuccessful. Please correct the errors and try again.</value>
+  </data>
+  <data name="AccountInformationText" xml:space="preserve">
+    <value>Account Information</value>
+  </data>
+  <data name="AccountDeactivatedMessage" xml:space="preserve">
+    <value>Your account has been deactivated. Please contact your administrator to have your account reactivated.</value>
+  </data>
+  <data name="AccountLockedMessage" xml:space="preserve">
+    <value>Your account has been locked since you have exceeded the maximum number of unsuccessful login attempts. You will be able to login again after 30 minutes using your existing password. In case you have forgotten your password, please use the “Forgot Password?” option to reset your password.</value>
+  </data>
+  <data name="MemberAccountDeactivatedMessage" xml:space="preserve">
+    <value>Unauthorized login. Please contact system administrator.</value>
+  </data>
+  <data name="AccountUpdateUnsuccessfulMessage" xml:space="preserve">
+    <value>Account Update was unsuccessful. Please correct the errors and try again.</value>
+  </data>
+  <data name="Address1RequiresAValue" xml:space="preserve">
+    <value>Address1 Requires A Value</value>
+  </data>
+  <data name="Address1Text" xml:space="preserve">
+    <value>Address Line 1:</value>
+  </data>
+  <data name="Address2Text" xml:space="preserve">
+    <value>Address Line 2:</value>
+  </data>
+  <data name="Address3Text" xml:space="preserve">
+    <value>Address Line 3:</value>
+  </data>
+  <data name="AdministratorEmail" xml:space="preserve">
+    <value>vinod_patil@kaleconsultants.com</value>
+    <comment>Change this to ISAdmininstratorEmail in sys param</comment>
+  </data>
+  <data name="AdminUserSearchText1" xml:space="preserve">
+    <value>Admin User Search</value>
+  </data>
+  <data name="Answer1Text" xml:space="preserve">
+    <value>Answer 1:</value>
+  </data>
+  <data name="Answer2Text" xml:space="preserve">
+    <value>Answer 2:</value>
+  </data>
+  <data name="Answer3Text" xml:space="preserve">
+    <value>Answer 3:</value>
+  </data>
+  <data name="BackToLoginPage" xml:space="preserve">
+    <value>Back to Login Page</value>
+  </data>
+  <data name="ChangePasswordFailedMessage1" xml:space="preserve">
+    <value>Change Password Failed - Invalid Old Password</value>
+  </data>
+  <data name="ChangePasswordFailedMessage2" xml:space="preserve">
+    <value>Change Password Failed - New Password must be at least 7 characters in length and should contain at least one Alpha and one numeric character.</value>
+  </data>
+  <data name="ChangePasswordFailedMessage3" xml:space="preserve">
+    <value>Change Password Failed - New Password Already Used</value>
+  </data>
+  <data name="ChangePasswordFailedMessage4" xml:space="preserve">
+    <value>Change Password Failed. Your Session Has Been Lost. Please Try Again Later.</value>
+  </data>
+  <data name="ChangePasswordFailedMessage5" xml:space="preserve">
+    <value>Change Password Failed. Maximum Number Of Attempts Has Been Reached. Your Account Is Now Locked.</value>
+  </data>
+  <data name="ChangePasswordFailedText1" xml:space="preserve">
+    <value>ChangePasswordFailed</value>
+  </data>
+  <data name="ChangePasswordText" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="ChangeSecurityAnswersText1" xml:space="preserve">
+    <value>Change Security Answers</value>
+  </data>
+  <data name="ChangeSecurityQuestionsFailedMessage1" xml:space="preserve">
+    <value>Change Security Questions Failed. Your Session Has Been Lost. Please Try Again Later.</value>
+  </data>
+  <data name="ChangeSecurityQuestionsFailedMessage2" xml:space="preserve">
+    <value>Change Security Questions Failed.  Please Try Again Later.</value>
+  </data>
+  <data name="ChangeSecurityQuestionsPageTitle" xml:space="preserve">
+    <value>Change Security Questions</value>
+  </data>
+  <data name="CityNameRequiresAValue" xml:space="preserve">
+    <value>CityName Requires A Value</value>
+  </data>
+  <data name="CityNameText" xml:space="preserve">
+    <value>City Name:</value>
+  </data>
+  <data name="ConfirmNewPasswordText" xml:space="preserve">
+    <value>Confirm New Password:</value>
+  </data>
+  <data name="CountryNameRequiresAValue" xml:space="preserve">
+    <value>You must select a  Country Name </value>
+  </data>
+  <data name="CountryNameText" xml:space="preserve">
+    <value>Country Name:</value>
+  </data>
+  <data name="CreateANewAccountText" xml:space="preserve">
+    <value>Create a New Account</value>
+  </data>
+  <data name="CurrentOrTemporaryPasswordExpiredMessage1" xml:space="preserve">
+    <value>Your current or temporary password has expired.</value>
+  </data>
+  <data name="CurrentPasswordText" xml:space="preserve">
+    <value>Current Password:</value>
+  </data>
+  <data name="DatabaseEntryFailedMessage" xml:space="preserve">
+    <value>Database entry failed</value>
+  </data>
+  <data name="DepartmentText" xml:space="preserve">
+    <value>Department:</value>
+  </data>
+  <data name="DivisionText" xml:space="preserve">
+    <value>Division:</value>
+  </data>
+  <data name="EditSecurityQuestionsLink" xml:space="preserve">
+    <value>View Security Questions</value>
+  </data>
+  <data name="EmailAddressText" xml:space="preserve">
+    <value>Email Address:</value>
+  </data>
+  <data name="EmailAlreadyExistsMessage" xml:space="preserve">
+    <value>A username for that e-mail address already exists. Please enter a different e-mail address.</value>
+  </data>
+  <data name="EmailRequiredMessage" xml:space="preserve">
+    <value>Email Required</value>
+  </data>
+  <data name="EmailRequiresAValue" xml:space="preserve">
+    <value>Email Address Requires A Value</value>
+  </data>
+  <data name="Enter3SecurityQuestionsText1" xml:space="preserve">
+    <value>Please select security questions that will be used in the event your password is forgotten.
+
+  All three questions are required.</value>
+  </data>
+  <data name="FaxText" xml:space="preserve">
+    <value>Fax:</value>
+  </data>
+  <data name="FirstNameRequiresAValueMessage" xml:space="preserve">
+    <value>First Name Requires A Value</value>
+  </data>
+  <data name="FirstNameText" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="ForgotPasswordFailed" xml:space="preserve">
+    <value>Forgot Password Failed. Please correct the errors and try again.</value>
+  </data>
+  <data name="ForgotPasswordPageTile" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="ForgotPasswordFailedMessage" xml:space="preserve">
+    <value>Forgot password failed to reset your password. If you have entered the wrong answer 
+        for the security question more times than allowed, your account may now be locked. 
+        &lt;br /&gt;&lt;br /&gt;
+        Please see your administrator if your account gets lock to have your account unlocked.
+    &lt;/p&gt;
+    &lt;p&gt;To go back to the log on screen</value>
+  </data>
+  <data name="HaveAdministratorUnlockAccountMessage1" xml:space="preserve">
+    <value>Please See Your Administrator To Have Your Account Unlocked.</value>
+  </data>
+  <data name="HeaderMessage1" xml:space="preserve">
+    <value>Welcome to Simplified Interline Settlement!</value>
+  </data>
+  <data name="InvalidPassPhraseAnswerMessage1" xml:space="preserve">
+    <value>Forgot Password Failed- Invalid Pass Phrase Answer</value>
+  </data>
+  <data name="InvalidSalutation" xml:space="preserve">
+    <value>Invalid Salutation</value>
+  </data>
+  <data name="InvalidUserNameAlert" xml:space="preserve">
+    <value>Invalid Username. Please re-enter your Username and Try Again</value>
+  </data>
+  <data name="InvalidUsernameOrPasswordEntered" xml:space="preserve">
+    <value>You have entered an invalid username or password. If you forgot your password, click on the  "Forgot Password" link to reset your password</value>
+  </data>
+  <data name="InvalidWithParameter" xml:space="preserve">
+    <value>{0} is invalid</value>
+  </data>
+  <data name="LastNameRequiresAValue" xml:space="preserve">
+    <value>Last Name Requires A Value</value>
+  </data>
+  <data name="LastNameText" xml:space="preserve">
+    <value>Last Name:</value>
+  </data>
+  <data name="LocalSettingsText" xml:space="preserve">
+    <value>Local Settings:</value>
+  </data>
+  <data name="LocationIDText" xml:space="preserve">
+    <value>Location ID:</value>
+  </data>
+  <data name="LoginUnsuccessfulMessage" xml:space="preserve">
+    <value>Login was unsuccessful. Please correct the errors and try again.</value>
+  </data>
+  <data name="LogOffProxySuccessfulHeader" xml:space="preserve">
+    <value>LogOffProxy</value>
+  </data>
+  <data name="MemberSearchEmailInvalid" xml:space="preserve">
+    <value>Member Search Email Invalid</value>
+  </data>
+  <data name="MobileText" xml:space="preserve">
+    <value>Mobile:</value>
+  </data>
+  <data name="ModifyAccountSuccessText1" xml:space="preserve">
+    <value>Account has successfully been updated.</value>
+  </data>
+  <data name="ModifyFailedText1" xml:space="preserve">
+    <value>&lt;h2&gt;Modify Failed&lt;/h2&gt;
+    &lt;p&gt;Account could not be updated. An error occured while updating your account.&lt;/p&gt;</value>
+  </data>
+  <data name="NewPasswordsRequirementText1" xml:space="preserve">
+    <value>New passwords are required to be a minimum of 6</value>
+  </data>
+  <data name="NewPasswordsRequirementText2" xml:space="preserve">
+    <value>characters in length and contain at least one alpha and one numeric value.</value>
+  </data>
+  <data name="NewPasswordText" xml:space="preserve">
+    <value>New Password:</value>
+  </data>
+  <data name="OptionActiveText1" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="OptionAllText1" xml:space="preserve">
+    <value>All</value>
+  </data>  
+  <data name="PasswordChangeMessage" xml:space="preserve">
+    <value>Security Questions change was unsuccessful. All three questions are required and should be unique. Please correct the errors and try again.</value>
+  </data>
+  <data name="PasswordChangeUnsuccessful" xml:space="preserve">
+    <value>Password change was unsuccessful. Please correct the errors and try again.</value>
+  </data>
+  <data name="PasswordForLoginText" xml:space="preserve">
+    <value>Password:</value>
+  </data>  
+  <data name="PasswordsDoNotMatchMessage" xml:space="preserve">
+    <value>The new password and confirmation password do not match.</value>
+  </data>
+  <data name="PasswordSuccessfullyChangedText1" xml:space="preserve">
+    <value>Your password has been changed successfully.</value>
+  </data>
+  <data name="PleaseEnterThePassPhraseAnswer" xml:space="preserve">
+    <value>Please enter the Pass-Phrase Answer</value>
+  </data>
+  <data name="PleaseEnterUsername" xml:space="preserve">
+    <value>Please enter Username</value>
+  </data>
+  <data name="PleaseTryAgainMessage1" xml:space="preserve">
+    <value>Please Try Again, if problem persists, then contact administrator</value>
+  </data>
+  <data name="PositionTitleText" xml:space="preserve">
+    <value>Position Title:</value>
+  </data>
+  <data name="PostalCodeRequiresAValue" xml:space="preserve">
+    <value>Postal Code Requires A Value</value>
+  </data>
+  <data name="PostalCodeText" xml:space="preserve">
+    <value>Postal Code:</value>
+  </data>  
+  <data name="RolesHeaderText" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="SalutationText" xml:space="preserve">
+    <value>Salutation:</value>
+  </data>
+  <data name="SearchCriteriaText1" xml:space="preserve">
+    <value>Search Criteria</value>
+  </data>
+  <data name="SearchEmailInvalidMessage" xml:space="preserve">
+    <value>Search Email Invalid</value>
+  </data>
+  <data name="SearchFirstNameInvalid" xml:space="preserve">
+    <value>Search First Name Invalid</value>
+  </data>
+  <data name="SearchLastNameInvalid" xml:space="preserve">
+    <value>Search Last Name Invalid</value>
+  </data>
+  <data name="SearchStatusInvalidMessage" xml:space="preserve">
+    <value>Search Status Invalid</value>
+  </data>
+  <data name="SecurityQuestionsMustBeUnique" xml:space="preserve">
+    <value>Security questions must be unique.</value>
+  </data>
+  <data name="SelectOneOrMoreRolesMessage" xml:space="preserve">
+    <value>Please Select One Or More Roles</value>
+  </data>
+  <data name="SettingPageUnderConstructionMessage" xml:space="preserve">
+    <value>This page is under construction. For the time being, just click the submit button to continue.</value>
+  </data>
+  <data name="SISLogOnHeader1" xml:space="preserve">
+    <value>SIS :: Log On</value>
+  </data>
+  <data name="SISModifyUserHeader1" xml:space="preserve">
+    <value>SIS :: Modify User</value>
+  </data>
+  <data name="SISRegisterHeader1" xml:space="preserve">
+    <value>SIS :: Register</value>
+  </data>
+  <data name="SitaAddressText" xml:space="preserve">
+    <value>SITA Address:</value>
+  </data>
+  <data name="SpecifyAPasswordOfCharacters" xml:space="preserve">
+    <value>New Password must be at least {0} characters in length and should contain at least one Alpha and one numeric character.</value>
+  </data>
+  <data name="StaffIDText" xml:space="preserve">
+    <value>Staff ID:</value>
+  </data>
+  <data name="StatusText" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="SubdivisionNameText" xml:space="preserve">
+    <value>Subdivision Name:</value>
+  </data>
+  <data name="SuccessfullyLoggedOutOfProxyText1" xml:space="preserve">
+    <value>You have successfully logged out of proxy mode</value>
+  </data>
+  <data name="Telephone1RequiresAValue" xml:space="preserve">
+    <value>Telephone1 Requires A Value</value>
+  </data>
+  <data name="TelephoneText1" xml:space="preserve">
+    <value>Telephone 1:</value>
+  </data>
+  <data name="TelephoneText2" xml:space="preserve">
+    <value>Telephone 2:</value>
+  </data>
+  <data name="TimeZoneText" xml:space="preserve">
+    <value>Time Zone:</value>
+  </data>
+  <data name="ToGoBackToLoginText1" xml:space="preserve">
+    <value>To go back to the log in,</value>
+  </data>
+  <data name="UsernameForLogonText" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="UseTheFormBelowToModifyAccountText2" xml:space="preserve">
+    <value>Use the form below to modify account.</value>
+  </data>
+  <data name="UseTheFormToChangePasswordText" xml:space="preserve">
+    <value>Please use the form below to change your password.</value>
+  </data>
+  <data name="UseTheFormToCreateANewAccountPassword" xml:space="preserve">
+    <value>Use the form below to create a new account.  All required fields are marked (*)</value>
+  </data>
+  <data name="UseTheFormToSearchText1" xml:space="preserve">
+    <value>Use the form below to Search for and modify a selected user.</value>
+  </data>
+  <data name="YouMustSpecifyACurrentPasswordMessage" xml:space="preserve">
+    <value>You must specify a current password.</value>
+  </data>  
+  <data name="YouMustSpecifyAPassword" xml:space="preserve">
+    <value>You must specify a password</value>
+  </data>
+  <data name="YouMustSpecifyAUsername" xml:space="preserve">
+    <value>You must specify a username.</value>
+  </data>  
+  <data name="CustomLocationIdentifier" xml:space="preserve">
+    <value />
+    <comment>Specifies Custom Location Request</comment>
+  </data>
+  <data name="ModifyAccountSuccessHeader1" xml:space="preserve">
+    <value>Modify Account Success</value>
+  </data>
+  <data name="Address1InvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Address 1 is an invalid format.</value>
+  </data>
+  <data name="Address1LengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Address 1 is longer than the supported length.</value>
+  </data>
+  <data name="Address2InvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Address 2 is an invalid format.</value>
+  </data>
+  <data name="Address2LengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Address 2 is longer than the supported length.</value>
+  </data>
+  <data name="Address3InvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Address 3 is an invalid format.</value>
+  </data>
+  <data name="Address3LengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Address 3 is longer than the supported length.</value>
+  </data>
+  <data name="CityNameInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for City Name is an invalid format.</value>
+  </data>
+  <data name="CityNameLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for City Name is longer than the supported length.</value>
+  </data>
+  <data name="CountryInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for County is an invalid format.</value>
+  </data>
+  <data name="CountryLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Country is longer than the supported length.</value>
+  </data>
+  <data name="DepartmentInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Department is an invalid format.</value>
+  </data>
+  <data name="DepartmentLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Department is longer than the supported length.</value>
+  </data>
+  <data name="DivisionInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Division is an invalid format.</value>
+  </data>
+  <data name="DivisionLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Division is longer than the supported length.</value>
+  </data>
+  <data name="EmailAddressInvalidFormatMessage" xml:space="preserve">
+    <value>The email address entered is an invalid format.</value>
+  </data>
+  <data name="EmailAddressTooLongText1" xml:space="preserve">
+    <value>The email address entered is longer than the supported length.</value>
+  </data>
+  <data name="FaxInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Fax is an invalid format.</value>
+  </data>
+  <data name="FaxLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Fax is longer than the supported length.</value>
+  </data>
+  <data name="FirstNameInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for First Name is an invalid format.</value>
+  </data>
+  <data name="FirstNameLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for First Name is longer than the supported length.</value>
+  </data>
+  <data name="LastNameInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Last Name is an invalid format.</value>
+  </data>
+  <data name="LastNameLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Last Name is longer than the supported length.</value>
+  </data>
+  <data name="MobileInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Mobile is an invalid format.</value>
+  </data>
+  <data name="MobileLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Mobile is longer than the supported length.</value>
+  </data>
+  <data name="PositionTitleInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Position Title is an invalid format.</value>
+  </data>
+  <data name="PositionTitleLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Position Title is longer than the supported length.</value>
+  </data>
+  <data name="PostalCodeInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Postal Code is an invalid format.</value>
+  </data>
+  <data name="PostalCodeLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Postal Code is longer than the supported length.</value>
+  </data>
+  <data name="SitaAddressInvalidFormatMessage" xml:space="preserve">
+    <value>The text entered for SITA Address is an invalid format.</value>
+  </data>
+  <data name="SitaAddressLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for SITA Address is longer than the supported length.</value>
+  </data>
+  <data name="StaffIDInvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Staff ID is an invalid format.</value>
+  </data>
+  <data name="StaffIDLengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Staff ID is longer than the supported length.</value>
+  </data>
+  <data name="Telephone1InvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Telephone 1 is an invalid format.</value>
+  </data>
+  <data name="Telephone1LengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Telephone 1 is longer than the supported length.</value>
+  </data>
+  <data name="Telephone2InvalidFormatMessage1" xml:space="preserve">
+    <value>The text entered for Telephone 2 is an invalid format.</value>
+  </data>
+  <data name="Telephone2LengthTooLongText1" xml:space="preserve">
+    <value>The text entered for Telephone 2 is longer than the supported length.</value>
+  </data>
+  <data name="ForgotPasswordText" xml:space="preserve">
+    <value>Forgot Password?</value>
+  </data>
+  <data name="LogOnButtonText" xml:space="preserve">
+    <value>Log On</value>
+  </data>
+  <data name="SaveUserDetailsText" xml:space="preserve">
+    <value>Save User Details</value>
+  </data>
+  <data name="PleaseEnterAnEmailAddress" xml:space="preserve">
+    <value>Please enter an email address.</value>
+  </data>
+  <data name="SubDivisionInvalidFormatMessage" xml:space="preserve">
+    <value>The text entered for Subdivision is an invalid format.</value>
+  </data>
+  <data name="SubDivisionLengthTooLongText" xml:space="preserve">
+    <value>The text entered for Subdivision is longer than the supported length.</value>
+  </data>
+  <data name="SubDivisionRequresAValueText" xml:space="preserve">
+    <value>Subdivision Requires A Value</value>
+  </data>
+  <data name="UserCategoryMember" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="UserCategorySysOps" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EmailValidation" xml:space="preserve">
+    <value>^[A-Za-z0-9._%+-]+@[A-Z0-9.-]+\.[A-Za-z]{2,4}$</value>
+  </data>
+  <data name="MaxAddressLength" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="MaxEmailLength" xml:space="preserve">
+    <value>250</value>
+  </data>
+  <data name="MembersText" xml:space="preserve">
+    <value>Members:</value>
+  </data>
+  <data name="UserCategoryText" xml:space="preserve">
+    <value>User Category:</value>
+  </data>
+  <data name="UserCategoryRequired" xml:space="preserve">
+    <value>You Must Select a User Category</value>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="OptionInactiveText1" xml:space="preserve">
+    <value>InActive</value>
+  </data>
+  <data name="BackText" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="PassPhraseAnswerText" xml:space="preserve">
+    <value>Pass-Phrase Answer:</value>
+  </data>
+  <data name="SubmitText" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="ClickHereText" xml:space="preserve">
+    <value>Click Here</value>
+  </data>
+  <data name="ChangeSecurityAnswerSuccess" xml:space="preserve">
+    <value>You have successfully changed your Security Questions and Answers.</value>
+  </data>
+  <data name="ProxyAsUserText" xml:space="preserve">
+    <value>Proxy As User</value>
+  </data>
+  <data name="ProxyLogonSearchText" xml:space="preserve">
+    <value>Proxy Login Search</value>
+  </data>
+  <data name="ModifyUserText" xml:space="preserve">
+    <value>Modify User</value>
+  </data>
+  <data name="ProxyLoginSuccessText" xml:space="preserve">
+    <value>Proxy Login Successful</value>
+  </data>
+  <data name="FieldRequiredSymbol" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="SubDivionRequiresAValue" xml:space="preserve">
+    <value>You must select a SubDivision.</value>
+  </data>
+  <data name="SearchText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SearchUnsuccessfulMessage" xml:space="preserve">
+    <value>No Records Found. Please refine your search and try again.</value>
+  </data>
+  <data name="InvalidCharacterQuestion1" xml:space="preserve">
+    <value>Invalid character in Question 1</value>
+  </data>
+  <data name="InvalidCharacterQuestion2" xml:space="preserve">
+    <value>Invalid character in Question 2</value>
+  </data>
+  <data name="InvalidCharacterQuestion3" xml:space="preserve">
+    <value>Invalid character in Question 3</value>
+  </data>
+  <data name="MemberSelectionRequired" xml:space="preserve">
+    <value>You must select as member.</value>
+  </data>
+  <data name="ActivateUserAccountImageAltText" xml:space="preserve">
+    <value>Activate User's Account</value>
+  </data>
+  <data name="ActivateUserAccountImagePath" xml:space="preserve">
+    <value>~/Content/Images/activate_user.png</value>
+  </data>
+  <data name="ActivateUserAccountImageToolTip" xml:space="preserve">
+    <value>Activate Account</value>
+  </data>
+  <data name="DeactivateUserAccountImageAltText" xml:space="preserve">
+    <value>Deactivate User's Account</value>
+  </data>
+  <data name="DeactivateUserAccountImagePath" xml:space="preserve">
+    <value>~/Content/Images/deactivate_user.png</value>
+  </data>
+  <data name="DeactivateUserAccountImageToolTip" xml:space="preserve">
+    <value>Deactivate Account</value>
+  </data>
+  <data name="EditUserAccountImagePath" xml:space="preserve">
+    <value>~/Content/Images/edit.png</value>
+  </data>
+  <data name="EditUserAccountImageToolTip" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditUserImageAltText" xml:space="preserve">
+    <value>Edit User's Account</value>
+  </data>
+  <data name="ResetPasswordImageAltText" xml:space="preserve">
+    <value>Reset User's Password</value>
+  </data>
+  <data name="ResetPasswordImagePath" xml:space="preserve">
+    <value>~/Content/Images/reset_password.png</value>
+  </data>
+  <data name="ResetPasswordImageToolTip" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="ProxyAccountImageToolTip" xml:space="preserve">
+    <value>Proxy Login</value>
+  </data>
+  <data name="ProxyLoginAccountImageAltText" xml:space="preserve">
+    <value>Proxy Login</value>
+  </data>
+  <data name="ProxyLoginAccountImagePath" xml:space="preserve">
+    <value>~/Content/Images/proxy_login.png</value>
+  </data>
+  <data name="BillingMonthFrom" xml:space="preserve">
+    <value>Billing Month From:</value>
+  </data>
+  <data name="BillingMonthFromToRestriction" xml:space="preserve">
+    <value>Billing Month From cannot be greater than Billing Month To</value>
+  </data>
+  <data name="BillingMonthTo" xml:space="preserve">
+    <value>Billing Month To:</value>
+  </data>
+  <data name="BillingPeriodFrom" xml:space="preserve">
+    <value>Billing Period From:</value>
+  </data>
+  <data name="BillingPeriodFromToRestriction" xml:space="preserve">
+    <value>Billing Period From cannot be greater than Billing Period To</value>
+  </data>
+  <data name="BillingPeriodTo" xml:space="preserve">
+    <value>Billing Period To:</value>
+  </data>
+  <data name="BillingYear" xml:space="preserve">
+    <value>Billing Year:</value>
+  </data>
+  <data name="BillingYearExceptionString" xml:space="preserve">
+    <value>Error in IS-Download functionality</value>
+  </data>
+  <data name="BillingYearToStartWith" xml:space="preserve">
+    <value>2009</value>
+    <comment>Added in System Parameter</comment>
+  </data>
+  <data name="FileType" xml:space="preserve">
+    <value>File Type:</value>
+  </data>
+  <data name="DataServiceName" xml:space="preserve">
+    <value>DataService</value>
+  </data>
+  <data name="DownloadFileError" xml:space="preserve">
+    <value>There was an error in the file download process. Please try again, or contact your administrator.</value>
+  </data>
+  <data name="DownloadFileImageAltText" xml:space="preserve">
+    <value>Download File</value>
+  </data>
+  <data name="DownloadFileImagePath" xml:space="preserve">
+    <value>~/Content/Images/zip.png</value>
+  </data>
+  <data name="DownloadFileImageToolTip" xml:space="preserve">
+    <value>Download File</value>
+  </data>
+  <data name="DownloadFileMoveLocation" xml:space="preserve">
+    <value>C:\FTPRoot\{0}\Download\</value>
+  </data>
+  <data name="FileExistsAlready" xml:space="preserve">
+    <value>Name of the file being uploaded must be unique. A file with this name has already been uploaded.</value>
+  </data>
+  <data name="FileTypeAccepted" xml:space="preserve">
+    <value>.ZIP</value>
+    <comment>Added in System Parameter</comment>
+  </data>
+  <data name="FileUploadSuccessful" xml:space="preserve">
+    <value>Your file uploaded successfully and is in processing.</value>
+  </data>
+  <data name="FileUploadSuccessfulBody" xml:space="preserve">
+    <value>Your file, named {0} was successfully uploaded and is in processing.</value>
+  </data>
+  <data name="FileUploadSuccessfulForWeb" xml:space="preserve">
+    <value>File uploaded successfully and is being processed.</value>
+  </data>
+  <data name="FileUploadSuccessfulForMemberUploadCsv" xml:space="preserve">
+    <value>File has been uploaded and is being processed. The report will be sent via email to SIS Ops</value>
+  </data>
+  <data name="IncorrectFileType" xml:space="preserve">
+    <value>Invalid File Type or File Name.</value>
+  </data>
+  <data name="MonthApril" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="MonthAugust" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="MonthDecember" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="MonthFebruary" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="MonthJanuary" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="MonthJuly" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="MonthJune" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="MonthMarch" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="MonthMay" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="MonthNovember" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="MonthOctober" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="MonthSeptember" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Save Failed</value>
+  </data>
+  <data name="ZipFileRequired" xml:space="preserve">
+    <value>File being uploaded must be zipped (with ".zip" extension).</value>
+  </data>
+  <data name="EmailAddressIsMemberUserOfOtherUser" xml:space="preserve">
+    <value>Entered  {0} emailId is member user of other member. Please try with another email Id.</value>
+  </data>
+  <data name="EmptyFile" xml:space="preserve">
+    <value>Upload file /filename is empty.</value>
+  </data>
+  <data name="DownloadZipFileImagePath" xml:space="preserve">
+    <value>~/Content/Images/zip.png</value>
+  </data>
+  <data name="FileUploadFailsForIsWeb" xml:space="preserve">
+    <value>Your file upload is unsuccessful due to internal error. Please resubmit the file. </value>
+  </data>
+  <data name="DuplicateMemberContact" xml:space="preserve">
+    <value>A contact with the existing (old) email address is already linked with this user. Additionally, another unlinked contact with the new email address also exists. Unable to proceed with this update as it will result in creation of duplicate contacts.</value>
+  </data>
+  <data name="LocationAssociationIconPath" xml:space="preserve">
+    <value>~/Content/Images/Location_Association.jpg</value>
+  </data>
+  <data name="UrlPasswordResetLink" xml:space="preserve">
+    <value>Account/ResetPassword?siscpt=</value>
+    <comment>This is used to create password reset url hyperlink</comment>
+  </data>
+  <data name="ResetPasswordSuccessMessage" xml:space="preserve">
+    <value>Request to reset the password has been processed by the system. An email has been sent to the user regarding this.</value>
+  </data>
+</root>
