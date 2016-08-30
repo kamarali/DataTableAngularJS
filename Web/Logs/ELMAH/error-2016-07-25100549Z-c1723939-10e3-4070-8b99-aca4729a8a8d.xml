@@ -1,0 +1,171 @@
+﻿<error errorId="c1723939-10e3-4070-8b99-aca4729a8a8d" host="FCE8297" type="System.Security.SecurityException" message="The source was not found, but some or all event logs could not be searched.  To create the source, you need permission to read all event logs to make sure that the new source name is unique.  Inaccessible logs: Security." source="System" detail="System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  To create the source, you need permission to read all event logs to make sure that the new source name is unique.  Inaccessible logs: Security.&#xD;&#xA;   at System.Diagnostics.EventLog.FindSourceRegistration(String source, String machineName, Boolean readOnly, Boolean wantToCreate)&#xD;&#xA;   at System.Diagnostics.EventLog.SourceExists(String source, String machineName, Boolean wantToCreate)&#xD;&#xA;   at System.Diagnostics.EventLogInternal.VerifyAndCreateSource(String sourceName, String currentMachineName)&#xD;&#xA;   at System.Diagnostics.EventLogInternal.WriteEntry(String message, EventLogEntryType type, Int32 eventID, Int16 category, Byte[] rawData)&#xD;&#xA;   at System.Diagnostics.EventLog.WriteEntry(String message)&#xD;&#xA;   at Devart.Common.Web.Providers.DbSessionStateStore.a(Exception A_0, String A_1)&#xD;&#xA;   at Devart.Common.Web.Providers.DbSessionStateStore.a(Boolean A_0, HttpContext A_1, String A_2, Boolean&amp; A_3, TimeSpan&amp; A_4, Object&amp; A_5, SessionStateActions&amp; A_6)&#xD;&#xA;   at Devart.Common.Web.Providers.DbSessionStateStore.GetItemExclusive(HttpContext context, String id, Boolean&amp; locked, TimeSpan&amp; lockAge, Object&amp; lockId, SessionStateActions&amp; actionFlags)&#xD;&#xA;   at System.Web.SessionState.SessionStateModule.GetSessionStateItem()&#xD;&#xA;   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)&#xD;&#xA;   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)&#xD;&#xA;The Zone of the assembly that failed was:&#xD;&#xA;MyComputer" user="203" time="2016-07-25T10:05:49.5817650Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:Keep-Alive&#xD;&#xA;HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US&#xD;&#xA;HTTP_COOKIE:lastVisit=7/25/2016 3:27:50 PM; myCookie=; ASP.NET_SessionId=dhdunh2qvh0spmmiwgjjoiko; .ASPXAUTH=65074906B157270A9310D6FC755004FD88DF5949871BAD1CB6F0ABDEBDFB0C6612FF889EDABEC9A5E30F928F70B88493D7BD55D6E424DB2E467D4E3A9385762A63805E84DAA224B6D8A67D662AD37BC68356A01083CDB8ADC7731CDC7465FAB860AE142293CA57AFC7C6F0F2433C6E6B17FCC8566CC073C89D124F40CE64FA42; __RequestVerificationToken_Lw__=X4I/BbDlMZPI2TwW53dgA0YzQI5P729p3+kOgK6NpVdoWZS+hY01ZXtD7e2rV5n5OT+aVP170zRiGs4kWmv6pbzTviSy/vuF17dYaXio5kZ9Mv+edTxdBsekF9igIkHJUJSECH+CsOTjju6sTI3X25D/J6KdpL/XiimpJe5QGM8=&#xD;&#xA;HTTP_HOST:localhost:5477&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: Keep-Alive&#xD;&#xA;Accept: text/html, application/xhtml+xml, image/jxr, */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: en-US&#xD;&#xA;Cookie: lastVisit=7/25/2016 3:27:50 PM; myCookie=; ASP.NET_SessionId=dhdunh2qvh0spmmiwgjjoiko; .ASPXAUTH=65074906B157270A9310D6FC755004FD88DF5949871BAD1CB6F0ABDEBDFB0C6612FF889EDABEC9A5E30F928F70B88493D7BD55D6E424DB2E467D4E3A9385762A63805E84DAA224B6D8A67D662AD37BC68356A01083CDB8ADC7731CDC7465FAB860AE142293CA57AFC7C6F0F2433C6E6B17FCC8566CC073C89D124F40CE64FA42; __RequestVerificationToken_Lw__=X4I/BbDlMZPI2TwW53dgA0YzQI5P729p3+kOgK6NpVdoWZS+hY01ZXtD7e2rV5n5OT+aVP170zRiGs4kWmv6pbzTviSy/vuF17dYaXio5kZ9Mv+edTxdBsekF9igIkHJUJSECH+CsOTjju6sTI3X25D/J6KdpL/XiimpJe5QGM8=&#xD;&#xA;Host: localhost:5477&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Web\Iata.IS.Web.App\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="203" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="INDIAOPS\kamarali.dukandar" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="203" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Web\Iata.IS.Web.App" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="5477" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, application/xhtml+xml, image/jxr, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="lastVisit=7/25/2016 3:27:50 PM; myCookie=; ASP.NET_SessionId=dhdunh2qvh0spmmiwgjjoiko; .ASPXAUTH=65074906B157270A9310D6FC755004FD88DF5949871BAD1CB6F0ABDEBDFB0C6612FF889EDABEC9A5E30F928F70B88493D7BD55D6E424DB2E467D4E3A9385762A63805E84DAA224B6D8A67D662AD37BC68356A01083CDB8ADC7731CDC7465FAB860AE142293CA57AFC7C6F0F2433C6E6B17FCC8566CC073C89D124F40CE64FA42; __RequestVerificationToken_Lw__=X4I/BbDlMZPI2TwW53dgA0YzQI5P729p3+kOgK6NpVdoWZS+hY01ZXtD7e2rV5n5OT+aVP170zRiGs4kWmv6pbzTviSy/vuF17dYaXio5kZ9Mv+edTxdBsekF9igIkHJUJSECH+CsOTjju6sTI3X25D/J6KdpL/XiimpJe5QGM8=" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:5477" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="lastVisit">
+      <value string="7/25/2016 3:27:50 PM" />
+    </item>
+    <item name="myCookie">
+      <value string="" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="dhdunh2qvh0spmmiwgjjoiko" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="65074906B157270A9310D6FC755004FD88DF5949871BAD1CB6F0ABDEBDFB0C6612FF889EDABEC9A5E30F928F70B88493D7BD55D6E424DB2E467D4E3A9385762A63805E84DAA224B6D8A67D662AD37BC68356A01083CDB8ADC7731CDC7465FAB860AE142293CA57AFC7C6F0F2433C6E6B17FCC8566CC073C89D124F40CE64FA42" />
+    </item>
+    <item name="__RequestVerificationToken_Lw__">
+      <value string="X4I/BbDlMZPI2TwW53dgA0YzQI5P729p3+kOgK6NpVdoWZS+hY01ZXtD7e2rV5n5OT+aVP170zRiGs4kWmv6pbzTviSy/vuF17dYaXio5kZ9Mv+edTxdBsekF9igIkHJUJSECH+CsOTjju6sTI3X25D/J6KdpL/XiimpJe5QGM8=" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,168 @@
+﻿<error errorId="fe41c499-a50b-4958-8eeb-bf004e630061" host="FCE8297" type="System.Web.HttpException" message="Path '/Areas/Pax/Views/Correspondence/PaxCreateCorrespondence.aspx' was not found." source="System.Web" detail="System.Web.HttpException (0x80004005): Path '/Areas/Pax/Views/Correspondence/PaxCreateCorrespondence.aspx' was not found.&#xD;&#xA;   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" time="2016-07-18T04:48:02.2702022Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:Keep-Alive&#xD;&#xA;HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US&#xD;&#xA;HTTP_COOKIE:lastVisit=7/18/2016 10:11:36 AM; myCookie=; ASP.NET_SessionId=t4qbhitzsum0hf3lucz1uvxh; __RequestVerificationToken_Lw__=biZhmHXql82I3rDilkE2fZ5Cr46P5uTifdrs2FEVZid5UwXQf8wYdCPIh69FgD35Fz5q1YGdMNL3DbVSnp1nEvFd0NT1S83YLZtmptZ970mJyP4Y+bF8049cjUO3UqrGs9H70wh9/C1aEVy0Tj2hSZad8NWDepfiufyqtn/ogUo=; .ASPXAUTH=681FEEAC3D240810E055E979FD3D60963DE89930E0E27AB8C420C4EB57EE8630DAC28A244A3DAE5311AC38794D7DED213EF78452230C003EECF3BDE56EC394C8C182AE778D47D480C5B511B44FDFBC2B33A8267EB33FA4D5EB98A0915E9BE9DCED485E1144551CF12E8042051F559C55ECE4DDF98282DBFF6EE2115D99073C1B&#xD;&#xA;HTTP_HOST:localhost:5474&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: Keep-Alive&#xD;&#xA;Accept: text/html, application/xhtml+xml, image/jxr, */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: en-US&#xD;&#xA;Cookie: lastVisit=7/18/2016 10:11:36 AM; myCookie=; ASP.NET_SessionId=t4qbhitzsum0hf3lucz1uvxh; __RequestVerificationToken_Lw__=biZhmHXql82I3rDilkE2fZ5Cr46P5uTifdrs2FEVZid5UwXQf8wYdCPIh69FgD35Fz5q1YGdMNL3DbVSnp1nEvFd0NT1S83YLZtmptZ970mJyP4Y+bF8049cjUO3UqrGs9H70wh9/C1aEVy0Tj2hSZad8NWDepfiufyqtn/ogUo=; .ASPXAUTH=681FEEAC3D240810E055E979FD3D60963DE89930E0E27AB8C420C4EB57EE8630DAC28A244A3DAE5311AC38794D7DED213EF78452230C003EECF3BDE56EC394C8C182AE778D47D480C5B511B44FDFBC2B33A8267EB33FA4D5EB98A0915E9BE9DCED485E1144551CF12E8042051F559C55ECE4DDF98282DBFF6EE2115D99073C1B&#xD;&#xA;Host: localhost:5474&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Web\Iata.IS.Web.App\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="INDIAOPS\kamarali.dukandar" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Areas/Pax/Views/Correspondence/PaxCreateCorrespondence.aspx" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Web\Iata.IS.Web.App\Areas\Pax\Views\Correspondence\PaxCreateCorrespondence.aspx" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Areas/Pax/Views/Correspondence/PaxCreateCorrespondence.aspx" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="5474" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/Areas/Pax/Views/Correspondence/PaxCreateCorrespondence.aspx" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, application/xhtml+xml, image/jxr, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="lastVisit=7/18/2016 10:11:36 AM; myCookie=; ASP.NET_SessionId=t4qbhitzsum0hf3lucz1uvxh; __RequestVerificationToken_Lw__=biZhmHXql82I3rDilkE2fZ5Cr46P5uTifdrs2FEVZid5UwXQf8wYdCPIh69FgD35Fz5q1YGdMNL3DbVSnp1nEvFd0NT1S83YLZtmptZ970mJyP4Y+bF8049cjUO3UqrGs9H70wh9/C1aEVy0Tj2hSZad8NWDepfiufyqtn/ogUo=; .ASPXAUTH=681FEEAC3D240810E055E979FD3D60963DE89930E0E27AB8C420C4EB57EE8630DAC28A244A3DAE5311AC38794D7DED213EF78452230C003EECF3BDE56EC394C8C182AE778D47D480C5B511B44FDFBC2B33A8267EB33FA4D5EB98A0915E9BE9DCED485E1144551CF12E8042051F559C55ECE4DDF98282DBFF6EE2115D99073C1B" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:5474" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="lastVisit">
+      <value string="7/18/2016 10:11:36 AM" />
+    </item>
+    <item name="myCookie">
+      <value string="" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="t4qbhitzsum0hf3lucz1uvxh" />
+    </item>
+    <item name="__RequestVerificationToken_Lw__">
+      <value string="biZhmHXql82I3rDilkE2fZ5Cr46P5uTifdrs2FEVZid5UwXQf8wYdCPIh69FgD35Fz5q1YGdMNL3DbVSnp1nEvFd0NT1S83YLZtmptZ970mJyP4Y+bF8049cjUO3UqrGs9H70wh9/C1aEVy0Tj2hSZad8NWDepfiufyqtn/ogUo=" />
+    </item>
+  </cookies>
+</error>

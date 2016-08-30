@@ -1,0 +1,174 @@
+﻿<error errorId="30d81a5d-0e04-4824-a5ff-8743125b64f5" host="FCE8297" type="System.Web.HttpException" message="File does not exist." source="System.Web" detail="System.Web.HttpException (0x80004005): File does not exist.&#xD;&#xA;   at System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)&#xD;&#xA;   at System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)&#xD;&#xA;   at System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="203" time="2016-07-14T06:58:27.1258666Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:Keep-Alive&#xD;&#xA;HTTP_ACCEPT:text/css, */*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US&#xD;&#xA;HTTP_COOKIE:lastVisit=7/14/2016 12:27:24 PM; myCookie=; ASP.NET_SessionId=ysxkx3tyfv5gms5p0gvgjwh2; .ASPXAUTH=37613EE20E251537DCFA6E5811A5A7C7F3B0FF2F4C508F55FE24B4C7812E7257B83BFA8D9E871A450F65ECC22B329E965F0DC05DCC03556F30A21C8B17BEBCFA69D9FE98836B015F9919750F9ACEAA11377F848741FE21917CFA454283BAC4B58B2F2EE01AA5F6ACB5D4127E052C3EB2C6046E462219580EEC300AB9D97B4837; __RequestVerificationToken_Lw__=3pn4isGjSceFXfHK1lW0QtK2fFeAk+yWImwJWpJPHwG4UAp1yfZo44A/qMPZ/8W5Ty/9qTIOFdHKBoXs4VDn7EIIgbC7eAPGHT1xT70phVU4lKoi5PsUUk/wZBTeoeS23Qq6aERBi0Q9xdSYp9rrIhrUHgXIy+UJ2VyMjURaWmo=&#xD;&#xA;HTTP_HOST:localhost:5474&#xD;&#xA;HTTP_REFERER:http://localhost:5474/MiscInvoiceSummary.aspx?fYear=2015&amp;fMonth=6&amp;fPeriod=4&amp;tYear=2016&amp;tMonth=6&amp;tPeriod=4&amp;SettlementId=-1&amp;DataSource=-1&amp;BilledMemberCode=&amp;ChargeCategory=0&amp;CurrencyCode=840&amp;TransactionType=4&amp;BillingType=2&amp;SearchCriteria=From%20Billing%20Year:2015,%20From%20Billing%20Month:Jun,%20From%20Period%20:4,%20Submission%20Method:All,%20Settlement%20Method%20Indicator:All,%20To%20Billing%20Year:2016,%20To%20Billing%20Month:Jun,%20To%20Period:4,%20Billed%20Member%20Code:All,%20Clearance%20Currency:USD,%20Charge%20Category:All&amp;BrowserDateTime=Thu%20Jul%2014%202016%2012:28:24&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: Keep-Alive&#xD;&#xA;Accept: text/css, */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: en-US&#xD;&#xA;Cookie: lastVisit=7/14/2016 12:27:24 PM; myCookie=; ASP.NET_SessionId=ysxkx3tyfv5gms5p0gvgjwh2; .ASPXAUTH=37613EE20E251537DCFA6E5811A5A7C7F3B0FF2F4C508F55FE24B4C7812E7257B83BFA8D9E871A450F65ECC22B329E965F0DC05DCC03556F30A21C8B17BEBCFA69D9FE98836B015F9919750F9ACEAA11377F848741FE21917CFA454283BAC4B58B2F2EE01AA5F6ACB5D4127E052C3EB2C6046E462219580EEC300AB9D97B4837; __RequestVerificationToken_Lw__=3pn4isGjSceFXfHK1lW0QtK2fFeAk+yWImwJWpJPHwG4UAp1yfZo44A/qMPZ/8W5Ty/9qTIOFdHKBoXs4VDn7EIIgbC7eAPGHT1xT70phVU4lKoi5PsUUk/wZBTeoeS23Qq6aERBi0Q9xdSYp9rrIhrUHgXIy+UJ2VyMjURaWmo=&#xD;&#xA;Host: localhost:5474&#xD;&#xA;Referer: http://localhost:5474/MiscInvoiceSummary.aspx?fYear=2015&amp;fMonth=6&amp;fPeriod=4&amp;tYear=2016&amp;tMonth=6&amp;tPeriod=4&amp;SettlementId=-1&amp;DataSource=-1&amp;BilledMemberCode=&amp;ChargeCategory=0&amp;CurrencyCode=840&amp;TransactionType=4&amp;BillingType=2&amp;SearchCriteria=From%20Billing%20Year:2015,%20From%20Billing%20Month:Jun,%20From%20Period%20:4,%20Submission%20Method:All,%20Settlement%20Method%20Indicator:All,%20To%20Billing%20Year:2016,%20To%20Billing%20Month:Jun,%20To%20Period:4,%20Billed%20Member%20Code:All,%20Clearance%20Currency:USD,%20Charge%20Category:All&amp;BrowserDateTime=Thu%20Jul%2014%202016%2012:28:24&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Web\Iata.IS.Web.App\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="203" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="INDIAOPS\kamarali.dukandar" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="203" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/aspnet_client/system_web/4_6_79/crystalreportviewers13/css/exception.css" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Web\Iata.IS.Web.App\aspnet_client\system_web\4_6_79\crystalreportviewers13\css\exception.css" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/aspnet_client/system_web/4_6_79/crystalreportviewers13/css/exception.css" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="5474" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/aspnet_client/system_web/4_6_79/crystalreportviewers13/css/exception.css" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/css, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="lastVisit=7/14/2016 12:27:24 PM; myCookie=; ASP.NET_SessionId=ysxkx3tyfv5gms5p0gvgjwh2; .ASPXAUTH=37613EE20E251537DCFA6E5811A5A7C7F3B0FF2F4C508F55FE24B4C7812E7257B83BFA8D9E871A450F65ECC22B329E965F0DC05DCC03556F30A21C8B17BEBCFA69D9FE98836B015F9919750F9ACEAA11377F848741FE21917CFA454283BAC4B58B2F2EE01AA5F6ACB5D4127E052C3EB2C6046E462219580EEC300AB9D97B4837; __RequestVerificationToken_Lw__=3pn4isGjSceFXfHK1lW0QtK2fFeAk+yWImwJWpJPHwG4UAp1yfZo44A/qMPZ/8W5Ty/9qTIOFdHKBoXs4VDn7EIIgbC7eAPGHT1xT70phVU4lKoi5PsUUk/wZBTeoeS23Qq6aERBi0Q9xdSYp9rrIhrUHgXIy+UJ2VyMjURaWmo=" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:5474" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:5474/MiscInvoiceSummary.aspx?fYear=2015&amp;fMonth=6&amp;fPeriod=4&amp;tYear=2016&amp;tMonth=6&amp;tPeriod=4&amp;SettlementId=-1&amp;DataSource=-1&amp;BilledMemberCode=&amp;ChargeCategory=0&amp;CurrencyCode=840&amp;TransactionType=4&amp;BillingType=2&amp;SearchCriteria=From%20Billing%20Year:2015,%20From%20Billing%20Month:Jun,%20From%20Period%20:4,%20Submission%20Method:All,%20Settlement%20Method%20Indicator:All,%20To%20Billing%20Year:2016,%20To%20Billing%20Month:Jun,%20To%20Period:4,%20Billed%20Member%20Code:All,%20Clearance%20Currency:USD,%20Charge%20Category:All&amp;BrowserDateTime=Thu%20Jul%2014%202016%2012:28:24" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="lastVisit">
+      <value string="7/14/2016 12:27:24 PM" />
+    </item>
+    <item name="myCookie">
+      <value string="" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="ysxkx3tyfv5gms5p0gvgjwh2" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="37613EE20E251537DCFA6E5811A5A7C7F3B0FF2F4C508F55FE24B4C7812E7257B83BFA8D9E871A450F65ECC22B329E965F0DC05DCC03556F30A21C8B17BEBCFA69D9FE98836B015F9919750F9ACEAA11377F848741FE21917CFA454283BAC4B58B2F2EE01AA5F6ACB5D4127E052C3EB2C6046E462219580EEC300AB9D97B4837" />
+    </item>
+    <item name="__RequestVerificationToken_Lw__">
+      <value string="3pn4isGjSceFXfHK1lW0QtK2fFeAk+yWImwJWpJPHwG4UAp1yfZo44A/qMPZ/8W5Ty/9qTIOFdHKBoXs4VDn7EIIgbC7eAPGHT1xT70phVU4lKoi5PsUUk/wZBTeoeS23Qq6aERBi0Q9xdSYp9rrIhrUHgXIy+UJ2VyMjURaWmo=" />
+    </item>
+  </cookies>
+</error>

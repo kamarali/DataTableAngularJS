@@ -1,0 +1,194 @@
+﻿<error errorId="7053bb13-5835-4501-9b8c-76fa685af035" host="FCE8297" type="System.Security.SecurityException" message="The source was not found, but some or all event logs could not be searched.  To create the source, you need permission to read all event logs to make sure that the new source name is unique.  Inaccessible logs: Security." source="System" detail="System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  To create the source, you need permission to read all event logs to make sure that the new source name is unique.  Inaccessible logs: Security.&#xD;&#xA;   at System.Diagnostics.EventLog.FindSourceRegistration(String source, String machineName, Boolean readOnly, Boolean wantToCreate)&#xD;&#xA;   at System.Diagnostics.EventLog.SourceExists(String source, String machineName, Boolean wantToCreate)&#xD;&#xA;   at System.Diagnostics.EventLogInternal.VerifyAndCreateSource(String sourceName, String currentMachineName)&#xD;&#xA;   at System.Diagnostics.EventLogInternal.WriteEntry(String message, EventLogEntryType type, Int32 eventID, Int16 category, Byte[] rawData)&#xD;&#xA;   at System.Diagnostics.EventLog.WriteEntry(String message)&#xD;&#xA;   at Devart.Common.Web.Providers.DbSessionStateStore.a(Exception A_0, String A_1)&#xD;&#xA;   at Devart.Common.Web.Providers.DbSessionStateStore.SetAndReleaseItemExclusive(HttpContext context, String id, SessionStateStoreData item, Object lockId, Boolean newItem)&#xD;&#xA;   at System.Web.SessionState.SessionStateModule.OnReleaseState(Object source, EventArgs eventArgs)&#xD;&#xA;   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)&#xD;&#xA;The Zone of the assembly that failed was:&#xD;&#xA;MyComputer" user="203" time="2016-07-18T06:33:52.0938691Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:Keep-Alive&#xD;&#xA;HTTP_CONTENT_LENGTH:140&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:application/json, text/javascript, */*; q=0.01&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US&#xD;&#xA;HTTP_COOKIE:lastVisit=7/18/2016 12:01:21 PM; myCookie=; ASP.NET_SessionId=cd0fouwl3k520hvamufslp4p; .ASPXAUTH=58DC7946CF7EB47B092849A820CA4D6B2F406D249BDB022F12FA00628BC4E5001CC9D02A80413E5D23A79F0EF9518D2CB9D1F25F9FB8C465D73064DFE6294547EB81474227F3E26175301CFFEA405EAB542534DDE3C4D75247734EF7A2F5BFFDA60EC68F203BB6703AE5A56450654F212D2FBEAD4C0D2B59941CA56645803610; __RequestVerificationToken_Lw__=8GvkaXVPl2/+ZqNTg+cs7tgFtPKH8OD/s7HsbpFNFS4QO62c+cxFVLMpff8b/eWqq60pJP4yGvR1um0wNlbafEG0GdQLaGJUeJsxJSAIG0X4mVz+irHJoFafBcB2aW9eRqR2eCIwxvd2YDoM1UutZCrqPwyKuiiBKJbY81BOoF8=&#xD;&#xA;HTTP_HOST:localhost:5474&#xD;&#xA;HTTP_REFERER:http://localhost:5474/Pax/BillingHistory?searchType=Invoice&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: Keep-Alive&#xD;&#xA;Content-Length: 140&#xD;&#xA;Content-Type: application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;Accept: application/json, text/javascript, */*; q=0.01&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: en-US&#xD;&#xA;Cookie: lastVisit=7/18/2016 12:01:21 PM; myCookie=; ASP.NET_SessionId=cd0fouwl3k520hvamufslp4p; .ASPXAUTH=58DC7946CF7EB47B092849A820CA4D6B2F406D249BDB022F12FA00628BC4E5001CC9D02A80413E5D23A79F0EF9518D2CB9D1F25F9FB8C465D73064DFE6294547EB81474227F3E26175301CFFEA405EAB542534DDE3C4D75247734EF7A2F5BFFDA60EC68F203BB6703AE5A56450654F212D2FBEAD4C0D2B59941CA56645803610; __RequestVerificationToken_Lw__=8GvkaXVPl2/+ZqNTg+cs7tgFtPKH8OD/s7HsbpFNFS4QO62c+cxFVLMpff8b/eWqq60pJP4yGvR1um0wNlbafEG0GdQLaGJUeJsxJSAIG0X4mVz+irHJoFafBcB2aW9eRqR2eCIwxvd2YDoM1UutZCrqPwyKuiiBKJbY81BOoF8=&#xD;&#xA;Host: localhost:5474&#xD;&#xA;Referer: http://localhost:5474/Pax/BillingHistory?searchType=Invoice&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Web\Iata.IS.Web.App\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="203" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="INDIAOPS\kamarali.dukandar" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="203" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="140" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Pax/Correspondence/InitiateCorrespondence" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\SIS\Iata.IS-Rel1.9-DEV2\Iata.IS.Web\Iata.IS.Web.App\Pax\Correspondence\InitiateCorrespondence" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Pax/Correspondence/InitiateCorrespondence" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="5474" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/Pax/Correspondence/InitiateCorrespondence" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="140" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="application/json, text/javascript, */*; q=0.01" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="lastVisit=7/18/2016 12:01:21 PM; myCookie=; ASP.NET_SessionId=cd0fouwl3k520hvamufslp4p; .ASPXAUTH=58DC7946CF7EB47B092849A820CA4D6B2F406D249BDB022F12FA00628BC4E5001CC9D02A80413E5D23A79F0EF9518D2CB9D1F25F9FB8C465D73064DFE6294547EB81474227F3E26175301CFFEA405EAB542534DDE3C4D75247734EF7A2F5BFFDA60EC68F203BB6703AE5A56450654F212D2FBEAD4C0D2B59941CA56645803610; __RequestVerificationToken_Lw__=8GvkaXVPl2/+ZqNTg+cs7tgFtPKH8OD/s7HsbpFNFS4QO62c+cxFVLMpff8b/eWqq60pJP4yGvR1um0wNlbafEG0GdQLaGJUeJsxJSAIG0X4mVz+irHJoFafBcB2aW9eRqR2eCIwxvd2YDoM1UutZCrqPwyKuiiBKJbY81BOoF8=" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:5474" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:5474/Pax/BillingHistory?searchType=Invoice" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="invoiceId">
+      <value string="031a1cf9-4d34-2146-95ff-f09400cd8e27" />
+    </item>
+    <item name="rejectedRecordIds">
+      <value string="a5ac17c7-1c57-c248-850e-8d244edeb3d9,01c39442-fb02-1a40-becf-bede36353d98" />
+    </item>
+  </form>
+  <cookies>
+    <item name="lastVisit">
+      <value string="7/18/2016 12:01:21 PM" />
+    </item>
+    <item name="myCookie">
+      <value string="" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="cd0fouwl3k520hvamufslp4p" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="58DC7946CF7EB47B092849A820CA4D6B2F406D249BDB022F12FA00628BC4E5001CC9D02A80413E5D23A79F0EF9518D2CB9D1F25F9FB8C465D73064DFE6294547EB81474227F3E26175301CFFEA405EAB542534DDE3C4D75247734EF7A2F5BFFDA60EC68F203BB6703AE5A56450654F212D2FBEAD4C0D2B59941CA56645803610" />
+    </item>
+    <item name="__RequestVerificationToken_Lw__">
+      <value string="8GvkaXVPl2/+ZqNTg+cs7tgFtPKH8OD/s7HsbpFNFS4QO62c+cxFVLMpff8b/eWqq60pJP4yGvR1um0wNlbafEG0GdQLaGJUeJsxJSAIG0X4mVz+irHJoFafBcB2aW9eRqR2eCIwxvd2YDoM1UutZCrqPwyKuiiBKJbY81BOoF8=" />
+    </item>
+  </cookies>
+</error>
