@@ -1,0 +1,148 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="Iata.IS.Model.MemberProfile.Enums" %>
+<%@ Import Namespace="System.Security.Policy" %>
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">--%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%--SCP249564: Member Profile problem on IE11--%>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <%-- SCP0000 :  Icon update --%>    
+    <link id="Link1" runat="server" rel="shortcut icon" href="~/favicon.ico" type="image/x-icon"/>
+    <link id="Link2" runat="server" rel="icon" href="~/favicon.ico" type="image/ico"/>
+
+    <link href="<%:Url.Content("~/Content/superfish.css")%>" rel="stylesheet" type="text/css" />
+        
+    <link href="<%:Url.Content("~/Content/ui-sis/jquery-ui.css")%>" rel="stylesheet" type="text/css" />
+
+    <link href="<%:Url.Content("~/Content/jquery.autocomplete.css")%>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%:Url.Content("~/Content/Site.css")%>" rel="stylesheet" type="text/css" />
+    <link href="<%:Url.Content("~/Content/ui.jqgrid.css")%>" rel="stylesheet" type="text/css" />
+    <link href="<%:Url.Content("~/Content/Forms.css")%>" rel="stylesheet" type="text/css" />
+    <!--[if IE 6]>
+  <link href="<%:Url.Content("~/Content/Forms-IE6.css")%>" rel="stylesheet" type="text/css" />
+  <![endif]-->
+    <!--[if IE 7]>
+  <link href="<%:Url.Content("~/Content/Forms-IE7.css")%>" rel="stylesheet" type="text/css" />
+  <![endif]-->
+    <![if !IE]>
+    <link href="<%:Url.Content("~/Content/Forms-FF.css")%>" rel="stylesheet" type="text/css" />
+    <![endif]>
+    <script src="<%:Url.Content("~/Scripts/jquery-1.12.3.min.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/jquery-migrate-1.2.1.min.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/jquery-ui.js")%>" type="text/javascript"></script>
+
+    <script src="<%:Url.Content("~/Scripts/jquery.jqgrid.locale-en.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/jquery.jqGrid.min.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/hoverIntent.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/superfish.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/supersubs.js")%>" type="text/javascript"></script>
+    <script type="text/javascript">
+        var $parentForm;
+    </script>
+    <script language="javascript" type="text/javascript">
+      function SubmitProxyLogOffForm(formEl) {        
+          formEl.submit();
+        };
+
+        function SubmitLogOffForm() {
+          $("#frmLogOff").submit();
+        };
+
+
+        <%--Following code is used to change Header and Navigation bar color according to environment--%> 
+         $(document).ready(function () {   
+             //Read colors from web.config file.
+             var headerBarColor= '<%=ConfigurationManager.AppSettings["HeaderBarColor"] %>';
+             var navigationBarColor = '<%=ConfigurationManager.AppSettings["NavigationBarColor"] %>';
+             //Check header bar and navigation bar color is exist in the web.config file.
+             if (headerBarColor && navigationBarColor) { 
+                 $('#headerBar').css('background-color', headerBarColor);
+                 $('#navigation').css('background-color', navigationBarColor);
+                 $('.sf-menu li').css('background-color', navigationBarColor); 
+             }
+         });
+    </script>
+</head>
+<body>
+    <div id="appHeader">
+        <div class="logo">
+            <a target="_blank" href="http://www.iata.org/">
+                <img src="<%: Url.Content("~/Content/Images/logo_sub.gif") %>" border="0" alt="International Air Transport Association"
+                    title="International Air Transport Association" />
+            </a>
+        </div>
+    </div>
+    <div id="headerBar">
+        <% Html.RenderAction("HeaderBar", "Partial", new { area = string.Empty, userId = SessionUtil.UserId });%>
+    </div>
+    <div id="globalWrap">
+        <div id="navigation">
+            <% Html.RenderAction("Menu", "Partial", new { area = string.Empty, userId = SessionUtil.UserId });%>
+        </div>
+        <div id="breadCrumbs">
+            <% Html.RenderPartial("BreadCrumbsControl");%>
+            <% if (SessionUtil.UserCategory == UserCategory.Member)
+         {	
+            %>
+            <img id="memberLogo" src='<%: Url.Action("GetMemberLogo", "Member", new { area = "Profile", memberId = SessionUtil.MemberId }) %>'
+                style="position: absolute; right: 0; top: 10;" />
+            <%
+        } %>
+        </div>
+        <%
+      Html.RenderPartial("MessageControl");%>
+        <div id="content">
+            <div class="oi">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+        </div>
+        <div id="footer">
+            <%
+      Html.RenderAction("Footer", "Partial", new { area = string.Empty });%>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="<%:Url.Content("~/Scripts/jquery.autocomplete.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/jquery.watermark.min.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/jquery.validate.min.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/jquery.dirtyforms.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/validator.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/jquery.form.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/jquery-ui-timepicker-addon.js")%>" type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Scripts/jquery.numeric.js") %>" type="text/javascript"></script>
+    <script type="text/javascript">
+    var _loadingGif = '<%: Url.Content("~/Content/Images/busy.gif") %>';
+    var _errorIcon = '<%: Url.Content("~/Content/Images/error_icon.png")%>';
+    var _calendarIcon = '<%: Url.Content("~/Content/Images/calendar.gif")%>';
+    var _amountDecimals = 3;
+    var _percentDecimals = 3;
+    var _exchangeRateDecimals = 5;
+    var _dateFormat = 'dd-M-y';
+    var _dateWatermark = 'DD-MMM-YY';
+    var _periodFormat = 'YYYY-MMM-PP';
+    var _timeFormatForDateTimePicker = 'hh:mm:ss';
+    var _dateTimeWatermark = 'DD-MMM-YYThh:mm:ss';
+    var _gridColumnDateFormat = '{0:dd-MMM-yy}';    
+    var _setPageSizeMethod = '<%: Url.Action("SetPageSize", "Data", new {area=""}) %>';
+    //Added by Ranjit Kumar 06/04/2011
+    //Action for maintain current page option by clicking jqGrid navigator and edit button.
+    var _setCurrentPageMethod = '<%: Url.Action("SetcurrentPageNo", "Data", new {area=""}) %>';
+    var _changeBillingMemberUrl = '<%: Url.Action("About", "Home", new {area=""}) %>';
+    var _showUnsavedDataWarning = '<%: SessionUtil.UnsavedWarningMessagesEnabled ? 1 : 0 %>';
+    var _isAjaxError = false;
+    var _billingType = '<%: ViewData[ViewDataConstants.BillingType] ?? string.Empty %>';
+    var _skyMajic = <%: ConfigurationManager.AppSettings.Get("SkyMagic") == "1" ? 1 : 0 %>;
+    var _loginUrl = '<%:Url.Action("LogOn", "Account", new { area = "" })%>';
+    var _sessionCheckUrl = '<%:Url.Action("CheckUserSessions", "Account", new { area = "" })%>';
+    </script>
+    <script src="<%:Url.Content("~/Scripts/Site.js")%>" type="text/javascript"></script>
+    <script src="<%:Url.Content("~/Scripts/autoCompleteDisplay.js")%>" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="Script" runat="server" />
+</body>
+</html>

@@ -1,0 +1,47 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">--%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>
+    <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+  </title>
+     
+
+  <%-- SCP0000 :  Icon update --%>
+  <link id="Link1" runat="server" rel="shortcut icon" href="~/favicon.ico" type="image/x-icon"/>
+  <link id="Link2" runat="server" rel="icon" href="~/favicon.ico" type="image/ico"/>
+
+  <link href="<%: Url.Content("~/Content/Site.css") %>" rel="stylesheet" type="text/css" />
+  <link href="<%: Url.Content("~/Content/Forms.css") %>" rel="stylesheet" type="text/css" />
+  <script src="<%:Url.Content("~/Scripts/jquery-1.12.3.min.js")%>" type="text/javascript"></script>
+  <script src="<%:Url.Content("~/Scripts/jquery-migrate-1.2.1.min.js")%>" type="text/javascript"></script>
+
+  <script src="<%: Url.Content("~/Scripts/jquery.watermark.min.js") %>" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+    }); 
+  </script>
+  <asp:ContentPlaceHolder ID="Script" runat="server" />
+</head>
+<body>
+  <div id="header">
+    <div class="logo">
+      <a target="_blank" href="http://www.iata.org/">
+        <img src="<%: Url.Content("~/Content/Images/header_logo_light.gif") %>" border="0" alt="International Air Transport Association"
+          title="International Air Transport Association" />
+      </a>
+    </div>
+    <div class="logoPrint">
+      <img src="<%: Url.Content("~/Content/Images/IATA_logo_print.gif") %>" />
+    </div>
+  </div>
+  <div id="anonymousContainer">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    <div id="footer">
+      <% Html.RenderPartial("FooterControl"); %>
+    </div>
+  </div>
+</body>
+</html>
