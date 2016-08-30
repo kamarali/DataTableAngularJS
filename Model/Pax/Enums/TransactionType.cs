@@ -1,0 +1,43 @@
+﻿namespace Iata.IS.Model.Pax.Enums
+{
+  public enum TransactionType
+  {
+    None = 0,
+    Coupon = 1,
+    RejectionMemo1 = 2,
+    RejectionMemo2 = 3,
+    RejectionMemo3 = 4,
+    BillingMemo = 5,
+    CreditMemo = 6,
+    SamplingFormAB = 7,
+    SamplingFormC = 8,
+    SamplingFormD = 9,
+    SamplingFormF = 10,
+    SamplingFormXF = 11,
+    PaxCorrespondence = 12,
+    PaxOtherCorrespondence = 13,
+    CargoPrimePrepaid = 14,
+    CargoPrimeChargeCollect = 15,
+    CargoRejectionMemmoStage1 = 16,
+    CargoRejectionMemmoStage2 = 17,
+    CargoRejectionMemmoStage3 = 18,
+    CargoBillingMemo = 19,
+    CargoCreditMemo = 20,
+    CargoCorrespondence = 21,
+    CargoOtherCorrespondence = 22,
+    MiscOriginal = 23,
+    MiscRejection1 = 24,
+    MiscRejection2 = 25,
+    MiscCorrespondence = 26,
+    MiscOtherCorrespondence = 27, 
+    MiscUatp = 28,
+    PasNsBillingMemoDueToAuthorityToBill = 29,
+    PasNsBillingMemoDueToExpiry = 30,
+    CargoBillingMemoDueToAuthorityToBill = 31,
+    CargoBillingMemoDueToExpiry = 32,
+    MiscCorrInvoiceDueToAuthorityToBill = 33,
+    MiscCorrInvoiceDueToExpiry = 34,
+    PaxCorrespondenceSampling = 35,
+    MiscCreditNote = 36
+  }
+}
