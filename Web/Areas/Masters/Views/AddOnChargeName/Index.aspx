@@ -1,0 +1,26 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Iata.IS.Model.MiscUatp.Common.AddOnChargeName>" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+	SIS::Master Maintenance :: Add On ChargeName
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+    <h2>
+        Manage Add On Charge Name</h2>
+    <% using (Html.BeginForm("Index", "AddOnChargeName", FormMethod.Post))
+       {%>
+    <div>
+        <% Html.RenderPartial("~/Areas/Masters/Views/Shared/SearchAddOnChargeName.ascx"); %>
+    </div>
+    <div class="buttonContainer">
+        <input type="button" class="primaryButton" value="Add" id="btnAdd" name="Add" onclick="javascript:location.href = '<%:Url.Action("Create","AddOnChargeName") %>'" />
+        <input type="submit" class="primaryButton" value="Search" id="btnSearch" name="Search" />
+    </div>
+    <%} %>
+    <h2>Search Results</h2>
+    <%Html.RenderPartial("~/Areas/Masters/Views/Shared/SearchAddOnChargeNameGrid.ascx", ViewData["AddOnChargeNameGrid"]); %>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="Script" runat="server">
+</asp:Content>
+
