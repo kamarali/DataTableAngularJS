@@ -1,0 +1,9 @@
+﻿Dear Admin,<br/><br/>
+
+  The Output file generation failed due to some pending processes for the member $MemberCode for the period "$Period".<br/><br/>
+
+  Error Message: $ErrorMessage <br/><br/>
+
+  Please take the appropriate action to resolve the issue.  <br/><br/>
+
+<p>This is a system generated message - please do not reply.<p/>

@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <style type="text/css">
+    body
+    {
+      font: normal 8pt Arial, Helvetica, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0px auto 0px auto;
+      padding: 0;
+    }
+    table
+    {
+      border-collapse: collapse;
+      padding: 5px 0px;
+      margin: 0;
+    }
+    table.b
+    {
+      border: 1px solid #0075bd;
+    }
+    thead
+    {
+      background-color: #d7e9f8;
+    }
+    td
+    {
+      padding: 2px 2px;
+    }
+    table.b td
+    {
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+    }
+    #content
+    {
+      width: 90%;
+      text-align: left;
+      padding: 10px;
+    }
+    .h1
+    {
+      font-size: 18px;
+    }
+    .h1, .h4
+    {
+      font-weight: bold;
+      padding: 5px 0px 0px 0px;
+    }
+    .fwf
+    {
+      font: normal 8pt 'Courier New' , Courier, monospace;
+    }
+    .ac
+    {
+      text-transform: uppercase;
+    }
+    .hw
+    {
+      width: 50%;
+    }
+    .w65
+    {
+      width: 65%;
+    }
+    .s
+    {
+      font-weight: bold;
+    }
+    .ca
+    {
+      text-align: center;
+    }
+    .num
+    {
+      text-align: right;
+    }
+    .hl {
+      background-color: #dddddd;
+    }
+    ol.il li {
+      display: list-item;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+   <p>Dear SIS Member,</p>
+
+	 <p>The following Future Submission invoice(s) have gone into error during re-validation and is not considered for further processing:</p>
+
+	  <table cellpadding="0" cellspacing="0">
+      <tr>
+		<td style="width: 120px;">
+			Billing Month Period
+		</td>
+		
+		<td style="width: 150px;">
+			Billed Member
+		</td>
+		
+		<td style="width: 100px;">
+			Billing Category
+		</td>
+		
+		<td style="width: 120px;">
+			Invoice No.
+		</td>
+		
+		<td >
+			Error Description
+		</td>
+	  </tr>
+	   #foreach($Record in $invoiceInError) 
+	  <tr>
+		<td>
+			$Record.BillingMonYearPeriod
+		</td>
+		
+		<td>
+			$Record.BilledMemberCode
+		</td>
+		
+		<td>
+			$Record.BillingCategoryName
+		</td>
+		
+		<td>
+			$Record.InvoiceNo
+		</td>
+		
+		<td>
+			$Record.DetailErrorDesc
+		</td>
+
+	  </tr>
+	   #end
+	  </table>
+	 
+	  <BR/>
+	  Regards,
+	  <BR/>
+	  IATA SIS	
+	  <BR/>
+	  <BR/>
+	  <BR/>
+
+	  This is a computer generated message.
+	</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿Dear SIS Ops,<br/>
+
+	<P>An exception occurred during creation of legal XML file for the following invoice:</P>
+
+		<P>Billing Member: $billingMemberCode</P>
+		<P>Billed Member: $billedMemberCode</P>
+		<P>Billing Category: $BillingCategory</P>
+		<P>Invoice Number: $invoiceNo</P>
+		<P>Billing Period: $billingPeriod</P>
+	<BR/>
+Regards,
+<BR/>
+IS System

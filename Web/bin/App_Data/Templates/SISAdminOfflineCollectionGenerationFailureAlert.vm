@@ -1,0 +1,15 @@
+﻿<html><body>
+Dear SIS Ops,<br/>
+<p>The offline collection generation process failed for,
+<ul>
+ #if($InvoiceNumber && $InvoiceNumber.Length > 0)<li>Invoice Number: $InvoiceNumber</li>#end
+ #if($InvoiceId)<li>Invoice Id: $InvoiceId</li>#end
+ #if($Period)<li>Billing period: $Period</li>#end
+</ul>
+Error Message: $ErrorMessage<br/> 
+Please take the appropriate action to resolve the issue.<br/>
+</p>
+Regards, <br/>
+SIS - System
+</body></html>
+

@@ -1,0 +1,21 @@
+﻿Dear SIS Ops, 
+
+The Retrieval web-service response of CDC Arkhinéo indicated a failure for the following invoice:
+<br/><br/>
+Archive Customer: $BillingMember
+<br/><br/>
+Billing Member: $BillingMember
+<br/><br/>
+Billed Member: $BilledMember
+<br/><br/>
+Billing Period: $BillingPeriod
+<br/><br/>
+Billing Category: $BillingCategory
+<br/><br/>
+Invoice Number: $InvoiceNumber
+<br/><br/>
+Web-Service Response: $ErrorCode
+<br/><br/>
+
+Regards,
+IS System

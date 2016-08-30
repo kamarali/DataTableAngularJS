@@ -1,0 +1,11 @@
+﻿<html>
+	<body>
+
+   <p> BVC Response File Name $FileName received from ATPCO was failed. </p>
+   <p> Non numeric value received in numeric field.</p>
+   <p> Please take the corrective action.</p>
+   
+
+ 
+ </body>
+</html>

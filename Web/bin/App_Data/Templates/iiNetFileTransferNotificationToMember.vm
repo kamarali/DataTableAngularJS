@@ -1,0 +1,19 @@
+<html>
+	<body>
+
+	<p>Dear SIS Member,
+	<p> 
+	 #if($Content && $Content !="") 
+	   $Content 
+	 #else 
+	   The following file has been generated and transferred to your iiNET account: 
+	 #end
+     <br/>   
+	<p> $FileName <br/>
+
+	<p>Regards,
+	<p>IATA SIS Operations Team</p>
+	<p>$SisOpsEmailId </p>
+
+</body>
+</html>

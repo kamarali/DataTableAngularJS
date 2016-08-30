@@ -1,0 +1,15 @@
+﻿<html>
+	<body>
+
+	<p>Dear SIS Member,
+
+	<p>The following file has been generated and is available for download via IS-WEB: <br/>
+        
+	<p> $ZipFileName <br/>
+
+	<p>Regards,
+	<p>IATA SIS Operations Team</p>
+	<p>$SisOpsEmailId </p>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿Hello $Message.RecipientName,<br/>
+  
+  The download file requested is ready for download at $Message.DownloadableInvoicePath.<br/>
+
+Regards,<br/>
+Admin - IATA

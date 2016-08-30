@@ -1,0 +1,14 @@
+﻿<html>
+	<body>
+	<p>Dear $ClearingHouse operations team,</p><br/>
+	<p>Basic Member profile setup for $MemberName has been completed by SIS Admin.</p>
+	<p>Please complete the $ClearingHouse specific setup of the Member profile if the Member belong to $ClearingHouse.</p>
+
+	Regards,
+	<BR/>
+	IATA SIS Operations Team
+	<BR/>
+	$SISOpsEmailid
+	</body>
+</html>
+ 

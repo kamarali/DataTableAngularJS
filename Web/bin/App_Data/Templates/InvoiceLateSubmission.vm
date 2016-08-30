@@ -1,0 +1,12 @@
+﻿<html>
+	<body>
+   <p>Dear $ClearingHouse Ops,</p>
+		<p>Late Submission of $InvoiceCount Invoice(s) has been requested by $MemberName .</p>
+
+    Regards,
+<BR/>
+   IATA SIS Operations Team
+<BR/>
+   $SISOpsEmailid
+	</body>
+</html>

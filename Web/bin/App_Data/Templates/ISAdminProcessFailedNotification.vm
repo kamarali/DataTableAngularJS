@@ -1,0 +1,11 @@
+﻿Dear Admin,<br/>
+
+  The application experienced unexpected error for the member $MemberCode for the period "$Period".<br/>
+
+  Invoice No: $InvoiceNo <br/>
+  Error Message: $ErrorMessage <br/>
+
+  Please take the appropriate action to resolve the issue. <br/>
+
+Regards,<br/>
+SIS – System

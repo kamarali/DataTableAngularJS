@@ -1,0 +1,10 @@
+﻿Dear SIS Member,<br/>
+
+	<p>&nbsp;&nbsp;Billing Value Confirmation Reports for the billing period $billingMonth have been generated and are available for download. </p>
+	<p>The name of the zip file containing these reports is $fileName.</p>
+	<BR/>
+Regards,
+<BR/>
+IATA SIS Operations Team
+<BR/>
+ $SISOpsemailid
