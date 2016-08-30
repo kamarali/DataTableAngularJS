@@ -1,0 +1,102 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+iPayables_Business_Web
+</name>
+</assembly>
+<members>
+<member name="M:iPayables_Business.Notification.SendNotification(System.String,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="Message"></param>
+	<param name="Subject"></param>
+	<param name="Address"></param>
+	<remarks></remarks>
+</member><member name="P:iPayables_Business.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:iPayables_Business.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.CGO_RECEIVED">
+	<summary>
+  Looks up a localized string similar to 156.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.FILE_SENDER_RECEIVER_HOST">
+	<summary>
+  Looks up a localized string similar to 127.0.0.1.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.INV_AVAILABLE_CGO">
+	<summary>
+  Looks up a localized string similar to 157.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.INV_AVAILABLE_MISC">
+	<summary>
+  Looks up a localized string similar to 163.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.INV_AVAILABLE_PAX">
+	<summary>
+  Looks up a localized string similar to 149.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.INV_AVAILABLE_UATP">
+	<summary>
+  Looks up a localized string similar to 168.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.ISR_AVAILABLE_ICH">
+	<summary>
+  Looks up a localized string similar to 173.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.MISC_RECEIVED">
+	<summary>
+  Looks up a localized string similar to 162.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.PAX_RECEIVED">
+	<summary>
+  Looks up a localized string similar to 148.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.UATP_RECEIVED">
+	<summary>
+  Looks up a localized string similar to 167.
+</summary>
+</member><member name="P:iPayables_Business.My.Resources.userSettings.VCF_AVAILABLE_ACH">
+	<summary>
+  Looks up a localized string similar to 174.
+</summary>
+</member><member name="T:iPayables_Business.My.Resources.userSettings">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:iPayables_Business.Community.BatchInterfaceSubmissions(System.String,System.Collections.ArrayList,iPayables_Data.UnitOfWork)">
+	<summary>
+ Gets All BatchInterfaceSubmissions
+ </summary>
+	<param name="StoredProcedureName"></param>
+	<param name="Parameters"></param>
+	<param name="uow"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:iPayables_Business.Community">
+	<summary>
+ Community is a helper class to retrieve record(Customer, BatchInterfaceSubmissions, XMLDocument). 
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

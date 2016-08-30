@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+iPayables_Business
+</name>
+</assembly>
+<members>
+<member name="M:iPayables_Business.IWDiagnostics.LogWriter.Write(System.String,iPayables_Business.IWDiagnostics.LogWriter.LogMode)">
+	<summary>
+  Write a log using Log4Net
+  
+ </summary>
+	<param name="message">Message to print in log file</param>
+	<param name="ApplicableLogMode"> Log Mode type </param>
+	<remarks></remarks>
+</member><member name="M:iPayables_Business.Notification.SendNotification(System.String,System.String,System.String,System.Collections.SortedList)">
+	<summary>
+	</summary>
+	<param name="Message"></param>
+	<param name="Subject"></param>
+	<param name="Address"></param>
+	<remarks></remarks>
+</member><member name="M:iPayables_Business.Common.GetCurrentBillingPeriod">
+	<summary>
+  'SCP50998 - Didn't receive any validation file report for a wrong file submitted (lower case)
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables_Business.Community.BatchInterfaceSubmissions(System.String,System.Collections.ArrayList,iPayables_Data.UnitOfWork,System.Int32,System.Int32)">
+	<summary>
+ Gets All BatchInterfaceSubmissions
+ </summary>
+	<param name="StoredProcedureName"></param>
+	<param name="Parameters"></param>
+	<param name="uow"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:iPayables_Business.Community">
+	<summary>
+ Community is a helper class to retrieve record(Customer, BatchInterfaceSubmissions, XMLDocument). 
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
