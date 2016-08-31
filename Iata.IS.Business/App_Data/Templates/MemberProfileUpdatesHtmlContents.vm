@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Member Profile - Changes done to Member Profile</title>
+  <style type="text/css">
+    body
+    {
+      font: normal 8pt Arial, Helvetica, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0px auto 0px auto;
+      padding: 0;
+    }
+    table
+    {
+      border-collapse: collapse;
+      padding: 5px 0px;
+      margin: 0;
+    }
+    table.b
+    {
+      border: 1px solid #0075bd;
+    }
+    thead
+    {
+      background-color: #d7e9f8;
+    }
+    td
+    {
+      padding: 2px 2px;
+    }
+    table.b td
+    {
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+    }
+    #content
+    {
+      width: 90%;
+      text-align: left;
+      padding: 10px;
+    }
+    .h1
+    {
+      font-size: 18px;
+    }
+    .s
+    {
+      font-weight: bold;
+    }
+    .num
+    {
+      text-align: right;
+    }
+  </style>
+</head>
+	<body>
+			#foreach($Record in $FutureUpdates)
+	#beforeall	
+		<table border="0" cellpadding="0" cellspacing="0" class="b">
+			<thead>
+				<td>Group</td>				
+				<td>Element</td>
+				<td>Additional Info</td>
+				<td>Action</td>
+				<td>Old Value</td>			 
+				<td>New Value</td>
+				<td>Effective Date</td>
+				<td>Effective Period</td>
+			</thead>
+	#before
+			<tr>
+	#odd
+			<Style='color:gray'>
+	#even
+			<Style='color:blue'>
+	#each
+			<td>#if($Record.DisplayGroup) $Record.DisplayGroup #end</td>
+			<td>#if($Record.ElementName) $Record.ElementName #end</td>		
+			<td>#if($Record.RelationIdDisplayName) $Record.RelationIdDisplayName #end </td>
+			<td>#if($Record.ActionType) $Record.ActionType #end </td>
+			<td>#if($Record.OldValueDisplayName) $Record.OldValueDisplayName #end </td>
+			<td>#if($Record.NewValueDisplayName) $Record.NewValueDisplayName #end </td>	
+			<td>#if($Record.ChangeEffectiveOn) $Record.ChangeEffectiveOn #end </td>
+			<td>#if($Record.ChangeEffectivePeriod) $Record.ChangeEffectivePeriod #end </td>
+	#after
+			</tr>
+	#afterall
+		</table>
+	
+		
+	#nodata
+				 Sorry No Record Found
+	#end
+	</body>
+</html>

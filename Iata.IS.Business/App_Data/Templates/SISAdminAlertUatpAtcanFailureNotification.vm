@@ -1,0 +1,10 @@
+Dear Admin, <br/><br/>
+ The UAtp Atcan statement Csv file generation failed for the member $MemberCode for the billing period "$Period".
+ #if($InvoiceNo && $InvoiceNo.Length > 0)
+ <br/><br/>
+ Invoice Number: $InvoiceNo
+ #end
+ <br/><br/>
+ Please take the appropriate action to resolve the issue. 
+ <br/><br/>
+ This is a system generated message - please do not reply.

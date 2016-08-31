@@ -1,0 +1,16 @@
+<html>
+	<body>
+
+<p> This is the report on the processing of Member Profile data uploaded to the system. Please refer to the details below </p>
+
+<p> File Name: $Filename </p>
+<p> Date/time of submission (EDT/EST): $SubmissionDateTime </p>  
+<p> Uploaded by: $UploadedBy </p>
+<p> Result: Successful </p>
+
+
+Regards,
+<BR/>
+IS System
+</body>
+</html>

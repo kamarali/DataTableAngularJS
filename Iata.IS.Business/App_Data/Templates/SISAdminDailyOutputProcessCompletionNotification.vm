@@ -1,0 +1,11 @@
+﻿Dear IS Admin,<br/>
+
+The following are the counts of Daily MISC Bilateral Invoice/Credit Note Outputs Delivered on $TargetDate.<br/>
+
+Total number of IS-XML files delivered: $XmlCount <br/>
+Total number of Offline Archive files delivered: $OarCount <br/>
+Total number of IS-XML files delivered (Location Specific):  $XmlLocSpecCount <br/>
+Total number of Offline Archive files delivered (Location Specific):$OarLocSpecCount <br/>
+
+Regards,<br/>
+IS System

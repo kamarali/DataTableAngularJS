@@ -1,0 +1,14 @@
+Dear SIS Ops,<br/>
+
+	<P>An exception was encountered in the process of updating profile migration data. Please take correction action.</P>
+	<br/>
+	<br/>
+	<P> Exception Message</P>
+	<br/>
+	<P>$ExceptionMessage</P>
+	<br/>
+	<br/>
+	<BR/>
+Regards,
+<BR/>
+IS System

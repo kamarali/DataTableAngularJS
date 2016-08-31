@@ -1,0 +1,9 @@
+﻿Dear $Message.RecipientName,
+  
+The validation report for the input file $Message.ParsedFileName is available for download via iiNET/IS-WEB. 
+The report name is $Message.FileLocation. Error(s)/Warning(s) have been generated while validating the input file. 
+Refer to the validation report for details.
+
+Regards,
+IATA SIS Operations Team
+$SISOpsEmailId

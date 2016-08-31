@@ -1,0 +1,740 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<style type="text/css">
+    .stageSeparator {
+      border-top: 5px solid #888;
+      margin: 5px 0px;
+    }
+    .numeric {
+      text-align: right;
+    }
+    .tableHead {
+      font: normal 8pt Arial, Helvetica, sans-serif;
+    }
+    table.formattedTable {
+      background-color: #edeeee;
+      border: 1px solid #666;
+      padding: 0px 0px 0px 0px;
+      margin: 5px 0px 10px 0px;
+      border-collapse: collapse;
+    }
+    table.formattedTable > thead > tr {
+      background-color: #d7e9f8;
+      color: #000;
+      font-weight: bold;
+    }
+    table.formattedTable > thead > tr > td {
+      vertical-align: top;
+      text-align: center;
+      border: 1px solid #666;
+      padding: 8px 3px 8px 3px;
+    }
+    table.formattedTable > tbody > tr {
+      background-color: #fff;
+    }
+    table.formattedTable > tbody > tr > td {
+      padding: 8px 3px 8px 3px;
+      font: normal 9pt Arial, Helvetica, sans-serif;
+      color: #000000;
+      border: 1px solid #666;
+    }
+  </style>
+  <body>
+    <div id="content">
+      <h2>$areaName Audit Trail Report</h2>
+	  ##CMP508:Audit Trail Download with Supporting Documents
+	  #set($CurrentFolderNumber = 0) ## -- Numbering Logic, start from 0, increment before using	
+	  #set($AssignFolderNumber = 0) 
+	  #set($SuppDocRootPath = 'SUPPDOCS\') ## -- set root path , number will be appended to root path
+	  #set($SuppDocDisplayText = 'in Folder SUPPDOCS\')
+	  #set($Slash = '\')
+      #if($auditTrail.CorrespondenceInvoice)
+        <h2>Stage #if ($auditTrail.RejectionInvoiceList.Count == 0)
+                    #set($stage = $auditTrail.InvoiceStageCount - 1)
+                    $stage 
+                  #else
+                    #set($count = $miscInvoiceManager.GetCorrespondenceCount($auditTrail)) 
+                    #set($stage = $auditTrail.InvoiceStageCount + $count - 1)
+                    $stage 
+                  #end Invoice Due To Correspondence</h2>  
+        <table class="formattedTable">
+        <thead class="tableHead">
+          <tr>
+            <td>
+              Billing Period
+            </td>
+            <td>
+              Billing Member 
+            </td>
+            <td>
+              Billed Member
+            </td>
+            <td>
+              Invoice Number
+            </td>
+            <td>
+              Invoice Date
+            </td>
+            <td>
+              Charge Category
+            </td>
+            <td>
+              Correspondence<br /> Ref. No.
+            </td>
+            <td>
+              Net Amount
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              $auditTrail.CorrespondenceInvoice.DisplayBillingPeriod
+            </td>
+            <td>
+              $auditTrail.CorrespondenceInvoice.BillingMemberText
+            </td>
+            <td>
+              $auditTrail.CorrespondenceInvoice.BilledMemberText
+            </td>
+            <td>
+              $auditTrail.CorrespondenceInvoice.InvoiceNumber
+            </td>
+            <td>
+              $auditTrail.CorrespondenceInvoice.InvoiceDate.ToString("dd-MMM-yy")
+            </td>
+            <td>
+              $auditTrail.CorrespondenceInvoice.ChargeCategory.Name
+            </td>
+            <td>        
+              #if($auditTrail.CorrespondenceInvoice.CorrespondenceRefNo) $auditTrail.CorrespondenceInvoice.CorrespondenceRefNo.ToString("00000000000") #end
+            </td>
+            <td>
+              #if($auditTrail.CorrespondenceInvoice.ListingCurrencyDisplayText) $auditTrail.CorrespondenceInvoice.ListingCurrencyDisplayText #else "USD" #end
+              $auditTrail.CorrespondenceInvoice.BillingAmount.ToString("N2")
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <table class="formattedTable">
+          <thead class="tableHead">
+            <tr>
+              <td>
+                Line Item #
+              </td>
+              <td>
+                Charge Code
+              </td>
+              <td>
+                Description
+              </td>
+              <td>
+                Quantity
+              </td>
+              <td>
+                UOM Code
+              </td>
+              <td>
+                Unit Price
+              </td>
+              <td>
+                Currency<br /> Code
+              </td>
+              <td>
+                Gross Amount
+              </td>
+              <td>
+                Tax
+              </td>
+              <td>
+                VAT
+              </td>
+              <td>
+                Add/Deduct<br /> Charge
+              </td>
+              <td>
+                Net Amount
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            #if ($auditTrail.CorrespondenceInvoice.LineItems.Count == 0)
+              <tr>
+                <td colspan="10">
+                  No line items present.
+                </td>
+              </tr>
+            #else
+              #foreach ($lineItem in $orderedLineItemsList)
+                <tr>
+                  <td>
+                    $lineItem.LineItemNumber
+                  </td>
+                  <td>
+                    $lineItem.ChargeCode.Name
+                  </td>
+                  <td>
+                    $lineItem.Description
+                  </td>
+                  <td>
+                    $lineItem.Quantity
+                  </td>
+                  <td>
+                    $lineItem.UomCodeNameDisplayText
+                  </td>
+                  <td>
+                    $lineItem.UnitPrice.ToString("N4")
+                  </td>
+                  <td>
+                    $auditTrail.CorrespondenceInvoice.ListingCurrencyDisplayText
+                  </td>
+                  <td>
+                    $lineItem.ChargeAmount.ToString("N3")
+                  </td>
+                  <td>
+                    #if($lineItem.TotalTaxAmount) $lineItem.TotalTaxAmount.ToString("N3") #end
+                  </td>
+                  <td>
+                    #if($lineItem.TotalVatAmount) $lineItem.TotalVatAmount.ToString("N3") #end
+                  </td>
+                  <td>
+                    #if($lineItem.TotalAddOnChargeAmount) $lineItem.TotalAddOnChargeAmount.ToString("N3") #end
+                  </td>
+                  <td>
+                    $lineItem.TotalNetAmount.ToString("N3")
+                  </td>
+                </tr>
+              #end ## ($lineItem in $orderedLineItemsList)
+            #end ## ($auditTrail.CorrespondenceInvoice.LineItems.Count == 0)
+          </tbody>
+        </table>
+      </div>
+      #if ($auditTrail.CorrespondenceInvoice.Attachments.Count > 0)
+        <br />
+        <div>
+          ##CMP508:Audit Trail Download with Supporting Documents				 
+			<b>Supporting Document(s) </b>
+			#if($downloadPackage)				    
+				#if($suppDocs.ContainsKey($auditTrail.CorrespondenceInvoice.Attachments.get_item(0)))
+					#set($AssignFolderNumber = $suppDocs.get_item($auditTrail.CorrespondenceInvoice.Attachments.get_item(0))) ## get a value 						
+				#else
+					#set($CurrentFolderNumber = $CurrentFolderNumber + 1)	
+					#set($AssignFolderNumber = $CurrentFolderNumber)							
+				#end
+				$SuppDocDisplayText$AssignFolderNumber
+			#end
+			<br />	
+          #foreach ($attachment in $auditTrail.CorrespondenceInvoice.Attachments)
+            #if($downloadPackage)							
+				#if(!$suppDocs.ContainsKey($attachment))
+					$suppDocs.Add($attachment , $AssignFolderNumber)	
+				#end
+				<a href= "$SuppDocRootPath$AssignFolderNumber$Slash$attachment.OriginalFileName">$attachment.OriginalFileName</a> 
+			#else
+				$attachment.OriginalFileName
+			#end
+			<br />
+          #end ## ($attachment in $auditTrail.CorrespondenceInvoice.Attachments) foreach
+        </div>
+      #end ## ($auditTrail.CorrespondenceInvoice.Attachments.Count > 0) if
+      <div class="stageSeparator"> </div>
+      #end ## ($auditTrail.CorrespondenceInvoice) if
+      ##--------------------------------------------------------------------------------------------------
+      
+	    #if ($auditTrail.RejectionInvoiceList.Count > 0)
+        #foreach ($correspondence in $thirdStageRejectionInvoiceCorrespondenceList)
+          #if (($correspondence.CorrespondenceSubStatus != 3 && $correspondence.CorrespondenceSubStatus != 4 && $correspondence.CorrespondenceSubStatus != 6) || (($correspondence.CorrespondenceSubStatus == 3 || $correspondence.CorrespondenceSubStatus == 4 ) && $correspondence.FromMemberId == $currentMemberId))
+            #set($stage = $correspondence.CorrespondenceStage + $auditTrail.RejectionInvoiceList.Count)
+            <h2>Stage $stage Correspondence $correspondence.CorrespondenceStage</h2>
+             #if ($correspondence.AcceptanceComment)
+			     Accepted On: $correspondence.AcceptanceDateTime.ToString("dd-MMM-yy, HH:mm")<br /><br />
+				 Accepted By:  $correspondence.AcceptanceUserName<br /><br />  
+                 Acceptance Comments:<br />
+                 <p>$correspondence.AcceptanceComment</p>  
+               #end
+			<div>
+              <table class="formattedTable">
+                <thead class="tableHead">
+                  <tr>
+                    <td rowspan="2">
+                      From Member
+                    </td>
+                    <td rowspan="2">
+                      To Member
+                    </td>
+                    <td rowspan="2">
+                      Correspondence<br /> Date
+                    </td>
+                    <td rowspan="2">
+                      Correspondence<br /> Ref. No.
+                    </td>
+                    <td rowspan="2">
+                      Charge Category
+                    </td>
+                    <td rowspan="2">
+                      Authority<br /> To Bill
+                    </td>
+                    <td colspan="2">
+                      Amount<br /> to be Settled
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2">
+                      $correspondence.FromMember.MemberCodeAlpha $correspondence.FromMember.MemberCodeNumeric $correspondence.FromMember.CommercialName
+                    </td>
+                    <td rowspan="2">
+                      $correspondence.ToMember.MemberCodeAlpha $correspondence.ToMember.MemberCodeNumeric $correspondence.ToMember.CommercialName
+                    </td>
+                    <td rowspan="2">
+                      $correspondence.CorrespondenceDate.ToString("dd-MMM-yy")
+                    </td>
+                    <td rowspan="2">        
+                      #if($correspondence.CorrespondenceNumber) $correspondence.CorrespondenceNumber.ToString("00000000000") #else string.Empty #end
+                    </td>
+                    <td rowspan="2">
+                      $correspondence.Invoice.ChargeCategory.Name
+                    </td>
+                    <td rowspan="2">
+                      #if($correspondence.AuthorityToBill) Yes #else No #end
+                    </td>
+                    <td colspan="2">
+                      $correspondence.Currency.Code
+                      $correspondence.AmountToBeSettled.ToString("N2")
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div>
+                <b>Correspondence Details</b>: $correspondence.CorrespondenceDetails
+              </div>
+              #if ($correspondence.Attachments.Count > 0)
+                <br />
+                <div>
+                  ##CMP508:Audit Trail Download with Supporting Documents				 
+					<b>Supporting Document(s) </b>
+					#if($downloadPackage)				    
+						#if($suppDocs.ContainsKey($correspondence.Attachments.get_item(0)))
+							#set($AssignFolderNumber = $suppDocs.get_item($correspondence.Attachments.get_item(0))) ## get a value 						
+						#else
+							#set($CurrentFolderNumber = $CurrentFolderNumber + 1)	
+							#set($AssignFolderNumber = $CurrentFolderNumber)							
+						#end
+						$SuppDocDisplayText$AssignFolderNumber
+					#end
+					<br />	
+                  #foreach ($document in $correspondence.Attachments)
+                    #if($downloadPackage)							
+						#if(!$suppDocs.ContainsKey($document))
+							$suppDocs.Add($document , $AssignFolderNumber)	
+						#end
+						<a href= "$SuppDocRootPath$AssignFolderNumber$Slash$document.OriginalFileName">$document.OriginalFileName</a> 
+					#else
+						$document.OriginalFileName
+					#end
+					<br />
+                  #end ## ($document in $correspondence.Attachments) foreach
+                </div>
+              #end ## ($$correspondence.Attachments.Count > 0) if
+            </div>
+            <div class="stageSeparator"></div>
+          #end ## (($correspondence.CorrespondenceSubStatus != 3 && $correspondence.CorrespondenceSubStatus != 4 && $correspondence.CorrespondenceSubStatus != 6) || (($correspondence.CorrespondenceSubStatus == 3 || $correspondence.CorrespondenceSubStatus == 4 ) && $correspondence.FromMemberId == $currentMemberId)) if
+        #end ## ($correspondence in $thirdStageRejectionInvoiceCorrespondenceList) foreach
+      #end ## ($auditTrail.RejectionInvoiceList.Count > 0) if
+      ##--------------------------------------------------------------------------------------------------------------------------
+
+      #if ($auditTrail.RejectionInvoiceList.Count > 0)
+        #set($ChargeAmount = "0.000")
+        #foreach ($rejectionInvoice in $orderedRejectionInvoiceList)
+          #if ($rejectionInvoice.RejectionStage == 1)
+            #set($rejInvoice = $rejectionInvoice)
+            #foreach ($lineItem in $rejInvoice.LineItems)
+              ##------------------------------------------------------
+              #set($lineItemExists = $miscInvoiceManager.ChechWhetherLineItemExistsForOriginalInvoice($auditTrail, $lineItem))
+              ##------------------------------------------------------
+              #if ($auditTrail.OriginalInvoice && $lineItemExists)
+                #set($ChargeAmount = $miscInvoiceManager.GetLineItemChargeAmountFromOriginalInvoice($auditTrail, $lineItem))
+              #else
+                #set($ChargeAmount = "0.000")
+              #end ## ($auditTrail.OriginalInvoice && $lineItemExists) else
+            #end ## ($lineItem in $rejInvoice.LineItems) foreach
+          #else
+            #set($rejInvoice = $rejectionInvoice)
+            #foreach ($lineItem in $rejInvoice.LineItems)
+              #set($isStage1InvoiceFound = "false")
+              #foreach ($rejInvoice in $auditTrail.RejectionInvoiceList)
+                ##-------------------------------------------------------------------------------------------------
+                #set($lineItemExists = $miscInvoiceManager.ChechWhetherLineItemExistsForRejectionInvoice($rejInvoice, $lineItem))
+                ##-------------------------------------------------------------------------------------------------
+                #if ($rejInvoice.RejectionStage == 1 && $lineItemExists)
+                  #set($lineItem.ChargeAmount = $miscInvoiceManager.GetLineItemChargeAmountFromRejectionInvoice($rejInvoice, $lineItem))
+                  #set($isStage1InvoiceFound = "true")
+                #end ## ($rejInvoice.RejectionStage == 1 && $lineItemExists) if
+              #end ## ($rejInvoice in $auditTrail.RejectionInvoiceList) foreach
+              #if ($isStage1InvoiceFound == "false")
+                ##-------------------------------------------------------------------------------------------------
+                #set($lineItemExists = $miscInvoiceManager.ChechWhetherLineItemExistsForRejectionInvoice($rejectionInvoice, $lineItem))
+                ##-------------------------------------------------------------------------------------------------
+                #if ($lineItemExists)
+                  #set($ChargeAmount = "0.000")
+                #end ## ($lineItemExists) if
+              #end ## ($isStage1InvoiceFound == "false") if
+            #end ## ($lineItem in $rejInvoice.LineItems) foreach
+          #end ## ($rejectionInvoice.RejectionStage == 1) else
+
+          <h2>Stage $rejectionInvoice.RejectionStage Rejection Invoice $rejectionInvoice.RejectionStage</h2> 
+          <div>
+          <table class="formattedTable">
+            <thead class="tableHead">
+              <tr>
+                <td>
+                  Billing period
+                </td>
+                <td>
+                  Billing Member
+                </td>
+                <td>
+                  Billed Member
+                </td>
+                <td>
+                  Invoice Number
+                </td>
+                <td>
+                  Invoice Date
+                </td>
+                <td>
+                  Charge Category
+                </td>
+                <td>
+                  Net Reject<br /> Amount
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  $rejectionInvoice.DisplayBillingPeriod
+                </td>
+                <td>
+                  $rejectionInvoice.BillingMemberText
+                </td>
+                <td>
+                  $rejectionInvoice.BilledMemberText
+                </td>
+                <td>
+                  $rejectionInvoice.InvoiceNumber
+                </td>
+                <td>
+                  $rejectionInvoice.InvoiceDate.ToString("dd-MMM-yy")
+                </td>
+                <td>
+                  $rejectionInvoice.ChargeCategory.Name
+                </td>
+                <td>
+                  #if($rejectionInvoice.ListingCurrencyDisplayText) $rejectionInvoice.ListingCurrencyDisplayText $rejectionInvoice.BillingAmount.ToString("N3") #else "USD" $rejectionInvoice.BillingAmount.ToString("N3") #end
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            <table class="formattedTable">
+              <thead class="tableHead">
+                <tr>
+                  <td>
+                    Rejection<br /> Line Item #
+                  </td>
+                  <td>
+                    Original<br /> Line Item #
+                  </td>
+                  <td>
+                    Currency<br /> Code
+                  </td>
+                  <td>
+                    Rejection Line Item<br />Net Amount
+                  </td>
+                  <td>
+                    Original Line Item<br /> Net Amount
+                  </td>
+                  <td>
+                    Charge Code
+                  </td>
+				  #if($rejectionInvoice.BillingCategoryId== 3)
+				  <td>
+                    Rejection Reason Code
+                  </td>
+				  #end
+                  <td>
+                    Reason Description
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                #if ($rejectionInvoice.LineItems.Count == 0)
+                  <tr>
+                    <td colspan="10">No line items present.</td>
+                  </tr>
+                #else
+                  ##---------------------------------------------------------------------------
+                  #set($lineItemList = $miscInvoiceManager.GetOrderedLineItemList($rejectionInvoice))
+                  ##---------------------------------------------------------------------------
+                  #foreach ($lineItem in $lineItemList)
+                    <tr>
+                      <td>
+                        $lineItem.LineItemNumber
+                      </td>
+                      <td>
+                        #if($lineItem.OriginalLineItemNumber) $lineItem.OriginalLineItemNumber #end
+                      </td>
+                      <td>
+                        #if($rejectionInvoice.ListingCurrencyDisplayText) $rejectionInvoice.ListingCurrencyDisplayText #else "USD" #end
+                      </td>
+                      <td>
+                        $lineItem.TotalNetAmount.ToString("N3")
+                      </td>
+                      <td>
+                        $ChargeAmount
+                      </td>
+                      <td>
+                        $lineItem.ChargeCode.Name
+                      </td>
+					  #if($rejectionInvoice.BillingCategoryId== 3)
+					  <td>
+                          #if($lineItem.RejectionReasonCode) $lineItem.RejectionReasonCode #end 
+                      </td>
+					  #end
+                      <td>
+                        $lineItem.Description 
+                      </td>
+                    </tr>
+                  #end ## ($lineItem in $lineItemList) foreach
+                #end ## ($rejectionInvoice.LineItems.Count == 0) if
+                  </tbody>
+                </table>
+              </div>
+              #if ($rejectionInvoice.Attachments.Count > 0)
+                <br />
+                <div>
+                  ##CMP508:Audit Trail Download with Supporting Documents				 
+					<b>Supporting Document(s) </b>
+					#if($downloadPackage)				    
+						#if($suppDocs.ContainsKey($rejectionInvoice.Attachments.get_item(0)))
+							#set($AssignFolderNumber = $suppDocs.get_item($rejectionInvoice.Attachments.get_item(0))) ## get a value 						
+						#else
+							#set($CurrentFolderNumber = $CurrentFolderNumber + 1)	
+							#set($AssignFolderNumber = $CurrentFolderNumber)							
+						#end
+						$SuppDocDisplayText$AssignFolderNumber
+					#end
+					<br />	
+                  #foreach ($attachment in $rejectionInvoice.Attachments)
+                    #if($downloadPackage)							
+						#if(!$suppDocs.ContainsKey($attachment))
+							$suppDocs.Add($attachment , $AssignFolderNumber)	
+						#end
+						<a href= "$SuppDocRootPath$AssignFolderNumber$Slash$attachment.OriginalFileName">$attachment.OriginalFileName</a> 
+					#else
+						$attachment.OriginalFileName
+					#end
+					<br />
+                  #end ## ($attachment in $rejectionInvoice.Attachments) foreach
+                </div>
+              #end ## ($rejectionInvoice.Attachments.Count > 0) if
+         </div>
+         <div class="stageSeparator"></div>
+        #end ## ($rejectionInvoice in $orderedRejectionInvoiceList) foreach
+      #end ## ($auditTrail.RejectionInvoiceList.Count > 0) if
+
+      ##------------------------------------------------------------------------------------------------------------------------
+      #if ($auditTrail.OriginalInvoice)
+        <h2>Stage 0, Original Invoice</h2>
+        <div>
+          <table class="formattedTable">
+            <thead class="tableHead">
+              <tr>
+                <td>
+                  Billing Period
+                </td>
+                <td>
+                  Billing Member
+                </td>
+                <td>
+                  Billed Member
+                </td>
+                <td>
+                  Invoice Number
+                </td>
+                <td>
+                  Invoice Date
+                </td>
+                <td>
+                  Charge Category
+                </td>
+                <td>
+                  PO Number
+                </td>
+                <td>
+                  Net Amount
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  $auditTrail.OriginalInvoice.DisplayBillingPeriod
+                </td>
+                <td>
+                  $auditTrail.OriginalInvoice.BillingMemberText
+                </td>
+                <td>
+                  $auditTrail.OriginalInvoice.BilledMemberText
+                </td>
+                <td>
+                  $auditTrail.OriginalInvoice.InvoiceNumber
+                </td>
+                <td>
+                  $auditTrail.OriginalInvoice.InvoiceDate.ToString("dd-MMM-yy")
+                </td>
+                <td>
+                  $auditTrail.OriginalInvoice.ChargeCategory.Name
+                </td>
+                <td>
+                  #if($auditTrail.OriginalInvoice.PONumber) $auditTrail.OriginalInvoice.PONumber #end 
+                </td>
+                <td>
+                  #if($auditTrail.OriginalInvoice.ListingCurrencyDisplayText) $auditTrail.OriginalInvoice.ListingCurrencyDisplayText $auditTrail.OriginalInvoice.BillingAmount.ToString("N3") #else "USD" $auditTrail.OriginalInvoice.BillingAmount.ToString("N3") #end
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            <table class="formattedTable">
+            <thead class="tableHead">
+              <tr>
+                <td>
+                  Line Item #
+                </td>
+                <td>
+                  Charge Code
+                </td>
+                <td>
+                  Description
+                </td>
+                <td>
+                  Quantity 
+                </td>
+                <td>
+                  UOM Code
+                </td>
+                <td>
+                  Unit Price 
+                </td>
+                <td>
+                  Currency<br /> Code 
+                </td>
+                <td>
+                  Gross Amount 
+                </td>
+                <td>
+                  Tax 
+                </td>
+                <td>
+                  VAT
+                </td>
+                <td>
+                  Add/Deduct<br /> Charge
+                </td>
+                <td>
+                  Net Amount 
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              #if ($auditTrail.OriginalInvoice.LineItems.Count == 0)
+                <tr>
+                  <td colspan="10">
+                    No line items present.
+                  </td>
+                </tr>
+              #else
+                ##---------------------------------------------------------------------------
+                #set($lineItemList = $miscInvoiceManager.GetOrderedLineItemList($auditTrail.OriginalInvoice))
+                ##---------------------------------------------------------------------------
+                #foreach ($lineItem in $lineItemList)
+                  <tr>
+                    <td>
+                      $lineItem.LineItemNumber
+                    </td>
+                    <td>
+                      $lineItem.ChargeCode.Name
+                    </td>
+                    <td>
+                      $lineItem.Description
+                    </td>
+                    <td>
+                      $lineItem.Quantity
+                    </td>
+                    <td>
+                      $lineItem.UomCodeNameDisplayText
+                    </td>
+                    <td>
+                      $lineItem.UnitPrice.ToString("N4")
+                    </td>
+                    <td>
+                      #if($lineItem.Invoice.ListingCurrencyDisplayText) $lineItem.Invoice.ListingCurrencyDisplayText #else "USD" #end
+                    </td>
+                    <td>
+                      $lineItem.ChargeAmount.ToString("N3")
+                    </td>
+                    <td>
+                      #if($lineItem.TotalTaxAmount) $lineItem.TotalTaxAmount.ToString("N3") #end
+                    </td>
+                    <td>
+                      #if($lineItem.TotalVatAmount) $lineItem.TotalVatAmount.ToString("N3") #end
+                    </td>
+                    <td>
+                      #if($lineItem.TotalAddOnChargeAmount) $lineItem.TotalAddOnChargeAmount.ToString("N3") #end
+                    </td>
+                    <td>
+                      $lineItem.TotalNetAmount.ToString("N3")
+                    </td>
+                  </tr>
+                #end ## ($lineItem in $lineItemList) foreach
+              #end ## ($auditTrail.OriginalInvoice.LineItems.Count == 0) if
+                </tbody>
+              </table>
+            </div>
+            #if ($auditTrail.OriginalInvoice.Attachments.Count > 0)
+              <br />
+              <div>
+                ##CMP508:Audit Trail Download with Supporting Documents				 
+				<b>Supporting Document(s) </b>
+				#if($downloadPackage)				    
+					#if($suppDocs.ContainsKey($auditTrail.OriginalInvoice.Attachments.get_item(0)))
+						#set($AssignFolderNumber = $suppDocs.get_item($auditTrail.OriginalInvoice.Attachments.get_item(0))) ## get a value 						
+					#else
+						#set($CurrentFolderNumber = $CurrentFolderNumber + 1)	
+						#set($AssignFolderNumber = $CurrentFolderNumber)							
+					#end
+					$SuppDocDisplayText$AssignFolderNumber
+				#end
+				<br />	
+                #foreach ($attachment in $auditTrail.OriginalInvoice.Attachments)
+                  #if($downloadPackage)							
+						#if(!$suppDocs.ContainsKey($attachment))
+							$suppDocs.Add($attachment , $AssignFolderNumber)	
+						#end
+						<a href= "$SuppDocRootPath$AssignFolderNumber$Slash$attachment.OriginalFileName">$attachment.OriginalFileName</a> 
+				  #else
+						$attachment.OriginalFileName
+				  #end
+				  <br />
+                #end ## ($attachment in $auditTrail.OriginalInvoice.Attachments) foreach
+              </div>
+            #end ## ($auditTrail.OriginalInvoice.Attachments.Count > 0) if
+        </div>
+      #end ## ($auditTrail.OriginalInvoice) if
+    </div>
+  </body>  
+</html>

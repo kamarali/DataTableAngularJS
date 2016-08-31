@@ -1,0 +1,29 @@
+﻿Dear IS Admin,<br/>
+
+The daily MISC Bilateral Invoice/Credit Note output process that ran on $TargetDate could not deliver an invoice due to one or more of the reasons listed below:<br/>
+a) Invoice PDF creation process is not yet complete<br/>
+b) Digital Signature process is not yet complete<br/>
+c) Offline Collection process is not yet complete<br/><br/>
+
+#if($pendingInvoiceList.Count > 0)
+The following are the invoice details:<br/>
+<table border="1">
+	<tr>
+		<th>Billing Period</th>
+		<th>Billing Member</th>
+		<th>Billed Member</th>
+		<th>Invoice Number</th>
+	</tr>
+	#foreach($pendingInvoice in $pendingInvoiceList)
+	<tr>
+		<td>$pendingInvoice.BillingPeriod</td>
+		<td>$pendingInvoice.BillingMember</td>
+		<td>$pendingInvoice.BilledMember</td>
+		<td>$pendingInvoice.InvoiceNumber</td>
+	</tr>
+	#end
+</table><br/>
+#end
+
+Regards,<br/>
+IS System

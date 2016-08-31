@@ -1,0 +1,7 @@
+﻿Dear SIS Member,${n}
+Please find attached details of the changes made to the Member profile of Member $MemberPrefix - $MemberDesignator - $MemberCommercialName on $EffectiveOn. ${n}
+Kindly take a note of the same.
+${n}
+Regards, ${n}
+IATA SIS Operations Team ${n}
+$SISOpsEmail

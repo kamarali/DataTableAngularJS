@@ -1,0 +1,10 @@
+﻿Dear IS Admin,<br/>
+
+The $ProcessName run on $TargetDate for $Member encountered an exception and did not complete successfully.<br/>
+Error Message: $ErrorMessage <br/>
+
+Please contact the SIS support team for resolution.<br/>
+
+
+Regards,<br/>
+IS System

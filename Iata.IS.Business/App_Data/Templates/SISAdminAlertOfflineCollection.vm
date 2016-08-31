@@ -1,0 +1,9 @@
+﻿<br/>
+Dear SIS Admin,<br/>
+<P>&nbsp;&nbsp;Offline collection could not be generated for:
+<BR/>&nbsp;&nbsp;&nbsp;&nbsp;Billing Member: $BillingMemberAccountingCode
+#if($InvoiceNo && $InvoiceNo.Length > 0)
+<BR/>&nbsp;&nbsp;&nbsp;&nbsp;Invoice Number: $InvoiceNo
+#end
+</P>
+This is a system generated message - please do not reply.

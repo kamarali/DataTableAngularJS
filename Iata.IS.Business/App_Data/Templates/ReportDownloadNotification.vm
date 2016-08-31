@@ -1,0 +1,16 @@
+﻿<html>
+	<body>
+<P>Dear SIS Member,<br/>
+The report requested by you has been generated and is now available for download.</P><br/>
+<P>Report: $ReportName</P><br/>
+<P>UTC date/time of report request: $UtcDateTime</P><br/> 
+<P>Search criteria provided: <br/>$SearchCriteria</P><br/>
+<P>Follow the below link to download the file </br> <a href="$FilePath">$FilePath</a> </br>  </P>  
+<br/> <br/>
+Regards,
+<BR/>
+IATA SIS Operations Team
+<BR/>
+$SISOpsEmailId
+</body>
+</html>

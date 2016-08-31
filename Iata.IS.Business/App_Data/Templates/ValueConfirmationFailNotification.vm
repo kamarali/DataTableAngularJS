@@ -1,0 +1,10 @@
+﻿<html>
+	<body>
+	<p>Please be informed that BVC failed due to mismatch in BVC participation data in ATPCO. Details are as follows:</p>
+	<p>Billing Airline: $BillingAirline</p>
+	<p>Billed Airline: $BilledAirline</p>
+	<p>Filename: $FileName</p>
+	<p>Separator record position: $RecordPosition </p>
+	</body>
+</html>
+ 

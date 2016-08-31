@@ -1,0 +1,14 @@
+﻿<html>
+	<body>
+		<p>Dear SIS Member,</p>
+		<p>Usage file $fileName failed sanity checks.</p>
+    <p>The summary and detail error report has been generated $BodyContent </p>
+		<p> $ReportfileName </p>
+
+Regards,
+<BR/>
+IATA SIS Operations Team
+<BR/>
+ $SISOpsEmailid
+</body>
+</html>

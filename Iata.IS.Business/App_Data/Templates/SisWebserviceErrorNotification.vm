@@ -1,0 +1,10 @@
+﻿<html>
+	<body>
+		<p> Dear ICH/SIS Ops Member,
+		   ${n} $EmailContent at $FailureTime. 
+		   ${n} Comments: $Comments		  
+</p>
+<p>$EmailSignature</p>
+		
+	</body>
+</html>

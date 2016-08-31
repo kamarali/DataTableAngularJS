@@ -1,0 +1,8 @@
+﻿Dear Admin, <br/><br/>
+ The Offline collection download process failed for the member $MemberCode for the billing period "$Period" for $Category Category.
+ <br/><br/>
+ Error Message: $ErrorMessage
+ <br/><br/>
+ Please take the appropriate action to resolve the issue. 
+ <br/><br/>
+ This is a system generated message - please do not reply.
