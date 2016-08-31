@@ -1,0 +1,38 @@
+﻿<html>
+	<body>
+  	#foreach($Record in $Invoices)
+	#beforeall
+		<p>The below mentioned invoices have been submitted against a suspended member and will be kept for recording purposes but not be processed by the $clearingHouse.</p>
+		<table border ="1" width="100%">
+			<tr>
+        <th>Billed Airline</th>
+				<th>Invoice Number</th>				
+				<th>Billing Period</th>
+        <th>Billing Category</th>
+			
+			</tr>
+	#before
+			<tr>
+	#odd
+			<Style='color:gray'>
+	#even
+			<Style='color:blue'>
+	#each
+      <td>$BilledMemberText</td>
+			<td>$Record.InvoiceNumber</td>			
+			<td>$Record.DisplayBillingPeriod</td>		
+      	<td>$Record.BillingCategory</td>		
+      
+	#after
+			</tr>
+	#afterall
+		</table>
+   <p>Upon re-instatement notification of the suspended member,  invoices which have not already been settled on a bi-lateral basis may be resubmitted for settlement.   
+Members can resubmit invoices by going to the Manage Suspended Invoices section of the IS-Web</p>
+			
+	#nodata
+				 Sorry No Record Found
+	#end
+	</body>
+</html>
+ 

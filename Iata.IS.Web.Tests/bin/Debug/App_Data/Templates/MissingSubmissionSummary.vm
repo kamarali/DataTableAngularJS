@@ -1,0 +1,45 @@
+﻿<html>
+	<body>
+  	#foreach($Record in $memberRecord)
+	#beforeall
+	
+		<table border ="1" width="100%">
+    <tr>
+    <th></th>
+      <th colspan="4">ACH Clearance</th>
+		  <th colspan="4">ACH-ICH Interclearance</th>
+     </tr>
+			<tr>
+        <th>Member</th>
+        <th>P</th>
+        <th>F</th>
+        <th>M</th>
+        <th>U</th>
+        <th>P</th>
+        <th>F</th>
+        <th>M</th>
+        <th>U</th>
+      </tr>
+	#before
+			<tr>
+	#odd
+			<Style='color:gray'>
+	#even
+			<Style='color:blue'>
+	#each
+  #foreach($Rec in $Record)
+  #each
+      <td>$Rec</td>
+      	#end
+     
+	#after
+			</tr>
+	#afterall
+		</table>
+			
+	#nodata
+				 Sorry No Record Found
+	#end
+	</body>
+</html>
+ 

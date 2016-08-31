@@ -1,0 +1,21 @@
+﻿<html>
+	<body>
+
+	Dear $FirstName $LastName, <br/>
+  <br/>
+  Your IS user account has been created. <br/>
+  Please use the hyperlink below to define your password and activate your account. This hyperlink is valid for 48 hours. <br/>
+  <br/>$LogonURL <br/><br/>
+
+  In case you are not able to activate your account by this time, please use the “Forgot Password?” option in the login page by 
+  providing Username : $EmailAddress
+  <br/>
+  <br/>
+  Regards, <br/>
+
+  IATA SIS Operations Team <br/>
+  $SisOpsEmailId
+  <br/>
+ 
+</body>
+</html>

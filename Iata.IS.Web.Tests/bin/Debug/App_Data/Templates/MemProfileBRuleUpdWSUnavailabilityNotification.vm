@@ -1,0 +1,5 @@
+﻿<html>
+	<body>
+		<p>ICH web-service for synchronization of $ProfileUpdateType data could not be invoked. Hence ICH system could not be updated with latest changes to $ProfileUpdateType. Please see the attached file for the updates that could not be synchronized.</p>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+<html>
+	<body>
+		<p>Please note there was a failure in generating and placing recharge data xml file on FTP.</p>
+		<p><b>Error</b>:</p>
+		<p>$Error</p>
+	</body>
+</html>

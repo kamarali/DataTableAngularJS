@@ -1,0 +1,10 @@
+﻿Dear SIS Member,<br/>
+
+<P>&nbsp;&nbsp;The data related to Invoice Number:$InvoiceNumber requested by you is available for download.</P>
+<P>&nbsp;&nbsp;Follow the below link to download the file $FilePath</P>
+<br/>
+Regards,
+<BR/>
+IATA SIS Operations Team
+<BR/>
+$SISOpsEmailId

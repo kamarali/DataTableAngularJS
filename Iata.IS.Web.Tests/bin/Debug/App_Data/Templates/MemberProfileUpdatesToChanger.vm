@@ -1,0 +1,62 @@
+﻿<html>
+	<body>
+	#foreach($Record in $FutureUpdates)
+	#beforeall
+		<p>The following changes have been made in the profile of the IS member $MemberName</p>
+		<table border ="1" width="100%">
+			<tr>
+				<th>Group</th>				
+				<th>Element</th>
+				<th>Additional Info</th>
+				<th>Action</th>
+				<th>Old Value</th>			 
+				<th>New Value</th>
+				<th>Effective Date</th>
+				<th>Effective Period</th>
+			</tr>
+	#before
+			<tr>
+	#odd
+			<Style='color:gray'>
+	#even
+			<Style='color:blue'>
+	#each
+			<td>$Record.DisplayGroup</td>			
+			<td>$Record.ElementName</td>
+			#if($Record.RelationIdDisplayName)
+			<td>$Record.RelationIdDisplayName</td>	 
+			#else
+			<td></td>
+			#end 
+			<td>$Record.ActionType</td>
+			#if($Record.OldValueDisplayName)
+			<td>$Record.OldValueDisplayName</td>	  
+			#else
+			<td></td>
+			#end	 
+			#if($Record.NewValueDisplayName)
+			<td>$Record.NewValueDisplayName</td>	  
+			#else
+			<td></td>
+			#end     
+			#if($Record.ChangeEffectiveOn)
+			<td>$Record.DisplayChangeEffectiveDate</td>	  
+			#else
+			<td></td>
+			#end
+			#if($Record.ChangeEffectivePeriod)
+			<td>$Record.DisplayChangeEffectivePeriod</td>	  
+			#else
+			<td></td>
+			#end
+	#after
+			</tr>
+	#afterall
+		</table>
+	
+		<p>Kindly take a note of the same.</p>
+	#nodata
+				 Sorry No Record Found
+	#end
+	</body>
+</html>

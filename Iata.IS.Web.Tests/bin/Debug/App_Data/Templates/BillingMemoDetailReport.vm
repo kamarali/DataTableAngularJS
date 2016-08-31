@@ -1,0 +1,695 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Billing Memo</title>
+  <style type="text/css">
+    body {
+      font: normal 8pt Arial, Helvetica, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0px auto 0px auto;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      padding: 5px 0px;
+      margin: 0;
+    }
+    table.b {
+      border: 1px solid #0075bd;
+    }
+    thead {
+      background-color: #d7e9f8;
+    }
+    td {
+      padding: 2px 2px;
+    }
+    table.b td {
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+    }
+    #content {
+      width: 90%;
+      text-align: left;
+      padding: 10px;
+    }
+    .h1 {
+      font-size: 18px;
+    }
+    .h1, .h4 {
+      font-weight: bold;
+      padding: 5px 0px 0px 0px;
+    }
+    .fwf {
+      font: normal 8pt 'Courier New' , Courier, monospace;
+    }
+    .ac {
+      text-transform: uppercase;
+    }
+    .hw {
+      width: 50%;
+    }
+    .w65
+    {
+      width: 65%;
+    }
+    .s {
+      font-weight: bold;
+    }
+    .ca {
+      text-align: center;
+    }
+    .num {
+      text-align: right;
+    }
+    .hl {
+      background-color: #dddddd;
+    }
+    ol.il li {
+      display: list-item;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <div class="h1" style="text-align: center;">
+      Billing Memo</div>
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="width: 50px;">
+          From:
+        </td>
+        <td class="s">
+          $Message.From
+        </td>
+      </tr>
+      <tr>
+        <td>
+          To:
+        </td>
+        <td class="s">
+          $Message.To
+        </td>
+      </tr>
+    </table>
+    <div class="h4">
+      Our Reference:</div>
+    <div id="ourRef" style="width: 650px;">
+      <div class="hw" style="float: left;">
+        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+          <tr>
+            <td class="hw">
+              Billing Memo No:
+            </td>
+            <td class="hw s">
+              $Message.BillingMemoNumber
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Invoice No:
+            </td>
+            <td>
+              $Message.InvoiceNumber
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Billing Month:
+            </td>
+            <td>
+              $Message.DisplayBillingMonthYear
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Billing Period:
+            </td>
+            <td>
+              $Message.BillingPeriod
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Our Ref (Internal Use):
+            </td>
+            <td>
+             #if($Message.OurRef)$Message.OurRef #end
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hw" style="float: left;">
+        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+          <tr>
+            <td class="w65 hw">
+              Source Code:
+            </td>
+            <td class="hw num">
+              $Message.SourceCodeId
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Correspondence No:
+            </td>
+            <td class="num">
+              $Message.CorrespondenceRefNumber
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Attachment Indicator Original:
+            </td>
+            <td class="num">
+             #if($Message.AttachmentIndicatorOriginal) 
+                #if($Message.AttachmentIndicatorOriginal == 0)
+				    No
+                    #elseif($Message.AttachmentIndicatorOriginal == 1) 
+					Yes
+                    #elseif($Message.AttachmentIndicatorOriginal == 2) 
+                    Pending
+                    #end
+			  #else 
+			  No 
+			  #end
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Exchange Rate:
+            </td>
+            <td class="num">
+              $Message.ExchangeRate.ToString("N5")
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Currency of BM:
+            </td>
+            <td class="num s">
+              #if($Message.CurrencyOfBm) $Message.CurrencyOfBm #end
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="h4" style="clear: both;">
+      Your Reference:</div>
+    <div id="yourRef" style="width: 650px;">
+      <div class="hw" style="float: left;">
+        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+          <tr>
+            <td class="hw">
+              Your Invoice No:
+            </td>
+            <td class="hw">
+              #if($Message.YourInvoiceNumber) $Message.YourInvoiceNumber #end
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Your Billing Month:
+            </td>
+            <td>
+              $Message.DisplayYourInvoiceBillingMonthYearReport
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Your Billing Period:
+            </td>
+            <td>
+              #if($Message.YourInvoiceBillingPeriod > 0) $Message.YourInvoiceBillingPeriod #end
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hw" style="float: left;">
+        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+          <tr>
+            <td class="w65">
+              FIM Number:
+            </td>
+            <td class="num">
+              #if($Message.FimNumber && $Message.FimNumber != 0) $Message.FimNumber #end
+            </td>
+          </tr>
+          <tr>
+            <td class="w65">
+              FIM Coupon No:
+            </td>
+            <td class="num">
+              #if($Message.FimCouponNumber && $Message.FimCouponNumber != 0) $Message.FimCouponNumber #end
+            </td>
+          </tr>
+		  <tr>
+            <td class="w65">
+              Airline Own Use:
+            </td>
+            <td class="num">
+             #if($Message.AirlineOwnUse) $Message.AirlineOwnUse #end
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="h4" style="clear: both;">
+      Billing Memo Amounts</div>
+    <div id="rejAmounts">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              Gross Amt
+            </td>
+            <td>
+              ISC Amt
+            </td>
+            <td>
+              Other Comm. Amt
+            </td>
+            <td>
+              UATP Amt
+            </td>
+            <td>
+              Handling Fee Amt
+            </td>
+            <td>
+              Tax Amt
+            </td>
+            <td>
+              VAT Amt
+            </td>
+            <td>
+              Net Billed Amt
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">
+              $Message.TotalGrossAmountBilled.ToString("N2")
+            </td>
+            <td class="num">
+              $Message.TotalIscAmountBilled.ToString("N2")
+            </td>
+            <td class="num">
+              $Message.TotalOtherCommissionAmount.ToString("N2")
+            </td>
+            <td class="num">
+              $Message.TotalUatpAmountBilled.ToString("N2")
+            </td>
+            <td class="num">
+              $Message.TotalHandlingFeeBilled.ToString("N2")
+            </td>
+            <td class="num">
+              $Message.TaxAmountBilled.ToString("N2")
+            </td>
+            <td class="num">
+              $Message.TotalVatAmountBilled.ToString("N2")
+            </td>
+            <td class="num hl">
+              <b>$Message.NetAmountBilled.ToString("N2")</b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    #foreach($messageVatBreakdown in $Message.VatBreakdown)
+    #beforeall
+    <div class="h4">
+      Billing Memo VAT Breakdown</div>
+    <div id="rejMemoVat">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              VAT On
+            </td>
+            <td>
+              VAT Base Amt
+            </td>
+            <td>
+              VAT %
+            </td>
+            <td>
+              VAT Amt
+            </td>
+            <td>
+              VAT Label
+            </td>
+            <td>
+              VAT Text
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+           #each
+          <tr>
+            <td>
+              $messageVatBreakdown.Identifier
+            </td>
+            <td class="num">
+              $messageVatBreakdown.VatBaseAmount.ToString("N2")
+            </td>
+            <td class="num">
+              $messageVatBreakdown.VatPercentage.ToString("N2")
+            </td>
+            <td class="num">
+              $messageVatBreakdown.VatCalculatedAmount.ToString("N2")
+            </td>
+            <td>
+              $messageVatBreakdown.VatLabel
+            </td>
+            <td>
+              $messageVatBreakdown.VatText
+            </td>
+          </tr>
+         #afterall
+          <tr>
+            <td class="num s" colspan="3">
+              Total VAT Amt
+            </td>
+            <td class="num">
+              <b>$Message.VatAmount</b>
+            </td>
+            <td class="num" colspan="2">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    #end
+     <div style="padding-top: 5px;">
+      <span class="h4">Reason for Billing: </span><span>#if($Message.ReasonCodeDescription) $Message.ReasonCodeDescription #end</span>
+      </div>
+    <div style="padding-top: 5px;">
+      <span class="h4">Additional Remarks: </span><span>#if($Message.ReasonRemarks) $Message.ReasonRemarks #end</span>
+      </div>
+    #foreach($messageCouponBreakdown in $Message.CouponBreakdownRecord)
+     #each
+    <div class="h4" style="clear: both;">
+      Linked Coupon Details</div>
+    <div id="rejCoupons">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              Ticket No
+            </td>
+            <td>
+              Sector
+            </td>
+            <td>
+              Original PMI
+            </td>
+            <td>
+              Validated PMI
+            </td>
+            <td>
+              Agreement Indicator Supplied
+            </td>
+            <td>
+              Agreement Indicator Validated
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ca">
+              #if($messageCouponBreakdown.TicketOrFimIssuingAirline) $messageCouponBreakdown.TicketOrFimIssuingAirline #end
+              #if($messageCouponBreakdown.TicketDocOrFimNumber) $messageCouponBreakdown.TicketDocOrFimNumber #end
+              #if($messageCouponBreakdown.TicketOrFimCouponNumber) $messageCouponBreakdown.TicketOrFimCouponNumber #end&nbsp;
+            </td>
+            <td class="ca">
+              #if($Record.FromToAirport) $Record.FromToAirport #end
+            </td>
+            <td class="ca">
+              #if($messageCouponBreakdown.OriginalPmi) $messageCouponBreakdown.OriginalPmi #end
+            </td>
+            <td class="ca">
+              #if($messageCouponBreakdown.ValidatedPmi)$messageCouponBreakdown.ValidatedPmi #end
+            </td>
+            <td class="ca">
+              #if($messageCouponBreakdown.AgreementIndicatorSupplied)$messageCouponBreakdown.AgreementIndicatorSupplied #end
+            </td>
+            <td class="ca">
+              #if($messageCouponBreakdown.AgreementIndicatorValidated)$messageCouponBreakdown.AgreementIndicatorValidated #end
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+	<div class="h4" style="clear: both;">
+     Coupon Additional Information</div>
+    <div id="rejCoupons">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              Refrence Field 1
+            </td>
+            <td>
+               Refrence Field 2
+            </td>
+            <td>
+               Refrence Field 3
+            </td>
+            <td>
+               Refrence Field 4
+            </td>
+            <td>
+               Refrence Field 5
+            </td>
+            <td>
+              Airline Own Use
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ca">
+              #if($messageCouponBreakdown.ReferenceField1) $messageCouponBreakdown.ReferenceField1 #end
+            </td>
+            <td class="ca">
+              #if($messageCouponBreakdown.ReferenceField2) $messageCouponBreakdown.ReferenceField2 #end
+            </td>
+            <td class="ca">
+              #if($messageCouponBreakdown.ReferenceField3) $messageCouponBreakdown.ReferenceField3 #end
+            </td>
+            <td class="ca">
+              #if($messageCouponBreakdown.ReferenceField4)$messageCouponBreakdown.ReferenceField4 #end
+            </td>
+            <td class="ca">
+              #if($messageCouponBreakdown.ReferenceField5)$messageCouponBreakdown.ReferenceField5 #end
+            </td>
+            <td class="ca">
+              #if($messageCouponBreakdown.AirlineOwnUse)$messageCouponBreakdown.AirlineOwnUse #end
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="h4">
+      Coupon Amounts</div>
+    <div id="couponAmounts">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              Gross Amt
+            </td>
+            <td>
+              ISC %
+            </td>
+            <td>
+              ISC Amt
+            </td>
+            <td>
+              Other Comm. %
+            </td>
+            <td>
+              Other Comm. Amt
+            </td>
+            <td>
+              UATP %
+            </td>
+            <td>
+              UATP Amt
+            </td>
+            <td>
+              Handling Fee Amt
+            </td>
+            <td>
+              Tax Amt
+            </td>
+            <td>
+              VAT Amt
+            </td>
+            <td>
+              Net Billed Amt
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">
+              $messageCouponBreakdown.GrossAmountBilled.ToString("N2")
+            </td>
+            <td>
+              $messageCouponBreakdown.IscPercent.ToString("N2")
+            </td>
+            <td class="num">
+              $messageCouponBreakdown.IscAmountBilled.ToString("N2")
+            </td>
+            <td>
+              $messageCouponBreakdown.OtherCommissionPercent.ToString("N2")
+            </td>
+            <td class="num">
+              $messageCouponBreakdown.OtherCommissionBilled.ToString("N2")
+            </td>
+            <td>
+              $messageCouponBreakdown.UatpPercent.ToString("N2")
+            </td>
+            <td class="num">
+              $messageCouponBreakdown.UatpAmountBilled.ToString("N2")
+            </td>
+            <td class="num">
+              $messageCouponBreakdown.HandlingFeeAmount.ToString("N2")
+            </td>
+            <td class="num">
+              $messageCouponBreakdown.TaxAmount.ToString("N2")
+            </td>
+            <td class="num">
+              $messageCouponBreakdown.VatAmount.ToString("N2")
+            </td>
+            <td class="num hl">
+              <b>$messageCouponBreakdown.NetAmountBilled.ToString("N2")</b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+	
+    <div>
+      #foreach($messageCouponTax in $messageCouponBreakdown.TaxBreakdown)
+       #beforeall
+        <div style="float: left; padding-right: 10px;">
+        <div class="h4">
+          Coupon Tax Breakdown</div>
+        <div id="couponTax">
+          <table border="0" cellpadding="0" cellspacing="0" class="b">
+            <thead style="font-weight: bold;">
+              <tr>
+                <td>
+                  Tax Code
+                </td>
+                <td>
+                  Amt
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              #each
+              <tr>
+                <td>
+                  $messageCouponTax.TaxCode
+                </td>
+                <td class="num">
+                  $messageCouponTax.Amount.ToString("N2")
+                </td>
+              </tr>
+             #afterall
+              <tr>
+                <td class="num s">
+                  Total
+                </td>
+                <td class="num">
+                  <b>$messageCouponBreakdown.TotalTaxAmountReport.ToString("N2")</b>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      #end
+       #foreach($messageCouponVat in $messageCouponBreakdown.VatBreakdown)
+        #beforeall
+       <div style="float: left;">
+        <div class="h4">
+          Coupon VAT Breakdown</div>
+        <div id="couponVat">
+          <table border="0" cellpadding="0" cellspacing="0" class="b">
+            <thead style="font-weight: bold;">
+              <tr>
+                <td>
+                  VAT On
+                </td>
+                <td>
+                  VAT Base Amt
+                </td>
+                <td>
+                  VAT %
+                </td>
+                <td>
+                  VAT Amt
+                </td>
+                <td>
+                  VAT Label
+                </td>
+                <td>
+                  VAT Text
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              #each
+              <tr>
+                <td>
+                  $messageCouponVat.Identifier
+                </td>
+                <td class="num">
+                  $messageCouponVat.VatBaseAmount.ToString("N2")
+                </td>
+                <td class="num">
+                  $messageCouponVat.VatPercentage.ToString("N2")
+                </td>
+                <td class="num">
+                  $messageCouponVat.VatCalculatedAmount.ToString("N2")
+                </td>
+                <td>
+                  $messageCouponVat.VatLabel
+                </td>
+                <td>
+                  $messageCouponVat.VatText
+                </td>
+              </tr>
+              #afterall
+              <tr>
+                <td class="num s" colspan="3">
+                  Total VAT Amount
+                </td>
+                <td class="num">
+                  <b>$messageCouponBreakdown.TotalVatAmountReport.ToString("N2")</b>
+                </td>
+                <td colspan="2">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      #end
+    </div>
+    #if($messageCouponBreakdown.ProrateSlipDetails)
+      <div class="h4" style="clear: both;">Prorate Slip</div>
+      #if($messageCouponBreakdown.ProrateSlipDetails.Length > 0)
+      <div class="fwf"><pre>$Utility.FormatProrateSlipDetails($messageCouponBreakdown.ProrateSlipDetails)</pre></div>
+      #end
+    #end
+    #end    
+    <div style="padding-top: 10px; clear:both;">Generated On: $Message.ReportGenerationDate</div>
+  </div>
+</body>
+</html>

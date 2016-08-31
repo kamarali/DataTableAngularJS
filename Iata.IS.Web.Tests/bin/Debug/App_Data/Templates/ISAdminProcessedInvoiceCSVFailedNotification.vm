@@ -1,0 +1,12 @@
+Dear Admin,
+
+   The application experienced unexpected error, while generating processed invoice CSV for the member $MemberCode for the period '$Period'.
+		<br/><br/>
+		 #if($InvoiceNo && $InvoiceNo.Length > 0)
+		 Invoice Number: $InvoiceNo
+		 #end
+		 <br/><br/>
+   Please take the appropriate action to resolve the issue.
+
+Regards,
+SIS - System

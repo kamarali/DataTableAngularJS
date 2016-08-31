@@ -1,0 +1,13 @@
+﻿<html>
+	<body>
+	     <p> 
+		  Dear ICH/SIS Ops Member,<BR/>
+		 <BR/>
+		 <BR/>
+		  Attempt to send settlement data to ICH at $FailureTime has failed.Reason: $FailureReason
+         <BR/>
+		 </p>
+<p>This is a system generated message - please do not reply.</p>
+		
+	</body>
+</html>
