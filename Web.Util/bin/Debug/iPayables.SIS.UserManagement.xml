@@ -1,0 +1,2656 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+iPayables.SIS.UserManagement
+</name>
+</assembly>
+<members>
+<member name="M:iPayables.UserManagement.Repository`1.#ctor">
+	<summary>
+ Default constructor. Resolves the unit of work using the default container.
+ </summary>
+</member><member name="M:iPayables.UserManagement.Repository`1.#ctor(iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+ Constructor. Expects the unit of work to be injected.
+ </summary>
+	<param name="unitOfWork">Instance that hosts the shared context using which the unit of work will be saved.</param>
+</member><member name="T:iPayables.UserManagement.Repository`1">
+	<summary>
+ Generic repository implementation. Depends on a unit of work instance.
+ </summary>
+	<typeparam name="E">Any sub-type of <see cref="T:System.Data.Objects.DataClasses.EntityObject"/> can be a valid entity for the generic repository.</typeparam>
+</member><member name="P:iPayables.UserManagement.UnitOfWork.Context">
+	<summary>
+ The Context allows for any operations to be directly on the <see cref="T:System.Data.Objects.ObjectContext"/>.
+ This is a read-only property.
+ </summary>
+</member><member name="M:iPayables.UserManagement.UnitOfWork.#ctor(iPayables.UserManagement.IObjectContext)">
+	<summary>
+ Constructor. Expects the <see cref="T:System.Data.Objects.ObjectContext"/> to be injected.
+ </summary>
+	<param name="context"></param>
+</member><member name="M:iPayables.UserManagement.UnitOfWork.Commit">
+	<summary>
+ Commits changes for all the repositories sharing the same <see cref="T:System.Data.Objects.ObjectContext"/>.
+ </summary>
+</member><member name="M:iPayables.UserManagement.UnitOfWork.CommitDefault">
+	<summary>
+ Retrieves the context from the container and then saves the changes for that context.
+ </summary>
+</member><member name="M:iPayables.UserManagement.UnitOfWork.CreateNew">
+	<summary>
+ Creates a new context and wraps the context in a <see cref="T:iPayables.UserManagement.IUnitOfWork"/>. Returns this <see cref="T:iPayables.UserManagement.IUnitOfWork"/> instance.
+ </summary>
+	<returns></returns>
+</member><member name="M:iPayables.UserManagement.UnitOfWork.Dispose">
+	<summary>
+ Disposes the enclosed context.
+ </summary>
+</member><member name="T:iPayables.UserManagement.UnitOfWork">
+	<summary>
+ Enables saving the changes based on the same <see cref="T:System.Data.Objects.ObjectContext"/>. Implements <see cref="T:System.IDisposable"/>.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.#ctor">
+	<summary>
+ Initializes a new UserManagementContainer object using the connection string found in the 'UserManagementContainer' section of the application configuration file.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.#ctor(System.String)">
+	<summary>
+ Initialize a new UserManagementContainer object.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.#ctor(System.Data.EntityClient.EntityConnection)">
+	<summary>
+ Initialize a new UserManagementContainer object.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.IS_FILE_LOG">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.IS_PREVIOUS_USED_PASSWORDS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.IS_USER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.IS_USER_CATEGORIES">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MEMBER_DETAILS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MEM_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MEM_CONTACT_TYPE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MEM_CONTACT_TYPE_GROUP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MEM_CONTACT_TYPE_MATRIX">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MEM_CONTACT_TYPE_SUB_GROUP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MEM_LOCATION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MST_COUNTRY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MST_CURRENCY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MST_LANGUAGE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MST_OUTPUT_FILE_DELIVERY_METH">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.MST_SUB_DIVISION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagementContainer.PROXY_LOGIN">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToIS_FILE_LOG(iPayables.IS_FILE_LOG)">
+	<summary>
+ Deprecated Method for adding a new object to the IS_FILE_LOG EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToIS_PREVIOUS_USED_PASSWORDS(iPayables.IS_PREVIOUS_USED_PASSWORDS)">
+	<summary>
+ Deprecated Method for adding a new object to the IS_PREVIOUS_USED_PASSWORDS EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToIS_USER(iPayables.IS_USER)">
+	<summary>
+ Deprecated Method for adding a new object to the IS_USER EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToIS_USER_CATEGORIES(iPayables.IS_USER_CATEGORIES)">
+	<summary>
+ Deprecated Method for adding a new object to the IS_USER_CATEGORIES EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMEMBER_DETAILS(iPayables.MEMBER_DETAILS)">
+	<summary>
+ Deprecated Method for adding a new object to the MEMBER_DETAILS EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMEM_CONTACT(iPayables.MEM_CONTACT)">
+	<summary>
+ Deprecated Method for adding a new object to the MEM_CONTACT EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMEM_CONTACT_TYPE(iPayables.MEM_CONTACT_TYPE)">
+	<summary>
+ Deprecated Method for adding a new object to the MEM_CONTACT_TYPE EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMEM_CONTACT_TYPE_GROUP(iPayables.MEM_CONTACT_TYPE_GROUP)">
+	<summary>
+ Deprecated Method for adding a new object to the MEM_CONTACT_TYPE_GROUP EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMEM_CONTACT_TYPE_MATRIX(iPayables.MEM_CONTACT_TYPE_MATRIX)">
+	<summary>
+ Deprecated Method for adding a new object to the MEM_CONTACT_TYPE_MATRIX EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMEM_CONTACT_TYPE_SUB_GROUP(iPayables.MEM_CONTACT_TYPE_SUB_GROUP)">
+	<summary>
+ Deprecated Method for adding a new object to the MEM_CONTACT_TYPE_SUB_GROUP EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMEM_LOCATION(iPayables.MEM_LOCATION)">
+	<summary>
+ Deprecated Method for adding a new object to the MEM_LOCATION EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMST_COUNTRY(iPayables.MST_COUNTRY)">
+	<summary>
+ Deprecated Method for adding a new object to the MST_COUNTRY EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMST_CURRENCY(iPayables.MST_CURRENCY)">
+	<summary>
+ Deprecated Method for adding a new object to the MST_CURRENCY EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMST_LANGUAGE(iPayables.MST_LANGUAGE)">
+	<summary>
+ Deprecated Method for adding a new object to the MST_LANGUAGE EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMST_OUTPUT_FILE_DELIVERY_METH(iPayables.MST_OUTPUT_FILE_DELIVERY_METH)">
+	<summary>
+ Deprecated Method for adding a new object to the MST_OUTPUT_FILE_DELIVERY_METH EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToMST_SUB_DIVISION(iPayables.MST_SUB_DIVISION)">
+	<summary>
+ Deprecated Method for adding a new object to the MST_SUB_DIVISION EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:iPayables.UserManagementContainer.AddToPROXY_LOGIN(iPayables.PROXY_LOGIN)">
+	<summary>
+ Deprecated Method for adding a new object to the PROXY_LOGIN EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="T:iPayables.UserManagementContainer">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.IS_FILE_LOG.CreateIS_FILE_LOG(System.Guid,System.String,System.DateTime,System.DateTime,System.String)">
+	<summary>
+ Create a new IS_FILE_LOG object.
+ </summary>
+	<param name="iS_FILE_LOG_ID">Initial value of the IS_FILE_LOG_ID property.</param>
+	<param name="fILE_NAME">Initial value of the FILE_NAME property.</param>
+	<param name="fILE_DATETIME">Initial value of the FILE_DATETIME property.</param>
+	<param name="fILE_RECEIVED_SENT_ON">Initial value of the FILE_RECEIVED_SENT_ON property.</param>
+	<param name="fILE_SENDER_RECEIVER_IP">Initial value of the FILE_SENDER_RECEIVER_IP property.</param>
+</member><member name="P:iPayables.IS_FILE_LOG.IS_FILE_LOG_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.FILE_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.INCOMING_OUTGOING">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.FILE_SENDER_RECEIVER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.FILE_DATETIME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.BILLING_PERIOD">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.BILLING_MONTH">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.FILE_RECEIVED_SENT_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.FILE_SENDER_RECEIVER_IP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.FILE_LOCATION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.FILE_STATUS_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.FILE_FORMAT_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.BILLING_CATEGORY_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.FILE_VERSION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.OUTPUT_FILE_DELIVERY_METH_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.BILLING_YEAR">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.MEMBER_DETAILS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.MEMBER_DETAILSReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.MST_OUTPUT_FILE_DELIVERY_METH">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_FILE_LOG.MST_OUTPUT_FILE_DELIVERY_METHReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.IS_FILE_LOG">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.IS_PREVIOUS_USED_PASSWORDS.CreateIS_PREVIOUS_USED_PASSWORDS(System.Decimal,System.String,System.String,System.Int32,System.DateTime,System.Int32,System.DateTime)">
+	<summary>
+ Create a new IS_PREVIOUS_USED_PASSWORDS object.
+ </summary>
+	<param name="pREVIOUS_PASSWORD_ID">Initial value of the PREVIOUS_PASSWORD_ID property.</param>
+	<param name="pREVIOUS_PASSWORD">Initial value of the PREVIOUS_PASSWORD property.</param>
+	<param name="pASSWORD_SALT">Initial value of the PASSWORD_SALT property.</param>
+	<param name="iS_USER_ID">Initial value of the IS_USER_ID property.</param>
+	<param name="pASSWORD_EXPIRED_ON">Initial value of the PASSWORD_EXPIRED_ON property.</param>
+	<param name="lAST_UPDATED_BY">Initial value of the LAST_UPDATED_BY property.</param>
+	<param name="lAST_UPDATED_ON">Initial value of the LAST_UPDATED_ON property.</param>
+</member><member name="P:iPayables.IS_PREVIOUS_USED_PASSWORDS.PREVIOUS_PASSWORD_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_PREVIOUS_USED_PASSWORDS.PREVIOUS_PASSWORD">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_PREVIOUS_USED_PASSWORDS.PASSWORD_SALT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_PREVIOUS_USED_PASSWORDS.IS_USER_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_PREVIOUS_USED_PASSWORDS.PASSWORD_EXPIRED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_PREVIOUS_USED_PASSWORDS.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_PREVIOUS_USED_PASSWORDS.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_PREVIOUS_USED_PASSWORDS.IS_USER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_PREVIOUS_USED_PASSWORDS.IS_USERReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.IS_PREVIOUS_USED_PASSWORDS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.IS_USER.CreateIS_USER(System.Int32,System.String,System.Decimal,System.String,System.String,System.DateTime,System.String,System.String,System.Decimal,System.Boolean,System.Int32,System.DateTime,System.Boolean)">
+	<summary>
+ Create a new IS_USER object.
+ </summary>
+	<param name="iS_USER_ID">Initial value of the IS_USER_ID property.</param>
+	<param name="eMAIL_ID">Initial value of the EMAIL_ID property.</param>
+	<param name="uSER_CATEGORY_ID">Initial value of the USER_CATEGORY_ID property.</param>
+	<param name="iS_PASSWORD">Initial value of the IS_PASSWORD property.</param>
+	<param name="pASSWORD_SALT">Initial value of the PASSWORD_SALT property.</param>
+	<param name="pASSWORD_EXPIRY">Initial value of the PASSWORD_EXPIRY property.</param>
+	<param name="fIRST_NAME">Initial value of the FIRST_NAME property.</param>
+	<param name="lAST_NAME">Initial value of the LAST_NAME property.</param>
+	<param name="lOGINATTEMPTS">Initial value of the LOGINATTEMPTS property.</param>
+	<param name="uSER_TYPE">Initial value of the USER_TYPE property.</param>
+	<param name="lAST_UPDATED_BY">Initial value of the LAST_UPDATED_BY property.</param>
+	<param name="lAST_UPDATED_ON">Initial value of the LAST_UPDATED_ON property.</param>
+	<param name="iS_ARCHIVED">Initial value of the IS_ARCHIVED property.</param>
+</member><member name="P:iPayables.IS_USER.IS_USER_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.EMAIL_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.USER_CATEGORY_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.IS_PASSWORD">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.PASSWORD_SALT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.PASSWORD_EXPIRY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.FIRST_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.LAST_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.STAFF_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.DIVISION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.DEPARTMENT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.SALUTATION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.POSITION_TILE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.LOCATION_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MEMBER_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.COUNTRY_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.LANGUAGE_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.ADDRESSLINE1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.ADDRESSLINE2">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.ADDRESSLINE3">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.CITY_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.SUB_DIVISION_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.POSTAL_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.PHONE1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.PHONE2">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MOBILE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.FAX">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.SITA_ADDRESS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.LOGINATTEMPTS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.USER_TYPE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.SESSIONID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.LASTLOGINDATETIME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.IS_LOCKED">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.IS_ACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.FEDERATION_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.IS_ARCHIVED">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.IS_PREVIOUS_USED_PASSWORDS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.PROXY_LOGIN">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.IS_USER_CATEGORIES">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.IS_USER_CATEGORIESReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MEMBER_DETAILS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MEMBER_DETAILSReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MEM_LOCATION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MEM_LOCATIONReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MST_COUNTRY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MST_COUNTRYReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MST_SUB_DIVISION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER.MST_SUB_DIVISIONReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.IS_USER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.IS_USER_CATEGORIES.CreateIS_USER_CATEGORIES(System.Decimal,System.String,System.String,System.Int32,System.DateTime)">
+	<summary>
+ Create a new IS_USER_CATEGORIES object.
+ </summary>
+	<param name="uSER_CATEGORY_ID">Initial value of the USER_CATEGORY_ID property.</param>
+	<param name="cATEGORY_NAME">Initial value of the CATEGORY_NAME property.</param>
+	<param name="dESCRIPTION">Initial value of the DESCRIPTION property.</param>
+	<param name="lAST_UPDATED_BY">Initial value of the LAST_UPDATED_BY property.</param>
+	<param name="lASTUPDATEDON">Initial value of the LASTUPDATEDON property.</param>
+</member><member name="P:iPayables.IS_USER_CATEGORIES.USER_CATEGORY_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER_CATEGORIES.CATEGORY_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER_CATEGORIES.DESCRIPTION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER_CATEGORIES.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER_CATEGORIES.LASTUPDATEDON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.IS_USER_CATEGORIES.IS_USER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.IS_USER_CATEGORIES">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MEM_CONTACT.CreateMEM_CONTACT(System.Int32,System.Int32,System.String)">
+	<summary>
+ Create a new MEM_CONTACT object.
+ </summary>
+	<param name="cONTACT_ID">Initial value of the CONTACT_ID property.</param>
+	<param name="mEMBER_ID">Initial value of the MEMBER_ID property.</param>
+	<param name="eMAIL_ADDRESS">Initial value of the EMAIL_ADDRESS property.</param>
+</member><member name="P:iPayables.MEM_CONTACT.CONTACT_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.MEMBER_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.EMAIL_ADDRESS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.IS_USER_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.STAFF_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.IS_ACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.SALUTATION_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.FIRST_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.LAST_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.POSITION_OR_TITLE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.DIVISION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.DEPARTMENT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.LOCATION_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.COUNTRY_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.ADDRESS_LINE1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.ADDRESS_LINE2">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.ADDRESS_LINE3">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.CITY_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.SUB_DIVISION_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.SUB_DIVISION_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.POSTAL_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.PHONE_NUMBER1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.PHONE_NUMBER2">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.MOBILE_NUMBER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.FAX_NUMBER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.SITA_ADRESS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.START_DATE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.END_DATE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.MEMBER_DETAILS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.MEMBER_DETAILSReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.MEM_CONTACT_TYPE_MATRIX">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.MST_COUNTRY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT.MST_COUNTRYReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MEM_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MEM_CONTACT_TYPE.CreateMEM_CONTACT_TYPE(System.Int32)">
+	<summary>
+ Create a new MEM_CONTACT_TYPE object.
+ </summary>
+	<param name="cONTACT_TYPE_ID">Initial value of the CONTACT_TYPE_ID property.</param>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.CONTACT_TYPE_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.CONTACT_TYPE_TEXT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.REQUIRED">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.ORDER_NO">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.DEPENDENT_FIELD">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.TYPE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.IS_ACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.MEMBER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.E_BILLING">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.PAX">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.CGO">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.MISC">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.UATP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.ICH">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.ACH">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.TECHNICAL">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.RESERVED_GROUP1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.RESERVED_GROUP2">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.RESERVED_GROUP3">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.GROUP_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.SUB_GROUP_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.ACH_OPS_MEM_RPT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.ACH_OPS_CONTACT_RPT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.ICH_OPS_MEM_RPT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.ICH_OPS_CONTACT_RPT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.IS_ACC_MEM_RPT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.IS_ACC_CONTACT_RPT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.IS_ACC_OWN_MEM_RPT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.IS_ACC_OWN_CONTACT_RPT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.MEM_CONTACT_TYPE_MATRIX">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.MEM_CONTACT_TYPE_GROUP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.MEM_CONTACT_TYPE_GROUPReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.MEM_CONTACT_TYPE_SUB_GROUP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE.MEM_CONTACT_TYPE_SUB_GROUPReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MEM_CONTACT_TYPE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MEM_CONTACT_TYPE_GROUP.CreateMEM_CONTACT_TYPE_GROUP(System.Int32)">
+	<summary>
+ Create a new MEM_CONTACT_TYPE_GROUP object.
+ </summary>
+	<param name="gROUP_ID">Initial value of the GROUP_ID property.</param>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_GROUP.GROUP_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_GROUP.GROUP_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_GROUP.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_GROUP.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_GROUP.IS_ACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_GROUP.MEM_CONTACT_TYPE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_GROUP.MEM_CONTACT_TYPE_SUB_GROUP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MEM_CONTACT_TYPE_GROUP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MEM_CONTACT_TYPE_MATRIX.CreateMEM_CONTACT_TYPE_MATRIX(System.Int32,System.Int32)">
+	<summary>
+ Create a new MEM_CONTACT_TYPE_MATRIX object.
+ </summary>
+	<param name="cONTACT_ID">Initial value of the CONTACT_ID property.</param>
+	<param name="cONTACT_TYPE_ID">Initial value of the CONTACT_TYPE_ID property.</param>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_MATRIX.CONTACT_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_MATRIX.CONTACT_TYPE_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_MATRIX.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_MATRIX.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_MATRIX.ELEMENT_GROUP_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_MATRIX.MEM_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_MATRIX.MEM_CONTACTReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_MATRIX.MEM_CONTACT_TYPE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_MATRIX.MEM_CONTACT_TYPEReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MEM_CONTACT_TYPE_MATRIX">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.CreateMEM_CONTACT_TYPE_SUB_GROUP(System.Int32)">
+	<summary>
+ Create a new MEM_CONTACT_TYPE_SUB_GROUP object.
+ </summary>
+	<param name="sUB_GROUP_ID">Initial value of the SUB_GROUP_ID property.</param>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.SUB_GROUP_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.SUB_GROUP_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.GROUP_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.IS_ACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.MEM_CONTACT_TYPE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.MEM_CONTACT_TYPE_GROUP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_CONTACT_TYPE_SUB_GROUP.MEM_CONTACT_TYPE_GROUPReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MEM_CONTACT_TYPE_SUB_GROUP">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MEM_LOCATION.CreateMEM_LOCATION(System.Int32,System.String,System.Int32,System.String)">
+	<summary>
+ Create a new MEM_LOCATION object.
+ </summary>
+	<param name="lOCATION_ID">Initial value of the LOCATION_ID property.</param>
+	<param name="lOCATION_CODE">Initial value of the LOCATION_CODE property.</param>
+	<param name="mEMBER_ID">Initial value of the MEMBER_ID property.</param>
+	<param name="aDDRESS_LINE1">Initial value of the ADDRESS_LINE1 property.</param>
+</member><member name="P:iPayables.MEM_LOCATION.LOCATION_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.LOCATION_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.MEMBER_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.MEMBER_LEGAL_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.MEMBER_COMMERCIAL_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.IS_ACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.REGISTRATION_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.TAX_VAT_REGISTRATION_NUMBER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.ADD_TAX_VAT_REGISTRATION_NUM">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.COUNTRY_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.ADDRESS_LINE1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.ADDRESS_LINE2">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.ADDRESS_LINE3">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.CITY_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.SUB_DIVISION_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.SUB_DIVISION_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.POSTAL_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.LEGAL_TEXT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.IBAN">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.SWIFT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.BANK_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.BRANCH_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.BANK_ACCOUNT_NUMBER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.BANK_ACCOUNT_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.CURRENCY_CODE_NUM">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.BANK_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.IS_USER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.MEMBER_DETAILS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.MEMBER_DETAILSReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.MST_COUNTRY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.MST_COUNTRYReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.MST_CURRENCY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEM_LOCATION.MST_CURRENCYReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MEM_LOCATION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MEMBER_DETAILS.CreateMEMBER_DETAILS(System.Int32,System.String,System.String)">
+	<summary>
+ Create a new MEMBER_DETAILS object.
+ </summary>
+	<param name="mEMBER_ID">Initial value of the MEMBER_ID property.</param>
+	<param name="mEMBER_CODE_NUMERIC">Initial value of the MEMBER_CODE_NUMERIC property.</param>
+	<param name="mEMBER_CODE_ALPHA">Initial value of the MEMBER_CODE_ALPHA property.</param>
+</member><member name="P:iPayables.MEMBER_DETAILS.MEMBER_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.MEMBER_CODE_NUMERIC">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.MEMBER_CODE_ALPHA">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.LOGO">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.IS_MEMBERSHIP_STATUS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.IS_MIGRATION_STATUS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.IATA_MEMBERSHIP_STATUS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.IS_OPS_COMMENTS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.MEMBER_COMMERCIAL_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.IS_MEMBERSHIP_SUB_STATUS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.MEMBER_LEGAL_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_SAMP_MEM_INFO_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_SAMP_SC_MEM_INFO_CONT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_SAMP_QSMART_INFO_CONT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_OLD_IDEC_SC_INFO_CONT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_FIRST_N_FINAL_INFO_CONT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_FNF_ASG_INFO_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_FNF_AIA_INFO_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_RAWG_MEM_INFO_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_IAWG_MEM_INFO_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_ICH_PANEL_INFO_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_E_INV_WG_INFO_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ENABLE_SIS_SC_INFO_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.ALLOW_CONTACT_DETAILS_DOWNLOAD">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.IS_PARTICIPATE_IN_VALUE_DETERM">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.IS_PARTICIPATE_IN_VALUE_CONFIR">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.IS_FILE_LOG">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.IS_USER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.MEM_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MEMBER_DETAILS.MEM_LOCATION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MEMBER_DETAILS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MST_COUNTRY.CreateMST_COUNTRY(System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.DateTime)">
+	<summary>
+ Create a new MST_COUNTRY object.
+ </summary>
+	<param name="cOUNTRY_CODE">Initial value of the COUNTRY_CODE property.</param>
+	<param name="cOUNTRY_NAME">Initial value of the COUNTRY_NAME property.</param>
+	<param name="dS_SUPPORTED_BY_ATOS">Initial value of the DS_SUPPORTED_BY_ATOS property.</param>
+	<param name="iS_ACTIVE">Initial value of the IS_ACTIVE property.</param>
+	<param name="lAST_UPDATED_BY">Initial value of the LAST_UPDATED_BY property.</param>
+	<param name="lAST_UPDATED_ON">Initial value of the LAST_UPDATED_ON property.</param>
+</member><member name="P:iPayables.MST_COUNTRY.COUNTRY_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.COUNTRY_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.DS_SUPPORTED_BY_ATOS">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.DS_FORMAT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.IS_ACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.IS_USER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.MEM_CONTACT">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.MEM_LOCATION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_COUNTRY.MST_SUB_DIVISION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MST_COUNTRY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MST_CURRENCY.CreateMST_CURRENCY(System.Int32,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.DateTime)">
+	<summary>
+ Create a new MST_CURRENCY object.
+ </summary>
+	<param name="cURRENCY_CODE_NUM">Initial value of the CURRENCY_CODE_NUM property.</param>
+	<param name="cURRENCY_CODE_ALPHA">Initial value of the CURRENCY_CODE_ALPHA property.</param>
+	<param name="cURRENCY_NAME">Initial value of the CURRENCY_NAME property.</param>
+	<param name="cURRENCY_PRECISION">Initial value of the CURRENCY_PRECISION property.</param>
+	<param name="iS_ACTIVE">Initial value of the IS_ACTIVE property.</param>
+	<param name="lAST_UPDATED_BY">Initial value of the LAST_UPDATED_BY property.</param>
+	<param name="lAST_UPDATED_ON">Initial value of the LAST_UPDATED_ON property.</param>
+</member><member name="P:iPayables.MST_CURRENCY.CURRENCY_CODE_NUM">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_CURRENCY.CURRENCY_CODE_ALPHA">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_CURRENCY.CURRENCY_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_CURRENCY.CURRENCY_PRECISION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_CURRENCY.IS_ACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_CURRENCY.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_CURRENCY.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_CURRENCY.MEM_LOCATION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MST_CURRENCY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MST_LANGUAGE.CreateMST_LANGUAGE(System.String,System.String,System.DateTime)">
+	<summary>
+ Create a new MST_LANGUAGE object.
+ </summary>
+	<param name="lANGUAGE_CODE">Initial value of the LANGUAGE_CODE property.</param>
+	<param name="lANGUAGE_DESCRIPTION">Initial value of the LANGUAGE_DESCRIPTION property.</param>
+	<param name="lASTUPDATEDON">Initial value of the LASTUPDATEDON property.</param>
+</member><member name="P:iPayables.MST_LANGUAGE.LANGUAGE_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_LANGUAGE.LANGUAGE_DESCRIPTION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_LANGUAGE.LASTUPDATEDBY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_LANGUAGE.LASTUPDATEDON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MST_LANGUAGE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MST_OUTPUT_FILE_DELIVERY_METH.CreateMST_OUTPUT_FILE_DELIVERY_METH(System.Int32)">
+	<summary>
+ Create a new MST_OUTPUT_FILE_DELIVERY_METH object.
+ </summary>
+	<param name="oUTPUT_FILE_DELIVERY_METH_ID">Initial value of the OUTPUT_FILE_DELIVERY_METH_ID property.</param>
+</member><member name="P:iPayables.MST_OUTPUT_FILE_DELIVERY_METH.OUTPUT_FILE_DELIVERY_METH_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_OUTPUT_FILE_DELIVERY_METH.DESCRIPTION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_OUTPUT_FILE_DELIVERY_METH.ISACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_OUTPUT_FILE_DELIVERY_METH.IS_FILE_LOG">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MST_OUTPUT_FILE_DELIVERY_METH">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.MST_SUB_DIVISION.CreateMST_SUB_DIVISION(System.String,System.String,System.String,System.Boolean,System.Int32,System.DateTime)">
+	<summary>
+ Create a new MST_SUB_DIVISION object.
+ </summary>
+	<param name="sUB_DIVISION_CODE">Initial value of the SUB_DIVISION_CODE property.</param>
+	<param name="sUB_DIVISION_NAME">Initial value of the SUB_DIVISION_NAME property.</param>
+	<param name="cOUNTRY_CODE">Initial value of the COUNTRY_CODE property.</param>
+	<param name="iS_ACTIVE">Initial value of the IS_ACTIVE property.</param>
+	<param name="lAST_UPDATED_BY">Initial value of the LAST_UPDATED_BY property.</param>
+	<param name="lAST_UPDATED_ON">Initial value of the LAST_UPDATED_ON property.</param>
+</member><member name="P:iPayables.MST_SUB_DIVISION.SUB_DIVISION_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_SUB_DIVISION.SUB_DIVISION_NAME">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_SUB_DIVISION.COUNTRY_CODE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_SUB_DIVISION.IS_ACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_SUB_DIVISION.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_SUB_DIVISION.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_SUB_DIVISION.IS_USER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_SUB_DIVISION.MST_COUNTRY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.MST_SUB_DIVISION.MST_COUNTRYReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.MST_SUB_DIVISION">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:iPayables.PROXY_LOGIN.CreatePROXY_LOGIN(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime)">
+	<summary>
+ Create a new PROXY_LOGIN object.
+ </summary>
+	<param name="pROXY_LOGIN_ID">Initial value of the PROXY_LOGIN_ID property.</param>
+	<param name="aDMIN_ID">Initial value of the ADMIN_ID property.</param>
+	<param name="iS_USER_ID">Initial value of the IS_USER_ID property.</param>
+	<param name="mEMBER_ID">Initial value of the MEMBER_ID property.</param>
+	<param name="lAST_UPDATED_BY">Initial value of the LAST_UPDATED_BY property.</param>
+	<param name="lAST_UPDATED_ON">Initial value of the LAST_UPDATED_ON property.</param>
+</member><member name="P:iPayables.PROXY_LOGIN.PROXY_LOGIN_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.ADMIN_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.IS_USER_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.MEMBER_ID">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.LASTSTARTEDON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.LASTENDEDON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.ISACTIVE">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.LAST_UPDATED_BY">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.LAST_UPDATED_ON">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.IS_USER">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.PROXY_LOGIN.IS_USERReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:iPayables.PROXY_LOGIN">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:iPayables.UserManagement.ISPassPhraseQuestion.PassPhraseAnswer">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISPassPhraseQuestion.PassPhraseQuestion">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISPassPhraseQuestion.QuestionIndex">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.My.Resources.UserManagement.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.CHANGED_PWD_MESSAGE_BODY">
+	<summary>
+  Looks up a localized string similar to You have recently changed your password in the IATA Simplified Interline Settlement system.&lt;br/&gt;&lt;br/&gt;  Please contact your administrator if you have any issues accessing the system..
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.CHANGED_PWD_SUBJECT">
+	<summary>
+  Looks up a localized string similar to SIS password has been reset.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.EMAIL_REGULAR_EXPRESSION">
+	<summary>
+  Looks up a localized string similar to ^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]$.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.ICH_OPS_USER_CATEGORY">
+	<summary>
+  Looks up a localized string similar to 2.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.IS_OPS_USER_CATEGORY">
+	<summary>
+  Looks up a localized string similar to 1.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.MEMBER_ACTIVE_STATUS">
+	<summary>
+  Looks up a localized string similar to 1.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.MEMBER_USER_CATEGORY">
+	<summary>
+  Looks up a localized string similar to 4.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.NUMBER_OF_USER_CATEGORIES">
+	<summary>
+  Looks up a localized string similar to 4.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.RESET_PWD_MESSAGE_BODY">
+	<summary>
+  Looks up a localized string similar to Your Simplified Interline Settlement account password has changed.&lt;br /&gt;&lt;br /&gt;
+Please go to 
+{0}
+and use the temporary password
+{1}
+to access your account.&lt;br /&gt;&lt;br /&gt;
+Upon login, you will be asked to change your password.
+Remember! your password must be at least 6 characters in length
+and contain at least 1 alpha and 1 numeric value.
+Please contact your administrator with any questions or issues..
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.USER_TYPE_SUPER">
+	<summary>
+  Looks up a localized string similar to 1.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.WELCOME_MESSAGE_BODY">
+	<summary>
+  Looks up a localized string similar to Welcome to IATA's Simplified Interline Settlement.
+Please review your information and ensure that it is correct
+
+Salutation: {0}
+First Name: {1}
+Last Name: {2}
+Staff ID: {3}
+Department: {4}
+Division: {5}
+Position\Title: {6}
+Primary Phone Number: {7}
+Alternate Phone Number: {8}
+Mobile Number: {9}
+Fax Number: {10}
+Address Line 1: {11}
+Address Line 2: {12}
+Address Line 3: {13}
+Country Name: {14}
+Subdivision Name: {15}
+City Name: {16}
+Postal Code: {17}
+SITA Address: {18}
+
+Your Temporary P [rest of string was truncated]";.
+</summary>
+</member><member name="P:iPayables.My.Resources.UserManagement.WELCOME_SUBJECT">
+	<summary>
+  Looks up a localized string similar to Welcome to IATA Simplified Interline Settlement System.
+</summary>
+</member><member name="T:iPayables.My.Resources.UserManagement">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:iPayables.UserManagement.MemberLocation.#ctor">
+	<summary>
+ Default Constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.MemberLocation.#ctor(iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+	</summary>
+	<param name="Context"></param>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.MemberLocation.#ctor(System.Int32,System.String)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<param name="LocationID"></param>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.MemberLocation.Address1">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.MemberLocation.Address2">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.MemberLocation.Address3">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.MemberLocation.CountryID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.MemberLocation.LocationID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.MemberLocation.MemberID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.MemberLocation.SubDivisionID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.MemberLocation.Context">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.MemberLocation.SITA_Address">
+	<summary>
+ Not Implemented
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.MemberLocation.GetLocation">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="P:iPayables.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:iPayables.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:iPayables.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.Add(`0)">
+	<summary>
+ Adds a new entity to the context.
+  Note: The entity is not added to the database unless the context is saved.
+ </summary>
+	<param name="entity">The entity to be added.</param>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.Attach(`0)">
+	<summary>
+ Attaches an existing entity to the context. The assumption is that the entity being attached has a primary key.
+ </summary>
+	<param name="entity">The entity to be attached to the context. After attaching the entity is a candidate for change tracking.</param>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.Update(`0)">
+	<summary>
+ Updates an existing entity in the context.
+ </summary>
+	<param name="entity">The entity to be updated to the context.</param>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.Delete(`0)">
+	<summary>
+ Deletes an entity from the context.
+ Note: The entity is not deleted from the database unless the context is saved.
+ </summary>
+	<param name="entity">The entity to be deleted.</param>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.GetAll">
+	<summary>
+ Retrieves an unfiltered list of type E.
+ </summary>
+	<returns>Returns a list of records of type E.</returns>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+	<summary>
+ Retrieves an unfiltered list of type E.
+ </summary>
+	<returns>Returns a list of records of type E.</returns>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.GetCount">
+	<summary>
+ Gets the count of all records of type E.
+ </summary>
+	<returns>Returns the count of all records of type E.</returns>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.GetCount(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+	<summary>
+ Gets the count of records of type E filtered by the where clause.
+ </summary>
+	<param name="where">The predicate to be used for filtering the records.</param>
+	<returns>Returns the count of records matching the where clause.</returns>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.Single(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+	<summary>
+ Gets a single instance of the record type based on the where clause.
+ </summary>
+	<param name="where">The predicate to be used for filtering the records.</param>
+	<returns>Returns a single entity matching the where clause.</returns>
+</member><member name="M:iPayables.UserManagement.Interfaces.Data.IRespository`1.First(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+	<summary>
+ Gets the first instance of the record type based on the where clause.
+ </summary>
+	<param name="where">The predicate to be used for filtering the records.</param>
+	<returns>Returns the first entity matching the where clause.</returns>
+</member><member name="T:iPayables.UserManagement.Interfaces.Data.IRespository`1">
+	<summary>
+ A generic repository that allows the client to perform any operation on an entity.
+ </summary>
+	<typeparam name="E">Any sub-type of <see cref="T:System.Data.Objects.DataClasses.EntityObject"/> can be a valid entity for the generic repository.</typeparam>
+</member><member name="M:iPayables.UserManagement.ISMember.#ctor">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.ISMember.#ctor(System.Int32)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISMember.ISActive">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISMember.MemberCommercialName">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISMember.ISMembershipSubStatus">
+	<summary>
+ CMP #665: Conditional Suppression of OTP Email to New Member Users.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISMember.MemberCode">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISMember.MemberID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.#ctor(iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+	</summary>
+	<param name="UOW"></param>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.UserManagementModel.Context">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.UserManagementModel.MinSaltLength">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.UserManagementModel.MinPasswordLength">
+	<summary>
+ Gets or Sets the Minimum Allowed Password Length
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.UserManagementModel.FromEmailAddress">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.UserManagementModel.ChangePasswordNotification">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.UserManagementModel.ResetPasswordNotification">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.UserManagementModel.NewAccountNotification">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.UserManagementModel.LogOnPageURL">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.UserManagementModel.User">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.CreateNewUser(iPayables.UserManagement.I_ISUser)">
+	<summary>
+ Creates A New User Account.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.UpdateUserProfile(iPayables.UserManagement.I_ISUser,System.Int32@)">
+	<summary>
+ Updates A User's Profile
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.SignOn(System.String,System.String)">
+	<summary>
+ Signs A User Into The System.
+ </summary>
+	<param name="UserName"></param>
+	<param name="Password"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.SignOut(System.Int32)">
+	<summary>
+ Signs A User Out Of The System.
+ </summary>
+	<param name="UserID"></param>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.ValidatePassPhraseQuestionAnswer(System.String,System.Int32,System.String)">
+	<summary>
+ Validates A Response By A User To A Pass Phrase Security Question.
+ </summary>
+	<param name="QuestionID"></param>
+	<param name="Answer"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.ChangePassword(System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32@)">
+	<summary>
+ Changes User's Password to the a New Password
+ </summary>
+	<param name="UserID"></param>
+	<param name="OldPassword"></param>
+	<param name="NewPassword"></param>
+	<param name="ConfirmPassword"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUsersByCategory(System.String)">
+	<summary>
+ Gets All Users by Category
+ </summary>
+	<param name="Category"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUsersByMemberID(System.Int32)">
+	<summary>
+ Get All Users By Member ID
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUserByUserIDStatic(System.Int32,iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<param name="UOW"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUserByUserIDStatic(System.Int32)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUserCategories">
+	<summary>
+	</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.DoesCategoryIDContainMembers(System.Int32)">
+	<summary>
+	</summary>
+	<param name="CategoryID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUserByUserID(System.Int32)">
+	<summary>
+ Gets User by User ID
+ </summary>
+	<param name="UserID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetProxyUserByAdminUserID(System.Int32)">
+	<summary>
+  Get Proxy User details by Admin User Id
+ Author : Vinod Patil
+ Date   : 21-March-2011
+ </summary>
+	<param name="UserID"></param>
+	<returns>return ISUser object </returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.SignInProxy(System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="AdminID"></param>
+	<param name="UserName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.SignOutProxyByAdminID(System.String,iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+	</summary>
+	<param name="AdminID"></param>
+	<param name="UOW"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.SignOutProxyByAdminID(System.Int32)">
+	<summary>
+	</summary>
+	<param name="AdminID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.SignOutProxyByProxyUserId(System.Int32)">
+	<summary>
+  Sign out proxy login 
+ </summary>
+	<param name="userId"> proxy Login user Id </param>
+	<returns>Admin user Id </returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.SignOutProxyByAdminName(System.String,iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+	</summary>
+	<param name="AdminName"></param>
+	<param name="UOW"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUserByUserNameStatic(System.String,iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+ Gets Proxy User By Admin's Email Address
+ </summary>
+	<param name="UserName">Admin's Email Address</param>
+	<param name="UOW">Unit of Work For Database Transaction</param>
+	<returns>Implementation of I_ISUser interface</returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUserByUserName(System.String,iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+ Gets User By Email Address
+ </summary>
+	<param name="UserName">Email Address of User</param>
+	<param name="UOW">Unit of Work Object For Database Transaction</param>
+	<returns>Implementation of I_ISUser interface</returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetActiveUserByUserName(System.String)">
+	<summary>
+ SCP#490868:SIS password has been reset - SIS Production
+ Gets User by Email Address
+ </summary>
+	<param name="UserName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUserByUserName(System.String)">
+	<summary>
+ Gets User by Email Address
+ </summary>
+	<param name="UserName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetUserByUserName(System.String,System.Boolean)">
+	<summary>
+ Gets User by Email Address
+ </summary>
+	<param name="UserName"></param>
+	<param name="ProxySession"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.LockUser(System.Int32)">
+	<summary>
+ Locks a User's Account
+ </summary>
+	<param name="UserID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.Unlock(System.Int32)">
+	<summary>
+ Unlocks a User's Account
+ </summary>
+	<param name="UserID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetCurrentUser(System.String)">
+	<summary>
+	</summary>
+	<param name="SessionID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.ResetUserPassword(System.Int32)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.SendNotificationToUserToChangePassword(System.Int32,System.String)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<param name="TemporaryPassword"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.SendUserChangedPasswordNotification(System.Int32)">
+	<summary>
+ Sends a notification to user that their password has been changed successfully.
+ </summary>
+	<param name="UserID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.ConvertISUserToUserProfile(iPayables.UserManagement.I_ISUser)">
+	<summary>
+	</summary>
+	<param name="UserInformation"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.ConvertUserProfileToISUSerStatic(iPayables.IS_USER)">
+	<summary>
+	</summary>
+	<param name="UserInformation"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.CheckIfCityExist(System.Int32)">
+	<summary>
+	</summary>
+	<param name="CityID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.CheckIfMemberLocationExist(System.Int32)">
+	<summary>
+	</summary>
+	<param name="Location_ID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.CheckIfMemberExist(System.Int32)">
+	<summary>
+	</summary>
+	<param name="MemberID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.CheckIfSubDivisionExist(System.String)">
+	<summary>
+	</summary>
+	<param name="SubDivisionID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.CheckIfUserCategoryExist(System.Int32)">
+	<summary>
+	</summary>
+	<param name="UserCategoryID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetSubDivisionsBySubDivisionCode(System.String)">
+	<summary>
+ Get SubDivisions By Sub Division Code
+ </summary>
+	<param name="StringToSearchOn"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetSubDivisionsBySubDivisionName(System.String)">
+	<summary>
+ Get SubDivisions By Sub Division Name
+ </summary>
+	<param name="StringToSearchOn"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetCountriesByCountryCode(System.String)">
+	<summary>
+ Get Countries by Country Code
+ </summary>
+	<param name="StringToSearchOn"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetCountriesByCountryName(System.String)">
+	<summary>
+ Get Countries by Country Name
+ </summary>
+	<param name="StringToSearchOn"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetCitiesByCityCode(System.String)">
+	<summary>
+ Get Cities By City Code
+ </summary>
+	<param name="StringToSearchOn"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetCitiesByCityName(System.String)">
+	<summary>
+ Get Cities By City Name
+ </summary>
+	<param name="StringToSearchOn"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetRolesByRoleNameSpacesRemoved(System.String)">
+	<summary>
+ Get Roles By Role Name With Spaces Removed
+ </summary>
+	<param name="StringToSearchOn"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetPermissionsByPermissionName(System.String)">
+	<summary>
+ Get Permissions By Permission Name
+ </summary>
+	<param name="StringToSearchOn"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetAllSubDivisions">
+	<summary>
+ Get All Sub Divisions
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetAllCountries">
+	<summary>
+ Get All Countries
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetAllCities">
+	<summary>
+ Get All Cities
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetAllMemberLocationsByID(System.Int32)">
+	<summary>
+ Get All Member Locations
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetAllMemberLocations(System.Int32)">
+	<summary>
+ Get All Member Locations
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetAllPermissions">
+	<summary>
+	</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetAllUsers">
+	<summary>
+	</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.InsertIsFileLog(iPayables.IS_FILE_LOG)">
+	<summary>
+  Make and Entry in IS_FILE_LOG table 
+  Author : Vinod Patil
+  Date   : 28 March 2011
+ </summary>
+	<param name="IsFileLog">object of IS_FILE_LOG </param>
+	<returns>flag to indicate transaction status </returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.UserManagementModel.GetSelectedSubDivisions(System.String,System.String)">
+	<summary>
+ Get Selected Sub Divisions
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.IObjectContext.CreateObjectSet``1">
+	<summary>
+ Create an object set with the help of the <see cref="T:System.Data.Objects.ObjectContext"/>.
+ </summary>
+	<typeparam name="E">Any sub-type of <see cref="T:System.Data.Objects.DataClasses.EntityObject"/> can be a valid entity for the generic repository.</typeparam>
+	<returns>Returns an <see cref="T:System.Data.Objects.IObjectSet`1"/> instance using the <see cref="T:System.Data.Objects.ObjectContext"/>.</returns>
+</member><member name="M:iPayables.UserManagement.IObjectContext.SaveChanges">
+	<summary>
+ Saves the changes for the <see cref="T:System.Data.Objects.ObjectContext"/> that it wraps.
+ </summary>
+</member><member name="M:iPayables.UserManagement.ISUser_Location.#ctor">
+	<summary>
+ Default Constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.ISUser_Location.#ctor(iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+	</summary>
+	<param name="Context"></param>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.ISUser_Location.#ctor(System.Int32,System.String)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<param name="LocationID"></param>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.ISUser_Location.#ctor(System.Int32,System.String,iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<param name="LocationID"></param>
+	<param name="Context"></param>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Location.Address1">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Location.Address2">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Location.Address3">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Location.CountryID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Location.LocationID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Location.MemberID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Location.SITA_Address">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Location.SubDivisionID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Location.Context">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.ISUser_Location.GetLocation">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.ISUser_Phone.#ctor">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Phone.Fax">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Phone.MobileNumber">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Phone.PhoneNumber1">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser_Phone.PhoneNumber2">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.IUnitOfWork.Commit">
+	<summary>
+ Commits changes for all the repositories sharing the same <see cref="T:System.Data.Objects.ObjectContext"/>.
+</summary>
+</member><member name="M:iPayables.UserManagement.ISUser.#ctor">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.ISUser.#ctor(System.Int32)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.ISUser.#ctor(System.Int32,iPayables.UserManagement.IUnitOfWork)">
+	<summary>
+	</summary>
+	<param name="UserID"></param>
+	<param name="Context"></param>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.CategoryID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.Salutation">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.FirstName">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.FederationId">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.LanguageCode">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.LastName">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.Email">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.Password">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.PasswordExpirationDateTime">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.Salt">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.IsLocked">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.LastLoggedIn">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.Department">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.Division">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.StaffID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.Member">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.Phone">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.Location">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.PassPhraseQuestions">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.SessionID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.UserID">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.LoginAttempts">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.PositionOrTitle">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.ModifiedBy">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.PasswordIsExpired">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.LoginStatus">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.IsActive">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.UserType">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.IsSysAdmin">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.IsSuperUser">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.UserManagement.ISUser.IsArchived">
+	<summary>
+ CMP#668: Archival of IS-WEB Users and Removal from Screens
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.UserManagement.ISUser.GetUser">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
