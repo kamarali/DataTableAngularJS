@@ -1,0 +1,1112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDDBFFEA-550D-4E1D-88B5-906B1F7958A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Iata.IS.Business</RootNamespace>
+    <AssemblyName>Iata.IS.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\Iata.IS.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Iata.IS.Business.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Iata.IS.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Iata.IS.Business.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.2.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Castle.Windsor.2.5.3\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data, Version=5.0.1408.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Devart\Devart.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Devart.Data.Oracle, Version=8.5.616.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Devart\Devart.Data.Oracle.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FileHelpers">
+      <HintPath>..\lib\FileHelpers.2.0\FileHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\lib\DotNetZip.1.9\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.1.2.10\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NVelocity, Version=1.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NVelocity\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Net.ProxySocket, Version=2.0.4086.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\lib\Rebex 4.0\Rebex.Net.ProxySocket.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditTrailPackageDownload\IAuditTrailPackageDownload.cs" />
+    <Compile Include="AuditTrailPackageDownload\Impl\AuditTrailPackageDownload.cs" />
+    <Compile Include="AutoBillingClosure\IAutoBillingInvoicesClosure.cs" />
+    <Compile Include="AutoBillingClosure\Impl\AutoBillingInvoicesClosure.cs" />
+    <Compile Include="BroadcastMessages\IBroadcastMessagesManager.cs" />
+    <Compile Include="BroadcastMessages\Impl\BroadcastMessagesManager.cs" />
+    <Compile Include="CargoErrorCodes.cs" />
+    <Compile Include="Cargo\AwbRecordComparer.cs" />
+    <Compile Include="Cargo\ICargoCreditNoteManager.cs" />
+    <Compile Include="Cargo\ICargoInvoiceManager.cs" />
+    <Compile Include="Cargo\Impl\CargoInvoiceManager.cs" />
+    <Compile Include="Cargo\Impl\CargoCreditNoteManager.cs" />
+    <Compile Include="Cargo\Impl\CgoRmBmCmDetailReportUtility.cs" />
+    <Compile Include="Cargo\Impl\OutputGeneratorManager.cs" />
+    <Compile Include="Cargo\Impl\CargoCorrespondenceManager.cs" />
+    <Compile Include="Cargo\Impl\PayableInvoiceSearchManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cargo\IPayableInvoiceSearchManager.cs" />
+    <Compile Include="Cargo\IValidationCgoInvoiceManager.cs" />
+    <Compile Include="Cargo\MemoComparer.cs" />
+    <Compile Include="Common\IInvPaymentStatusManager.cs" />
+    <Compile Include="Common\IAchCurrencySetUpManager.cs" />
+    <Compile Include="Common\IAutoBillingNotificationManager.cs" />
+    <Compile Include="Common\IBvcAgreementManager.cs" />
+    <Compile Include="Common\ICgoListingsReportGenerator.cs" />
+    <Compile Include="Common\IConcurrencyManager.cs" />
+    <Compile Include="Common\ICorrespondenceManager.cs" />
+    <Compile Include="Common\IDailyOutputProcessManager.cs" />
+    <Compile Include="Common\ILanguageManager.cs" />
+    <Compile Include="Common\ILeadPeriodManager.cs" />
+    <Compile Include="Common\IMaxAcceptableAmountManager.cs" />
+    <Compile Include="Common\IMinAcceptableAmountManager.cs" />
+    <Compile Include="Common\Impl\AchCurrencySetUpManager.cs" />
+    <Compile Include="Common\Impl\AutoBillingNotificationManager.cs" />
+    <Compile Include="Common\Impl\BvcAgreementManager.cs" />
+    <Compile Include="Common\Impl\CgoListingsReportGenerator.cs" />
+    <Compile Include="Common\Impl\ConcurrencyManager.cs" />
+    <Compile Include="Common\Impl\InvPaymentStatusManager.cs" />
+    <Compile Include="Common\Impl\CorrespondenceManager.cs" />
+    <Compile Include="Common\Impl\DailyOutputProcessManager.cs" />
+    <Compile Include="Common\Impl\ExceptionDetailSearchResultManager.cs" />
+    <Compile Include="Cargo\IOutputGeneratorManager.cs" />
+    <Compile Include="Cargo\Impl\SearchInvoiceManager.cs" />
+    <Compile Include="Cargo\ICargoCorrespondenceManager.cs" />
+    <Compile Include="Cargo\ISearchInvoiceManager.cs" />
+    <Compile Include="Common\IExceptionDetailSearchResultManager.cs" />
+    <Compile Include="Common\CalendarConstants.cs" />
+    <Compile Include="Common\CalendarValidationError.cs" />
+    <Compile Include="Common\IAddOnChargeNameManager.cs" />
+    <Compile Include="Common\IAircraftTypeIcaoManager.cs" />
+    <Compile Include="Common\IAircraftTypeManager.cs" />
+    <Compile Include="Common\IAirportManager.cs" />
+    <Compile Include="Common\IBillingCategoryManager.cs" />
+    <Compile Include="Common\IBvcMatrixManager.cs" />
+    <Compile Include="Common\ICalendarManager.cs" />
+    <Compile Include="Common\ICgoRMReasonAcceptableDiffManager.cs" />
+    <Compile Include="Common\IChargeCategoryManager.cs" />
+    <Compile Include="Common\IChargeCodeManager.cs" />
+    <Compile Include="Common\IChargeCodeTypeManager.cs" />
+    <Compile Include="Common\ICityAirportManager.cs" />
+    <Compile Include="Common\ICountryIcaoManager.cs" />
+    <Compile Include="Common\ICountryManager.cs" />
+    <Compile Include="Common\ICurrencyManager.cs" />
+    <Compile Include="Common\IEinvoiceDocumentGenerator.cs" />
+    <Compile Include="Common\IEmailManager.cs" />
+    <Compile Include="Common\IExchangeRateManager.cs" />
+    <Compile Include="Common\IFileFormatManager.cs" />
+    <Compile Include="Common\IFileManager.cs" />
+    <Compile Include="Common\IIchZoneManager.cs" />
+    <Compile Include="Common\IInvoiceOfflineCollectionDownloadManager.cs" />
+    <Compile Include="Common\IInvoiceOfflineCollectionManager.cs" />
+    <Compile Include="Common\IMiscListingReportGenerator.cs" />
+    <Compile Include="Common\IMiscSupportingDocumentGenerator.cs" />
+    <Compile Include="Common\Impl\CalendarManager.cs" />
+    <Compile Include="Common\Impl\ChargeCodeTypeManager.cs" />
+    <Compile Include="Common\Impl\EinvoiceDocumentGenerator.cs" />
+    <Compile Include="Common\Impl\EmailManager.cs" />
+    <Compile Include="Common\Impl\IsValidationExceptionManager.cs" />
+    <Compile Include="Common\Impl\LanguageManager.cs" />
+    <Compile Include="Common\Impl\LeadPeriodManager.cs" />
+    <Compile Include="Common\Impl\MaxAcceptableAmountManager.cs" />
+    <Compile Include="Common\Impl\MinAcceptableAmountManager.cs" />
+    <Compile Include="Common\Impl\MiscListingReportGenerator.cs" />
+    <Compile Include="Common\Impl\MiscSupportingDocumentGenerator.cs" />
+    <Compile Include="Common\Impl\ParsingNotificationManager.cs" />
+    <Compile Include="Common\Impl\ExceptionSummarySearchResultManager.cs" />
+    <Compile Include="Common\Impl\ProfileMigrationUpdateManager.cs" />
+    <Compile Include="Common\Impl\PurgingTransactionManager.cs" />
+    <Compile Include="Common\Impl\ReferenceDataManager.cs" />
+    <Compile Include="Common\Impl\SettlementMethodManager.cs" />
+    <Compile Include="Common\Impl\UatpAtcanDetailsManager.cs" />
+    <Compile Include="Common\IParsingNotificationManager.cs" />
+    <Compile Include="Common\IPaxListingsReportGenerator.cs" />
+    <Compile Include="Common\ILocationIcaoManager.cs" />
+    <Compile Include="Common\IMemoReportGenerator.cs" />
+    <Compile Include="Common\IMinMaxAcceptableAmountManager.cs" />
+    <Compile Include="Common\IMiscCodeManager.cs" />
+    <Compile Include="Common\Impl\AddOnChargeNameManager.cs" />
+    <Compile Include="Common\Impl\AircraftTypeIcaoManager.cs" />
+    <Compile Include="Common\Impl\AircraftTypeManager.cs" />
+    <Compile Include="Common\Impl\AirportManager.cs" />
+    <Compile Include="Common\Impl\BillingCategoryManager.cs" />
+    <Compile Include="Common\Impl\BvcMatrixManager.cs" />
+    <Compile Include="Common\Impl\CalendarManagerFake.cs" />
+    <Compile Include="Common\Impl\CgoRMReasonAcceptableDiffManager.cs" />
+    <Compile Include="Common\Impl\ChargeCategoryManager.cs" />
+    <Compile Include="Common\Impl\ChargeCodeManager.cs" />
+    <Compile Include="Common\Impl\CityAirportManager.cs" />
+    <Compile Include="Common\Impl\CountryIcaoManager.cs" />
+    <Compile Include="Common\Impl\CountryManager.cs" />
+    <Compile Include="Common\Impl\CurrencyManager.cs" />
+    <Compile Include="Common\Impl\ExchangeRateManager.cs" />
+    <Compile Include="Common\Impl\FileFormatManager.cs" />
+    <Compile Include="Common\Impl\FileManager.cs" />
+    <Compile Include="Common\Impl\IchZoneManager.cs" />
+    <Compile Include="Common\Impl\InvoiceOfflineCollectionDownloadManager.cs" />
+    <Compile Include="Common\Impl\InvoiceOfflineCollectionManager.cs" />
+    <Compile Include="Common\Impl\PaxListingsReportGenerator.cs" />
+    <Compile Include="Common\Impl\LocationIcaoManager.cs" />
+    <Compile Include="Common\Impl\MemoReportGenerator.cs" />
+    <Compile Include="Common\Impl\MinMaxAcceptableAmountManager.cs" />
+    <Compile Include="Common\Impl\MiscCodeManager.cs" />
+    <Compile Include="Common\Impl\OldIdecParticipationManager.cs" />
+    <Compile Include="Common\Impl\OnBehalfInvoiceSetupManager.cs" />
+    <Compile Include="Common\Impl\ProcessedInvoiceDetailManager.cs" />
+    <Compile Include="Common\Impl\ReasonCodeManager.cs" />
+    <Compile Include="Common\Impl\RficManager.cs" />
+    <Compile Include="Common\Impl\RfiscManager.cs" />
+    <Compile Include="Common\Impl\RMReasonAcceptableDiffManager.cs" />
+    <Compile Include="Common\Impl\SampleDigitManager.cs" />
+    <Compile Include="Common\Impl\SisMemberStatusManager.cs" />
+    <Compile Include="Common\Impl\SisMemberSubStatusManager.cs" />
+    <Compile Include="Common\Impl\SourceCodeManager.cs" />
+    <Compile Include="Common\Impl\SubDivisionManager.cs" />
+    <Compile Include="Common\Impl\SupportingDocumentGenerator.cs" />
+    <Compile Include="Common\Impl\TaxCodeManager.cs" />
+    <Compile Include="Common\Impl\TaxSubTypeManager.cs" />
+    <Compile Include="Common\Impl\TimeLimitManager.cs" />
+    <Compile Include="Common\Impl\ToleranceManager.cs" />
+    <Compile Include="Common\Impl\TransactionTypeManager.cs" />
+    <Compile Include="Common\Impl\UnlocCodeManager.cs" />
+    <Compile Include="Common\Impl\UomCodeManager.cs" />
+    <Compile Include="Common\Impl\UserManager.cs" />
+    <Compile Include="Common\Impl\ValidationErrorManager.cs" />
+    <Compile Include="Common\Impl\VatIdentifierManager.cs" />
+    <Compile Include="Common\IOldIdecParticipationManager.cs" />
+    <Compile Include="Common\IOnBehalfInvoiceSetupManager.cs" />
+    <Compile Include="Common\IProcessedInvoiceDetailManager.cs" />
+    <Compile Include="Common\IProfileMigrationUpdateManager.cs" />
+    <Compile Include="Common\IPurgingTransactionManager.cs" />
+    <Compile Include="Common\IReasonCodeManager.cs" />
+    <Compile Include="Common\IReferenceDataManager.cs" />
+    <Compile Include="Common\IRficManager.cs" />
+    <Compile Include="Common\IRfiscManager.cs" />
+    <Compile Include="Common\IRMReasonAcceptableDiffManager.cs" />
+    <Compile Include="Common\ISampleDigitManager.cs" />
+    <Compile Include="Common\ISisMemberStatusManager.cs" />
+    <Compile Include="Common\ISisMemberSubStatusManager.cs" />
+    <Compile Include="Common\ISourceCodeManager.cs" />
+    <Compile Include="Common\ISubDivisionManager.cs" />
+    <Compile Include="Common\ISupportingDocumentGenerator.cs" />
+    <Compile Include="Common\ITaxCodeManager.cs" />
+    <Compile Include="Common\ITaxSubTypeManager.cs" />
+    <Compile Include="Common\ITimeLimitManager.cs" />
+    <Compile Include="Common\IToleranceManager.cs" />
+    <Compile Include="Common\ITransactionTypeManager.cs" />
+    <Compile Include="Common\IUatpAtcanDetailsManager.cs" />
+    <Compile Include="Common\IUnlocCodeManager.cs" />
+    <Compile Include="Common\IUomCodeManager.cs" />
+    <Compile Include="Common\IUserManager.cs" />
+    <Compile Include="Common\IValidationErrorManager.cs" />
+    <Compile Include="Common\IValidationExceptionManager.cs" />
+    <Compile Include="Common\IExceptionSummarySearchResultManager.cs" />
+    <Compile Include="Common\IVatIdentifierManager.cs" />
+    <Compile Include="Common\FormatUtility.cs" />
+    <Compile Include="Common\ISettlementMethodManager.cs" />
+    <Compile Include="CompareUtil.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="CorrespondenceReportDownload\ICorrespondenceReportDownload.cs" />
+    <Compile Include="CorrespondenceReportDownload\Impl\CorrespondenceReportDownload.cs" />
+    <Compile Include="ICP\IIcpEmailSenderManager.cs" />
+    <Compile Include="ICP\Impl\IcpEmailSenderManager.cs" />
+    <Compile Include="MemberProfileCSVUpload\IMemberProfileCSVUploadManager.cs" />
+    <Compile Include="MemberProfileCSVUpload\Impl\MemberProfileCSVUploadManager.cs" />
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MiscUatpErrorCodes.cs" />
+    <Compile Include="MiscErrorCodes.cs" />
+    <Compile Include="ErrorCorrectionLevels.cs" />
+    <Compile Include="ErrorLevels.cs" />
+    <Compile Include="ExternalInterfaces\IATAInterface\IIATAInterfaceHandler.cs" />
+    <Compile Include="ExternalInterfaces\IATAInterface\Impl\IATAInterfaceHandler.cs" />
+    <Compile Include="ExternalInterfaces\IATAInterface\Impl\RechargeDataClasses.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\Impl\ICHSettlementXmlClasses.cs" />
+    <Compile Include="LegalArchive\Impl\RetrievalManager.cs" />
+    <Compile Include="LegalArchive\IRetrievalManager.cs" />
+    <Compile Include="MiscUatp\LineItemDetailsComparer.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\InvoiceOpCodeValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\LocCodeOrLocCodeIcaoExtValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\MealTypeNameValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\MiscDataAtNameValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\MishandlingTypeValidator.cs" />
+    <Compile Include="Purging\IFilePurgingManager.cs" />
+    <Compile Include="Purging\Impl\FilePurgingManager.cs" />
+    <Compile Include="File\FileIo.cs" />
+    <Compile Include="FutureSubmission\ICloseFututreSubmission.cs" />
+    <Compile Include="FutureSubmission\Impl\CloseFututreSubmission.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\IICHInterfaceHandler.cs" />
+    <Compile Include="ExternalInterfaces\ICHInterface\Impl\ICHInterfaceHandler.cs" />
+    <Compile Include="ICHInterfaceErrorCodes.cs" />
+    <Compile Include="InvoiceManagerBase.cs" />
+    <Compile Include="LegalArchive\IArchiveSearchManager.cs" />
+    <Compile Include="LegalArchive\Impl\ArchiveSearchManager.cs" />
+    <Compile Include="LegalArchive\Impl\ArchivalManager.cs" />
+    <Compile Include="LegalArchive\IArchivalManager.cs" />
+    <Compile Include="ManageSystemParameter\ImanageSystemParameter.cs" />
+    <Compile Include="ManageSystemParameter\Impl\ManageSystemParameter.cs" />
+    <Compile Include="MemberProfile\IBlockingRulesManager.cs" />
+    <Compile Include="MemberProfile\IBlockingRuleUpdateHandler.cs" />
+    <Compile Include="MemberProfile\IICHUpdateHandler.cs" />
+    <Compile Include="MemberProfile\IICHXmlHandler.cs" />
+    <Compile Include="MemberProfile\IMemberLocationCsvGenerator.cs" />
+    <Compile Include="MemberProfile\IFutureUpdatesManager.cs" />
+    <Compile Include="MemberProfile\IManageContactsManager.cs" />
+    <Compile Include="MemberProfile\IMemberLocationUpdateHandler.cs" />
+    <Compile Include="MemberProfile\IMemberManager.cs" />
+    <Compile Include="MemberProfile\IMemberProfileImmediateUpdatesEmailHandler.cs" />
+    <Compile Include="MemberProfile\Impl\AuditProcessor.cs" />
+    <Compile Include="MemberProfile\Impl\BlockingRulesManager.cs" />
+    <Compile Include="MemberProfile\Impl\BlockingRuleUpdateHandler.cs" />
+    <Compile Include="MemberProfile\Impl\FutureUpdatesManager.cs" />
+    <Compile Include="MemberProfile\Impl\ICHUpdateHandler.cs" />
+    <Compile Include="MemberProfile\Impl\ICHXmlHandler.cs" />
+    <Compile Include="MemberProfile\Impl\ManageContactsManager.cs" />
+    <Compile Include="MemberProfile\Impl\MemberLocationCsvGenerator.cs" />
+    <Compile Include="MemberProfile\Impl\MemberLocationUpdateHandler.cs" />
+    <Compile Include="MemberProfile\Impl\MemberManager.cs" />
+    <Compile Include="MemberProfile\Impl\MemberProfileImmediateUpdatesEmailHandler.cs" />
+    <Compile Include="MemberProfile\Impl\MemberProfileMetadataConstatnts.cs" />
+    <Compile Include="MemberProfile\Impl\NotificationManager.cs" />
+    <Compile Include="MemberProfile\Impl\PermissionManager.cs" />
+    <Compile Include="MemberProfile\Impl\QueryAndDownloadDetailsManager.cs" />
+    <Compile Include="MemberProfile\Impl\UserManagementManager.cs" />
+    <Compile Include="MemberProfile\INotificationManager.cs" />
+    <Compile Include="MemberProfile\IPermissionManager.cs" />
+    <Compile Include="MemberProfile\IQueryAndDownloadDetailsManager.cs" />
+    <Compile Include="MemberProfile\IUserManagementManager.cs" />
+    <Compile Include="Purging\Impl\InvalidInvTempDataPurgingManager.cs" />
+    <Compile Include="Purging\IInvalidInvTempDataPurgingManager.cs" />
+    <Compile Include="RMAuditTrailDownload\Impl\RMAuditTrailDownload.cs" />
+    <Compile Include="RMAuditTrailDownload\IRMAuditTrailDownload.cs" />
+    <Compile Include="Reports\OfflineReports\Imp\OfflineReportBase.cs" />
+    <Compile Include="Reports\OfflineReports\Imp\PaxPayableRmBmCmReport.cs" />
+    <Compile Include="Reports\OfflineReports\Imp\PaxReceivableRmBmCmReport.cs" />
+    <Compile Include="Reports\OfflineReports\Imp\SearchOfflineReportManager.cs" />
+    <Compile Include="Reports\OfflineReports\IOfflineReportBase.cs" />
+    <Compile Include="Reports\OfflineReports\ISearchOfflineReportManager.cs" />
+    <Compile Include="Reports\OfflineReportManger\Imp\OfflineReportLogManager.cs" />
+    <Compile Include="Reports\OfflineReportManger\IOfflineReportLogManager.cs" />
+    <Compile Include="Reports\OfflineReports\IPaxPayableRmBmCmReport.cs" />
+    <Compile Include="Reports\OfflineReports\IPaxReceivableRmBmCmReport.cs" />
+    <Compile Include="MemberProfileDataFile\Impl\MemberProfileDataFile.cs" />
+    <Compile Include="MemberProfileDataFile\IMemberProfileDataFile.cs" />
+    <Compile Include="Reports\UserPermission\Impl\UserPermissionReport.cs" />
+    <Compile Include="Reports\UserPermission\IUserPermissionReport.cs" />
+    <Compile Include="Security\Permissions\General\LegalArchive.cs" />
+    <Compile Include="Security\Permissions\Misc\DownloadCorrepsondence\DownloadCorrespondences.cs" />
+    <Compile Include="Security\Permissions\Misc\Payables\DailyBilateralDelivery.cs" />
+    <Compile Include="Security\Permissions\Misc\Receivables\ValidationErrorCorrection.cs" />
+    <Compile Include="Security\Permissions\Pax\DownloadCorrespondences\DownloadCorrespondences.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\CorrectAutoBillingInvoices.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\ValidationErrorCorrection.cs" />
+    <Compile Include="Security\Permissions\Reports\InvoceDeletionReport.cs" />
+    <Compile Include="Security\Permissions\Reports\UserPermissionReport.cs" />
+    <Compile Include="SetTransactionExpiry\Impl\TransactionExpiryManager.cs" />
+    <Compile Include="SetTransactionExpiry\ITransactionExpiryManager.cs" />
+    <Compile Include="UatpErrorCodes.cs" />
+    <Compile Include="MiscUatp\IInvoiceOutputManager.cs" />
+    <Compile Include="MiscUatp\IMiscCorrespondenceManager.cs" />
+    <Compile Include="MiscUatp\IMiscInvoiceManager.cs" />
+    <Compile Include="MiscUatp\IMiscUatpInvoiceManager.cs" />
+    <Compile Include="MiscUatp\Impl\InvoiceOutputManager.cs" />
+    <Compile Include="MiscUatp\Impl\InvoiceOutputManagerConstants.cs" />
+    <Compile Include="MiscUatp\Impl\MiscCorrespondenceManager.cs" />
+    <Compile Include="MiscUatp\Impl\MiscInvoiceManager.cs" />
+    <Compile Include="MiscUatp\Impl\MiscUatpInvoiceManager.cs" />
+    <Compile Include="MiscUatp\Impl\OutputXmlGeneratorManager.cs" />
+    <Compile Include="MiscUatp\Impl\UatpInvoiceManager.cs" />
+    <Compile Include="MiscUatp\IOutputXmlGeneratorManager.cs" />
+    <Compile Include="MiscUatp\IUatpInvoiceManager.cs" />
+    <Compile Include="MiscUatp\IValidationMiscInvoiceManager.cs" />
+    <Compile Include="MiscUatp\IValidationUatpInvoiceManager.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\AircraftDetailValidator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MiscUatp\ServerValidation\Impl\AircraftTypeCodeOrAircraftTypeCodeIcaoValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\AircraftTypeIcaoValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\AircraftTypeValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\AmountValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\AreaSizeValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\BagCountValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\SuspendedAirlineValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\PassengerCountValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\LocationCodeOrLocationCodeIcaoValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\CountryCodeValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\CountryCodeIcaoValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\DistanceValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\MaxTakeOffWeightValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\PartialPaymentsValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\ReferenceNumberValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\RouteDataValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\RouteDateTimeValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\StationCodeValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\WayPointCodeValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\LocationCodeIcaoValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\Impl\LocationCodeValidator.cs" />
+    <Compile Include="MiscUatp\ServerValidation\IServerValidator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pax\CouponRecordComparer.cs" />
+    <Compile Include="Pax\Impl\OutputIdecGeneratorManager.cs" />
+    <Compile Include="Pax\Impl\PaxCorrespondenceManager.cs" />
+    <Compile Include="Pax\Impl\ReferenceManagerConstants.cs" />
+    <Compile Include="Pax\Impl\SamplingFormCManager.cs" />
+    <Compile Include="Pax\Impl\SamplingFormDEManager.cs" />
+    <Compile Include="Pax\Impl\SamplingFormFManager.cs" />
+    <Compile Include="Pax\Impl\SamplingRejectionManager.cs" />
+    <Compile Include="Pax\Impl\SamplingFormXFManager.cs" />
+    <Compile Include="Pax\IOutputIdecGeneratorManager.cs" />
+    <Compile Include="Pax\IPaxCorrespondenceManager.cs" />
+    <Compile Include="Pax\ISamplingFormCManager.cs" />
+    <Compile Include="Pax\ISamplingFormDEManager.cs" />
+    <Compile Include="ErrorCodes.cs" />
+    <Compile Include="Pax\Impl\InvoiceManager.cs" />
+    <Compile Include="Pax\Impl\NonSamplingCreditNoteManager.cs" />
+    <Compile Include="Pax\Impl\NonSamplingInvoiceManager.cs" />
+    <Compile Include="Common\Impl\ReferenceManager.cs" />
+    <Compile Include="Pax\Impl\SearchInvoiceManager.cs" />
+    <Compile Include="Pax\INonSamplingCreditNoteManager.cs" />
+    <Compile Include="Pax\INonSamplingInvoiceManager.cs" />
+    <Compile Include="Pax\IInvoiceManager.cs" />
+    <Compile Include="Common\IReferenceManager.cs" />
+    <Compile Include="Pax\ISamplingFormFManager.cs" />
+    <Compile Include="Pax\ISamplingRejectionManager.cs" />
+    <Compile Include="Pax\ISamplingFormXFManager.cs" />
+    <Compile Include="Pax\ISearchInvoiceManager.cs" />
+    <Compile Include="MemberProfile\IValidationMemberManager.cs" />
+    <Compile Include="Pax\IValidationNSInvoiceManager.cs" />
+    <Compile Include="Pax\IValidationSFormCManager.cs" />
+    <Compile Include="Pax\IValidationSFormDEManager.cs" />
+    <Compile Include="Pax\IValidationSFormFManager.cs" />
+    <Compile Include="Pax\MemoComparer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CargoSubmissionOverview\ICargoSubmissionOverview.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reports\CargoSubmissionOverview\Impl\CargoSubmissionOverview.cs" />
+    <Compile Include="Reports\Cargo\InterlineBillingSummary\IInterlineBillingSummaryReport.cs" />
+    <Compile Include="Reports\Cargo\InterlineBillingSummary\Impl\InterlineBillingSummaryReport.cs" />
+    <Compile Include="Reports\Cargo\RejectionAnalysis\ICgoRejAnalysisRec.cs" />
+    <Compile Include="Reports\Cargo\RejectionAnalysis\Impl\CgoRejAnalysisRec.cs" />
+    <Compile Include="Reports\Cargo\RMBMCMSummary\Impl\RMBMCMSummaryReport.cs" />
+    <Compile Include="Reports\Cargo\RMBMCMSummary\IRMBMCMSummaryReport.cs" />
+    <Compile Include="Reports\InterlinePayablesAnalysis\IInterlinePayablesAnalysisReport.cs" />
+    <Compile Include="Reports\InterlinePayablesAnalysis\Impl\InterlinePayablesAnalysisReport.cs" />
+    <Compile Include="Reports\Miscellaneous\IMiscellaneous.cs" />
+    <Compile Include="Reports\Miscellaneous\Impl\Miscellaneous.cs" />
+    <Compile Include="Reports\PaxCgoMscTopTenPartner\Impl\PaxCgoMscTopTenInterlinePartner.cs" />
+    <Compile Include="Reports\PaxCgoMscTopTenPartner\IPaxCgoMscTopTenInterlinePartner.cs" />
+    <Compile Include="Reports\PayablesReport\Impl\ReportPayables.cs" />
+    <Compile Include="Reports\PayablesReport\IPayablesReport.cs" />
+    <Compile Include="Reports\CorrespondenceStatus\ICorrespondenceStatus.cs" />
+    <Compile Include="Reports\CorrespondenceStatus\Impl\CorrespondenceStatus.cs" />
+    <Compile Include="Reports\ConfirmationDetail\IConfirmationDetail.cs" />
+    <Compile Include="Reports\ConfirmationDetail\Impl\ConfirmationDetailImpl.cs" />
+    <Compile Include="Reports\IManageSuspendedInvoicesManager.cs" />
+    <Compile Include="Reports\IMissingSubmissionAchManager.cs" />
+    <Compile Include="Reports\Impl\ManageSuspendedInvoicesManager.cs" />
+    <Compile Include="Reports\Impl\MissingSubmissionAchManager.cs" />
+    <Compile Include="Reports\Impl\ProcessingDashboardManager.cs" />
+    <Compile Include="LateSubmission\Impl\ProcessLateSubmissionManager.cs" />
+    <Compile Include="Reports\IProcessingDashboardManager.cs" />
+    <Compile Include="LateSubmission\IProcessLateSubmissionManager.cs" />
+    <Compile Include="Reports\MisMatchDoc\IMismatchDoc.cs" />
+    <Compile Include="Reports\MisMatchDoc\Impl\Mismatchdoc.cs" />
+    <Compile Include="Reports\PendingInvoicesInErrorReport\Impl\PendingInvoicesInErrorReport.cs" />
+    <Compile Include="Reports\PendingInvoicesInErrorReport\IPendingInvoicesInErrorReport.cs" />
+    <Compile Include="Reports\ProcessingDashBoard\Impl\SISUsageRecharge.cs" />
+    <Compile Include="Reports\ProcessingDashBoard\ISISUsageRecharge.cs" />
+    <Compile Include="Reports\MemberLocations\IMemberLocation.cs" />
+    <Compile Include="Reports\MemberLocations\Impl\MemberLocationImpl.cs" />
+    <Compile Include="Reports\ReceivablesReport\Impl\ReportReceivables.cs" />
+    <Compile Include="Reports\ReceivablesReport\IReceivablesReport.cs" />
+    <Compile Include="Reports\SandBoxTransaction\Impl\SandBoxTransactionImpl.cs" />
+    <Compile Include="Reports\SandBoxTransaction\ISandBoxTransaction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reports\ValidationDetails\Impl\ValidationDetailsImpl.cs" />
+    <Compile Include="Reports\ValidationDetails\IValidationDetails.cs" />
+    <Compile Include="Reports\ValidationSummary\Impl\ValidationSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reports\ValidationSummary\IValidationSummary.cs" />
+    <Compile Include="SalesForce\ISalesForce.cs" />
+    <Compile Include="SalesForce\Impl\SalesForce.cs" />
+    <Compile Include="Sandbox\Impl\SandboxCertificationManager.cs" />
+    <Compile Include="Sandbox\ISandboxCertificationManager.cs" />
+    <Compile Include="Security\IAuthorizationManager.cs" />
+    <Compile Include="Security\Impl\AuthorizationManager.cs" />
+    <Compile Include="Security\Permissions\AchOps.cs" />
+    <Compile Include="Security\Permissions\Cargo\BillingHistoryAndCorrespondence\BillingHistoryAndCorrespondence.cs" />
+    <Compile Include="Security\Permissions\Cargo\DownloadCorrespondences\DownloadCorrespondences.cs" />
+    <Compile Include="Security\Permissions\Cargo\Payables\CreditNote.cs" />
+    <Compile Include="Security\Permissions\Cargo\Payables\Invoice.cs" />
+    <Compile Include="Security\Permissions\Cargo\Payables\Search.cs" />
+    <Compile Include="Security\Permissions\Cargo\Payables\ViewSupportingDocuments.cs" />
+    <Compile Include="Security\Permissions\Cargo\Receivables\CorrectSupportingDocumentsLinkingErrors.cs" />
+    <Compile Include="Security\Permissions\Cargo\Receivables\CreateCreditNote.cs" />
+    <Compile Include="Security\Permissions\Cargo\Receivables\CreateInvoice.cs" />
+    <Compile Include="Security\Permissions\Cargo\Receivables\Manage.cs" />
+    <Compile Include="Security\Permissions\Cargo\Receivables\ManageSupportingDocuments.cs" />
+    <Compile Include="Security\Permissions\Cargo\Receivables\ValidationErrorCorrection.cs" />
+    <Compile Include="Security\Permissions\General\FileManagement.cs" />
+    <Compile Include="Security\Permissions\General\ManageSuspendedInvoices.cs" />
+    <Compile Include="Security\Permissions\General\ViewISAndCHCalendar.cs" />
+    <Compile Include="Security\Permissions\Help.cs" />
+    <Compile Include="Security\Permissions\IchOps.cs" />
+    <Compile Include="Security\Permissions\ISOps\ManageMasters.cs" />
+    <Compile Include="Security\Permissions\Masters\Masters.cs" />
+    <Compile Include="Security\Permissions\Menu.cs" />
+    <Compile Include="Security\Permissions\Misc\BillingHistoryAndCorrespondence.cs" />
+    <Compile Include="Security\Permissions\Misc\Payables\CreditNoteBillings.cs" />
+    <Compile Include="Security\Permissions\Misc\Payables\Invoice.cs" />
+    <Compile Include="Security\Permissions\Misc\Payables\Search.cs" />
+    <Compile Include="Security\Permissions\Misc\Payables\ViewSupportingDocuments.cs" />
+    <Compile Include="Security\Permissions\Misc\Receivables\CorrectSupportingDocumentsLinkingErrors.cs" />
+    <Compile Include="Security\Permissions\Misc\Receivables\CreditNote.cs" />
+    <Compile Include="Security\Permissions\Misc\Receivables\Invoice.cs" />
+    <Compile Include="Security\Permissions\Misc\Receivables\Manage.cs" />
+    <Compile Include="Security\Permissions\Misc\Receivables\ManageSupportingDocuments.cs" />
+    <Compile Include="Security\Permissions\Pax\BillingHistoryAndCorrespondence.cs" />
+    <Compile Include="Security\Permissions\Pax\Payables\SearchSampleFormC.cs" />
+    <Compile Include="Security\Permissions\Pax\Payables\ViewSupportingDocuments.cs" />
+    <Compile Include="Security\Permissions\Pax\Payables\NonSampleInvoice.cs" />
+    <Compile Include="Security\Permissions\Pax\Payables\Search.cs" />
+    <Compile Include="Security\Permissions\Pax\Payables\SampleFormXF.cs" />
+    <Compile Include="Security\Permissions\Pax\Payables\SampleFormF.cs" />
+    <Compile Include="Security\Permissions\Pax\Payables\SampleFormDE.cs" />
+    <Compile Include="Security\Permissions\Pax\Payables\SampleFormC.cs" />
+    <Compile Include="Security\Permissions\Pax\Payables\NonSampleCreditNote.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\CorrectSupportingDocumentsLinkingErrors.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\Manage.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\ManageFormC.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\ManageSupportingDocuments.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\SampleFormC.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\SampleFormDE.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\SampleFormF.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\SampleFormXF.cs" />
+    <Compile Include="Security\Permissions\Profile.cs" />
+    <Compile Include="Security\Permissions\Reports\Cargo.cs" />
+    <Compile Include="Security\Permissions\Reports\FinancialController.cs" />
+    <Compile Include="Security\Permissions\Reports\Iata.cs" />
+    <Compile Include="Security\Permissions\Reports\InvReferenceData.cs" />
+    <Compile Include="Security\Permissions\Reports\IsChCalendar.cs" />
+    <Compile Include="Security\Permissions\Reports\MemberContactReports.cs" />
+    <Compile Include="Security\Permissions\Reports\Misc.cs" />
+    <Compile Include="Security\Permissions\Reports\Pax.cs" />
+    <Compile Include="Security\Permissions\Reports\ProcessingDashboard.cs" />
+    <Compile Include="Security\Permissions\Reports\SISUsageReport.cs" />
+    <Compile Include="Security\Permissions\Sandbox.cs" />
+    <Compile Include="Security\Permissions\UATP\BillingHistoryAndCorrespondence\BillingHistoryAndCorrespondence.cs" />
+    <Compile Include="Security\Permissions\UATP\DownloadCorrespondences\DownloadCorrespondences.cs" />
+    <Compile Include="Security\Permissions\UATP\Payables\CreditNoteBillings.cs" />
+    <Compile Include="Security\Permissions\UATP\Payables\Invoice.cs" />
+    <Compile Include="Security\Permissions\UATP\Payables\Search.cs" />
+    <Compile Include="Security\Permissions\UATP\Payables\ViewSupportingDocuments.cs" />
+    <Compile Include="Security\Permissions\UATP\Receivables\CorrectSupportingDocumentsLinkingErrors.cs" />
+    <Compile Include="Security\Permissions\UATP\Receivables\CreditNote.cs" />
+    <Compile Include="Security\Permissions\UATP\Receivables\Invoice.cs" />
+    <Compile Include="Security\Permissions\UATP\Receivables\Manage.cs" />
+    <Compile Include="Security\Permissions\UATP\Receivables\ManageSupportingDocuments.cs" />
+    <Compile Include="Security\Permissions\UATP\Receivables\ValidationErrorCorrection.cs" />
+    <Compile Include="SubmissionDeadline\IISSubmissionDeadlineAlert.cs" />
+    <Compile Include="SubmissionDeadline\Impl\ISSubmissionDeadlineAlertImpl.cs" />
+    <Compile Include="SupportingDocuments\ICargoSupportingDocumentManager.cs" />
+    <Compile Include="SupportingDocuments\Impl\CargoSupportingDocumentManager.cs" />
+    <Compile Include="SystemMonitor\Imp\SystemMonitorManager.cs" />
+    <Compile Include="SystemMonitor\ISystemMonitorManager.cs" />
+    <Compile Include="ValidationCache.cs" />
+    <Compile Include="ValueConfirmation\IAutoGenerateValueConfirmationReport.cs" />
+    <Compile Include="ValueConfirmation\Impl\AutoGenerateValueConfirmationReport.cs" />
+    <Compile Include="ValueConfirmation\Impl\RequestVCF.cs" />
+    <Compile Include="ValueConfirmation\Impl\ResponseVCF.cs" />
+    <Compile Include="ValueConfirmation\Impl\ResponseVCFFileHelper.cs" />
+    <Compile Include="ValueConfirmation\Impl\TrackAtpcoResponseVCF.cs" />
+    <Compile Include="ValueConfirmation\IRequestVCF.cs" />
+    <Compile Include="SamplingErrorCodes.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\NonSampleCreditNote.cs" />
+    <Compile Include="Security\Permissions\Pax\Receivables\NonSampleInvoice.cs" />
+    <Compile Include="Service References\SISGatewayService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SupportingDocuments\Impl\SupportingDocumentManager.cs" />
+    <Compile Include="SupportingDocuments\ISupportingDocumentManager.cs" />
+    <Compile Include="TemplatedTextGenerator\Impl\TemplatedTextGenerator.cs" />
+    <Compile Include="TemplatedTextGenerator\ITemplatedTextGenerator.cs" />
+    <Compile Include="ValueConfirmation\IResponseVCF.cs" />
+    <Compile Include="ValueConfirmation\IResponseVCFFileHelper.cs" />
+    <Compile Include="ValueConfirmation\ITrackAtpcoResponseVCF.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Iata.IS.Business.Common\Iata.IS.Business.Common.csproj">
+      <Project>{F4822CFC-DAD9-451D-B901-3C6AE4409021}</Project>
+      <Name>Iata.IS.Business.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Business.Output\Iata.IS.Business.Output.csproj">
+      <Project>{271D3847-EAD1-490C-8EB3-B224E378B898}</Project>
+      <Name>Iata.IS.Business.Output</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Business.Reports\Iata.IS.Business.Reports.csproj">
+      <Project>{26D73ED8-38B0-4234-BB0E-4D6B0150638B}</Project>
+      <Name>Iata.IS.Business.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Core\Iata.IS.Core.csproj">
+      <Project>{6DAC77EB-620C-4AE0-9FC5-332F1170240D}</Project>
+      <Name>Iata.IS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Data\Iata.IS.Data.csproj">
+      <Project>{9AF8ED4F-C405-401A-9029-03A0653753B1}</Project>
+      <Name>Iata.IS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.DR.Business.OfflineCollection\Iata.IS.DR.Business.OfflineCollection.csproj">
+      <Project>{C804D09C-8113-4DCE-95EF-E5C799CFEB05}</Project>
+      <Name>Iata.IS.DR.Business.OfflineCollection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.DR.Business.Validation\Iata.IS.DR.Business.Validation.csproj">
+      <Project>{26E88B1A-E87C-4C42-ACB4-A57E6FD6BF1D}</Project>
+      <Name>Iata.IS.DR.Business.Validation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Ich.Interface\Iata.IS.Ich.Interface.csproj">
+      <Project>{35ACA4ED-986D-4B2F-8B27-CCD2623859CB}</Project>
+      <Name>Iata.IS.Ich.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Model\Iata.IS.Model.csproj">
+      <Project>{5EEA49E6-F25C-4682-979C-9257903BF490}</Project>
+      <Name>Iata.IS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Service\Iata.IS.FTP\Iata.IS.FTP.csproj">
+      <Project>{1990FE6F-D1E4-4BE0-A8B9-A0FC1E303BD3}</Project>
+      <Name>Iata.IS.FTP</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Web\Iata.IS.Business.Web\Iata.IS.Business.Web.csproj">
+      <Project>{979B5C7A-5192-4756-BEE7-83BDFE548092}</Project>
+      <Name>Iata.IS.Business.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Web\Iata.IS.System\Iata.IS.AdminSystem.csproj">
+      <Project>{85CC0FE4-7401-4CD6-89B8-B5A9CA181186}</Project>
+      <Name>Iata.IS.AdminSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\Templates\MuOutputGenerationNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\IcpDisableUserNoFederationIdNotification.vm" />
+    <None Include="App_Data\Templates\IcpEnableUserNoFederationIdNotification.vm" />
+    <None Include="App_Data\Templates\IcpEnableUserFailNotification.vm" />
+    <None Include="App_Data\Templates\IcpDisableUserFailNotification.vm" />
+    <EmbeddedResource Include="App_Data\Templates\MiscBillingHistoryAuditTrailPdf.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="App_Data\SchemaFiles\AttachmentTransmissionV3.6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\SchemaFiles\BlockingRuleUpdate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\SchemaFiles\FormCXSD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\SchemaFiles\ICH-Settlement.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\SchemaFiles\ICH-SMI-X-Request.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\SchemaFiles\ICH-SMI-X-Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\SchemaFiles\MemberProfileUpdate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\SchemaFiles\RechargeData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="App_Data\Templates\AutoBillingInvoiceClosureValidationError.vm" />
+    <None Include="App_Data\SchemaFiles\SIS-Update-User-Request.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\SchemaFiles\SIS-Update-User-Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Templates\AutoBillingInvoiceClosureError.vm" />
+    <None Include="App_Data\Templates\AutoBillingIrregularityReportSLA.vm" />
+    <None Include="App_Data\Templates\AutoBillingThresholdValueReachedInvoiceNotification.vm" />
+    <None Include="App_Data\Templates\AutoBillingUnavaliableInvoiceNotification.vm" />
+    <None Include="App_Data\Templates\AutoClosingICHLateSubFailureNotification.vm" />
+    <None Include="App_Data\Templates\CertificationReportNotification.vm" />
+    <EmbeddedResource Include="App_Data\Templates\CgoBillingMemoDetailReport.vm" />
+    <EmbeddedResource Include="App_Data\Templates\CgoCreditMemoDetailReport.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\Templates\CgoRejectionMemoDetailReport.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="App_Data\Templates\CompetionofConfigurationofIchAchSpecificElement.vm" />
+    <None Include="App_Data\Templates\BVCResponseUpdateFailed.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\BvcSanityCheckAlerts.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="App_Data\Templates\CargoBillingHistoryAuditTrailPdf.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\Templates\FutureSubmittedInvoiceInError.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\Templates\LegalXmlGenerateError.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\Templates\LegalXmlGenerateZipCreationFailError.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\Templates\LegalXmlCreationSuccessfull.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\Templates\IsWebInvoices.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="App_Data\Templates\AuditTrailPackageDownloadNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\CorrespondenceEmailNotification.vm" />
+    <None Include="App_Data\Templates\IchSmiXWSfailure.vm" />
+    <None Include="App_Data\Templates\IcpCreateUserFailNotification.vm" />
+    <None Include="App_Data\Templates\iiNetFileTransferNotificationToMember.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MemberProfileCsvUploadLoadingFailureNotification.vm" />
+    <None Include="App_Data\Templates\MemberProfileCsvUploadSuccessfulNotification.vm" />
+    <None Include="App_Data\Templates\ReportDownloadNotification.vm" />
+    <None Include="App_Data\Templates\SISAdminDailyOutputProcessCompletionNotification.vm" />
+    <None Include="App_Data\Templates\CorrespondenceDeletedAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\CorrespondenceUpatedToCloseAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\CsvUploadFileAvailable.vm" />
+    <None Include="App_Data\Templates\CsvUploadFileTransferred.vm" />
+    <None Include="App_Data\Templates\FileAvailableForDownload.vm" />
+    <None Include="App_Data\Templates\ISAdminPendingFutureSubmissionAlert.vm" />
+    <None Include="App_Data\Templates\IsrFileSanityCheckAlerts.vm" />
+    <None Include="App_Data\Templates\LegalArchiveZipFileCreationErrorAlert.vm" />
+    <None Include="App_Data\Templates\LegalArchivingStatusNotification.vm" />
+    <None Include="App_Data\Templates\ProfileMigrationUpdateFailureNotification.vm" />
+    <None Include="App_Data\Templates\ProfileMigrationUpdateSuccessNotification.vm" />
+    <None Include="App_Data\Templates\SISAdminAlertUatpAtcanFailureNotification.vm" />
+    <None Include="App_Data\Templates\LegalInvoiceArchiveRetrievalWebServiceInitializeFailureAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\LegalInvoiceArchiveRetrievalWebServiceResponseFailureAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\CorrespondenceReportDownloadNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ICHBlockingRuleDeleteNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ICHMemberProfileUpdateNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ICHBlockingRuleUpdateNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ISAdminExceptionNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ISAdminProcessedInvoiceCSVFailedNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ISAdminExceptionNotification.vm" />
+    <None Include="App_Data\Templates\ICHSettlementClaimFailedInvoices.vm" />
+    <None Include="App_Data\Templates\ICHSettlementClaimFailedInvoicesContent.vm" />
+    <None Include="App_Data\Templates\ICHSettlementErrorNotification.vm" />
+    <None Include="App_Data\Templates\ISAdminPurgingTransactionFailedNotification.vm" />
+    <None Include="App_Data\Templates\LegalArchiveDepositRequestFailureAlert.vm" />
+    <None Include="App_Data\Templates\LegalArchiveWebServiceExceptionAlert.vm" />
+    <None Include="App_Data\Templates\SalesForceFailureTemplate.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SalesForceTemplate.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ISAdminNotificationForUnexpectedError.vm" />
+    <None Include="App_Data\Templates\ISAdminOldIdecFailureNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="App_Data\Templates\PaxBillingHistoryAuditTrailPdf.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="App_Data\Templates\LateSubmissionInvoiceRejectHtmlContents.vm" />
+    <None Include="App_Data\Templates\MemberSuspendedInvoiceHtmlContents.vm" />
+    <None Include="App_Data\Templates\SISAdminAlertAutoBillingIrregularityReportRegenerateStatus.vm" />
+    <None Include="App_Data\Templates\SISAdminAlertAutoBillingWeeklyPostingFailureNotification.vm" />
+    <None Include="App_Data\Templates\SISAdminAlertDailyAutoBillingIrregularityReportGenerationFailureNotification .vm" />
+    <None Include="App_Data\Templates\SISAdminAlertDailyRevenueRecognitionReportGenerationFailureNotification.vm" />
+    <None Include="App_Data\Templates\SISAdminAlertUatpAtcanFailureNotificationzip.vm" />
+    <None Include="App_Data\Templates\SISAdminDailyOutputProcessFailureNotification.vm" />
+    <None Include="App_Data\Templates\SISAdminDailyOutputProcessPendingInvoicesNotification.vm" />
+    <None Include="App_Data\Templates\SISAdminOfflineCollectionDownloadFailureAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\OutputFileAvailableForFormCAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SisWebserviceErrorNotification.vm" />
+    <None Include="App_Data\Templates\SuspendedInvoiceEmail.vm" />
+    <None Include="App_Data\Templates\SuspendedInvoiceHtmlContents.vm" />
+    <None Include="App_Data\Templates\UsageFileSanityCheckAlerts.vm" />
+    <None Include="Service References\SISGatewayService\SISGatewayService1.disco" />
+    <EmbeddedResource Include="App_Data\Templates\BillingMemoDetailReport.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\Templates\CreditMemoDetailReport.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\Templates\NonSamplinghRejectionMemoDetailReport.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="App_Data\Templates\AtpcoResponseVcfNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ISAdminAchRecapSheetFailureNotification.vm" />
+    <None Include="App_Data\Templates\SanityCheckExceptionAlerts.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\FutureUpdatesEffectToChangerHtmlContents.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\FutureUpdatesEffectToContactsHtmlContents.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MemberProfileUpdates.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MemberProfileUpdatesHtmlContents.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SanityCheckAlerts.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MemProfileBRuleUpdWSUnavailabilityNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SettlementDataWSUnavailabilityNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SISAdminAlertParsingAndValidationFailureNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ValueConfirmationReportsAlerts.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\FdrExcessExchangeRatesRecievedNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ISAdminPendingBVCProcessesAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ISSubmissionDeadlineAlerts.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\OutputFileAvailableAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SISAdminOfflineCollectionGenerationFailureAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\OfflineOutputAvailableAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SISAdminAlertOutputFileGenerationPendingProcessesNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SISAdminAlertOfflineCollection.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SISAdminAlertOfflineCollectionzip.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\FtpFileUploadFailure.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ISAdminProcessFailedNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\FdrNotReceivedNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\FdrParsingAndValidationFailureNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MissingSubmissionNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MissingSubmissionSummary.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="App_Data\Templates\SamplingRejectionMemoDetailReport.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="App_Data\Templates\RechargeDataAvailableForDownloadNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\RechargeDataGenerationFailureNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\OutputAvailableAlert.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\UserChangedPassword.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\LateSubmissionWSUnavailabilityNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\LateSubmissionInvoiceRejectNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MemberSuspensionNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\SettlementFailureNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ParsingValidationExceptionNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\UserWelcomeNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ValueConfirmationFailNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\XMLValidationFailureNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Service References\SISGatewayService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SISGatewayService\configuration.svcinfo" />
+    <None Include="Service References\SISGatewayService\configuration91.svcinfo" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Templates\ACHRecapSheetStatus.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ACHRecapSheetOverview.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\FileLateSubmission.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ICHBlockingRuleUpdateFailureNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\ICHMemberProfileUpdateFailureNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\InvoiceLateSubmission.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\Correspondence.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\FutureUpdatesEffectToChanger.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\FutureUpdatesEffectToContacts.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="App_Data\Templates\InvoiceDownloadNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="App_Data\Templates\MemberCreationToIchAchOps.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MemberLocationUpdatedForFTPPull.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MemberLocationUpdatedWithCSV.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MemberProfileUpdatesToChanger.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\MemberProfileUpdatesToContacts.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Templates\OutputGenerationNotification.vm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Service References\SISGatewayService\SISGatewayService1.wsdl" />
+    <None Include="Service References\SISGatewayService\SISGatewayService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SISGatewayService\SISGatewayService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SISGatewayService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Security\Permissions\AchOps\" />
+    <Folder Include="Security\Permissions\IchOps\" />
+    <Folder Include="Security\Permissions\ISOps\ManageMasters\" />
+    <Folder Include="Security\Permissions\Menu\" />
+    <Folder Include="Security\Permissions\Misc\BillingHistoryAndCorrespondence\" />
+    <Folder Include="Security\Permissions\Pax\BillingHistoryAndCorrespondence\" />
+    <Folder Include="Security\Permissions\Profile\" />
+    <Folder Include="Security\Permissions\Reports\SISOps\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Iata.IS.Core\Iata.IS.Core.csproj">
+      <Project>{6DAC77EB-620C-4AE0-9FC5-332F1170240D}</Project>
+      <Name>Iata.IS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Data\Iata.IS.Data.csproj">
+      <Project>{9AF8ED4F-C405-401A-9029-03A0653753B1}</Project>
+      <Name>Iata.IS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iata.IS.Model\Iata.IS.Model.csproj">
+      <Project>{5EEA49E6-F25C-4682-979C-9257903BF490}</Project>
+      <Name>Iata.IS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iPayables.SIS.Security\iPayables.SIS.Security.vbproj">
+      <Project>{F46313B9-93FB-40C7-BD22-F29D43FB6DFA}</Project>
+      <Name>iPayables.SIS.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iPayables.SIS.UserManagement\iPayables.SIS.UserManagement.vbproj">
+      <Project>{B036C9A1-9DE8-483E-A6A0-EC768ED03FB2}</Project>
+      <Name>iPayables.SIS.UserManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

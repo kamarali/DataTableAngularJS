@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SISGatewayService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ISISGatewayService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:SecureConversationToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:BootstrapPolicy>
+                  <wsp:Policy>
+                    <sp:SignedParts>
+                      <sp:Body />
+                      <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+                      <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+                      <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                      <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                      <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+                      <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                      <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+                    </sp:SignedParts>
+                    <sp:EncryptedParts>
+                      <sp:Body />
+                    </sp:EncryptedParts>
+                    <sp:TransportBinding>
+                      <wsp:Policy>
+                        <sp:TransportToken>
+                          <wsp:Policy>
+                            <sp:HttpsToken RequireClientCertificate="false" />
+                          </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:AlgorithmSuite>
+                          <wsp:Policy>
+                            <sp:Basic256 />
+                          </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                          <wsp:Policy>
+                            <sp:Strict />
+                          </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp />
+                      </wsp:Policy>
+                    </sp:TransportBinding>
+                    <sp:SignedSupportingTokens>
+                      <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                          <wsp:Policy>
+                            <sp:WssUsernameToken10 />
+                          </wsp:Policy>
+                        </sp:UsernameToken>
+                      </wsp:Policy>
+                    </sp:SignedSupportingTokens>
+                    <sp:Wss11>
+                      <wsp:Policy />
+                    </sp:Wss11>
+                    <sp:Trust10>
+                      <wsp:Policy>
+                        <sp:MustSupportIssuedTokens />
+                        <sp:RequireClientEntropy />
+                        <sp:RequireServerEntropy />
+                      </wsp:Policy>
+                    </sp:Trust10>
+                  </wsp:Policy>
+                </sp:BootstrapPolicy>
+              </wsp:Policy>
+            </sp:SecureConversationToken>
+          </wsp:Policy>
+        </sp:EndorsingSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://10.1.2.128/ICHWS/SISGatewayService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://10.1.2.128/ICHWS/SISGatewayService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISISGatewayService_MemberProfileUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:MemberProfileUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ISISGatewayService_MemberProfileUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MemberProfileUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISISGatewayService_BlockingRuleUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:BlockingRuleUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ISISGatewayService_BlockingRuleUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BlockingRuleUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISISGatewayService_InvoiceSettlement_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvoiceSettlement" />
+  </wsdl:message>
+  <wsdl:message name="ISISGatewayService_InvoiceSettlement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvoiceSettlementResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISISGatewayService_LateSubmissionClosureNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:LateSubmissionClosureNotification" />
+  </wsdl:message>
+  <wsdl:message name="ISISGatewayService_LateSubmissionClosureNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LateSubmissionClosureNotificationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISISGatewayService">
+    <wsdl:operation name="MemberProfileUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISISGatewayService/MemberProfileUpdate" message="tns:ISISGatewayService_MemberProfileUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISISGatewayService/MemberProfileUpdateResponse" message="tns:ISISGatewayService_MemberProfileUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BlockingRuleUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISISGatewayService/BlockingRuleUpdate" message="tns:ISISGatewayService_BlockingRuleUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISISGatewayService/BlockingRuleUpdateResponse" message="tns:ISISGatewayService_BlockingRuleUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceSettlement">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISISGatewayService/InvoiceSettlement" message="tns:ISISGatewayService_InvoiceSettlement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISISGatewayService/InvoiceSettlementResponse" message="tns:ISISGatewayService_InvoiceSettlement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LateSubmissionClosureNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISISGatewayService/LateSubmissionClosureNotification" message="tns:ISISGatewayService_LateSubmissionClosureNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISISGatewayService/LateSubmissionClosureNotificationResponse" message="tns:ISISGatewayService_LateSubmissionClosureNotification_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_ISISGatewayService" type="tns:ISISGatewayService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ISISGatewayService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MemberProfileUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ISISGatewayService/MemberProfileUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockingRuleUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ISISGatewayService/BlockingRuleUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceSettlement">
+      <soap12:operation soapAction="http://tempuri.org/ISISGatewayService/InvoiceSettlement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LateSubmissionClosureNotification">
+      <soap12:operation soapAction="http://tempuri.org/ISISGatewayService/LateSubmissionClosureNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SISGatewayService">
+    <wsdl:port name="WSHttpBinding_ISISGatewayService" binding="tns:WSHttpBinding_ISISGatewayService">
+      <soap12:address location="https://10.1.2.128/ICHWS/SISGatewayService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://10.1.2.128/ICHWS/SISGatewayService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

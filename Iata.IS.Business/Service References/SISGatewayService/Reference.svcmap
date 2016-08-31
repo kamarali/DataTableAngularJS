@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="57b56615-7ac1-438d-b26d-5524f2c8ab7d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://10.1.2.128/ICHWS/SISGatewayService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SISGatewayService2.xsd" MetadataType="Schema" ID="5757e8fa-069d-4111-86dd-f4534a8d0c96" SourceId="1" SourceUrl="https://10.1.2.128/ICHWS/SISGatewayService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SISGatewayService21.xsd" MetadataType="Schema" ID="684a8f9d-1adf-4e14-be49-8da986518f9e" SourceId="1" SourceUrl="https://10.1.2.128/ICHWS/SISGatewayService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SISGatewayService1.disco" MetadataType="Disco" ID="d8fb88cd-bafa-476d-90c0-b3b988a69c06" SourceId="1" SourceUrl="https://10.1.2.128/ICHWS/SISGatewayService.svc?disco" />
+    <MetadataFile FileName="SISGatewayService1.wsdl" MetadataType="Wsdl" ID="f006e05f-f87b-4293-b888-9de05128a5cf" SourceId="1" SourceUrl="https://10.1.2.128/ICHWS/SISGatewayService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
