@@ -1,0 +1,13 @@
+﻿<html>
+	<body>
+    <p>Dear ICH Ops, </p>
+		<p>  The web service for communicating the closing of the late submission window is unavailable.
+       Hence the late submission window closure details could not be successfully communicated.<br/>
+       Note that the late submission window for billing period $BilingPeriod is closed.
+    </p>
+
+    <p>IATA SIS Operations Team,</p>
+    <p>$SISOpsemailid</p>
+		
+	</body>
+</html>

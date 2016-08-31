@@ -1,0 +1,6 @@
+﻿<html>
+	<body>
+	<p>Please note that blocking rule updates did not get sent for $BlockingRuleName configured for $MemberName (ID: $MemberId). ErrorCode : $ErrorCode </p>
+	</body>
+</html>
+ 

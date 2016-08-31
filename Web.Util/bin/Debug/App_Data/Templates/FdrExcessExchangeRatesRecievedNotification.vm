@@ -1,0 +1,48 @@
+<html>
+	<body>
+    Dear Admin,<br/>
+
+        <p>FDR file received for $Month $Year. The exchange rate for all active currencies(SIS currency master) which are present in FDR file will be imported to the system.</p>
+  
+      #foreach($Record in $Records)
+	    #beforeall
+		    <p>The file also contains exchange rate for currencies which are either not present or inactive in SIS currency master.</p>
+	          <table border ="1" width="100%">
+			        <tr>
+				        <th>Currency Numeric Code</th>
+				        <th>Currency Alpha Code</th>
+				        <th>EUR Exchange Rate</th>				
+				        <th>GBP Exchange Rate</th>
+                <th>USD Exchange Rate</th>
+			        </tr>
+	    #before
+			    <tr>
+	    #odd
+			    <Style='color:gray'>
+	    #even
+			    <Style='color:blue'>
+	    #each
+			    <td>$Record.NumericCurrencyCode</td>
+			    <td>$Record.CurrencyCode</td>	 
+			    <td><label>$Record.EuroToCurrencyCodeExchangeRateInteger</label>.<label>$Record.EuroToCurrencyCodeExchangeRateFraction</label></td>			
+			    <td><label>$Record.PoundSterlingToCurrencyCodeExchangeRateInteger</label>.<label>$Record.PoundSterlingToCurrencyCodeExchangeRateFraction</label></td>	
+          <td><label>$Record.UsDollarToCurrencyCodeExchangeRateInteger</label>.<label>$Record.UsDollarToCurrencyCodeExchangeRateFraction</label></td>	
+	    #after
+			    </tr>
+	    #afterall
+		    </table>
+
+	    #end
+
+
+      #if($MissingCurPresent)
+      <p>The file does not contain exchange rate for following currencies: $MissingCurrencies</p>
+      #end
+	    
+      <p>Please resolve this ASAP.</p>
+      <br/>
+    Regards,<br/>
+    SIS–System
+
+    </body>
+</html>

@@ -1,0 +1,5 @@
+<html>
+	<body>
+		<p>There was a failure in sending settlement file for invoices in $ClearancePeriod clearance period(Error Code: $ErrorCode).</p>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<html>
+<br/>
+<p>This is to inform you that initiation of $billingCategory Correspondence No. $correspondenceNumber was terminated.</p> 
+<br/>
+Linked invoice details:<br/>
+Invoice No.: $invoiceNumber<br/>
+Billing Period: $billingPeriod<br/>
+Billing Member: $billingMember<br/>
+<br/>
+#if($rejectionMemoNumber) 
+<br/>$rejectionMemoNumber
+#end
+<br/>
+Regards<br/>
+IATA SIS Operations Team<br/>
+$sisOpsEmailId
+</html>

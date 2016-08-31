@@ -1,0 +1,11 @@
+﻿<html>
+	<body>
+		<p>Dear SIS Ops, </p>
+		<p>The validation of the file $fileName was unsuccessful.</p>
+		<p>Please find attached Validation Report.</p>
+
+Regards,
+<BR/>
+IS System
+</body>
+</html>
