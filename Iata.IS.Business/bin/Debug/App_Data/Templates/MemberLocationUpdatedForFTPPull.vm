@@ -1,0 +1,7 @@
+﻿<html>
+	<body>
+		<p>$CSVFileName file containing the details of all the locations for $MemberName is available for download <br/>
+		at the following ftp location $CSVFTPPath</p>
+	</body>
+</html>
+ 

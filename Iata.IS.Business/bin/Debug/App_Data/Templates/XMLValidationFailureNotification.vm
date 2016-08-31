@@ -1,0 +1,6 @@
+﻿<html>
+	<body>
+	<p>Please note that $OperationType was unsuccessful.Following validation errors were generated $ValidationFailureDetails </p>
+	</body>
+</html>
+ 

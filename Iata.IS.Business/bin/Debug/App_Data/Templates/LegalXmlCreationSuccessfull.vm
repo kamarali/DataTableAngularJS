@@ -1,0 +1,14 @@
+﻿<HTML>
+<BODY>
+Dear SIS Ops,<br/>
+
+	<P>&nbsp;&nbsp;Legal invoice data for Billing Month $billingMonth $billingYear has been created and is available for download from the IATA FTP folder.</P>
+	 <BR/>
+	The name of the file is $zipFileName.
+	<BR/>
+Regards,
+<BR/>
+<BR/>
+IS System
+</BODY>
+</HTML>

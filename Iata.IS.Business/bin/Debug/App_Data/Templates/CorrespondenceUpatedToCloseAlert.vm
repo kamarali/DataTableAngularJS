@@ -1,0 +1,9 @@
+﻿<html>
+<br/>
+This is to inform you that $billingCategory Correspondence No. $correspondenceNumber was accepted and closed by the initiating member of the correspondence.
+<br/>
+<br/>
+Regards.<br/>
+IATA SIS Operations Team<br/>
+$sisOpsEmailId<br/>
+</html>

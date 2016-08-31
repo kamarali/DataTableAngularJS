@@ -1,0 +1,17 @@
+﻿<html>
+	<body>
+		 <P>Dear SIS Member,
+			 <br/><br/>
+			 The audit trail package requested by you is available for download.		 
+			 <br/><br/>
+			Follow the below link to download the file <a href="$FilePath">$FilePath</a> 		 
+		</P>
+		</br> <br/> 
+		Regards,
+		<br/>
+		IATA SIS Operations Team
+		<br/>
+		$SISOpsEmailId
+		
+	</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<html>
+	<body>
+  	#if(!($achBillingCategorypax =="" && $achBillingCategorycgo =="" && $achBillingCategorymisc =="" && $achBillingCategoryuatp =="") )
+		<p>This is to inform you that invoices of the following Billing Categories for ACH clearance have not been received from you for billing period $BillingPeriod .</p>
+		<table border ="1" width="100%">
+			<tr>
+        <th>Billing Category</th>
+			</tr>
+      <tr>
+        <td>$achBillingCategorypax</td>
+			</tr>
+      <tr>
+        <td>$achBillingCategorycgo</td>
+			</tr>
+      <tr>
+        <td>$achBillingCategorymisc</td>
+			</tr>
+      <tr>
+        <td>$achBillingCategoryuatp</td>
+			</tr>
+      </table>
+#end
+  #if(!($interBillingCategorypax =="" && $interBillingCategorycgo =="" && $interBillingCategorymisc =="" && $interBillingCategoryuatp =="") )
+		<p>This is to inform you that invoices of the following Billing Categories for Inter clearance have not been received from you for billing period $BillingPeriod .</p>
+		<table border ="1" width="100%">
+			<tr>
+        <th>Billing Category</th>
+        <tr>
+        <td>$interBillingCategorypax</td>
+			</tr>
+      <tr>
+        <td>$interBillingCategorycgo</td>
+			</tr>
+      <tr>
+        <td>$interBillingCategorymisc</td>  
+      <tr>
+        <td>$interBillingCategoryuatp</td>
+			</tr>
+			</tr>
+     </table>
+			
+	#end
+	</body>
+</html>
+ 

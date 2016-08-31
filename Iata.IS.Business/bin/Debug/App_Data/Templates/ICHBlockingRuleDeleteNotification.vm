@@ -1,0 +1,12 @@
+﻿<html>
+<body>
+
+<p>Please note that blocking rule $BlockingRuleName  configured for $MemberName (ID: $MemberId) was deleted.  
+Please verify that update is received successfully in ICH system.</p>
+
+</body>
+
+</html>
+
+
+ 

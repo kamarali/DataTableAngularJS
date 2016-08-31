@@ -1,0 +1,28 @@
+<html>
+	<body>
+Dear Admin,<br/>
+
+<p>Please note that Five Day Rate file containing exchange rate records for $Month $Year could not be processed due to following errors:</p>
+
+#foreach($Error in $Errors)
+	#beforeall
+		<table>
+		<tr>
+			<th>Error Code</th>
+			<th>Error Description</th>
+		</tr>
+	#before
+		<tr>
+
+	#each
+
+			<td>$Error.ErrorCode</td>
+			<td>$Error.Message</td>
+	#after
+		</tr>
+
+	#afterall
+		</table>
+	#end
+	</body>
+</html>

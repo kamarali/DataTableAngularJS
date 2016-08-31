@@ -1,0 +1,7 @@
+﻿<html>
+	<body>
+		<p>This is to inform/alert you that a Response VCF has not been received for Request VCF having VCFK $key sent to ATPCO on $date at $time UTC </p>
+		
+		<P>This is a system generated message - please do not reply.<P/>
+	</body>
+</html>

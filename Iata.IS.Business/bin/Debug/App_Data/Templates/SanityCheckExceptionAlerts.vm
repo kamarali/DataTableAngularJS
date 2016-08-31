@@ -1,0 +1,13 @@
+﻿<html>
+	<body>
+		<p>There seems to be some problem with $ServiceName Sanity Check Service for file $FileName. The process has experienced a fatal error, which need to be looked at urgently. Please find below the exact error description thrown by the service.
+        </p>
+		<p>$ErrMsg</p>
+
+Regards,
+<BR/>
+IATA SIS Operations Team
+<BR/>
+ $SISOpsEmailid
+</body>
+</html>
