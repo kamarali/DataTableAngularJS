@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+iPayables.SIS.Security
+</name>
+</assembly>
+<members>
+<member name="P:iPayables.Security.DataSecurity.Password">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.Security.DataSecurity.HashString(System.String,System.String@)">
+	<summary>
+	</summary>
+	<param name="DataToHash"></param>
+	<param name="Salt"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables.Security.DataSecurity.CreateRandomSalt(System.Int32)">
+	<summary>
+	</summary>
+	<param name="SaltSize"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:iPayables.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:iPayables.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:iPayables.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
