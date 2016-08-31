@@ -1,0 +1,24 @@
+<html>
+	<body>
+		<p> 
+		Dear SIS Ops Member,<BR/>
+		<BR/>				  
+			  Irregularities in SLA with respect to responses from AIA were detected for Value Determination participant
+			  $DesAccCode.
+			  Please refer to the following file:
+
+		<BR/>
+		    $ZippedFileName<BR/>
+		
+		
+			
+		<BR/>
+		<BR/>		
+		Regards,
+		<BR/>
+		IS System
+</p>
+<p>This is a system generated message - please do not reply.</p>
+		
+	</body>
+</html>

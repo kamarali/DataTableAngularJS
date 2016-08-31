@@ -1,0 +1,12 @@
+﻿<html>
+	<body>
+		<p> Dear SIS Ops, </p>
+		<p> Sanity checks failed for the following Prorate Results (ISR) File received from ATPCO </p>
+    <p> $fileName </p>
+		<p> Please see attached report </p>
+
+Regards,
+<BR/>
+IS System
+</body>
+</html>

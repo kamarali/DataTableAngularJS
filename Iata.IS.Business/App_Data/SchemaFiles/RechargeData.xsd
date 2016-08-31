@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns="http://tempuri.org/XMLSchema.xsd" elementFormDefault="qualified">
+	<xs:element name="ClearanceMonths">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClearanceMonth" type="xs:string" maxOccurs="unbounded"/>
+				<xs:element name="ClearancePeriods">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ClearancePeriod" maxOccurs="4">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ClearancePeriodNo" type="xs:string"/>
+										<xs:element name="MemberStatistics" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="AlphaCode" type="xs:string"/>
+                          <!-- CMP #596: Length of Member Accounting Code to be Increased to 12
+                          Desc: No changes in XSD for Accounting Code of Member, as existing type is string having no restriction on code length.
+                          Ref: FRS Section 3.6 Table 24 Row 9 -->
+                          <xs:element name="NumericCode" type="xs:string"/>
+                          <!--CMP605 : Inclusion of new fields in Usage report and IATA recharge XML file.-->
+                          <xs:element name="ISMembershipStatus" type="xs:string"/>
+                          <xs:element name="ISMembershipSubStatus" type="xs:string"/>
+													<xs:element name="Statistic" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ISSubmission" type="xs:string"/>
+																<xs:element name="CountInvoicesPAX" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountInvoicesCGO" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountInvoicesMISC" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountInvoicesUATP" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsPAXPrimeCoupon" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsPaxBillingMemo" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsPaxCreditMemo" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsPaxSamplingProvisionInvoiceCoupon" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsPaxSamplingDigitEvaluationCoupon" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsPaxAutoBillingRequest" type="xs:nonNegativeInteger"/>
+                                <xs:element name="CountTransactionsPaxValueDeterminationRequest" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsCGOOriginalBillingAWB" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsCGOBillingMemo" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsCGOCreditMemo" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsPaxRejectionMemoInclSampling" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsPAXSamplingUAFCoupon" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsPaxCorrespondence" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsCGORejectionMemo" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsCGOCorrespondence" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsMISCCorrespondence" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountTransactionsUATPCorrespondence" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountSupportingDocumentsPAX" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountSupportingDocumentsCGO" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountSupportingDocumentsMISC" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountSupportingDocumentsUATP" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountDigitalSignatureValidationPAXsent" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountDigitalSignatureValidationCGOsent" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountDigitalSignatureValidationMISCsent" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountDigitalSignatureValidationUATPsent" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountDigitalSignatureValidationPAXrcvd" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountDigitalSignatureValidationCGOrcvd" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountDigitalSignatureValidationMISCrcvd" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountDigitalSignatureValidationUATPrcvd" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountEArchivingPAX" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountEArchivingCGO" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountEArchivingMISC" type="xs:nonNegativeInteger"/>
+																<xs:element name="CountEArchivingUATP" type="xs:nonNegativeInteger"/>
+																<xs:element name="TotalSizeEArchivingPAX" type="xs:nonNegativeInteger"/>
+																<xs:element name="TotalSizeEArchivingCGO" type="xs:nonNegativeInteger"/>
+																<xs:element name="TotalSizeEArchivingMISC" type="xs:nonNegativeInteger"/>
+																<xs:element name="TotalSizeEArchivingUATP" type="xs:nonNegativeInteger"/>
+                                <!--CMP605 : Inclusion of new fields in Usage report and IATA recharge XML file.-->
+                                <xs:element name="ReceivedCountInvoicesPAX" type="xs:nonNegativeInteger"/>
+                                <xs:element name="ReceivedCountInvoicesCGO" type="xs:nonNegativeInteger"/>
+                                <xs:element name="ReceivedCountInvoicesMISC" type="xs:nonNegativeInteger"/>
+                                <xs:element name="ReceivedCountInvoicesUATP" type="xs:nonNegativeInteger"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

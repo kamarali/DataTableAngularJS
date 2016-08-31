@@ -1,0 +1,19 @@
+﻿<html>
+	<body>
+		<p> 
+		Dear ICH/SIS Ops Member,<BR/>
+		<BR/>
+		 ${n} In processing of settlement data to ICH at $FailureTime has got error with Invoice/Invoices. 
+		<BR/>
+		  ${n} Detail: $EmailContent
+		<BR/>
+		 ${n} List of Error :
+		  <BR/> 
+		  ${n}  $ErrorCodeAndCount
+		<BR/>
+		<BR/>
+</p>
+<p>This is a system generated message - please do not reply.</p>
+		
+	</body>
+</html>

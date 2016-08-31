@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This document may not be disclosed, reproduced, copied, recast, reformatted or transmitted in any form by any means electronic or mechanical including photocopying, recording or any information storage and retrieval system without the express and prior written permission of the International Air Transport Association. 
+
+(C) Copyrights Reserved International Air Transport Association 2016
+
+The schema is located online at http://www.iata.org/services/finance/sis/Documents/schemas/AttachmentTransmissionV3.6.xsd
+
+***All XSDs will be versioned the same as the ISPG version being release, irrespective of if the schemas change.  For specific changes to the schemas, please refer to the change log.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="AttachmentTransmission">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="AttachmentHeader">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Version">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="50"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="TransmissionID" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="50"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BillingMember">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+                                      <!--CMP #596: Length of Member Accounting Code to be Increased to 12
+                                      Desc: Since the length of the Accounting Code is increased from 3 to 12.
+                                      Max length of billing member code is changed from 3 to 12.-->
+                                      <xs:maxLength value="12" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ClearanceMonth">
+								<xs:annotation>
+									<xs:documentation>Clearance Month in MMYY format</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:maxInclusive value="1299"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="PeriodNumber">
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:enumeration value="00"/>
+										<xs:enumeration value="01"/>
+										<xs:enumeration value="02"/>
+										<xs:enumeration value="03"/>
+										<xs:enumeration value="04"/>
+										<!-- Change made for ISPG Release 3.1.1 -->
+										<!-- Added 00 as a valid period number to take care of Sampling Form C and D/E cases-->
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BillingCategory">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="P"/>
+										<xs:enumeration value="C"/>
+										<xs:enumeration value="M"/>
+										<xs:enumeration value="U"/>
+										<xs:enumeration value="F"/>
+										<xs:enumeration value="D"/>
+										<!-- Change made for ISPG Release 3.1.1 -->
+										<!-- Added D as a valid period number to take care of Sampling Form D/E cases-->
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="InvoiceHeader" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BilledMember">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+                                                  <!--CMP #596: Length of Member Accounting Code to be Increased to 12
+                                                  Desc: Since the length of the Accounting Code is increased from 3 to 12.
+                                                  Max length of billing member code is changed from 3 to 12.-->
+                                                    <xs:maxLength value="12" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="InvoiceNumber">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="10"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="InvoiceAttachments" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="AttachmentNumber"/>
+													<xs:element ref="AttachmentFileName"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="BatchDetails" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BatchNumber">
+														<xs:simpleType>
+															<xs:restriction base="xs:integer">
+																<xs:maxInclusive value="99999"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="SequenceNumber">
+														<xs:simpleType>
+															<xs:restriction base="xs:integer">
+																<xs:maxInclusive value="99999"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<!-- Change made for ISPG Release 3.1.1 -->
+													<!-- Added minOccurs="0" -->
+													<xs:element name="LineItemDetailsAttachments" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<!-- Change made for ISPG Release 3.1.1 -->
+																<!-- Removed minOccurs="0" for the below 2 elements -->
+																<xs:element ref="AttachmentNumber"/>
+																<xs:element ref="AttachmentFileName"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<!--   change end -->
+													<!-- Change made for ISPG Release 3.1.1 -->
+													<!-- Moved BreakdownDetails node in line with LineItemDetails -->
+													<xs:element name="BreakdownDetails" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="BreakdownSerialNumber">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:integer">
+																			<xs:maxInclusive value="99999"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="BreakdownDetailsAttachments" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="AttachmentNumber"/>
+																			<xs:element ref="AttachmentFileName"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AttachmentNumber">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:maxInclusive value="99999"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="AttachmentFileName">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+              <!--308375 - Sanity Check Abruptly Failed. Need Urgent Attention!!!-->
+              <xs:minLength value="1"/>
+				<xs:maxLength value="500"/>
+              <xs:pattern value="(\s*[^\s]\s*)+"></xs:pattern>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>
+

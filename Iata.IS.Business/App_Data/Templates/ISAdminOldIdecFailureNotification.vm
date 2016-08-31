@@ -1,0 +1,9 @@
+﻿<p>Dear Admin,</p>
+
+  <p>The OLD-IDEC Files generation failed for the Month $BillingMonth.</p>
+
+  <p>Error Message : $ErrorMessage</p>
+
+<p>
+  This is a system generated message - please do not reply.
+</p>

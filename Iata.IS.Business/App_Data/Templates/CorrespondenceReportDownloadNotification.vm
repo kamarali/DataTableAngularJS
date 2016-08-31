@@ -1,0 +1,13 @@
+﻿<html>
+	<body>
+<P>Dear SIS Member,<br/>
+ The data related to Correspondence report requested by you is available for download.</P><br/>
+<P>Follow the below link to download the file; </br> <a href="$FilePath">$FilePath</a> </br>  </P>  
+<br/> <br/>
+Regards,
+<BR/>
+IATA SIS Operations Team
+<BR/>
+$SISOpsEmailId
+</body>
+</html>

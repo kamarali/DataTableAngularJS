@@ -1,0 +1,18 @@
+﻿<html>
+	<body>
+
+<p> There was a failure in the Web Service call with ICH for the Invoice/Credit Note whose details are provided below: </p>
+
+<p> Billing Period: $BillingPeriod </p>
+<p> Billing Category: $BillingCategory </p>  
+<p> Billing Member: $BillingMember </p>
+<p> Billed Member: $BilledMember </p>
+<p> Invoice/Credit Note Number: $Invoicenumber </p>
+<p> Submission Method: $SubmissionMethod </p>
+<p> Reason for failure: $ErrorMessage </p>
+
+Regards,
+<BR/>
+IS System
+</body>
+</html>

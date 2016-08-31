@@ -1,0 +1,12 @@
+﻿<html>
+	<body>
+		<p>Dear IS Admin,</p>
+		<p> $Content at $CurrentTime</p>
+		
+Regards,
+<BR/>
+IATA SIS Operations Team
+<BR/>
+ $SISOpsEmailid
+</body>
+</html>

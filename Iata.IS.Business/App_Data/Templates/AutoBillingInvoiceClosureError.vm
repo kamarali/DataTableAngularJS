@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <style type="text/css">
+    body
+    {
+      font: normal 8pt Arial, Helvetica, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0px auto 0px auto;
+      padding: 0;
+    }
+    table
+    {
+      border-collapse: collapse;
+      padding: 5px 0px;
+      margin: 0;
+    }
+    table.b
+    {
+      border: 1px solid #0075bd;
+    }
+    thead
+    {
+      background-color: #d7e9f8;
+    }
+    td
+    {
+      padding: 2px 2px;
+    }
+    table.b td
+    {
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+    }
+    #content
+    {
+      width: 90%;
+      text-align: left;
+      padding: 10px;
+    }
+    .h1
+    {
+      font-size: 18px;
+    }
+    .h1, .h4
+    {
+      font-weight: bold;
+      padding: 5px 0px 0px 0px;
+    }
+    .fwf
+    {
+      font: normal 8pt 'Courier New' , Courier, monospace;
+    }
+    .ac
+    {
+      text-transform: uppercase;
+    }
+    .hw
+    {
+      width: 50%;
+    }
+    .w65
+    {
+      width: 65%;
+    }
+    .s
+    {
+      font-weight: bold;
+    }
+    .ca
+    {
+      text-align: center;
+    }
+    .num
+    {
+      text-align: right;
+    }
+    .hl {
+      background-color: #dddddd;
+    }
+    ol.il li {
+      display: list-item;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+   Dear SIS Member,
+   <BR/>   <BR/>
+	 The Passanger auto-billing invoice as per the following details could not be closed:<BR/><BR/>
+
+	 Invoice number: $invoiceInError.InvoiceNo<BR/>
+
+	 Billed member: $invoiceInError.BilledMemberAlphaCode/$invoiceInError.BilledMemberNumericCode<BR/>
+
+	 Billing Period: $invoiceInError.PeriodNo&#45;$invoiceInError.BillingMonth&#45;$invoiceInError.BillingYear <BR/><BR/>
+
+	 The reason for closure failure was due to invalid IS Mebership Status.<BR/><BR/>
+
+	 <!-- If the error because Billing Member's or Billed Member's IS Membership status -->
+	 #if($invoiceInError.BillingMemberIsMembershipStatus = "Active") 
+		Your IS Membership status is  $invoiceInError.BillingMemberIsMembershipStatus.<BR/> 
+	 #else
+		IS Membership status of Billed Member $invoiceInError.BilledMemberAlphaCode/$invoiceInError.BilledMemberNumericCode is $invoiceInError.BilledMemberIsMembershipStatus .<BR/>
+	 #end
+	 <BR/><BR/>
+	  Regards,
+	  <BR/>
+	  <BR/>
+	  IATA SIS Operations Team <BR/>
+	  $invoiceInError.SisOpsEmailId <BR/> 
+	  
+	  <BR/> <BR/>		
+
+	</div>
+</body>
+</html>

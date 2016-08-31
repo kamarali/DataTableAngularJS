@@ -1,0 +1,11 @@
+<html>
+	<body>
+    <p>Dear ICH Ops, </p>
+		<p>There was a failure in sending late submission closure notification for $BilingPeriod clearance period(Error Code: $ErrorCode).
+   </p>
+
+    <p>IATA SIS Operations Team,</p>
+    <p>$SISOpsemailid</p>
+		
+	</body>
+</html>

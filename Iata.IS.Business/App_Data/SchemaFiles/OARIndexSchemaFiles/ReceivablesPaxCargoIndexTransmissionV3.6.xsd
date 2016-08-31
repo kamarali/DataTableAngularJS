@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document may not be disclosed, reproduced, copied, recast, reformatted or transmitted in any form by any means electronic or mechanical including photocopying, recording or any information storage and retrieval system without the express and prior written permission of the International Air Transport Association. 
+
+(C) Copyrights Reserved International Air Transport Association 2016
+
+The schema is located online at http://www.iata.org/services/finance/sis/Documents/schemas/ReceivablesPaxCargoIndexTransmissionV3.6.xsd
+
+***All XSDs will be versioned the same as the ISPG version being release, irrespective of if the schemas change.  For specific changes to the schemas, please refer to the change log.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="SISReceivablesIndexTransmission">
+		<xs:annotation>
+			<xs:documentation>Defines the Index File for Pax and Cargo Receivable billings</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SISReceivablesIndexHeader">
+					<xs:annotation>
+						<xs:documentation>Header Information of the SIS Index file for Pax and Cargo Receivables</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Version">
+								<xs:annotation>
+									<xs:documentation>Current version number of the specification. Should be always "IATA:SISReceivablesIndexV1.0."</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+										<xs:maxLength value="50"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="TransmissionID" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Unique identifier for the TransmissionMessage.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="50"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BillingMember">
+								<xs:annotation>
+									<xs:documentation>Member Prefix (220 in case of Lufthansa, 001 in case of American Airlines)</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="4"/>
+										<xs:minLength value="1"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ClearanceMonth">
+								<xs:annotation>
+									<xs:documentation>Clearance Month for which the supporting is getting linked. This should be in MMYY format.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="(0[1-9]|1[012])\d{2}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="PeriodNumber">
+								<xs:annotation>
+									<xs:documentation>Clearance Period on for which the Invoice Details are to be linked.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:enumeration value="00"/>
+										<xs:enumeration value="01"/>
+										<xs:enumeration value="02"/>
+										<xs:enumeration value="03"/>
+										<xs:enumeration value="04"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BillingCategory">
+								<xs:annotation>
+									<xs:documentation>Type of Invoice: P-PAX, F - PAX Form C, C-Cargo</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="P"/>
+										<xs:enumeration value="C"/>
+										<xs:enumeration value="F"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="InvoiceHeader" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BilledMember">
+											<xs:annotation>
+												<xs:documentation>Member Prefix (220 in case of Lufthansa, 001 in case of American Airlines)</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="4"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="InvoiceNumber">
+											<xs:annotation>
+												<xs:documentation>Invoice/Credit Note Number</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="10"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="EInvoicingFiles" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="SrNo"/>
+													<xs:element ref="FileName"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DetailedListingFiles" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="SrNo"/>
+													<xs:element ref="FileName"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="BatchDetails" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BatchNumber">
+														<xs:simpleType>
+															<xs:restriction base="xs:integer">
+																<xs:maxInclusive value="99999"/>
+																<xs:minInclusive value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="SequenceNumber">
+														<xs:simpleType>
+															<xs:restriction base="xs:integer">
+																<xs:maxInclusive value="99999"/>
+																<xs:minInclusive value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="MemoFileName">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:maxLength value="500"/>
+																<xs:minLength value="1"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<!-- Changes made for ISPG release 3.2 -->
+													<!-- Removed minOccurs restriction-->
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<!-- Change made for ISPG Release 3.2 -->
+										<!-- No Supporting document provided in the Receivables Offline Archive -->
+										<!--<xs:element name="InvoiceSupportingAttachments" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="AttachmentNumber"/>
+													<xs:element ref="AttachmentFileName"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element> -->
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SrNo">
+		<xs:annotation>
+			<xs:documentation>Serial number for e-invoicing/Detailed Listing related files</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="99999"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="FileName">
+		<xs:annotation>
+			<xs:documentation>The e-invoicing/Detailed Listing file name including the relative path to access it (if any)</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="500"/>
+				<xs:minLength value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- Change made for ISPG Release 3.2 -->
+	<!-- No Supporting document provided in the Receivables Offline Archive -->
+	<!--
+    <xs:element name="AttachmentNumber">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:maxInclusive value="99999"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="AttachmentFileName">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="500"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+    -->
+</xs:schema>

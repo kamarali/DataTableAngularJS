@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="SISInvoiceValidationRequestTransmission">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="BillingCategory" type="billingCategorytype"/>
+				<xs:element name="InvoiceCreditNoteNumber" type="invoiceCreditNoteNumberType"/>
+				<xs:element name="SettlementMethod" type="settlementMethodtype"/>
+				<xs:element name="SubmissionMethod" type="submissionMethodtype"/>
+				<xs:element name="BillingYearMonthPeriod" type="periodDateType"/>
+                                <xs:element name="OriginalInvoiceSISUniqueInvoiceNumber" type="originalInvoiceGuidType" minOccurs="0"/>
+				<xs:element name="InvoiceType" type="invoiceType"/>
+				<xs:element name="BillingMemberDesignator" type="alphaMemberDesignatorType"/>
+				<xs:element name="BillingMemberCode" type="numericMemberCodeType"/>
+				<xs:element name="BilledMemberDesignator" type="alphaMemberDesignatorType"/>
+				<xs:element name="BilledMemberCode" type="numericMemberCodeType"/>
+				<xs:element name="InvoiceCurrency" type="currencyCodeType"/>
+				<xs:element name="ClearanceCurrency" type="currencyCodeType"/>
+				<xs:element name="ExchangeRate" type="nonNegativeExchangeRateType"/>
+				<xs:element name="CHAgreementIndicator" type="chAgreementIndicatorType"/>
+				<xs:element name="CHDueDate" type="formattedDateType" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="billingCategorytype" id="billingCategorytype">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="P|C|M|U"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="invoiceCreditNoteNumberType" id="invoiceCreditNoteNumberType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="settlementMethodtype" id="settlementMethodtype">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="X"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="submissionMethodtype" id="submissionMethodtype">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="I|X|W"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="invoiceType" id="invoiceType">
+		<xs:restriction base="xs:string">
+      <xs:pattern value="IV|CN|CI|RI"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="alphaMemberDesignatorType" id="alphaMemberDesignatorType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="numericMemberCodeType" id="numericMemberCodeType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"/>
+                        <xs:maxLength value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="currencyCodeType" id="currencyCodeType">
+		<xs:restriction base="xs:string">
+			<xs:length value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nonNegativeExchangeRateType" id="nonNegativeExchangeRateType">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="chAgreementIndicatorType" id="chAgreementIndicatorType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="periodDateType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{4}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="formattedDateType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+		</xs:restriction>
+	</xs:simpleType>
+  <xs:simpleType name="originalInvoiceGuidType" id="originalInvoiceGuidType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="32"/>
+      <xs:maxLength value="32"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

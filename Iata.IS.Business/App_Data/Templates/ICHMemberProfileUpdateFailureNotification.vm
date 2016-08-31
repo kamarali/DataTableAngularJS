@@ -1,0 +1,4 @@
+﻿ICH web-service for synchronization of $UpdateType data could not be invoked for the reason: $FailureReason. 
+Hence ICH system could not be updated with latest changes to $UpdateType, Please see the attached file for the updates that could not be synchronized.
+
+This is a system generated message - please do not reply.

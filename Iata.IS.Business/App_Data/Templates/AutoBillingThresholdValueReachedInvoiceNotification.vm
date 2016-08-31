@@ -1,0 +1,14 @@
+﻿  Dear SIS Member,
+
+  The number of Invoice numbers available for auto-billing has fallen below the recommended
+  threshold limit of $Message.ThreshouldLimitValue.
+
+  $Message.AvalableInvoiceCount are now available for auto-billing.
+
+  Please take corrective action at the earliest and modify the range in the profile to avoid
+  errors in the auto-billing process.
+
+
+  Regards,
+  IATA SIS Operations Team
+  $SISOpsEmailId

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="SISInvoiceValidationResponseTransmission">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ValidationResult" type="validationResulttype"/>
+				<xs:element name="CurrencyRateIndicator" type="currencyRateIndicatortype" minOccurs="0"/>
+				<xs:element name="Errors" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Error" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ErrorCode" type="errorCodetype"/>
+										<xs:element name="ErrorDescription" type="errorDescriptiontype"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="validationResulttype" id="validationResulttype">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="P|F|E"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="currencyRateIndicatortype" id="currencyRateIndicatortype">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="F|C"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="errorCodetype" id="errorCodetype">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="errorDescriptiontype" id="errorDescriptiontype">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

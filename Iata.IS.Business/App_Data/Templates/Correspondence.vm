@@ -1,0 +1,12 @@
+﻿<html>
+	<body>
+		<p>Dear SIS Member, </br>
+		  A new correspondence has been sent by $FromMemberCode to $ToMemberCode. To view the correspondence, click on the below link;</br> </br> 
+      <a href="$CorrespondenceUrl">$CorrespondenceUrl</a> </br> </br> 
+      In case you are having trouble with the link, paste the following link in the browser</br> </br> <a href="$CorrespondenceUrl">$CorrespondenceUrl</a></p> </br>
+      Regards,</br>
+      IATA SIS Operations Team</br>
+      $SisOpsEmailId
+	</body>
+</html>
+ 

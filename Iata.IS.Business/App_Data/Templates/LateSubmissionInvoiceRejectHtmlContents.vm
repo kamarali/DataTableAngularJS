@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Late Submission - Rejected Invoices</title>
+  <style type="text/css">
+    body
+    {
+      font: normal 8pt Arial, Helvetica, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0px auto 0px auto;
+      padding: 0;
+    }
+    table
+    {
+      border-collapse: collapse;
+      padding: 5px 0px;
+      margin: 0;
+    }
+    table.b
+    {
+      border: 1px solid #0075bd;
+    }
+    thead
+    {
+      background-color: #d7e9f8;
+    }
+    td
+    {
+      padding: 2px 2px;
+    }
+    table.b td
+    {
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+    }
+    #content
+    {
+      width: 90%;
+      text-align: left;
+      padding: 10px;
+    }
+    .h1
+    {
+      font-size: 18px;
+    }
+    .s
+    {
+      font-weight: bold;
+    }
+    .num
+    {
+      text-align: right;
+    }
+  </style>
+</head>
+	<body>
+	#foreach($Record in $RejectInvoices)
+	#beforeall
+		<table border ="1" width="100%">
+			<tr>
+				<th>Billed Airline</th>
+				<th>Invoice Number</th>
+				<th>Billing Period</th>				
+				<th>Category</th>
+				
+			</tr>
+	#before
+			<tr>
+	#odd
+			<Style='color:gray'>
+	#even
+			<Style='color:blue'>
+	#each
+			<td>$Record.BilledAirline</td>
+			<td>$Record.InvoiceNo</td>	 
+			<td>$Record.BillingPeriod</td>			
+			<td>$Record.Category</td>	
+	#after
+			</tr>
+	#afterall
+		</table>
+
+		<p>Please initiate further action (increment billing period OR delete invoice) on these through the Processing Dashboard.</p>
+	#nodata
+				 Sorry No Record Found
+	#end
+	</body>
+</html>

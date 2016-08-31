@@ -1,0 +1,20 @@
+﻿<html>
+    <body>
+        <P>
+            A user was activated in SIS. SIS did not attempt to call/invoke the &lsquo;ICP Activate User Web Service&rsquo; as the &lsquo;Federation ID&rsquo; is not available for this user. Therefore, SIS was not able to provide this update to the IATA Customer Portal.
+            <BR/><BR/>
+            Please refer to details below and take appropriate corrective actions.
+            <BR/><BR/>
+            User&rsquo;s First Name: $FirstName <BR/>
+            User&rsquo;s Last Name: $LastName <BR/>
+            User&rsquo;s Email Address: $EmailId <BR/>
+            User&rsquo;s Category: $UserCategory <BR/>
+            $MemberIdText $MemberId 
+	    $MemberCodeText $MemberCode 
+        </P>
+
+        Regards,
+        <BR/>
+        IS System
+    </body>
+</html>

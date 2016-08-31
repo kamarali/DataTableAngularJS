@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="ICH-Settlement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ClearancePeriod" type="periodDateType"/>
+        <xs:element name="Creditors">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Creditor" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CreditorMember" type="DebtorMemberType"/>
+                    <xs:element name="CreditorSponsorMember" type="DebtorMemberType" minOccurs="0"/>
+                    <xs:element name="MergeParentCreditorMember" type="DebtorMemberType" minOccurs="0"/>
+                    <xs:element name="ZoneDetails">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ZoneDetail" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ZoneCode">
+                                  <xs:simpleType id="zoneCode">
+                                    <xs:restriction base="xs:string">
+                                      <xs:length value="1"/>
+                                      <xs:enumeration value="A"/>
+                                      <xs:enumeration value="B"/>
+                                      <xs:enumeration value="C"/>
+                                      <xs:enumeration value="D"/>
+                                      <!--CMP #637: Changes to ICH Settlement (New Zone X for SMI X)-->
+                                      <xs:enumeration value="X"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="ClearanceCurrencyCode" type="currencyCodeType"/>
+                                <xs:element name="DebtorDetails">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="DebtorDetail" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="DebtorMember" type="DebtorMemberType"/>
+                                            <xs:element name="SponsorMember" type="DebtorMemberType" minOccurs="0"/>
+                                            <xs:element name="MergeParentDebtorMember" type="DebtorMemberType" minOccurs="0"/>
+                                            <xs:element name="CategoryDetails">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="CategoryDetail" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element name="BillingCategory">
+                                                          <xs:simpleType id="billingCategory">
+                                                            <xs:restriction base="xs:string">
+                                                              <xs:length value="1"/>
+                                                              <xs:enumeration value="P"/>
+                                                              <xs:enumeration value="U"/>
+                                                              <xs:enumeration value="M"/>
+                                                              <xs:enumeration value="C"/>
+                                                            </xs:restriction>
+                                                          </xs:simpleType>
+                                                        </xs:element>
+                                                        <xs:element name="InvoiceDetails">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:element name="InvoiceDetail" maxOccurs="unbounded">
+                                                                <xs:complexType>
+                                                                  <xs:sequence>
+                                                                    <xs:element name="UniqueInvoiceNumber">
+                                                                      <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                          <xs:length value="32"/>
+                                                                        </xs:restriction>
+                                                                      </xs:simpleType>
+                                                                    </xs:element>
+                                                                    <xs:element name="TransmitterMember" type="DebtorMemberType" minOccurs="0"/>
+                                                                    <xs:element name="InvoiceSource">
+                                                                      <xs:simpleType id="invoiceSource">
+                                                                        <xs:restriction base="xs:string">
+                                                                          <xs:enumeration value="IS-IDEC"/>
+                                                                          <xs:enumeration value="IS-XML"/>
+                                                                          <xs:enumeration value="IS-WEB"/>
+                                                                          <xs:enumeration value="AUTO-BILLING"/>
+                                                                        </xs:restriction>
+                                                                      </xs:simpleType>
+                                                                    </xs:element>
+                                                                    <xs:element name="InvoiceNumber" type="xs:string"/>
+                                                                    <xs:element name="InvoiceDate" type="formattedDateType"/>
+                                                                    <xs:element name="LocalCurrencyCode" type="currencyCodeType"/>
+                                                                    <xs:element name="ExchangeRate" type="xs:double"/>
+                                                                    <xs:element name="DebitOrCredit">
+                                                                      <xs:simpleType id="debitOrCredit">
+                                                                        <xs:restriction base="xs:string">
+                                                                          <xs:length value="2"/>
+                                                                        </xs:restriction>
+                                                                      </xs:simpleType>
+                                                                    </xs:element>
+                                                                    <xs:element name="SettlementMethodIndicator">
+                                                                      <xs:simpleType id="settlementMethodIndicator">
+                                                                        <xs:restriction base="xs:string">
+                                                                          <xs:enumeration value="I"/>
+                                                                          <xs:enumeration value="M"/>
+                                                                          <!--CMP #637: Changes to ICH Settlement (include SMI X for Settlement)-->
+                                                                          <xs:enumeration value="X"/>
+                                                                        </xs:restriction>
+                                                                      </xs:simpleType>
+                                                                    </xs:element>
+                                                                    <xs:element name="SuspendedInvoiceIndicator" type="xs:boolean"/>
+                                                                    <xs:element name="LateSubmission" type="xs:boolean"/>
+                                                                    <xs:element name="IsResubmitted" type="xs:boolean" minOccurs="0"/>
+                                                                    <!--CMP #637: Changes to ICH Settlement (Added New Fields)-->
+                                                                    <xs:element name="CHAgreementIndicator" type="CHAgreementIndicatorType" minOccurs="0"/>
+                                                                    <xs:element name="CHDueDate" type="formattedDateType" minOccurs="0"/>
+                                                                    <xs:element name="SalesOrderNumber" type="SalesOrderNumberType" minOccurs="0"/>
+                                                                    <xs:element name="CreditorLocationID" type="LocationIDType" minOccurs="1"/>
+                                                                    <xs:element name="DebtorLocationID" type="LocationIDType" minOccurs="1"/>
+                                                                    <xs:element name="Total">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence>
+                                                                          <xs:element name="LocalCurrency" type="nonNegativeCurrencyAmountType"/>
+                                                                          <xs:element name="ClearanceCurrency" type="nonNegativeCurrencyAmountType"/>
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                    <xs:element name="SubmissionTime" type="xs:dateTime"/>
+                                                                  </xs:sequence>
+                                                                </xs:complexType>
+                                                              </xs:element>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="numericMemberCodeType" id="numericMemberCodeType">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          CMP #596: Length of Member Accounting Code to be Increased to 12
+          Desc: Changed old value from 4 to 12
+          Ref: FRS Section 3.8 Table 28 Row 3
+        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="3"/>
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nonNegativeLongType" id="nonNegativeLongType">
+    <xs:restriction base="xs:long">
+      <xs:minExclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nonNegativeCurrencyAmountType" id="nonNegativeCurrencyAmountType">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="currencyCodeType" id="currencyCodeType">
+    <xs:restriction base="xs:string">
+      <xs:length value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="designatorType" id="designatorType">
+    <xs:restriction base="xs:string">
+      <xs:length value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="periodDateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{4}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="formattedDateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DebtorMemberType">
+    <xs:sequence>
+      <xs:element name="Designator" type="designatorType"/>
+      <xs:element name="Code" type="numericMemberCodeType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--CMP #637: Changes to ICH Settlement (Define types for New Fields)-->
+  <xs:simpleType name="CHAgreementIndicatorType" id="CHAgreementIndicatorType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SalesOrderNumberType" id="SalesOrderNumberType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="80"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LocationIDType" id="LocationIDType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

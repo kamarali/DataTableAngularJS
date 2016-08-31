@@ -1,0 +1,18 @@
+﻿<html>
+	<body>
+	
+		<table border ="1" width="100%">
+			<tr>
+				<th></th>				
+				<th ><b>Passenger</b></th>
+				<th><b>Freight</b></th>
+				<th><b>UATP</b></th>
+				<th><b>Non-Transport</b></th>
+			</tr>
+
+			$DynamicCurrencyData
+	
+		</table>
+
+	</body>
+</html>

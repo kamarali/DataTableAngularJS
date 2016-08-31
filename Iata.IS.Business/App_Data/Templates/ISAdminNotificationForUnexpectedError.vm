@@ -1,0 +1,9 @@
+﻿Dear IS Admin,<br/>
+
+The application experienced unexpected error in $ServiceName for Member $MemberName. <br/>
+Error Message: $ErrorMessage <br/>
+
+Please take the appropriate action to resolve the issue. <br/>
+
+Regards,<br/>
+SIS – System

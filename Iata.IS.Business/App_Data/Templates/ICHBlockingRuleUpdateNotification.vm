@@ -1,0 +1,12 @@
+﻿<html>
+    <body>
+
+    <p>Please note that blocking rule $BlockingRuleName  was added/updated for $MemberName (ID: $MemberId). 
+		Please verify that update is received successfully in ICH system.</p>
+
+    </body>
+
+</html>
+
+
+ 

@@ -1,0 +1,12 @@
+<html>
+  <body>
+    Hello,<br/>
+    <p>Please find attached the certification report for <b>$FileName</b> file, sent by <b>'$MemberCommercialName'</b>.</p>
+    <br/>
+    Regards,
+    <br/>
+    IATA SIS Operations Team
+    <br/>
+    $SisOpsEmail
+  </body>
+</html>

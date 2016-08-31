@@ -1,0 +1,24 @@
+﻿<html>
+    <body><P>
+There was an issue in the &lsquo;ICP New User Web Service&rsquo; call for a new user created in SIS, or when the Web Service was called during retry for a user for whom the Web Service failed earlier.
+<BR/><BR/>
+Please refer to details below and take appropriate corrective actions.
+<BR/><BR/>
+Request Type:  $RequestType <BR/>
+User&rsquo;s First Name: $FirstName <BR/>
+User&rsquo;s Last Name: $LastName <BR/>
+User&rsquo;s Email Address: $EmailId <BR/>
+User&rsquo;s Federation ID received from ICP: $FederationId <BR/>
+User&rsquo;s Category: $UserCategory <BR/>
+$MemberIdText $MemberId
+$MemberCodeText $MemberCode
+Reason for Failure: $ReasonFailure <BR/>
+$ErrorCodeText $ErrorCode
+$ErrorDescText $ErrorDesc
+</P>
+        
+Regards,
+<BR/>
+IS System
+</body>
+</html>

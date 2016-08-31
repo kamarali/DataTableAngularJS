@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document may not be disclosed, reproduced, copied, recast, reformatted or transmitted in any form by any means electronic or mechanical including photocopying, recording or any information storage and retrieval system without the express and prior written permission of the International Air Transport Association. 
+
+(C) Copyrights Reserved International Air Transport Association 2011 
+
+The schema is located online at http://www.iata.org/whatwedo/finance/clearing/sis/Documents/schemas/ 
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="FormCTransmission">
+    <xs:annotation>
+      <xs:documentation>Defines a FormC transmission file Required Node</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TransmissionHeader">
+          <xs:annotation>
+            <xs:documentation>Header Information of the Form C Transmission File</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="TransmissionDateTime"/>
+              <xs:element ref="Version"/>
+              <xs:element ref="TransmissionID" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Unique identifier for the TransmissionMessage.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element ref="IssuingOrganizationID" minOccurs="0"/>
+              <xs:element ref="ReceivingOrganizationID" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SamplingFormC" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>SamplingFormC</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FormCHeader">
+                <xs:annotation>
+                  <xs:documentation>FormCHeader</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="FormCGeneratingEntity">
+                      <xs:annotation>
+                        <xs:documentation>FormCGeneratingEntity</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="FormCReceivingEntity">
+                      <xs:annotation>
+                        <xs:documentation>FormCReceivingEntity</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="ProvisionalBillingMonth">
+                      <xs:annotation>
+                        <xs:documentation>ProvisionalBillingMonth</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="NilFormCIndicator">
+                      <xs:annotation>
+                        <xs:documentation>NilFormCIndicator</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="CurrOfListingOfProvisionalBilling" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>CurrOfListingOfProvisionalBilling</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LineItem" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>LineItem</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="LineItemNumber">
+                      <xs:annotation>
+                        <xs:documentation>LineItemNumber</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="ChargeCode">
+                      <xs:annotation>
+                        <xs:documentation>ChargeCode</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="TotalGrossAmountALF">
+                      <xs:annotation>
+                        <xs:documentation>TotalGrossAmountALF</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="DetailCount">
+                      <xs:annotation>
+                        <xs:documentation>DetailCount</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LineItemDetail" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>LineItemDetail</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="ProvisionalInvoiceNumber">
+                      <xs:annotation>
+                        <xs:documentation>ProvisionalInvoiceNumber</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="BatchNumberOfProvisionalInvoice">
+                      <xs:annotation>
+                        <xs:documentation>BatchNumberOfProvisionalInvoice</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="RecordSeqNumberOfProvisionalInvoice">
+                      <xs:annotation>
+                        <xs:documentation>RecordSeqNumberOfProvisionalInvoice</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="TicketIssuingAirline">
+                      <xs:annotation>
+                        <xs:documentation>TicketIssuingAirline</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="CouponNumber">
+                      <xs:annotation>
+                        <xs:documentation>CouponNumber</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="TicketDocNumber">
+                      <xs:annotation>
+                        <xs:documentation>TicketDocNumber</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="ElectronicTicketIndicator" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>ElectronicTicketIndicator</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="GrossAmountALF">
+                      <xs:annotation>
+                        <xs:documentation>GrossAmountALF</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="NFPReasonCode" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>NFPReasonCode</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="AgreementIndicatorSupplied" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>AgreementIndicatorSupplied</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="AgreementIndicatorValidated" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>AgreementIndicatorValidated</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="OriginalPMI" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>OriginalPMI</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="ValidatedPMI" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>ValidatedPMI</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="AttachmentIndicatorOriginal">
+                      <xs:annotation>
+                        <xs:documentation>AttachmentIndicatorOriginal</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="AttachmentIndicatorValidated" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>AttachmentIndicatorValidated</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="NumberOfAttachments" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>NumberOfAttachments</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="RejectionReasonCode">
+                      <xs:annotation>
+                        <xs:documentation>RejectionReasonCode</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="Remarks" minOccurs="0" maxOccurs="5">
+                      <xs:annotation>
+                        <xs:documentation>Remarks</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TransmissionSummary">
+          <xs:annotation>
+            <xs:documentation>TransmissionSummary</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="SamplingFormCCount">
+                <xs:annotation>
+                  <xs:documentation>SamplingFormCCount</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--Elementary Business Objects -->
+  <xs:element name="TransmissionHeader">
+    <xs:annotation>
+      <xs:documentation>Header Information of the Form C Transmission File</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TransmissionDateTime" type="xs:dateTime">
+    <xs:annotation>
+      <xs:documentation>Date and time of transmission of the Invoice file. </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Version">
+    <xs:annotation>
+      <xs:documentation>Current version number of the specification</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TransmissionID">
+    <xs:annotation>
+      <xs:documentation>Unique identifier for the TransmissionMesage.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="IssuingOrganizationID">
+    <xs:annotation>
+      <xs:documentation>Unique identifier for the entity issuing the transmission</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="4"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ReceivingOrganizationID">
+    <xs:annotation>
+      <xs:documentation>Unique identifier for the entity receiving the transmission</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="4"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="FormCGeneratingEntity">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+  <xs:element name="FormCReceivingEntity">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+  <xs:element name="ProvisionalBillingMonth">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:length value="6"/>
+        <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[0-4]{1}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="NilFormCIndicator">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:length value="1"/>
+        <xs:enumeration value="Y"/>
+        <xs:enumeration value="S"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="CurrOfListingOfProvisionalBilling">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="LineItemNumber">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:totalDigits value="6" fixed="true"/>
+        <xs:minInclusive value="1" fixed="true"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ChargeCode" fixed="51">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:totalDigits value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TotalGrossAmountALF">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:totalDigits value="15"/>
+	<xs:fractionDigits value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DetailCount">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:totalDigits value="6"/>
+        <xs:minInclusive value="0"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ProvisionalInvoiceNumber">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="10"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="BatchNumberOfProvisionalInvoice">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:totalDigits value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="RecordSeqNumberOfProvisionalInvoice">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:totalDigits value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TicketIssuingAirline">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+	<xs:minLength value="1"/>
+        <xs:maxLength value="4"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="CouponNumber">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:totalDigits value="2"/>
+        <xs:minInclusive value="0"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TicketDocNumber">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:totalDigits value="11"/>
+        <xs:minInclusive value="0"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ElectronicTicketIndicator">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:length value="1"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="GrossAmountALF">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:totalDigits value="11"/>
+	<xs:fractionDigits value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="NFPReasonCode">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AgreementIndicatorSupplied">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AgreementIndicatorValidated">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="OriginalPMI">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ValidatedPMI">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AttachmentIndicatorOriginal">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1"/>
+        <xs:enumeration value="Y"/>
+        <xs:enumeration value="N"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AttachmentIndicatorValidated">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="NumberOfAttachments">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:totalDigits value="4"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="RejectionReasonCode">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Remarks">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="70"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="SamplingFormCCount">
+    <xs:simpleType>
+      <xs:restriction base="xs:int">
+        <xs:minInclusive value="0"/>
+        <xs:totalDigits value="6"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>

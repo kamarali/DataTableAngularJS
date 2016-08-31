@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document may not be disclosed, reproduced, copied, recast, reformatted or transmitted in any form by any means electronic or mechanical including photocopying, recording or any information storage and retrieval system without the express and prior written permission of the International Air Transport Association. 
+
+(C) Copyrights Reserved International Air Transport Association 2016 
+
+The schemas are located online at http://www.iata.org/services/finance/sis/Documents/schemas/PayablesDailyMiscIndexTransmissionV3.6.xsd
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="SISPayablesDailyMiscIndexTransmission">
+    <xs:annotation>
+      <xs:documentation>Defines the Index File for Payable billings</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SISPayablesDailyMiscIndexHeader">
+          <xs:annotation>
+            <xs:documentation>Header Information of the SIS Index file</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Version">
+                <xs:annotation>
+                  <xs:documentation>Current version number of the specification. Should be always "IATA: SISPayablesDailyMiscIndexTransmission V1.0.0"</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1"/>
+                    <xs:maxLength value="50"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransmissionID" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Unique identifier for the TransmissionMessage</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BilledMember">
+                <xs:annotation>
+                  <xs:documentation>Member Accounting Code (e.g. 131 for JL, Japan Airlines)</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12"/>
+		    <xs:minLength value="1"/>
+                  </xs:restriction>
+                </xs:simpleType>
+                <!-- Changes end -->
+							</xs:element>
+              <xs:element name="DeliveryDate">
+                <xs:annotation>
+                  <xs:documentation>Indicates the delivery date of the transmission. It will map to the originally determined ‘Target Date of Daily Delivery Output’ during the daily scheduled output process. So, even if a file is re-generated, this date will not change and will always indicate the originally determined target delivery date. This should be in YYYY-MM-DD format, e.g. 2013-12-11 for 11-Dec-2013
+                  </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:date">
+                    <xs:pattern value="[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BillingCategory">
+                <xs:annotation>
+                  <xs:documentation>Always M</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1"/>
+                    <xs:maxLength value="1"/>
+                    <xs:pattern value="M"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceHeader" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ClearanceMonth">
+                      <xs:annotation>
+                        <xs:documentation>Clearance Month in which the Invoice/Credit Note was billed. This should be in MMYY format, e.g. 1113 for Nov 2013</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="(0[1-9]|1[012])\d{2}"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PeriodNumber">
+                      <xs:annotation>
+                        <xs:documentation>Clearance Period in which the Invoice/Credit Note was billed. This should be in PP format, e.g. 02 for period 2</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:enumeration value="01"/>
+                          <xs:enumeration value="02"/>
+                          <xs:enumeration value="03"/>
+                          <xs:enumeration value="04"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BillingMember">
+                      <xs:annotation>
+                        <xs:documentation>Member Accounting  Code (e.g. 057 for AF, Air France)</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="12"/>
+                          <xs:minLength value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                      <!-- changes end -->
+										</xs:element>
+                    <xs:element name="InvoiceNumber">
+                      <xs:annotation>
+                        <xs:documentation>Invoice/Credit Note Number</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="10"/>
+                          <xs:minLength value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EInvoicingFiles" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="SrNo"/>
+                          <xs:element ref="FileName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DetailedListingFiles" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="SrNo"/>
+                          <xs:element ref="FileName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="InvoiceSupportingAttachments" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="AttachmentNumber"/>
+                          <xs:element ref="AttachmentFileName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SrNo">
+    <xs:annotation>
+      <xs:documentation>Serial number for e-invoicing/Detailed Listing related files</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="1"/>
+        <xs:maxInclusive value="99999"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="FileName">
+    <xs:annotation>
+      <xs:documentation>The e-invoicing/Detailed Listing file name including the relative path to access it (if any)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="500"/>
+        <xs:minLength value="1"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AttachmentNumber">
+    <xs:annotation>
+      <xs:documentation>Serial number for Attachments</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="1"/>
+        <xs:maxInclusive value="99999"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="AttachmentFileName">
+    <xs:annotation>
+      <xs:documentation>The attachment file name including the relative path to access it (if any)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="500"/>
+        <xs:minLength value="1"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>
+

@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <xs:simpleType name="RestrictedString">
+    <xs:annotation>
+      <xs:documentation>Base type for string max length 50</xs:documentation>
+      <xs:documentation>Added for CMP#625 to validate iiNetAccount</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MemberProfileUpdate">
+    <xs:annotation>
+      <xs:documentation>Comment describing your root element</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SISMemberID">
+          <xs:annotation>
+            <xs:documentation>Added new field SISMemberID in ICH Member Profile Update XML for CMP #625</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="9"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="NumericMemberCode">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:annotation>
+                <xs:documentation>CMP #596: Length of Member Accounting Code to be Increased to 12. Description: Changed old value from 3 to 12. Reference: FRS Section 3.8 Table 28 Row 1</xs:documentation>
+              </xs:annotation>
+              <xs:minLength value="3"/>
+              <xs:maxLength value="12"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="AlphaMemberCode">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:length value="2"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="MemberNameCurrentValue">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="100"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="MemberNameFutureValue" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="100"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="MemberNameChangePeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Comments" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="500"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="UATPInvoiceHandledByATCANCurrentValue" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="UATPInvoiceHandledByATCANFutureValue" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="UATPInvoiceHandledByATCANPeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="MemberStatusCurrentValue">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Live"/>
+              <xs:enumeration value="Suspended"/>
+              <xs:enumeration value="Terminated"/>
+              <!--CMP-689-Flexible CH Activation Options-->
+              <xs:enumeration value="Not a member"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="MemberStatusFutureValue" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Live"/>
+              <xs:enumeration value="Suspended"/>
+              <xs:enumeration value="Terminated"/>
+              <!--CMP-689-Flexible CH Activation Options-->
+              <xs:enumeration value="Not a member"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <!--CMP-689-Flexible CH Activation Options-->
+        <xs:element name="MemberStatusPeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="SuspensionPeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="TerminationPeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ReinstatementPeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ZoneCurrentValue">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="A"/>
+              <xs:enumeration value="B"/>
+              <xs:enumeration value="C"/>
+              <xs:enumeration value="D"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ZoneFutureValue" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="A"/>
+              <xs:enumeration value="B"/>
+              <xs:enumeration value="C"/>
+              <xs:enumeration value="D"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ZoneChangePeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CategoryCurrentValue">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="ACH / Airline Associate"/>
+              <xs:enumeration value="ACH / ACH Member"/>
+              <xs:enumeration value="ACH / Airline Related Participant"/>
+              <xs:enumeration value="Airline Member / IATA"/>
+              <xs:enumeration value="Airline Member / Non IATA"/>
+              <xs:enumeration value="Airline Member / Sponsored / IATA"/>
+              <xs:enumeration value="Airline Member / Sponsored / Non IATA"/>
+              <xs:enumeration value="Associate Member / Non Strategic"/>
+              <xs:enumeration value="Associate Member / Other"/>
+              <xs:enumeration value="Associate Member / Sponsored"/>
+              <xs:enumeration value="Associate Member / Strategic"/>
+              <xs:enumeration value="Associate Member / Subsidiary"/>
+              <!--SCP#351460: New ICH Membership Category-->
+              <xs:enumeration value="Associate Member / IATA"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CategoryFutureValue" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="ACH / Airline Associate"/>
+              <xs:enumeration value="ACH / ACH Member"/>
+              <xs:enumeration value="ACH / Airline Related Participant"/>
+              <xs:enumeration value="Airline Member / IATA"/>
+              <xs:enumeration value="Airline Member / Non IATA"/>
+              <xs:enumeration value="Airline Member / Sponsored / IATA"/>
+              <xs:enumeration value="Airline Member / Sponsored / Non IATA"/>
+              <xs:enumeration value="Associate Member / Non Strategic"/>
+              <xs:enumeration value="Associate Member / Other"/>
+              <xs:enumeration value="Associate Member / Sponsored"/>
+              <xs:enumeration value="Associate Member / Strategic"/>
+              <xs:enumeration value="Associate Member / Subsidiary"/>
+              <!--SCP#351460: New ICH Membership Category-->
+              <xs:enumeration value="Associate Member / IATA"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CategoryChangePeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="EntryDate" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="^(([0-2][0-9])|([3][0-1]))-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)-\d{4}$"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="TerminationDate" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="^(([0-2][0-9])|([3][0-1]))-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)-\d{4}$"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="EarlyCallDay" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="ICHComments" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="500"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ICHWebReportOptions">
+          <xs:simpleType>
+            <xs:restriction base="xs:int">
+              <xs:enumeration value="0"/>
+              <xs:enumeration value="1"/>
+              <xs:enumeration value="2"/>
+              <xs:enumeration value="3"/>
+              <xs:enumeration value="4"/>
+              <xs:enumeration value="5"/>
+              <xs:enumeration value="6"/>
+              <xs:enumeration value="7"/>
+              <xs:enumeration value="8"/>
+              <xs:enumeration value="9"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CanSubmitPAXWebF12FilesCurrentValue" type="xs:boolean"/>
+        <xs:element name="CanSubmitPAXWebF12FilesFutureValue" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="CanSubmitPAXChangePeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CanSubmitCGOWebF12FilesCurrentValue" type="xs:boolean"/>
+        <xs:element name="CanSubmitCGOWebF12FilesFutureValue" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="CanSubmitCGOChangePeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CanSubmitMISCWebF12FilesCurrentValue" type="xs:boolean"/>
+        <xs:element name="CanSubmitMISCWebF12FilesFutureValue" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="CanSubmitMISCChangePeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CanSubmitUATPWebF12FilesCurrentValue" type="xs:boolean"/>
+        <xs:element name="CanSubmitUATPWebF12FilesFutureValue" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="CanSubmitUATPChangePeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="iiNetAccount" minOccurs="0" maxOccurs="5" >
+          <xs:annotation>
+            <xs:documentation>	Added five new fields related to iiNetAccount for CMP #625</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="RestrictedString">
+                <xs:attribute name="Name" use="required" >
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                      <xs:enumeration value="PAX" />
+                      <xs:enumeration value="CGO" />
+                      <xs:enumeration value="MISC" />
+                      <xs:enumeration value="UATP" />
+                      <xs:enumeration value="ICH" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Contacts" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Contact" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ContactId" type="xs:integer"/>
+                    <xs:element name="isActive">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:boolean"/>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Salutation" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="10"/>
+                          <xs:enumeration value="Mr"/>
+                          <xs:enumeration value="Miss"/>
+                          <xs:enumeration value="Mrs"/>
+                          <xs:enumeration value="Dr"/>
+                          <xs:enumeration value="Ms"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="FirstName">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="100"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="LastName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="100"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EmailAddress">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="250"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Position" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="200"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PrimaryContact" type="xs:boolean"/>
+                    <xs:element name="AdviceContact" type="xs:boolean"/>
+                    <xs:element name="ClaimConfirmationContact" type="xs:boolean"/>
+                    <xs:element name="ClearanceInitializationContact" type="xs:boolean"/>
+                    <xs:element name="FinancialContact" type="xs:boolean"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AggregatorCurrentValue" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="AggregatorFutureValue" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="AggregatorPeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="AggregatedTypeCurrentValue" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:enumeration value="1"/>
+              <xs:enumeration value="2"/>
+              <xs:enumeration value="3"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="AggregatedTypeFutureValue" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:enumeration value="1"/>
+              <xs:enumeration value="2"/>
+              <xs:enumeration value="3"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="AggregatedTypePeriodFrom" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="AggregatedMembersCurrentValue" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AggregatedMember" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MemberCode">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>CMP #596: Length of Member Accounting Code to be Increased to 12. Description: Changed old value from 5 to 14. Reference: FRS Section 3.8 Table 28 Row 1</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="5"/>
+                          <xs:maxLength value="14"/>
+
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AggregatedMembersFutureValue" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AggregatedMember" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MemberCode">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>CMP #596: Length of Member Accounting Code to be Increased to 12. Description: Changed old value from 5 to 14. Reference: FRS Section 3.8 Table 28 Row 1</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="5"/>
+                          <xs:maxLength value="14"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PeriodFrom">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SponsoredMembersCurrentValue" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SponsoredMember" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MemberCode">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation> CMP #596: Length of Member Accounting Code to be Increased to 12. Description: Changed old value from 5 to 14. Reference: FRS Section 3.8 Table 28 Row 1</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="5"/>
+                          <xs:maxLength value="14"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SponsoredMembersFutureValue" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SponsoredMember" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MemberCode">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation> CMP #596: Length of Member Accounting Code to be Increased to 12. Description: Changed old value from 5 to 14. Reference: FRS Section 3.8 Table 28 Row 1</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="5"/>
+                          <xs:maxLength value="14"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PeriodFrom">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ParentMemberCurrentValue" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IsMerged">
+                <xs:annotation>
+                  <xs:documentation>Valid values are true and false</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:boolean"/>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MergerEffectivePeriod">
+                <xs:annotation>
+                  <xs:documentation>In YYYY-MMM-PP Format. For example JAN-2012, Period 1 will be specified as 2012-JAN-01</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="11"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParentMemberCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:annotation>
+                      <xs:documentation>CMP #596: Length of Member Accounting Code to be Increased to 12. Description: Changed old value from 5 to 14. Reference: FRS Section 3.8 Table 28 Row 1</xs:documentation>
+                          </xs:annotation>
+                    <xs:minLength value="5"/>
+                    <xs:maxLength value="14"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ParentMemberFutureValue" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IsMerged">
+                <xs:annotation>
+                  <xs:documentation>Valid values are true and false</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:boolean"/>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MergerEffectivePeriod">
+                <xs:annotation>
+                  <xs:documentation>In YYYY-MMM-PP Format. For example JAN-2012, Period 1 will be specified as 2012-JAN-01</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="11"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParentMemberCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:annotation>
+                      <xs:documentation>CMP # : Length of Member Accounting Code to be Increased to 12. Description: Changed old value from 5 to 14. Reference: FRS Section 3.8 Table 28 Row 1</xs:documentation>
+                    </xs:annotation>
+                        <xs:minLength value="5"/>
+                    <xs:maxLength value="14"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PeriodFrom">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="[0-9]{2}(0[1-9]|1[012])[0]{1}[1-4]{1}"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

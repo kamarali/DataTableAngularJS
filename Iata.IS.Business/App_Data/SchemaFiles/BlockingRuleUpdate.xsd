@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="BlockingRuleUpdate">
+		<xs:annotation>
+			<xs:documentation>Single blocking rule update</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RuleId">
+					<xs:annotation>
+						<xs:documentation>Blocking rule id</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="RuleDescription">
+					<xs:annotation>
+						<xs:documentation>Blocking rule description</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="200"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="MemberCode">
+					<xs:annotation>
+						<xs:documentation>Member Code for which this blocking rules are defined</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:choice>
+					<xs:annotation>
+						<xs:documentation>If a blocking rule is deleted in SIS then only Deleted element is sent with value true.</xs:documentation>
+					</xs:annotation>
+					<xs:sequence>
+						<xs:element name="BlockedCreditors" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>List of creditors who cannot raise invoices against this member.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Creditor" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="MemberCode"/>
+												<xs:element ref="BillingCategory"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="BlockedDebtors" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>List of debtors to whom invoices cannot be raised by this member.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Debtor" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="MemberCode"/>
+												<xs:element ref="BillingCategory"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="BlockedByGroup" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Blocking by groups using Zone</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="BlockedCreditors" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="Zone"/>
+												<xs:element ref="BillingCategory"/>
+												<xs:element ref="Exceptions" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="BlockedDebtors" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="Zone"/>
+												<xs:element ref="BillingCategory"/>
+												<xs:element ref="Exceptions" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:element name="Deleted" type="xs:boolean" fixed="true">
+						<xs:annotation>
+							<xs:documentation>If a blocking rule is deleted in SIS then only Deleted element is sent with value true.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BillingCategory">
+		<xs:annotation>
+			<xs:documentation>Comma separated list of P, C, M, U which indicates billing category Passenger, Cargo, Miscellaneous and UATP respectively.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="7"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="MemberCode">
+		<xs:annotation>
+			<xs:documentation>Member identifier</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+        <xs:annotation>
+          <xs:documentation> CMP #596: Length of Member Accounting Code to be Increased to 12 
+        Desc: Changed old value from 5 to 14
+        Ref: FRS Section 3.8 Table 28 Row 2</xs:documentation>
+        </xs:annotation>
+        <xs:minLength value="5"/>
+				<xs:maxLength value="14"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Zone">
+		<xs:annotation>
+			<xs:documentation>Comma separated list of Zones A, B, C, etc. If applicable to all zones then the value will be All</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="A"/>
+				<xs:enumeration value="B"/>
+				<xs:enumeration value="C"/>
+				<xs:enumeration value="D"/>
+				<xs:enumeration value="All"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Exceptions">
+		<xs:annotation>
+			<xs:documentation>Exception to the group blocking</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MemberCode" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

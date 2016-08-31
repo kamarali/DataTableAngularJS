@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="IcpRequestMessage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FederationID" type="federationID" maxOccurs="1"/>
+				<xs:element name="FirstName" type="firstName" maxOccurs="1"/>
+				<xs:element name="LastName" type="lastName" maxOccurs="1"/>
+				<xs:element name="EmailAddress" type="emailAddress" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>  
+	<xs:simpleType name="federationID" id="federationID">
+		<xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="firstName" id="firstName">
+		<xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="lastName" id="lastName">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="emailAddress" id="emailAddress">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+	</xs:simpleType>
+</xs:schema>

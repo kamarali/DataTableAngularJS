@@ -1,0 +1,26 @@
+﻿<html>
+	<body>
+		<p> 
+		Dear SIS Ops Member,<BR/>
+		<BR/>
+		   The legal invoice archive deposit web-service of CDC Arkhinéo for legal archiving cannot be initialized for Invoice ID - $InvoiceId,
+		   Invoice Number - $InvoiceNumber,
+		   Billing Category - $BillingCategory,
+		   Billing Period - $BillingPeriod,
+		   Billing Month - $BillingMonth, 
+		   Billing Year - $BillingYear at $FailureTime.
+		<BR/>
+		   Please take corrective action.
+		<BR/>
+		<BR/>
+		Signature:
+		<BR/>
+		<BR/>		
+		Regards,
+		<BR/>
+		IS System
+</p>
+<p>This is a system generated message - please do not reply.</p>
+		
+	</body>
+</html>

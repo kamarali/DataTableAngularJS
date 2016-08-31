@@ -1,0 +1,5 @@
+﻿Dear SIS Member,${n}
+Please find attached the details of the Post Dated Member profile changes that are made effective in the Member profile of Member $MemberPrefix - $MemberDesignator - $MemberCommercialName on $EffectiveOn. ${n}
+Regards, ${n}
+IATA SIS Operations Team ${n}
+$SISOpsEmail

@@ -1,0 +1,13 @@
+<html>
+	<body>
+<P>Dear SIS Member,</P>
+
+<P>
+ $Message
+</P>
+
+<br/> Regards,
+<br/> IATA SIS Operations Team
+<br/> $SISOpsEmailId
+</body>
+</html>

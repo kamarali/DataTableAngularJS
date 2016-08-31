@@ -1,0 +1,24 @@
+﻿<html>
+    <body>
+        <P>
+            A user was activated in SIS. There was a failure in the &lsquo;ICP Activate User Web Service&rsquo; call; and SIS was not able to provide this update to the IATA Customer Portal.
+            <BR/><BR/>
+            Please refer to details below and take appropriate corrective actions.
+            <BR/><BR/>
+            User&rsquo;s First Name: $FirstName <BR/>
+            User&rsquo;s Last Name: $LastName <BR/>
+            User&rsquo;s Email Address: $EmailId <BR/>
+            User&rsquo;s Federation ID received from ICP: $FederationId <BR/>
+            User&rsquo;s Category: $UserCategory <BR/>
+            $MemberIdText $MemberId
+	    $MemberCodeText $MemberCode
+	    Reason for Failure: $ReasonFailure <BR/>
+	    $ErrorCodeText $ErrorCode
+	    $ErrorDescText $ErrorDesc
+        </P>
+
+        Regards,
+        <BR/>
+        IS  System
+    </body>
+</html>

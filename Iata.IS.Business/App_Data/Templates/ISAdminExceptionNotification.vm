@@ -1,0 +1,16 @@
+<HTML>
+<BODY>
+Dear SIS Admin,<br/>
+In '$ServiceName' service, following exception occurred,<BR/>
+<P>
+Error Message: $OuterException.Message<BR/>
+StackTrace: $OuterException.StackTrace<BR/>
+<BR/>
+#if($OuterException.InnerException)
+Inner Exception Message: $OuterException.InnerException.Message<BR/>
+Inner Exception StackTrace: $OuterException.InnerException.StackTrace<BR/>
+#end
+</P>
+This is a system generated message - please do not reply.
+</BODY>
+</HTML>

@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Billing Memo</title>
+  <style type="text/css">
+    body {
+      font: normal 8pt Arial, Helvetica, sans-serif;
+      color: #000;
+      background: #fff;
+      margin: 0px auto 0px auto;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      padding: 5px 0px;
+      margin: 0;
+    }
+    table.b {
+      border: 1px solid #0075bd;
+    }
+    thead {
+      background-color: #d7e9f8;
+    }
+    td {
+      padding: 2px 2px;
+    }
+    table.b td {
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+    }
+    #content {
+      width: 90%;
+      text-align: left;
+      padding: 10px;
+    }
+    .h1 {
+      font-size: 18px;
+    }
+    .h1, .h4 {
+      font-weight: bold;
+      padding: 5px 0px 0px 0px;
+    }
+    .fwf {
+      font: normal 8pt 'Courier New' , Courier, monospace;
+    }
+    .ac {
+      text-transform: uppercase;
+    }
+    .hw {
+      width: 50%;
+    }
+    .w65 {
+      width: 65%;
+    }
+    .s {
+      font-weight: bold;
+    }
+    .ca {
+      text-align: center;
+    }
+    .num {
+      text-align: right;
+    }
+    .hl {
+      background-color: #dddddd;
+    }
+    ol.il li {
+      display: list-item;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <div class="h1" style="text-align: center;">
+      Billing Memo</div>
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="width: 50px;">
+          From:
+        </td>
+        <td class="s">
+          $Message.From
+        </td>
+      </tr>
+      <tr>
+        <td>
+          To:
+        </td>
+        <td class="s">
+          $Message.To
+        </td>
+      </tr>
+    </table>
+    <div class="h4">
+      Our Reference:</div>
+    <div id="ourRef" style="width: 650px;">
+      <div class="hw" style="float: left;">
+        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+          <tr>
+            <td class="hw">
+              Billing Memo No:
+            </td>
+            <td class="hw s">
+              $Message.BillingMemoNumber
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Invoice No:
+            </td>
+            <td>
+              $Message.InvoiceNumber
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Billing Month:
+            </td>
+            <td>
+              $Message.DisplayBillingMonthYear
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Billing Period:
+            </td>
+            <td>
+              $Message.BillingPeriod
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Our Ref (Internal Use):
+            </td>
+            <td>
+              #if($Message.OurRef)$Message.OurRef #end
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hw" style="float: left;">
+        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+          <tr>
+            <td class="w65 hw">
+              Attachmnet Indicator Original::
+            </td>
+            <td class="num">
+              #if($Message.AttachmentIndicatorOriginal) Y #else N #end
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Correspondence No:
+            </td>
+            <td class="num">
+              $Message.DisplayCorrespondenceReferenceNumber
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Exchange Rate:
+            </td>
+            <td class="num">
+              $Message.ExchangeRate.ToString("N5")
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Currency of BM:
+            </td>
+            <td class="num s">
+              #if($Message.CurrencyOfBm) $Message.CurrencyOfBm #end
+            </td>
+          </tr>
+          <tr>
+            <td>
+              &nbsp;
+            </td>
+            <td class="num s">
+              &nbsp;
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="h4" style="clear: both;">
+      Your Reference:</div>
+    <div id="yourRef" style="width: 650px;">
+      <div class="hw" style="float: left;">
+        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+          <tr>
+            <td class="hw">
+              Your Invoice No:
+            </td>
+            <td class="hw">
+              #if($Message.YourInvoiceNumber) $Message.YourInvoiceNumber #end
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Your Billing Month:
+            </td>
+            <td>
+              $Message.DisplayYourInvoiceBillingMonthYearReport
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="hw" style="float: left;">
+        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+          <tr>
+            <td>
+              Your Billing Period:
+            </td>
+            <td>
+              #if($Message.YourInvoiceBillingPeriod > 0) $Message.YourInvoiceBillingPeriod #end
+            </td>
+          </tr>
+          <tr>
+            <td class="w65">
+              &nbsp;
+            </td>
+            <td class="num">
+              &nbsp;
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="h4" style="clear: both;">
+      Billing Memo Amounts</div>
+    <div id="billingAmounts">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              Weight Charges
+            </td>
+            <td>
+              Valuation Charges
+            </td>
+            <td>
+              Other Charges Amount
+            </td>
+            <td>
+              ISC Amount
+            </td>
+            <td>
+              VAT Amount
+            </td>
+            <td>
+              Net Amount
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">
+              #if($Message.BilledTotalWeightCharge) $Message.BilledTotalWeightCharge.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($Message.BilledTotalValuationAmount) $Message.BilledTotalValuationAmount.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($Message.BilledTotalOtherChargeAmount) $Message.BilledTotalOtherChargeAmount.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($Message.BilledTotalIscAmount) $Message.BilledTotalIscAmount.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($Message.BilledTotalVatAmount) $Message.BilledTotalVatAmount.ToString("N2")#end
+            </td>
+            <td class="num hl">
+              <b>#if($Message.NetBilledAmount) $Message.NetBilledAmount.ToString("N2") #end</b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    #foreach($messageVatBreakdown in $Message.BillingMemoVat) #beforeall
+    <div class="h4">
+      Billing Memo VAT Breakdown</div>
+    <div id="billingMemoVat">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              VAT On
+            </td>
+            <td>
+              VAT Label
+            </td>
+            <td>
+              VAT Text
+            </td>
+            <td>
+              VAT Base Amt
+            </td>
+            <td>
+              VAT %
+            </td>
+            <td>
+              VAT Amt
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          #each
+          <tr>
+            <td>
+              $messageVatBreakdown.Identifier
+            </td>
+            <td>
+              $messageVatBreakdown.VatLabel
+            </td>
+            <td>
+              $messageVatBreakdown.VatText
+            </td>
+            <td class="num">
+              $messageVatBreakdown.VatBaseAmount.ToString("N2")
+            </td>
+            <td class="num">
+              $messageVatBreakdown.VatPercentage.ToString("N2")
+            </td>
+            <td class="num">
+              $messageVatBreakdown.VatCalculatedAmount.ToString("N2")
+            </td>
+          </tr>
+          #afterall
+          <tr>
+            <td class="num s" colspan="5">
+              Total VAT Amt
+            </td>
+            <td class="num" colspan="1">
+              <b>$Utility.BmVatSum($Message).ToString("N2")</b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    #end
+    <div style="padding-top: 5px;">
+      <span class="h4">Reason for Billing Memo: </span><span>#if($Message.ReasonCodeDescription) $Message.ReasonCodeDescription
+        #end</span>
+    </div>
+    <div style="padding-top: 5px;">
+      <span class="h4">Additional Remarks: </span><span>#if($Message.ReasonRemarks) $Message.ReasonRemarks #end</span>
+    </div>
+    #foreach($messageAwbBreakdown in $Message.AwbBreakdownRecord) #each
+    <br />
+    <div class="h4" style="clear: both;">
+      Linked AWB Details $velocityCount</div>
+    <div id="awbs">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              AWB No
+            </td>
+            <td>
+              Consignment O-D
+            </td>
+            <td>
+              Sector
+            </td>
+            <td>
+              AWB Date
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ca">
+              $messageAwbBreakdown.AwbIssueingAirline $messageAwbBreakdown.AwbSerialNumber $messageAwbBreakdown.AwbCheckDigit
+            </td>
+            <td class="ca">
+              #if($messageAwbBreakdown.ConsignmentOriginId) $messageAwbBreakdown.ConsignmentOriginId #end - #if($messageAwbBreakdown.ConsignmentDestinationId)
+              $messageAwbBreakdown.ConsignmentDestinationId #end
+            </td>
+            <td class="ca">
+              #if($messageAwbBreakdown.CarriageFromId) $messageAwbBreakdown.CarriageFromId #end - #if($messageAwbBreakdown.CarriageToId)
+              $messageAwbBreakdown.CarriageToId #end
+            </td>
+            <td class="ca">
+              #if($messageAwbBreakdown.AwbDate) $Utility.AwbDateString($messageAwbBreakdown.AwbDate) #end
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="h4">
+      AWB Amounts</div>
+    <div id="awbAmounts">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              Weight Charges
+            </td>
+            <td>
+              Valuation Charges
+            </td>
+            <td>
+              Amount subject to ISC
+            </td>
+            <td>
+              ISC %
+            </td>
+            <td>
+              ISC Amount
+            </td>
+            <td>
+              Other Charges Amount
+            </td>
+            <td>
+              VAT Amount
+            </td>
+            <td>
+              Net Amount
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">
+              #if($messageAwbBreakdown.BilledWeightCharge) $messageAwbBreakdown.BilledWeightCharge.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdown.BilledValuationCharge) $messageAwbBreakdown.BilledValuationCharge.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdown.BilledAmtSubToIsc) $messageAwbBreakdown.BilledAmtSubToIsc.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdown.BilledIscPercentage) $messageAwbBreakdown.BilledIscPercentage.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdown.BilledIscAmount) $messageAwbBreakdown.BilledIscAmount.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdown.BilledOtherCharge) $messageAwbBreakdown.BilledOtherCharge.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdown.BilledVatAmount) $messageAwbBreakdown.BilledVatAmount.ToString("N2") #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdown.TotalAmount) $messageAwbBreakdown.TotalAmount.ToString("N2") #end
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    #foreach($messageAwbBreakdownOtherCharge in $messageAwbBreakdown.OtherCharges) #beforeall
+    <div class="h4">
+      AWB Other Charges Breakdown
+    </div>
+    <div id="AwbOc">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              Other Charges Code
+            </td>
+            <td>
+              Billed Value
+            </td>
+            <td>
+              VAT Label
+            </td>
+            <td>
+              VAT Text
+            </td>
+            <td>
+              VAT Base Amt
+            </td>
+            <td>
+              VAT %
+            </td>
+            <td>
+              VAT Amt
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          #each
+          <tr>
+            <td>
+              #if($messageAwbBreakdownOtherCharge.OtherChargeCode) $messageAwbBreakdownOtherCharge.OtherChargeCode #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdownOtherCharge.OtherChargeCodeValue) $messageAwbBreakdownOtherCharge.OtherChargeCodeValue #end
+            </td>
+            <td>
+              #if($messageAwbBreakdownOtherCharge.OtherChargeVatLabel) $messageAwbBreakdownOtherCharge.OtherChargeVatLabel #end
+            </td>
+            <td>
+              #if($messageAwbBreakdownOtherCharge.OtherChargeVatText) $messageAwbBreakdownOtherCharge.OtherChargeVatText #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdownOtherCharge.OtherChargeVatBaseAmount) $messageAwbBreakdownOtherCharge.OtherChargeVatBaseAmount #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdownOtherCharge.OtherChargeVatPercentage) $messageAwbBreakdownOtherCharge.OtherChargeVatPercentage #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdownOtherCharge.OtherChargeVatCalculatedAmount) $messageAwbBreakdownOtherCharge.OtherChargeVatCalculatedAmount
+              #end
+            </td>
+          </tr>
+          #afterall
+          <tr>
+            <td class="num s" colspan="6">
+              Total Diff
+            </td>
+            <td class="num" colspan="1">
+              <b>$Utility.BmAwbOtherChargeSum($messageAwbBreakdown).ToString("N2")</b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    #end #foreach($messageAwbBreakdownVat in $messageAwbBreakdown.AwbVat) #beforeall
+    <div class="h4">
+      AWB VAT Breakdown
+    </div>
+    <div id="Div1">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              VAT On
+            </td>
+            <td>
+              VAT Label
+            </td>
+            <td>
+              VAT Text
+            </td>
+            <td>
+              VAT Base Amt
+            </td>
+            <td>
+              VAT %
+            </td>
+            <td>
+              VAT Amt
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          #each
+          <tr>
+            <td>
+              $messageAwbBreakdownVat.Identifier
+            </td>
+            <td>
+              $messageAwbBreakdownVat.VatLabel
+            </td>
+            <td>
+              $messageAwbBreakdownVat.VatText
+            </td>
+            <td class="num">
+              $messageAwbBreakdownVat.VatBaseAmount.ToString("N2")
+            </td>
+            <td class="num">
+              $messageAwbBreakdownVat.VatPercentage.ToString("N2")
+            </td>
+            <td class="num">
+              $messageAwbBreakdownVat.VatCalculatedAmount.ToString("N2")
+            </td>
+          </tr>
+          #afterall
+          <tr>
+            <td class="num s" colspan="5">
+              Total VAT Amt
+            </td>
+            <td class="num" colspan="1">
+              <b>$Utility.BmAwbVatSum($messageAwbBreakdown).ToString("N2") </b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    #end #foreach($messageAwbBreakdownProrate in $messageAwbBreakdown.ProrateLadder) #beforeall
+	<!--
+	  SCP:53226 - Prorate Ladder information Currency not being displayed Correctly in PDF Rejection Memo generated by SIS - Air Calin
+	  check ProrateCalCurrencyId, FromSector, ToSector, CarrierPrefix, ProvisoReqSpa, ProrateFactor, Amount for null. If these are null then replace with empty string.
+	-->
+    <div class="h4">
+      Prorate Ladder
+    </div>
+    <div id="prorateLadder">
+      <table border="0" cellpadding="0" cellspacing="0" class="b">
+        <thead style="font-weight: bold;">
+          <tr>
+            <td>
+              &nbsp;
+            </td>
+            <td colspan="2">
+              Prorate Ladder
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              Total Amount
+            </td>
+            <td>
+			  #if($messageAwbBreakdown.ProrateCalCurrencyId) $messageAwbBreakdown.ProrateCalCurrencyId #end
+            </td>
+            <td class="num">
+              $Utility.BmAwbProrateLadderDetailSum($messageAwbBreakdown).ToString("N2")
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sector
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              By
+            </td>
+            <td>
+              P/R
+            </td>
+            <td>
+              Factor or Agent
+            </td>
+            <td>
+              %
+            </td>
+            <td>
+              Amount
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          #each
+          <tr>
+            <td>
+			  #if($messageAwbBreakdownProrate.FromSector) $messageAwbBreakdownProrate.FromSector #end
+            </td>
+            <td>
+			  #if($messageAwbBreakdownProrate.ToSector)  $messageAwbBreakdownProrate.ToSector #end
+            </td>
+            <td>
+        	  #if($messageAwbBreakdownProrate.CarrierPrefix)  $messageAwbBreakdownProrate.CarrierPrefix #end
+            </td>
+            <td>
+         	  #if($messageAwbBreakdownProrate.ProvisoReqSpa)  $messageAwbBreakdownProrate.ProvisoReqSpa #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdownProrate.ProrateFactor) $messageAwbBreakdownProrate.ProrateFactor #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdownProrate.PercentShare) $messageAwbBreakdownProrate.PercentShare #end
+            </td>
+            <td class="num">
+              #if($messageAwbBreakdownProrate.Amount) $messageAwbBreakdownProrate.Amount.ToString("N2") #end
+            </td>
+          </tr>
+          #afterall
+        </tbody>
+      </table>
+    </div>
+    #end #end
+    <div style="padding-top: 10px; clear: both;">
+      Generated On: $Message.ReportGenerationDate
+    </div>
+  </div>
+</body>
+</html>

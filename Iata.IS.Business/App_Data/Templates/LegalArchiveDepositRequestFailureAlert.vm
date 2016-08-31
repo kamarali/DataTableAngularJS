@@ -1,0 +1,34 @@
+﻿<html>
+	<body>
+		<p> 
+		Dear ICH/SIS Ops Member,<BR/>
+		<BR/>
+		   The deposit web-service response of CDC Arkhinéo indicated a failure at $FailureTime for the following invoice. 
+		<BR/>
+		   Archive Customer: $ArchiveCustomer
+		<BR/>
+		   Billing Member: $BillingMember
+		<BR/> 
+		   Billed Member:  $BilledMember
+		<BR/>
+		   Billing Period: $BillingPeriod
+		<BR/>
+		   Billing Category: $BillingCategory
+		<BR/>
+		   Invoice Number: $InvoiceNumber
+		<BR/>
+		   Web-Service Response: $WebServiceResponse
+		
+		<BR/>
+		<BR/>
+		Signature:
+		<BR/>
+		<BR/>		
+		Regards,
+		<BR/>
+		IS System
+</p>
+<p>This is a system generated message - please do not reply.</p>
+		
+	</body>
+</html>

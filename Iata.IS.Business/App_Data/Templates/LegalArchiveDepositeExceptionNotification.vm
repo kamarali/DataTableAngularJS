@@ -1,0 +1,12 @@
+Dear SIS Admin,<br/>
+<P>An Exception has been ocurred in Legal Archive Deposit service:
+<br/><br/>
+ Details are as follows:<br/>
+ 1. InvoiceId :  $InvoiceId <br/>
+ 2. InvoiceType :  $InvoiceType <br/>
+ 3. Error Details :  $ErrorDetail <br/>
+ 4. Exception Time :  $ExceptionTime <br/>
+ <br/><br/><br/>
+ Please take the appropriate action to resolve the issue. 
+ <br/><br/>
+ This is a system generated message - please do not reply.
