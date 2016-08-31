@@ -1,0 +1,81 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+iPayables_Data_Web
+</name>
+</assembly>
+<members>
+<member name="M:iPayables_Data.BatchInterfaceSubmission.#ctor">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:iPayables_Data.BatchInterfaceSubmission.Lookup(System.Int32)">
+	<summary>
+	</summary>
+	<param name="ID"></param>
+	<remarks></remarks>
+</member><member name="M:iPayables_Data.BatchInterfaceSubmission.Lookup(System.Int32,iPayables_Data.UnitOfWork)">
+	<summary>
+	</summary>
+	<param name="ID"></param>
+	<param name="UnitofWork"></param>
+	<remarks></remarks>
+</member><member name="M:iPayables_Data.BatchInterfaceSubmission.LookUp(System.String,System.String)">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:iPayables_Data.BatchInterfaceSubmission.Lookup_LastSubmission(System.Int32,System.Int32)">
+	<summary>
+	</summary>
+	<param name="BatchInterfaceConfiguration_InterfaceType_ID"></param>
+	<param name="BatchInterfaceConfiguration_ID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables_Data.BatchInterfaceSubmission.Lookup(System.String,System.Collections.ArrayList)">
+	<summary>
+	</summary>
+	<param name="StoredProcedureName"></param>
+	<param name="Parameters"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables_Data.BatchInterfaceSubmission.Lookup(System.String,System.Collections.ArrayList,iPayables_Data.UnitOfWork)">
+	<summary>
+	</summary>
+	<param name="StoredProcedureName"></param>
+	<param name="Parameters"></param>
+	<param name="UnitofWork"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables_Data.BatchInterfaceSubmission.Update">
+	<summary>
+	</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables_Data.BatchInterfaceSubmission.Update(iPayables_Data.UnitOfWork)">
+	<summary>
+	</summary>
+	<param name="currentUnitOfWork"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:iPayables_Data.BatchInterfaceSubmission.Load(Devart.Data.Oracle.OracleDataReader)">
+	<summary>
+	</summary>
+	<param name="Data"></param>
+	<remarks></remarks>
+</member><member name="P:iPayables_Data.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:iPayables_Data.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:iPayables_Data.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
