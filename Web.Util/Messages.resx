@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BMEM.10101" xml:space="preserve">
+    <value>Duplicate Contact Type Name found</value>
+  </data>
+  <data name="BPAXNS.10101" xml:space="preserve">
+    <value>Billing member and billed member cannot be same</value>
+  </data>
+  <data name="BPAXNS.10102" xml:space="preserve">
+    <value>Unexpected invoice type</value>
+  </data>
+  <data name="BPAXNS.10103" xml:space="preserve">
+    <value>Invalid billing member</value>
+  </data>
+  <data name="BPAXNS.10104" xml:space="preserve">
+    <value>Invalid billed member</value>
+  </data>
+  <data name="BPAXNS.10105" xml:space="preserve">
+    <value>Invalid billing currency</value>
+  </data>
+  <data name="BPAXNS.10106" xml:space="preserve">
+    <value>Invalid billing period</value>
+  </data>
+  <data name="BPAXNS.10107" xml:space="preserve">
+    <value>Invalid settlement method</value>
+  </data>
+  <data name="BPAXNS.10108" xml:space="preserve">
+    <value>Tax total amount mismatch</value>
+  </data>
+  <data name="BPAXNS.10109" xml:space="preserve">
+    <value>VAT total amount mismatch</value>
+  </data>
+  <data name="BPAXNS.10110" xml:space="preserve">
+    <value>Please enter a valid "From Airport"</value>
+  </data>
+  <data name="BPAXNS.10111" xml:space="preserve">
+    <value>Please enter a valid "To Airport"</value>
+  </data>
+  <data name="BPAXNS.10112" xml:space="preserve">
+    <value>Invalid listing currency</value>
+  </data>
+  <data name="BPAXNS.10113" xml:space="preserve">
+    <value>No billing member available</value>
+  </data>
+  <data name="BPAXNS.10114" xml:space="preserve">
+    <value>No transactions found</value>
+  </data>
+  <data name="BPAXNS.10115" xml:space="preserve">
+    <value>The net billing amount is invalid</value>
+  </data>
+  <data name="BPAXNS.10116" xml:space="preserve">
+    <value>Rejection memo coupon breakdown not available</value>
+  </data>
+  <data name="BPAXNS.10117" xml:space="preserve">
+    <value>Billing memo coupon breakdown not available</value>
+  </data>
+  <data name="BPAXNS.10118" xml:space="preserve">
+    <value>Duplicate invoice found</value>
+  </data>
+  <data name="BPAXNS.10119" xml:space="preserve">
+    <value>Invalid "Allowed ISC" amount</value>
+  </data>
+  <data name="BPAXNS.10120" xml:space="preserve">
+    <value>Invalid "Accepted ISC" amount</value>
+  </data>
+  <data name="BPAXNS.10121" xml:space="preserve">
+    <value>Invalid "Allowed UATP" amount</value>
+  </data>
+  <data name="BPAXNS.10122" xml:space="preserve">
+    <value>Invalid "Allowed ISC" amount</value>
+  </data>
+  <data name="BPAXNS.10123" xml:space="preserve">
+    <value>Duplicate coupon record</value>
+  </data>
+  <data name="BPAXNS.10124" xml:space="preserve">
+    <value>Duplicate Invoice </value>
+  </data>
+  <data name="BPAXNS.10125" xml:space="preserve">
+    <value>Invalid Rejection Memo</value>
+  </data>
+  <data name="BPAXNS.10126" xml:space="preserve">
+    <value>Invalid amount</value>
+  </data>
+  <data name="BPAXNS.10127" xml:space="preserve">
+    <value>Invalid Tax amount</value>
+  </data>
+  <data name="BPAXNS.10128" xml:space="preserve">
+    <value>Invalid Flight Date</value>
+  </data>
+  <data name="BPAXNS.10129" xml:space="preserve">
+    <value>Invalid Settlement Authorization Code</value>
+  </data>
+  <data name="BPAXNS.10130" xml:space="preserve">
+    <value>Invalid Your Rejection Number</value>
+  </data>
+  <data name="BPAXNS.10131" xml:space="preserve">
+    <value>Billing Memo Vat Breakdown not available</value>
+  </data>
+  <data name="BPAXNS.10132" xml:space="preserve">
+    <value>Credit Memo Vat Breakdown not available</value>
+  </data>
+  <data name="BPAXNS.10133" xml:space="preserve">
+    <value>Billing Memo Coupon Tax Breakdown not available</value>
+  </data>
+  <data name="BPAXNS.10134" xml:space="preserve">
+    <value>Billing Memo Coupon Vat Breakdown not available</value>
+  </data>
+  <data name="BPAXNS.10135" xml:space="preserve">
+    <value>Invalid Invoice Status</value>
+  </data>
+  <data name="BPAXNS.10136" xml:space="preserve">
+    <value>Credit Memo Coupon Tax Breakdown not available</value>
+  </data>
+  <data name="BPAXNS.10137" xml:space="preserve">
+    <value>Credit Memo Coupon Vat Breakdown not available</value>
+  </data>
+  <data name="BPAXNS.10138" xml:space="preserve">
+    <value>Invalid Member Location</value>
+  </data>
+  <data name="BPAXNS.10139" xml:space="preserve">
+    <value>Duplicate Rejection Memo Coupon Breakdown record</value>
+  </data>
+  <data name="BPAXNS.10140" xml:space="preserve">
+    <value>Linked Invoice not available</value>
+  </data>
+  <data name="BPAXNS.10141" xml:space="preserve">
+    <value>Billing Memo reference correspondence not available</value>
+  </data>
+  <data name="BPAXNS.10142" xml:space="preserve">
+    <value>(message to be defined)</value>
+  </data>
+  <data name="BPAXNS.10143" xml:space="preserve">
+    <value>Credit Memo reference correspondence not available</value>
+  </data>
+  <data name="BPAXNS.10144" xml:space="preserve">
+    <value>Invalid Billing Code</value>
+  </data>
+  <data name="BPAXNS.10145" xml:space="preserve">
+    <value>Invalid Vat amount</value>
+  </data>
+  <data name="BPAXNS.10146" xml:space="preserve">
+    <value>Invalid Source Code</value>
+  </data>
+  <data name="BPAXNS.10147" xml:space="preserve">
+    <value>Invalid Reason Code</value>
+  </data>
+  <data name="BPAXNS.10149" xml:space="preserve">
+    <value>Duplicate Credit Memo found.</value>
+  </data>
+  <data name="BPAXNS.10150" xml:space="preserve">
+    <value>From and To airport must be different.</value>
+  </data>
+  <data name="BPAXNS.10152" xml:space="preserve">
+    <value>Your Invoice Number should not be current Invoice Number</value>
+  </data>
+  <data name="BPAXS.10101" xml:space="preserve">
+    <value>Sampling Form C already exists for provisional billing airline and billing month with same lising currency in  Open/Ready for submission/Error status</value>
+  </data>
+  <data name="BPAXS.10102" xml:space="preserve">
+    <value>Invalid Provisional Listing Currency</value>
+  </data>
+  <data name="BPAXS.10103" xml:space="preserve">
+    <value>Sampling Form C transactions not found</value>
+  </data>
+  <data name="BPAXS.10104" xml:space="preserve">
+    <value>Duplicate Sampling Form C record found</value>
+  </data>
+  <data name="BPAXS.10105" xml:space="preserve">
+    <value>Nil Form C already exists for selected member and month </value>
+  </data>
+  <data name="BPAXS.10106" xml:space="preserve">
+    <value>Nil Form C can not be added as Non-Nil Form C already exists for selected provisional billing member and billing month</value>
+  </data>
+  <data name="BPAXS.10107" xml:space="preserve">
+    <value>Sampling Form D/E transaction not found.</value>
+  </data>
+  <data name="BPAXS.10108" xml:space="preserve">
+    <value>Duplicate Form D/E Invoice found.</value>
+  </data>
+  <data name="BPAXS.10109" xml:space="preserve">
+    <value>Duplicate Form D Record found.</value>
+  </data>
+  <data name="FormCSubmissionFailed" xml:space="preserve">
+    <value>Error in submission of Form C.</value>
+  </data>
+  <data name="FormCSubmissionSuccessful" xml:space="preserve">
+    <value>Form C submitted successfully.</value>
+  </data>
+  <data name="InvoiceDeleteFailed" xml:space="preserve">
+    <value>Invoice "{0}" delete failed.</value>
+  </data>
+  <data name="InvoiceDeleteSuccessful" xml:space="preserve">
+    <value>Invoice "{0}" deleted successfully.</value>
+  </data>
+  <data name="InvoiceValidateFailed" xml:space="preserve">
+    <value>Validation failed for Invoice "{0}".</value>
+  </data>
+  <data name="InvoiceValidateSuccessful" xml:space="preserve">
+    <value>Invoice "{0}" validated successfully.</value>
+  </data>
+</root>
